@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/dialogue_option_button.gd" type="Script" id=1]
+[ext_resource path="res://assets/assets_fonts_files/TinyUnicode.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[node name="Button" type="Button"]
+margin_right = 290.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 290, 13 )
+custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.580392, 0.494118, 0.721569, 1 )
+custom_fonts/font = SubResource( 10 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+text = "Well, you fight like a dairy farmer."
+align = 0
+script = ExtResource( 1 )

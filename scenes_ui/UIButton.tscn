@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://resources/BetterPixels.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/ui_button.gd" type="Script" id=2]
+[ext_resource path="res://assets/assets_audio/click2.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/assets_audio/click1.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/assets_audio/click3.wav" type="AudioStream" id=5]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.294118, 0.294118, 0.294118, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="UIButton" type="Button"]
+margin_right = 70.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 70, 15 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
+text = "New Game"
+script = ExtResource( 2 )
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="HoverPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="HoverOutPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_UIButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_UIButton_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_UIButton_pressed"]

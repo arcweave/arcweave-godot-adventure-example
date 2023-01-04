@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://resources/PixelFont5px_wGlow.tres" type="DynamicFont" id=1]
+
+[node name="CharacterLines" type="Label"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 239.0
+margin_bottom = 34.0
+grow_vertical = 0
+rect_min_size = Vector2( 220, 16 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/line_spacing = -2
+custom_fonts/font = ExtResource( 1 )
+text = "What is this that stands before me? Figure in black which points at me? Turn round quick and start to run."
+align = 1
+valign = 2
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0, 0, 0.207843 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

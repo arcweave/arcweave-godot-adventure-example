@@ -1,0 +1,239 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scripts/inventory_grid_container.gd" type="Script" id=1]
+[ext_resource path="res://scripts/main.gd" type="Script" id=2]
+[ext_resource path="res://assets/assets_ui/cursor_idle.png" type="Texture" id=3]
+[ext_resource path="res://scripts/mouse_cursor.gd" type="Script" id=4]
+[ext_resource path="res://assets/assets_ui/arrowUpNormal.png" type="Texture" id=5]
+[ext_resource path="res://assets/assets_ui/arrowUpDisabled.png" type="Texture" id=6]
+[ext_resource path="res://resources/BetterPixels.tres" type="DynamicFont" id=7]
+[ext_resource path="res://assets/assets_fonts_files/RPGSystem.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://scenes_ui/Menu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/assets_ui/arrowDnDisabled.png" type="Texture" id=10]
+[ext_resource path="res://assets/assets_ui/arrowDnNormal.png" type="Texture" id=11]
+[ext_resource path="res://scenes_ui/MouseMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes_main/Player.tscn" type="PackedScene" id=13]
+
+[sub_resource type="DynamicFont" id=6]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 1.0
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ActionBackround" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 320.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 320, 52 )
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="UIBackground" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 100.0
+margin_right = 320.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 320, 52 )
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Title" type="CenterContainer" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -52.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="UI/Title"]
+margin_left = 10.0
+margin_top = 42.0
+margin_right = 310.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 300, 0 )
+custom_colors/font_color = Color( 1, 0.647059, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 6 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+margin_top = 100.0
+margin_right = 320.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 320, 52 )
+mouse_filter = 2
+custom_constants/margin_top = 3
+custom_constants/margin_left = 10
+
+[node name="ObjectsContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+margin_left = 10.0
+margin_top = 3.0
+margin_right = 320.0
+margin_bottom = 52.0
+mouse_filter = 2
+custom_constants/separation = -1
+
+[node name="ObjectName" type="Label" parent="UI/MarginContainer/ObjectsContainer"]
+margin_right = 310.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 160, 0 )
+custom_fonts/font = ExtResource( 7 )
+align = 1
+
+[node name="InventoryContainer" type="HBoxContainer" parent="UI/MarginContainer/ObjectsContainer"]
+margin_top = 12.0
+margin_right = 310.0
+margin_bottom = 49.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="OptionsUI" type="HBoxContainer" parent="UI/MarginContainer"]
+margin_left = 10.0
+margin_top = 3.0
+margin_right = 320.0
+margin_bottom = 52.0
+mouse_filter = 2
+custom_constants/separation = 0
+
+[node name="OptionsContainer" type="VBoxContainer" parent="UI/MarginContainer/OptionsUI"]
+margin_bottom = 49.0
+mouse_filter = 2
+custom_constants/separation = -1
+
+[node name="OptionsArrows" type="VBoxContainer" parent="UI/MarginContainer/OptionsUI"]
+margin_right = 20.0
+margin_bottom = 49.0
+mouse_filter = 2
+custom_constants/separation = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowButtonUp" type="TextureButton" parent="UI/MarginContainer/OptionsUI/OptionsArrows"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 0 )
+disabled = true
+texture_normal = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="ArrowButtonDn" type="TextureButton" parent="UI/MarginContainer/OptionsUI/OptionsArrows"]
+margin_top = 22.0
+margin_right = 20.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 0 )
+disabled = true
+texture_normal = ExtResource( 11 )
+texture_disabled = ExtResource( 10 )
+
+[node name="Masking5thVisibleOption" type="ColorRect" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 143.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="MouseMenu" parent="UI" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( 267, 74 )
+
+[node name="SettingsMenu" parent="UI" instance=ExtResource( 9 )]
+margin_right = 0.0
+margin_bottom = 0.0
+mouse_filter = 2
+
+[node name="Popup" parent="UI/SettingsMenu" index="0"]
+visible = false
+
+[node name="MarginContainer" parent="UI/SettingsMenu/Popup" index="1"]
+margin_bottom = 0.0
+
+[node name="VBoxContainer" parent="UI/SettingsMenu/Popup/MarginContainer" index="0"]
+margin_bottom = 116.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer" index="5"]
+margin_top = 60.0
+margin_right = 232.0
+margin_bottom = 60.0
+
+[node name="MouseCursor" type="Control" parent="UI"]
+pause_mode = 1
+script = ExtResource( 4 )
+
+[node name="Cursor" type="Sprite" parent="UI/MouseCursor"]
+texture = ExtResource( 3 )
+
+[node name="MouseCursorArea2D" type="Area2D" parent="UI/MouseCursor/Cursor"]
+
+[node name="MouseCursorCollision" type="CollisionShape2D" parent="UI/MouseCursor/Cursor/MouseCursorArea2D"]
+shape = SubResource( 7 )
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="UI"]
+volume_db = -80.0
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="UI"]
+volume_db = -80.0
+
+[node name="TweenImage" type="Tween" parent="UI"]
+
+[node name="TweenMusic" type="Tween" parent="UI"]
+
+[node name="Fader" type="ColorRect" parent="UI"]
+margin_right = 320.0
+margin_bottom = 100.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 13 )]
+
+[connection signal="timeout" from="DialogueTimer" to="." method="_on_DialogueTimer_timeout"]
+[connection signal="pressed" from="UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp" to="." method="_on_OptionArrowButtonUp_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn" to="." method="_on_OptionArrowButtonDn_pressed"]
+[connection signal="mouse_entered" from="UI/MouseMenu/ButtonMouth" to="." method="_on_ButtonMouth_mouse_entered"]
+[connection signal="mouse_exited" from="UI/MouseMenu/ButtonMouth" to="." method="_on_ButtonMouth_mouse_exited"]
+[connection signal="pressed" from="UI/MouseMenu/ButtonMouth" to="." method="_on_ButtonMouth_pressed"]
+[connection signal="mouse_entered" from="UI/MouseMenu/ButtonEye" to="." method="_on_ButtonEye_mouse_entered"]
+[connection signal="mouse_exited" from="UI/MouseMenu/ButtonEye" to="." method="_on_ButtonEye_mouse_exited"]
+[connection signal="pressed" from="UI/MouseMenu/ButtonEye" to="." method="_on_ButtonEye_pressed"]
+[connection signal="mouse_entered" from="UI/MouseMenu/ButtonHand" to="." method="_on_ButtonHand_mouse_entered"]
+[connection signal="mouse_exited" from="UI/MouseMenu/ButtonHand" to="." method="_on_ButtonHand_mouse_exited"]
+[connection signal="pressed" from="UI/MouseMenu/ButtonHand" to="." method="_on_ButtonHand_pressed"]
+[connection signal="restart" from="UI/SettingsMenu" to="." method="_on_SettingsMenu_restart"]
+[connection signal="about_to_show" from="UI/SettingsMenu/Popup" to="." method="_on_Popup_about_to_show"]
+[connection signal="popup_hide" from="UI/SettingsMenu/Popup" to="." method="_on_Popup_popup_hide"]
+[connection signal="value_changed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/MusicRow/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/SFXRow/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="value_changed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/DialogueSpeedRow/DialogueSpeedSlider" to="." method="_on_DialogueSpeedSlider_value_changed"]
+[connection signal="value_changed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/WalkSpeedRow/WalkSpeedSlider" to="." method="_on_WalkSpeedSlider_value_changed"]
+[connection signal="pressed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Save" to="." method="_on_Save_pressed"]
+[connection signal="area_entered" from="UI/MouseCursor/Cursor/MouseCursorArea2D" to="." method="_on_MouseCursorArea2D_area_entered"]
+[connection signal="area_exited" from="UI/MouseCursor/Cursor/MouseCursorArea2D" to="." method="_on_MouseCursorArea2D_area_exited"]
+[connection signal="finished" from="UI/SFXPlayer" to="." method="_on_SFXPlayer_finished"]
+[connection signal="animation_finished" from="Player/AnimationPlayer" to="." method="_on_Player_animation_finished"]
+
+[editable path="UI/MouseMenu"]
+[editable path="UI/SettingsMenu"]
+[editable path="Player"]

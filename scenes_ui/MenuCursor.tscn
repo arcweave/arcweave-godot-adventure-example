@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/assets_ui/cursor_idle.png" type="Texture" id=1]
+[ext_resource path="res://scripts/mouse_cursor.gd" type="Script" id=2]
+
+[node name="MenuCursor" type="Control"]
+script = ExtResource( 2 )
+
+[node name="Cursor" type="Sprite" parent="."]
+texture = ExtResource( 1 )

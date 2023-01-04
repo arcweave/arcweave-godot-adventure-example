@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://scripts/item.gd" type="Script" id=1]
+[ext_resource path="res://assets/assets_inventory/gameScripts_inventory.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+object_name = "game scripts"
+reply_id = "gameScripts"
+texture = ExtResource( 2 )

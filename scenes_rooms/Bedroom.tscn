@@ -1,0 +1,161 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scenes_rooms/LocationClass.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/assets_rooms/bedroom.png" type="Texture" id=2]
+[ext_resource path="res://scenes_objects/ClickableItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/assets_rooms/Amstrad.png" type="Texture" id=4]
+[ext_resource path="res://assets/assets_rooms/chair.png" type="Texture" id=5]
+[ext_resource path="res://assets/assets_rooms/magazines.png" type="Texture" id=6]
+[ext_resource path="res://assets/assets_audio/Kool_Kats-Kevin_MacLeod.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/assets_rooms/gameScripts.png" type="Texture" id=8]
+[ext_resource path="res://scenes_objects/ClickableExit.tscn" type="PackedScene" id=9]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 24.2049, 89.4927, 10, 90, 15, 79, 36, 79, 41, 96, 24, 96, 41, 90, 295.131, 81, 295, 75, 303, 75, 311, 91, 194, 81, 37, 74, 59, 74, 60, 76, 173, 80, 175, 77, 191, 77, 162, 80, 129, 76, 126, 72, 100, 76, 105, 72 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 7, 10, 6, 11 ), PoolIntArray( 6, 3, 12, 13, 14 ), PoolIntArray( 15, 16, 17, 11 ), PoolIntArray( 15, 11, 6, 18 ), PoolIntArray( 19, 18, 6 ), PoolIntArray( 20, 19, 6, 21 ), PoolIntArray( 21, 22, 20 ), PoolIntArray( 21, 6, 14 ) ]
+outlines = [ PoolVector2Array( 303, 75, 311, 91, 41, 90, 41, 96, 24, 96, 24.2049, 89.4927, 10, 90, 15, 79, 36, 79, 37, 74, 59, 74, 60, 76, 100, 76, 105, 72, 126, 72, 129, 76, 162, 80, 173, 80, 175, 77, 191, 77, 194, 81, 295.131, 81, 295, 75 ) ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 11, 21 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 8.5, 3 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 11, 3 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10.5, 5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 9, 7 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8, 6 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 5.5, 6.5 )
+
+[node name="Location" instance=ExtResource( 1 )]
+music = ExtResource( 7 )
+
+[node name="Art" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+navpoly = SubResource( 1 )
+
+[node name="FinalExit" parent="Objects" index="0" instance=ExtResource( 9 )]
+position = Vector2( 116, 72 )
+object_name = "wooden door"
+reply_id = "finalExit"
+target_room = "res://scenes_rooms/Afterlife.tscn"
+target_position = Vector2( 180, 90 )
+locked = true
+
+[node name="CollisionShape2D" parent="Objects/FinalExit" index="0"]
+position = Vector2( 0, -21 )
+shape = SubResource( 5 )
+
+[node name="ApproachPosition" parent="Objects/FinalExit" index="1"]
+position = Vector2( 0, 3 )
+
+[node name="Scripts" parent="Objects" index="1" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 72, 24 )
+object_name = "game scripts"
+reply_id = "gameScripts"
+state_variable = "i_gameScripts"
+
+[node name="CollisionShape2D" parent="Objects/Scripts" index="0"]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 7 )
+
+[node name="ApproachPosition" parent="Objects/Scripts" index="1"]
+position = Vector2( -16, 53 )
+
+[node name="Sprite" parent="Objects/Scripts" index="2"]
+texture = ExtResource( 8 )
+
+[node name="Magazines" parent="Objects" index="2" instance=ExtResource( 3 )]
+position = Vector2( 76, 69 )
+object_name = "magazines"
+reply_id = "magazines"
+state_variable = "i_magazines"
+
+[node name="CollisionShape2D" parent="Objects/Magazines" index="0"]
+shape = SubResource( 6 )
+
+[node name="ApproachPosition" parent="Objects/Magazines" index="1"]
+position = Vector2( 17, 9 )
+
+[node name="Sprite" parent="Objects/Magazines" index="2"]
+texture = ExtResource( 6 )
+
+[node name="ExitToGreenRoom" parent="Objects" index="3" instance=ExtResource( 9 )]
+position = Vector2( 32, 95 )
+object_name = "exit"
+reply_id = "exitToGreenRoom"
+target_room = "res://scenes_rooms/PianoRoom.tscn"
+target_position = Vector2( 65, 76 )
+locked = false
+
+[node name="CollisionShape2D" parent="Objects/ExitToGreenRoom" index="0"]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 4 )
+
+[node name="ApproachPosition" parent="Objects/ExitToGreenRoom" index="1"]
+position = Vector2( 0, 0 )
+
+[node name="Amstrad" parent="Objects" index="4" instance=ExtResource( 3 )]
+position = Vector2( 176, 51 )
+object_name = "Amstrad 6128"
+reply_id = "amstrad"
+state_variable = "i_amstrad"
+
+[node name="CollisionShape2D" parent="Objects/Amstrad" index="0"]
+shape = SubResource( 2 )
+
+[node name="ApproachPosition" parent="Objects/Amstrad" index="1"]
+position = Vector2( 7, 30 )
+
+[node name="Sprite" parent="Objects/Amstrad" index="2"]
+texture = ExtResource( 4 )
+
+[node name="Chair" type="Sprite" parent="Objects" index="5"]
+position = Vector2( 165, 63 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Notes" parent="Objects" index="6" instance=ExtResource( 3 )]
+position = Vector2( 158, 33 )
+object_name = "notes"
+reply_id = "notes"
+
+[node name="CollisionShape2D" parent="Objects/Notes" index="0"]
+shape = SubResource( 8 )
+
+[node name="ApproachPosition" parent="Objects/Notes" index="1"]
+position = Vector2( -13, 46 )
+
+[node name="BlankPage" parent="Objects" index="7" instance=ExtResource( 3 )]
+position = Vector2( 185, 33 )
+object_name = "blank page"
+reply_id = "page"
+
+[node name="CollisionShape2D" parent="Objects/BlankPage" index="0"]
+position = Vector2( 0.5, -0.5 )
+shape = SubResource( 9 )
+
+[node name="ApproachPosition" parent="Objects/BlankPage" index="1"]
+position = Vector2( 5, 45 )
+
+[editable path="Objects/FinalExit"]
+[editable path="Objects/Scripts"]
+[editable path="Objects/Magazines"]
+[editable path="Objects/ExitToGreenRoom"]
+[editable path="Objects/Amstrad"]
+[editable path="Objects/Notes"]
+[editable path="Objects/BlankPage"]

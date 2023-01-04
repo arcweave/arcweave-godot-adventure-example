@@ -1,0 +1,219 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://resources/BetterPixels.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/assets_ui/slider_grabber_disabled.png" type="Texture" id=2]
+[ext_resource path="res://assets/assets_ui/slider_tick.png" type="Texture" id=3]
+[ext_resource path="res://assets/assets_ui/slider.png" type="Texture" id=4]
+[ext_resource path="res://assets/assets_ui/slider_grabber.png" type="Texture" id=5]
+[ext_resource path="res://scenes_ui/MenuCursor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/menu.gd" type="Script" id=7]
+[ext_resource path="res://scenes_ui/UIButton.tscn" type="PackedScene" id=9]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.317647, 0.317647, 0.317647, 1 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 8, 2 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[node name="SettingsMenu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -320.0
+margin_bottom = -152.0
+rect_min_size = Vector2( 320, 152 )
+script = ExtResource( 7 )
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -120.0
+margin_top = -125.0
+margin_right = 120.0
+margin_bottom = -5.0
+rect_min_size = Vector2( 240, 120 )
+popup_exclusive = true
+
+[node name="Panel" type="Panel" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 4.0
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/MarginContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 236.0
+margin_bottom = 120.0
+
+[node name="MusicRow" type="HSplitContainer" parent="Popup/MarginContainer/VBoxContainer"]
+margin_right = 232.0
+margin_bottom = 16.0
+collapsed = true
+
+[node name="MusicLabel" type="Label" parent="Popup/MarginContainer/VBoxContainer/MusicRow"]
+margin_top = 1.0
+margin_right = 90.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 90, 0 )
+custom_fonts/font = ExtResource( 1 )
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="Popup/MarginContainer/VBoxContainer/MusicRow"]
+margin_left = 102.0
+margin_right = 232.0
+margin_bottom = 16.0
+custom_icons/tick = ExtResource( 3 )
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 5 )
+custom_styles/slider = SubResource( 8 )
+custom_styles/grabber_area_highlight = SubResource( 9 )
+custom_styles/grabber_area = SubResource( 10 )
+max_value = 1.0
+step = 0.01
+
+[node name="SFXRow" type="HSplitContainer" parent="Popup/MarginContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 232.0
+margin_bottom = 36.0
+collapsed = true
+
+[node name="SFXLabel" type="Label" parent="Popup/MarginContainer/VBoxContainer/SFXRow"]
+margin_top = 1.0
+margin_right = 90.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 90, 0 )
+custom_fonts/font = ExtResource( 1 )
+text = "SFX Volume"
+
+[node name="SFXSlider" type="HSlider" parent="Popup/MarginContainer/VBoxContainer/SFXRow"]
+margin_left = 102.0
+margin_right = 232.0
+margin_bottom = 16.0
+custom_icons/tick = ExtResource( 3 )
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 5 )
+custom_styles/slider = SubResource( 8 )
+custom_styles/grabber_area_highlight = SubResource( 9 )
+custom_styles/grabber_area = SubResource( 10 )
+max_value = 1.0
+step = 0.01
+
+[node name="DialogueSpeedRow" type="HSplitContainer" parent="Popup/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 232.0
+margin_bottom = 56.0
+collapsed = true
+
+[node name="DialogueSpeedLabel" type="Label" parent="Popup/MarginContainer/VBoxContainer/DialogueSpeedRow"]
+margin_top = 1.0
+margin_right = 90.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 90, 0 )
+custom_fonts/font = ExtResource( 1 )
+text = "Dialogue Speed"
+
+[node name="DialogueSpeedSlider" type="HSlider" parent="Popup/MarginContainer/VBoxContainer/DialogueSpeedRow"]
+margin_left = 102.0
+margin_right = 232.0
+margin_bottom = 16.0
+custom_icons/tick = ExtResource( 3 )
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 5 )
+custom_styles/slider = SubResource( 8 )
+custom_styles/grabber_area_highlight = SubResource( 9 )
+custom_styles/grabber_area = SubResource( 10 )
+min_value = 1.0
+max_value = 16.0
+value = 3.0
+rounded = true
+
+[node name="WalkSpeedRow" type="HSplitContainer" parent="Popup/MarginContainer/VBoxContainer"]
+margin_top = 60.0
+margin_right = 232.0
+margin_bottom = 76.0
+collapsed = true
+
+[node name="WalkSpeedLabel" type="Label" parent="Popup/MarginContainer/VBoxContainer/WalkSpeedRow"]
+margin_top = 1.0
+margin_right = 90.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 90, 0 )
+custom_fonts/font = ExtResource( 1 )
+text = "Walking Speed"
+
+[node name="WalkSpeedSlider" type="HSlider" parent="Popup/MarginContainer/VBoxContainer/WalkSpeedRow"]
+margin_left = 102.0
+margin_right = 232.0
+margin_bottom = 16.0
+custom_icons/tick = ExtResource( 3 )
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 5 )
+custom_styles/slider = SubResource( 8 )
+custom_styles/grabber_area_highlight = SubResource( 9 )
+custom_styles/grabber_area = SubResource( 10 )
+min_value = 10.0
+max_value = 40.0
+step = 0.01
+value = 18.0
+
+[node name="MarginContainer" type="CenterContainer" parent="Popup/MarginContainer/VBoxContainer"]
+margin_top = 80.0
+margin_right = 232.0
+margin_bottom = 95.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/MarginContainer/VBoxContainer/MarginContainer"]
+margin_left = 7.0
+margin_right = 225.0
+margin_bottom = 15.0
+
+[node name="Save" parent="Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource( 9 )]
+margin_bottom = 15.0
+text = "Save"
+
+[node name="Load" parent="Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 15.0
+text = "Load"
+
+[node name="Quit" parent="Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 15.0
+text = "Quit"
+
+[node name="MenuCursor" parent="Popup" instance=ExtResource( 6 )]
+margin_left = -40.0
+margin_top = -27.0
+margin_right = -40.0
+margin_bottom = -27.0
+
+[node name="CommandTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[connection signal="pressed" from="Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="timeout" from="CommandTimer" to="." method="_on_CommandTimer_timeout"]

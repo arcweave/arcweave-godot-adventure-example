@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes_rooms/LocationClass.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/assets_rooms/pianoRoom.png" type="Texture" id=2]
+[ext_resource path="res://scenes_objects/ClickableExit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes_objects/ClickableCharacter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/assets_audio/Kool_Kats-Kevin_MacLeod.ogg" type="AudioStream" id=5]
+[ext_resource path="res://scenes_objects/ClickableItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/assets_rooms/piano.png" type="Texture" id=7]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 305, 83, 309, 96, 206, 96, 260, 80, 254, 77, 202, 88, 103.161, 96, 12, 96, 12, 83, 47, 76, 53, 74, 76, 74, 82, 77, 120, 87, 119, 96 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 6, 9, 10, 11, 12 ), PoolIntArray( 12, 4, 5, 13 ), PoolIntArray( 6, 12, 13, 14 ) ]
+outlines = [ PoolVector2Array( 53, 74, 47, 76, 12, 83, 12, 96, 103.161, 96, 119, 96, 120, 87, 202, 88, 206, 96, 309, 96, 305, 83, 260, 80, 254, 77, 82, 77, 76, 74 ) ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 32.5, 9 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 24 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 7.25616
+height = 26.2149
+
+[node name="Location" instance=ExtResource( 1 )]
+music = ExtResource( 5 )
+
+[node name="Art" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+navpoly = SubResource( 1 )
+
+[node name="Piano" parent="Objects" index="0" instance=ExtResource( 6 )]
+position = Vector2( 153, 77 )
+z_index = 1
+object_name = "grand piano"
+reply_id = "piano"
+portable = false
+
+[node name="CollisionShape2D" parent="Objects/Piano" index="0"]
+position = Vector2( 8.5, -4 )
+shape = SubResource( 4 )
+
+[node name="ApproachPosition" parent="Objects/Piano" index="1"]
+position = Vector2( -38, 18 )
+
+[node name="Sprite" parent="Objects/Piano" index="2"]
+texture = ExtResource( 7 )
+
+[node name="ExitToBedroom" parent="Objects" index="1" instance=ExtResource( 3 )]
+position = Vector2( 65, 73 )
+object_name = "exit to bedroom"
+reply_id = "exitToBedroom"
+target_room = "res://scenes_rooms/Bedroom.tscn"
+target_position = Vector2( 32, 95 )
+locked = false
+
+[node name="CollisionShape2D" parent="Objects/ExitToBedroom" index="0"]
+position = Vector2( 0, -24 )
+shape = SubResource( 2 )
+
+[node name="ApproachPosition" parent="Objects/ExitToBedroom" index="1"]
+position = Vector2( 0, 3 )
+
+[node name="Andreas" parent="Objects" index="2" instance=ExtResource( 4 )]
+position = Vector2( 280, 77 )
+object_name = "Andreas"
+reply_id = "andreas"
+
+[node name="CollisionShape2D" parent="Objects/Andreas" index="0"]
+position = Vector2( -5, -19 )
+rotation = 0.537561
+shape = SubResource( 3 )
+
+[node name="ApproachPosition" parent="Objects/Andreas" index="1"]
+position = Vector2( -49, 3 )
+
+[editable path="Objects/Piano"]
+[editable path="Objects/ExitToBedroom"]
+[editable path="Objects/Andreas"]

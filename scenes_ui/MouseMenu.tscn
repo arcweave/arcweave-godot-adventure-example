@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/assets_ui/menu_examine_button.png" type="Texture" id=2]
+[ext_resource path="res://assets/assets_ui/menu_hand_button.png" type="Texture" id=3]
+[ext_resource path="res://assets/assets_ui/menu_mouth_button.png" type="Texture" id=4]
+
+[node name="MouseMenu" type="Node2D"]
+
+[node name="ButtonMouth" type="TextureButton" parent="."]
+margin_left = 5.0
+margin_top = 3.0
+margin_right = 25.0
+margin_bottom = 23.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
+
+[node name="ButtonEye" type="TextureButton" parent="."]
+margin_left = -10.0
+margin_top = -23.0
+margin_right = 10.0
+margin_bottom = -3.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonHand" type="TextureButton" parent="."]
+margin_left = -23.0
+margin_top = 3.0
+margin_right = -3.0
+margin_bottom = 23.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 3 )
+texture_focused = ExtResource( 3 )

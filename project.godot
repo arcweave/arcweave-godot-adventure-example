@@ -1,0 +1,209 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Object",
+"class": "Board",
+"language": "GDScript",
+"path": "res://addons/arcweave/board.gd"
+}, {
+"base": "ClickableObject",
+"class": "ClickableCharacter",
+"language": "GDScript",
+"path": "res://scripts/clickable_character.gd"
+}, {
+"base": "ClickableObject",
+"class": "ClickableExit",
+"language": "GDScript",
+"path": "res://scripts/clickable_exit.gd"
+}, {
+"base": "ClickableObject",
+"class": "ClickableItem",
+"language": "GDScript",
+"path": "res://scripts/clickable_item.gd"
+}, {
+"base": "Area2D",
+"class": "ClickableObject",
+"language": "GDScript",
+"path": "res://scripts/clickable_object.gd"
+}, {
+"base": "Object",
+"class": "Component",
+"language": "GDScript",
+"path": "res://addons/arcweave/component.gd"
+}, {
+"base": "Object",
+"class": "DataExport",
+"language": "GDScript",
+"path": "res://addons/arcweave/data_export.gd"
+}, {
+"base": "Object",
+"class": "Element",
+"language": "GDScript",
+"path": "res://addons/arcweave/element.gd"
+}, {
+"base": "Resource",
+"class": "InventoryHandler",
+"language": "GDScript",
+"path": "res://scripts/inventory.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://scripts/item.gd"
+}, {
+"base": "Node2D",
+"class": "Location",
+"language": "GDScript",
+"path": "res://scripts/room.gd"
+}, {
+"base": "Object",
+"class": "StateExport",
+"language": "GDScript",
+"path": "res://addons/arcweave/state_export.gd"
+}, {
+"base": "Resource",
+"class": "StateHandler",
+"language": "GDScript",
+"path": "res://scripts/state_handler.gd"
+}, {
+"base": "Object",
+"class": "Story",
+"language": "GDScript",
+"path": "res://addons/arcweave/story.gd"
+}, {
+"base": "Object",
+"class": "Utils",
+"language": "GDScript",
+"path": "res://addons/arcweave/utils.gd"
+} ]
+_global_script_class_icons={
+"Board": "",
+"ClickableCharacter": "",
+"ClickableExit": "",
+"ClickableItem": "",
+"ClickableObject": "",
+"Component": "",
+"DataExport": "",
+"Element": "",
+"InventoryHandler": "",
+"Item": "",
+"Location": "",
+"StateExport": "",
+"StateHandler": "",
+"Story": "",
+"Utils": ""
+}
+
+[application]
+
+config/name="Regrets"
+run/main_scene="res://scenes_main/IntroCredits.tscn"
+config/icon="res://icon2.png"
+
+[autoload]
+
+LoadGame="*res://scripts/load_game.gd"
+
+[display]
+
+window/size/width=320
+window/size/height=152
+window/size/test_width=960
+window/size/test_height=456
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/arcweave/plugin.cfg" )
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777222,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_select={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+ui_menu={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":77,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_skip={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":46,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+right_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[network]
+
+limits/debugger_stdout/max_chars_per_second=10000
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"

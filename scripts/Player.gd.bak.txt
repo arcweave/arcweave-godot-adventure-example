@@ -1,0 +1,73 @@
+[Player script backup]
+
+
+extends KinematicBody2D
+
+export var speed : = 30.0
+export var objectName: String = "you"
+var path : = PoolVector2Array() setget set_path
+
+onready var animationPlayer = $AnimationPlayer
+onready var sprite = $Sprite
+onready var bubble : Node2D = $Bubble
+#onready var characterLines : Label = $Bubble/CharacterLines
+#onready var characterLinesRich : RichTextLabel = $Bubble/CharacterLinesRich
+
+
+enum{IDLE, WALK, TAKE_PUT}
+
+var state = IDLE
+
+
+func _ready() -> void:
+	yield(get_tree(), "idle_frame") # Needing this for signalling.
+#	set_process(false)
+
+func _process(delta):
+	var move_distance : float = speed * delta
+	move_along_path(move_distance)
+	set_state_animation()
+
+func move_along_path(distance: float) -> void:
+	var start_point : = position
+	for _i in range(path.size()):
+		var distance_to_next : = start_point.distance_to(path[0])
+		
+		# if the distance covered in the physics_process cycle is smaller than the next path corner:
+		if distance <= distance_to_next and distance >= 0.0:
+			# We use the vector method .linear_interpolate() to place a new vector
+			# on the line defined by the start_point (current position) and the next path point.
+			# START------DISTANCE as fraction X-----PATH[0]-------PATH[1]...
+			# The second argument of .linear_interpolate is a fraction between 0 and 1 that
+			# defines how far from the start_point the new vector is: x = distance / distance_to_next
+			change_state(WALK)
+			position = start_point.linear_interpolate(path[0], distance / distance_to_next)
+			break
+		elif distance < 0.0:
+			position = path[0]
+			set_process(false)
+			break
+		change_state(IDLE)
+		distance -= distance_to_next
+		start_point = path[0]
+		# we remove the path[0], so that the next path point becomes the new path[0]
+		path.remove(0)
+
+func change_state(newState):
+	state = newState
+
+
+func set_state_animation():
+	match state:
+		IDLE:
+			animationPlayer.play("Idle")
+		WALK:
+			animationPlayer.play("Walk")
+		TAKE_PUT:
+			animationPlayer.play("Take")
+
+func set_path(value: PoolVector2Array) -> void:
+	path = value
+	if value.size() == 0:
+		return
+	set_process(true)

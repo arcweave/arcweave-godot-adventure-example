@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music_angels.ogg-67d6bc2a190c8dff469ef5fd21345b56.oggstr"
+
+[deps]
+
+source_file="res://assets/assets_audio/music_angels.ogg"
+dest_files=[ "res://.import/music_angels.ogg-67d6bc2a190c8dff469ef5fd21345b56.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
