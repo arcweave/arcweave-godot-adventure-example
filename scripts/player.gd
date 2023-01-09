@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Node2D
 
 enum{IDLE, WALK}
 
@@ -12,7 +12,6 @@ onready var animationPlayer = $AnimationPlayer
 onready var sprite = $Sprite
 onready var bubble : Node2D = $Bubble
 onready var characterLines : Label = $Bubble/CharacterLines
-onready var characterLinesRich : RichTextLabel = $Bubble/CharacterLinesRich
 
 
 func _ready() -> void:

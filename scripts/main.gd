@@ -80,7 +80,7 @@ onready var mouseButtonMouth : TextureButton = $UI/MouseMenu/ButtonMouth
 onready var mouseButtonHand : TextureButton = $UI/MouseMenu/ButtonHand
 onready var mouseCursor : Control = $UI/MouseCursor
 onready var cursorSprite : Sprite = $UI/MouseCursor/Cursor
-onready var player : KinematicBody2D = $Player
+onready var player : Node2D = $Player
 onready var animationPlayer : AnimationPlayer = $Player/AnimationPlayer
 onready var musicPlayer : AudioStreamPlayer = $UI/MusicPlayer
 onready var sfxPlayer : AudioStreamPlayer = $UI/SFXPlayer
@@ -387,7 +387,7 @@ func load_room_from_path(room_path : String, player_position : Vector2)-> void:
 
 
 func dress_up_room(room_node : Node2D) -> void:
-	var story_state : Dictionary = story.state.get_current_state()
+	var story_state : Dictionary = story.get_state()
 	
 	for obj in room_node.get_node("Objects").get_children():
 		if not obj is ClickableObject:
@@ -660,21 +660,13 @@ func render_current_element() -> void:
 	var current_content : String = story.get_current_content().strip_edges()
 	var components_classified : Dictionary = classify_components(current_element)
 	
-#	components_classified = {
-#		"speakers": [speaker1, speaker2, ...],
-#		"items": [item1, item2, ...],
-#		"activities": [activity1, activity2, ...],
-#		"animations": [animation1, animation2,...],
-#		"audios": [audio1, audio2, ...],
-#		"dialogue_commands": [dialogue_flow_command1, dialogue_flow_command2, ...],
-#		"player_commands": [player_command1, player_command2, ...]
-#	}
-	
 	if components_classified.dialogue_commands.size() > 0:
 		run_dialogue_commands(components_classified.dialogue_commands)
 
 	if current_content != "":
 		if current_object_clicked is ClickableObject:
+			# We have included a wildcard for repeating the clicked object's name
+			# within the dialogue: "$##$" therefore, we replace this with the name:
 			current_content = current_content.replace("$##$", current_object_clicked.object_name)
 		run_content(components_classified.speakers, current_content)
 	
@@ -691,9 +683,6 @@ func render_current_element() -> void:
 		# Some activities (like ADD TO INVENTORY) need items, others (like END GAME don't).
 		run_activities(components_classified.activities, components_classified.items, components_classified.exits)
 	
-	if not dialogueTimer.is_stopped():
-		print("Rendering Element: Dialogue Timer is Stopped.")
-	# Why do we have to check if the dialogueTimer is stopped?
 	if dialogueTimer.is_stopped():
 		dialogueTimer.wait_time = 0.001
 		dialogueTimer.start()
@@ -992,8 +981,6 @@ func classify_components(element : Element) -> Dictionary:
 	var animations : Array = []
 	var audios : Array = []
 	var dialogue_commands : Array = []
-	# Note: player command components are not needed during runtime.
-#	var player_commands : Array = [] # Action verbs like "EXAMINE," "HANDLE," and "TALK TO"
 
 	# ... and then this function will return this Dictionary:
 	var components_classified : Dictionary = {
@@ -1003,8 +990,7 @@ func classify_components(element : Element) -> Dictionary:
 		"activities": activities,
 		"animations": animations,
 		"audios": audios,
-		"dialogue_commands": dialogue_commands,
-#		"player_commands": player_commands
+		"dialogue_commands": dialogue_commands
 	}
 	
 	# We get an array of all the attached components (Dictionaries):
@@ -1101,7 +1087,7 @@ func run_dialogue_commands(commands : Array) -> void:
 
 
 func play_dialogue_animation(_animations : Array) -> void:
-	# This doesn't work properly yet. Conflicts with Player node animations.
+	# Not implemented in current demo.
 	pass
 
 
@@ -1386,9 +1372,7 @@ func after_timer_do():
 		exit_room_from(dangling_exit)
 		dangling_exit = null
 		return
-#	if state.game != DIALOGUE:
-#		push_error("Dialogue timer just timed out, but game state is NOT 'DIALOGUE.'")
-#		set_game_state(DIALOGUE)
+
 	if dialogue_end:
 		_end_dialogue()
 		return
@@ -1802,7 +1786,7 @@ func _on_inventory_container_item_examined(item)-> void:
 
 
 
-func _on_object_mouse_in(aNode : ClickableObject):
+func _on_object_mouse_in(_aNode : ClickableObject):
 	pass
 
 func set_cursor_hovering_over(aNode):
@@ -1915,7 +1899,7 @@ func _on_MouseCursorArea2D_area_entered(area: Area2D) -> void:
 			update_command_line()
 
 
-func _on_MouseCursorArea2D_area_exited(area: Area2D) -> void:
+func _on_MouseCursorArea2D_area_exited(_area: Area2D) -> void:
 		# We don't want anything to happen while TRANSITIONING or DIALOGUE:
 	if State.game == TRANSITIONING or State.game == DIALOGUE:
 		return

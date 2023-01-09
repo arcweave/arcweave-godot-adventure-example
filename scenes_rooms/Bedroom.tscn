@@ -142,7 +142,7 @@ position = Vector2( -13, 46 )
 
 [node name="BlankPage" parent="Objects" index="7" instance=ExtResource( 3 )]
 position = Vector2( 185, 33 )
-object_name = "blank page"
+object_name = "page"
 reply_id = "page"
 
 [node name="CollisionShape2D" parent="Objects/BlankPage" index="0"]
