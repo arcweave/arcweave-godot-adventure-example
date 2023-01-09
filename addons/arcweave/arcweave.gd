@@ -137,8 +137,19 @@ func _refresh_button_pressed():
 	self._save_details(info)
 	
 	var request_url = self.default_domain + "api/"+info.project_hash+"/godot"
+	var headers = []
+	var auth_header = false
+	if "headers" in self.env_vars:
+		for header in self.env_vars.headers:
+			if header == "Authorization":
+				auth_header = true
+				headers.append("Authorization: "+self.env_vars.headers[header]+", Bearer "+info.api_key)
+			else:
+				headers.append(header + ': ' + self.env_vars.headers[header])
+	if not auth_header:
+		headers.append("Authorization: Bearer "+info.api_key)
 	print("Retrieving: "+request_url)
-	http_request.request(request_url, ["Authorization: Bearer "+info.api_key])
+	http_request.request(request_url, headers)
 
 func _select_project_files_button_pressed():
 	_file_dialog.popup_centered_ratio(0.5)
@@ -146,6 +157,7 @@ func _select_project_files_button_pressed():
 func _project_dir_selected(dir: String):
 	selected_folder_input.set_text(dir)
 	selected_folder = dir
+	refresh_from_folder.disabled = false
 
 func _refresh_from_folder():
 	var file = File.new()

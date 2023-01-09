@@ -27,6 +27,10 @@ func aw_roll(maxRoll: int, rolls: int = 1):
 		roll_sum += rng.randi_range(1, maxRoll)
 	return roll_sum
 	
+# Retuns a rounded number to the nearest integer
+func aw_round(n):
+	return int(round(n))
+	
 # Returns the evaluation and concatenation of its argument expressions (see below)
 func aw_show():
 	pass
