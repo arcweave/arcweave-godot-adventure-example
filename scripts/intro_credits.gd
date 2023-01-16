@@ -27,6 +27,8 @@ func enable_load(yes: bool)->void:
 
 func go(new_command : int = PLAY) -> void:
 	command = new_command
+	# Instead of instantly GOing, we set a short timer,
+	# so we get time to hear the sound effect of the button click:
 	timer.start()
 
 func _on_NewGame_pressed() -> void:

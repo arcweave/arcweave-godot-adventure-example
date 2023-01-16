@@ -1,16 +1,19 @@
 class_name ClickableObject
 extends Area2D
 
+# The object's name, as it appears in the command line:
 export(String) var object_name = ""
+# The objectName as it appears in the Arcweave component:
 export(String) var reply_id = ""
+# The Arcweave variable associated with the object's state (it begins with "i_")
 export(String) var state_variable = ""
 
 # The UI & dialogue states are stored in a separate resource file, for global access:
 var state_handler = preload("res://resources/state_handler.tres")
 
+# Every clickable object has a position where the player stands to interact with it:
 onready var approachPosition = $ApproachPosition
 
-#signal mouse_in(aNode)
 signal object_clicked(aNode)
 
 var mouse_over : bool = false
@@ -18,15 +21,11 @@ var mouse_over : bool = false
 
 func _ready() -> void:
 	var _con : int = 0
-	yield(get_tree(), "idle_frame") # Needing this for signalling.
-#	_con = self.connect("mouse_in", get_tree().current_scene, "_on_object_mouse_in")
-#	_con = self.connect("mouse_exited", get_tree().current_scene, "_on_object_mouse_exited")
 	_con = self.connect("object_clicked", get_tree().current_scene, "_on_ClickableObject_clicked")
 	
 
 func _on_mouse_entered() -> void:
 	mouse_over = true
-#	emit_signal("mouse_in", self)
 
 
 func _on_mouse_exited() -> void:

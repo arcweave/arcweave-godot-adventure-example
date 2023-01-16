@@ -51,7 +51,6 @@ object_name = "wooden door"
 reply_id = "finalExit"
 target_room = "res://scenes_rooms/Afterlife.tscn"
 target_position = Vector2( 180, 90 )
-locked = true
 
 [node name="CollisionShape2D" parent="Objects/FinalExit" index="0"]
 position = Vector2( 0, -21 )
@@ -98,7 +97,6 @@ object_name = "exit"
 reply_id = "exitToGreenRoom"
 target_room = "res://scenes_rooms/PianoRoom.tscn"
 target_position = Vector2( 65, 76 )
-locked = false
 
 [node name="CollisionShape2D" parent="Objects/ExitToGreenRoom" index="0"]
 position = Vector2( 0.5, 0 )

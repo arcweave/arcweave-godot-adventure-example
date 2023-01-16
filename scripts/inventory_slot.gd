@@ -1,5 +1,8 @@
 extends CenterContainer
 
+# This inventory system is stol-- em... BORROWED from
+# a YouTube tutorial by HeartBeast.
+
 signal item_selected(item)
 signal item_examined(item)
 signal mouse_in_slot(item)

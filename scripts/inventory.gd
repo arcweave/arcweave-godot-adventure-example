@@ -1,9 +1,8 @@
 extends Resource
 class_name InventoryHandler
 
-#signal items_changed(indexes)
-#signal item_selected(item)
-
+# This inventory system is stol-- em... BORROWED from
+# a YouTube tutorial by HeartBeast.
 
 export(Array, Resource) var items = [
 	null, null, null, null, null, null, null, null
@@ -43,36 +42,3 @@ func clear_inventory()->void:
 	print("Clearing up inventory...")
 	for i in items.size():
 		items[i] = null
-
-
-#
-#func activity_inventory_add(items_components : Array) -> void:
-#	for item in items_components:
-#		var item_objectName : String = item.getAttributeByName("objectName").value.data.strip_edges()
-#		var new_item : Resource = load("res://InventoryItems/" + item_objectName + ".tres")
-#
-#		for i in Inventory.items.size():
-#			if Inventory.items[i] == null:
-#				Inventory.items[i] = new_item
-#				break
-#
-#		dress_up_room(get_node("Location"))
-#		inventoryGrid.update_inventory_display()
-
-
-
-
-	
-
-#func set_item(item_index, item):
-#	var previousItem = items[item_index]
-#	items[item_index] = item
-#	emit_signal("items_changed", [item_index])
-#	return previousItem
-
-
-#func remove_item(item_index):
-#	var previousItem = items[item_index]
-#	items[item_index] = null
-#	emit_signal("items_changed", [item_index])
-#	return previousItem

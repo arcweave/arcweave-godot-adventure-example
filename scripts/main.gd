@@ -1,6 +1,6 @@
 extends Node2D
 
-# Attention: following enums must have same names as those in StateHandler:
+# Attention: the following enums must have same names as in the StateHandler resource:
 enum {EXPLORING, WALKING_TO_ACTION, TRANSITIONING, DIALOGUE} # GAME states
 enum {IDLE, MENU_OPEN, HOLDING_ITEM} # UI states
 enum {OFF, RENDERING_ELEMENT, RENDERING_OPTIONS, WAITING_CHOICE, PAUSING} # DIALOGUE states
@@ -11,30 +11,34 @@ const MIN_X = 120 # MIN_X & MAX_X for dialogue bubble placement
 const MAX_X = 200
 const MIN_Y = 73 # Y for speaker position, for dialogue bubble placement
 const MAX_Y = 100 # (The room window lower end.)
-const PAUSE_TIME = 1.7 # The time kept when dialogue reaches a "pause" component.
+const PAUSE_TIME = 1.5 # The time kept when dialogue reaches a "pause" component.
+# Mouse Cursors:
 const IDLE_CURSOR : Texture = preload("res://assets/assets_ui/cursor_idle.png")
 const HOVER_CURSOR : Texture = preload("res://assets/assets_ui/cursor_hover.png")
 const EXIT_CURSOR : Texture = preload("res://assets/assets_ui/cursor_walk_out.png")
+# Starting room and position:
 const FIRST_ROOM : String = "res://scenes_rooms/Bedroom.tscn"
 const PLAYER_STARTING_POSITION : Vector2 = Vector2(138, 92)
+
 const DialogueOptionButton : PackedScene = preload("res://scenes_ui/DialogueOptionButton.tscn")
 const Inventory : InventoryHandler = preload("res://resources/Inventory.tres")
+# The states are stored in a separate resource file, for access by various scripts:
 const State : StateHandler = preload("res://resources/state_handler.tres") # The game's state machines. Not the story state.
 const SAVED_SETTINGS_PATH = "user://settings.dat"
 const SAVED_GAME_PATH = "user://save.dat"
-
-# The UI & dialogue states are stored in a separate resource file, for global access:
+# The following 2 vars get their values from the current room:
 var nav2D : Navigation2D = null
 var line2D : Line2D = null
-# Check which of those will perish for the sake and love of thy state machine.
+# The following vars get values from player actions:
 var inventory_item_selected : Item = null
 var current_object_hovered : Area2D = null
 var current_object_clicked : Area2D = null
+
 var current_target_id : String = "RESET"
 var current_line_bubble: Label = null
 var player_actions_aw_board : Board = null
 # Flags related to dialogue flow:
-var dialogue_speed_factor : int = 3 # For faster dialogue try e.g. 10.
+var dialogue_speed_factor : int = 3 # For faster dialogue go higher.
 var dialogue_pause : bool = false
 var dialogue_end : bool = false
 var line_is_title : bool = false
@@ -60,33 +64,19 @@ var registered_settings = { # Volumes in linear values (from 0 to 1)
 var number_of_visible_options : int = 0
 var option_buttons : Array = []
 var story = Story.new() # From Arcweave's plugin.
-#var inventory = Inventory.new()
 
-# First change the dialogue_handler.gd to eliminate signals.
-# Then turn the DialogueHandler node into a Resource.
 
-onready var UI: CanvasLayer = $UI
 onready var optionsUI : HBoxContainer = $UI/MarginContainer/OptionsUI
-onready var optionsContainer: VBoxContainer = $UI/MarginContainer/OptionsUI/OptionsContainer
-onready var optionArrows : VBoxContainer = $UI/MarginContainer/OptionsUI/OptionsArrows
-onready var optionArrowUp: TextureButton = $UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp
-onready var optionArrowDn: TextureButton = $UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn
 onready var objectsContainer: VBoxContainer = $UI/MarginContainer/ObjectsContainer
 onready var objectLabel: Label = $UI/MarginContainer/ObjectsContainer/ObjectName
-onready var titleLabel : Label = $UI/Title/Label
 onready var dialogueTimer: Timer = $DialogueTimer
-onready var mouseMenu : Node2D = $UI/MouseMenu
-onready var mouseButtonMouth : TextureButton = $UI/MouseMenu/ButtonMouth
-onready var mouseButtonHand : TextureButton = $UI/MouseMenu/ButtonHand
 onready var mouseCursor : Control = $UI/MouseCursor
 onready var cursorSprite : Sprite = $UI/MouseCursor/Cursor
 onready var player : Node2D = $Player
-onready var animationPlayer : AnimationPlayer = $Player/AnimationPlayer
 onready var musicPlayer : AudioStreamPlayer = $UI/MusicPlayer
 onready var sfxPlayer : AudioStreamPlayer = $UI/SFXPlayer
 onready var tween_room : Tween = $UI/TweenImage
 onready var tween_music : Tween = $UI/TweenMusic
-onready var room_fader : ColorRect = $UI/Fader
 onready var inventoryGrid : HBoxContainer = $UI/MarginContainer/ObjectsContainer/InventoryContainer
 
 
@@ -104,8 +94,8 @@ func _ready() -> void:
 
 
 # This loads the board where all starting elements are for player commands.
-# But I am not currently using it--it iterates through EVERY element in project.
-# We can try for comparing performance, later.
+# But I am not currently using it; the game currently iterates through EVERY element.
+# For larger games, use for optimisation.
 func load_player_actions_board()-> void:
 	for board_id in story.boards:
 		var board : Board = story.boards[board_id]
@@ -116,24 +106,11 @@ func load_player_actions_board()-> void:
 		+ " not found. Please, create board with custom Board ID: PLAYER_ACTIONS")
 
 
-
-#var saved_state = {
-#	'element_id': current_element_id,
-#	"has_dangling_dialogue": dangling_dialogue, # saves the global var
-#	"story_variables": current_story_variables,
-#	"room_path": current_room_path,
-#	"player_position": current_player_position,
-#	"player_looking_left": current_player_looking_left,
-
-#	"inventory": current_inventory,
-#}
-
 func check_load_start_game()-> void:
 	# If there is no command to Load, start a new game:
 	if not LoadGame.load_game:
 		start_new_game()
 		return
-	
 	# Else, load the data:
 	LoadGame.load_game = false # Reset the load_game var
 	load_saved_game()
@@ -286,7 +263,7 @@ func load_settings() -> void:
 func set_walk_speed(value : float = 18.0)-> void:
 	registered_settings.walk_speed = value
 	$UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/WalkSpeedRow/WalkSpeedSlider.value = value
-	animationPlayer.playback_speed = value * 1.0/10.0
+	$Player/AnimationPlayer.playback_speed = value * 1.0/10.0
 	player.speed = value * 14.0/10.0
 
 
@@ -325,9 +302,6 @@ func music_fade(towards : int) -> void:
 	var _temp = tween_music.interpolate_property (musicPlayer, "volume_db", start, end, 1.0)
 	var _temp2 = tween_music.start()
 
-#	if towards == OUT:
-#		musicPlayer.stop()
-
 
 func room_fade(towards : int) -> void:
 	var start : Color
@@ -342,7 +316,7 @@ func room_fade(towards : int) -> void:
 		_:
 			push_error("Invalid argument for room_fade function: " + str(towards))
 
-	var _temp = tween_room.interpolate_property(room_fader, "color", start, end, 1.0)
+	var _temp = tween_room.interpolate_property($UI/Fader, "color", start, end, 1.0)
 	var _temp2 = tween_room.start()
 
 
@@ -359,14 +333,12 @@ func load_room_from_path(room_path : String, player_position : Vector2)-> void:
 		yield(tween_room, "tween_completed")
 		current_room.queue_free()
 		yield(get_tree(), "idle_frame")
-	
-	# For some reason, I had a yield here.
-#	yield(get_tree(), "idle_frame")
+		
 	dress_up_room(next_room)
 	place_player(player_position)
 		
 	next_room.name = "Location"
-	get_tree().current_scene.add_child_below_node(UI, next_room)
+	get_tree().current_scene.add_child_below_node($UI, next_room)
 
 	room_fade(IN)
 	if musicPlayer.get_stream() != next_room.music:
@@ -401,9 +373,7 @@ func dress_up_room(room_node : Node2D) -> void:
 		
 		# We check if the object's var is in the story state:
 		if obj.state_variable in story_state:
-#			print("######## Variable " + obj.state_variable 
-#				+ " found with current value "+ str(story_state[obj.state_variable]))
-
+			# Then check if object is present (our convention: if its var == 1):
 			if story_state[obj.state_variable] == 1:
 				obj.visible = true
 				obj.monitorable = true
@@ -429,15 +399,15 @@ func show_cursor(yes : bool) -> void:
 # It doesn't check state nor sets the inventory_item_selected:
 func set_cursor(item):
 	if item is Item:
-		# This happens when clicking on inventory items:
+		# This should happen when clicking on inventory items:
 		cursorSprite.texture = item.texture
 		return
 	if item is ClickableExit:
-		# This happens when hovering over an Clickable Exit:
+		# This should happen when hovering over an Clickable Exit:
 		cursorSprite.texture = EXIT_CURSOR
 		return
 	if item is ClickableObject:
-		# This happens when hovering over a ClickableObject
+		# This should happen when hovering over a ClickableObject
 		# other than Clickable Exit:
 		cursorSprite.texture = HOVER_CURSOR
 		return
@@ -454,10 +424,7 @@ func set_game_state(new_state):
 		if new_state != DIALOGUE:
 			print("Ubruptly stopping dialogueTimer, due to game state changing to other than DIALOGUE.")
 			dialogueTimer.stop()
-	
-	State.game = new_state
-#	print("Game state just set to: " + state.get_game_state_name_from_enum(new_state))
-	
+		
 	match new_state:
 		EXPLORING:
 			disable_cursor_collisions(false)
@@ -480,23 +447,18 @@ func set_game_state(new_state):
 		DIALOGUE:
 			set_ui_state(IDLE)
 			disable_cursor_collisions()
-#			optionsUI.visible = true # Depends on sub-state WAITING_CHOICE
 			objectsContainer.visible = false
 			
 		_:
 			push_error("Attempt to assign invalid game state.")
 			return
+		
+	if State.game != new_state:
+		State.game = new_state
 
 
 func disable_cursor_collisions(yes: bool = true)->void:
 	$UI/MouseCursor/Cursor/MouseCursorArea2D/MouseCursorCollision.disabled = yes
-	# It used to be disable_objects_collisions:
-#	var clickable_collisions : Array = get_tree().get_nodes_in_group("collisions")
-#	for shape in clickable_collisions:
-#		if not shape is CollisionShape2D:
-#			push_error("Node in group 'collisions' is not of type CollisionShape2D.")
-#			continue
-#		shape.disabled = yes
 
 
 func set_ui_state(new_state):
@@ -525,7 +487,8 @@ func set_ui_state(new_state):
 			push_error("Attempt to assign invalid ui state.")
 			return
 	
-	State.ui = new_state
+	if State.ui != new_state:
+		State.ui = new_state
 
 
 func set_dialogue_state(new_state):
@@ -559,14 +522,11 @@ func set_dialogue_state(new_state):
 			push_error("Attempt to assign invalid dialogue state: " + str(new_state))
 			return
 
-	if new_state != State.dialogue:
-#		print("Dialogue state changed from " 
-#			+ state.get_dialogue_state_name_from_enum(state.dialogue) 
-#			+ " to " + state.get_dialogue_state_name_from_enum(new_state))
+	if State.dialogue != new_state:
 		State.dialogue = new_state
 
 
-# This function synchs the cursor and the inventory_item_selected
+# This function sets the cursor and the inventory_item_selected
 # or nulls both if item == null:
 func set_cursor_and_selected_item(item) -> void:
 	inventory_item_selected = item
@@ -574,9 +534,9 @@ func set_cursor_and_selected_item(item) -> void:
 
 
 func open_mouse_menu(true_false : bool) -> void:
-	mouseMenu.position = get_global_mouse_position()
-	# Add opening/closing animation...
-	mouseMenu.visible = true_false
+	var mouse_menu : Node2D = $UI/MouseMenu
+	mouse_menu.position = get_global_mouse_position()
+	mouse_menu.visible = true_false
 
 
 func erase_command_line():
@@ -589,7 +549,6 @@ func erase_command_line():
 
 func update_command_line():
 	# For later improvements: make "Walk to" as the default.
-	# Check when update_ and when erase_command_line are called.
 	objectLabel.text = ""
 	objectLabel.text +=       command_line.verb
 	objectLabel.text += " " + command_line.object_1
@@ -622,7 +581,6 @@ func orient_player_towards(position_of_interest: Vector2):
 
 
 func start_dialogue(element_id: String) -> void:
-#	print("Initializing dialogue handling for element title: " + dialogue_start_title)
 	set_game_state(DIALOGUE)
 	set_cursor_and_selected_item(null)
 	render_element(element_id)
@@ -630,17 +588,12 @@ func start_dialogue(element_id: String) -> void:
 
 func act(target_id : String) -> void:
 	current_target_id = target_id
-#	set_ui_state(IDLE)
-#	set_cursor_and_selected_item(null)
-#	if current_object_clicked == null:
-#		push_error("Function act: current_object_clicked is NULL.")
-#		return
 
 	if State.game == WALKING_TO_ACTION:
 		walk_player_to(current_object_clicked.approachPosition.global_position)
 		return
-	# This stops the player if walking, eg. to examine a character.
-	# As a convention, we now set to WALKING_TO_ACTION,
+	# The following stops the player if walking, eg. to examine a character.
+	# As a convention, we still set state to WALKING_TO_ACTION,
 	# although we stop the player on the spot.
 	# Function _on_Player_animation_finished checks the WALKING_TO_ACTION state
 	# and must get it right, regardless.
@@ -842,9 +795,7 @@ func get_speaker_node_by_name(component_objectName : String) -> Node:
 
 
 func render_title(text : String):
-	# Independent of setting states.
-	titleLabel.text = text
-	# Make visible?
+	$UI/Title/Label.text = text
 	dialogueTimer.wait_time = get_line_reading_time(text)
 	dialogueTimer.start()
 
@@ -860,7 +811,6 @@ func get_line_reading_time(text : String) -> float:
 
 
 func render_speech(speakers_nodes : Array, content: String) -> void:
-	# Independent from setting states:
 	var number_of_lines : int = 0
 	
 	for speaker in speakers_nodes:
@@ -869,10 +819,10 @@ func render_speech(speakers_nodes : Array, content: String) -> void:
 		yield(get_tree(), "idle_frame")
 		# The yielding is needed because Godot needs to draw the label with the current text,
 		# for at least 1 frame, to return data like get_line_count() etc.
-		# Assignment happens in every iteration, but oh well...
+		# Assignment happens in every iteration, but how many speakers are you gonna get anyway?
 		number_of_lines = speaker.bubble.characterLines.get_line_count()
 	
-		# Positioning the talkingBubble, depending on the position of its speaker.
+		# Positioning the talking bubble, depending on the position of its speaker.
 		speaker.bubble.global_position.x = clamp(speaker.global_position.x, MIN_X, MAX_X)
 		if speaker.global_position.x < MIN_X - 35:
 			speaker.bubble.characterLines.align = 0 # Aligning LEFT
@@ -923,23 +873,22 @@ func define_option_txt(option : Dictionary) -> String:
 
 func render_options() -> void:
 	if State.game != DIALOGUE:
-#		print("Render Options forcing Game State from " 
-#			+ state.get_game_state_name_from_enum(state.game) + " to DIALOGUE.")
 		set_game_state(DIALOGUE)
 	set_dialogue_state(RENDERING_OPTIONS)
-	# Dialogue State has been already set to RENDERING_OPTIONS.
+
 	var options : Array = story.get_current_options()
-	
+	# If the element has no valid outputs, end the dialogue:
 	if options.empty() or dialogue_end:
 		_end_dialogue()
 		return
 	
+	# If the element has only one valid output, follow it immediately:
 	if options.size() == 1:
 		var only_target_element_id : String = options[0].targetid
-		# Go straight to next element:
 		render_element(only_target_element_id)
 		return
 		
+	# If a "follow random" component exists, follow a random output:
 	if follow_random_output:
 		follow_random_output = false
 		var random_index : int = randi() % options.size()
@@ -952,13 +901,15 @@ func render_options() -> void:
 		var option_text : String = define_option_txt(option)
 		create_option_button(option_text, option.targetid)
 	
+	# More than MAX_NUMBER_VISIBLE_OPTIONS require arrow buttons, to scroll:
+	var option_arrows : VBoxContainer = $UI/MarginContainer/OptionsUI/OptionsArrows
 	number_of_visible_options = options.size()
 	if number_of_visible_options > MAX_NUMBER_VISIBLE_OPTIONS:
-		optionArrows.visible = true
-		optionArrowDn.disabled = false
+		option_arrows.visible = true
+		$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = false
 	else:
-		optionArrows.visible = false
-		optionArrowDn.disabled = true
+		option_arrows.visible = false
+		$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = true
 
 	set_dialogue_state(WAITING_CHOICE)
 
@@ -968,7 +919,7 @@ func create_option_button(option_txt, target_id):
 	option_button.text = option_txt
 	option_button.target_id = target_id
 	var _temp : int = option_button.connect("pressed", self, "_on_option_button_pressed", [target_id])
-	optionsContainer.add_child(option_button)
+	$UI/MarginContainer/OptionsUI/OptionsContainer.add_child(option_button)
 	option_buttons.append(option_button)
 
 
@@ -995,18 +946,14 @@ func classify_components(element : Element) -> Dictionary:
 	
 	# We get an array of all the attached components (Dictionaries):
 	var components : Array = element.components
-#	component.name = name
-#	component.attributes = attr
-
 	# Iterate through the element's attached components:
 	for component in components:
-		
 		if component.attributes.empty():
 			push_writer_error("No attributes found in component: " + component.name)
 			continue # go to the next component.
 		
 		# Finding the component's "type". 
-		# "Type" is a custom attribute the writer has assigned to components.
+		# "Type" is a custom attribute the Arcweave writer has assigned to components.
 		# The following array is to eventually check the component has only one type:
 		var component_types : Array = [] # It must have only one member eventually.
 		
@@ -1052,7 +999,7 @@ func classify_components(element : Element) -> Dictionary:
 
 		if component_types.size() > 1:
 			push_writer_error("More than 1 'type' attributes :" + str(component_types) + " in component: " + component.name)
-		# Unfortunately, after the error, we still have the problematic component classified in multiple types.
+		# Attention: after the error, we still have the problematic component classified in multiple types.
 		
 	return components_classified
 
@@ -1062,24 +1009,25 @@ func run_dialogue_commands(commands : Array) -> void:
 		var objectName : String = command.get_attribute_by_name("objectName").value.data.strip_edges()
 		match objectName:
 			"pause":
+				# This makes a pause AFTER the rendering of the current element.
 				print("Found PAUSE component.")
-				# This used to do a pause just BEFORE the current element's delivery.
-				# Now it is supposed to do one AFTER (before next element's delivery).
-				# Fix AW story, regarding the change from BEFORE to AFTER.
 				dialogue_pause = true
 			
 			"stop":
+				# This ends the dialogue after rendering current component.
 				dialogue_end = true
-#						print("A 'stop' component found. Dialogue to end after this element.")
-				#ends the dialogue after rendering
 			
 			"title":
+				# Renders current content as a title (instead of speech).
 				line_is_title = true
 				
 			"randomOut":
+				# Tells render_options to follow a random option.
 				follow_random_output = true
 				
 			"overlapNext":
+				# Instead of rendering content, it saves it, so that it appears
+				# with the next element's content.
 				overlap_current_line_with_next = true
 			
 			_:
@@ -1092,19 +1040,8 @@ func play_dialogue_animation(_animations : Array) -> void:
 
 
 func play_next_from_playlist() -> void:
-	
 	if current_playlist.size() == 0:
-		# Now that I've split the SFX and the music players,
-		# don't need this.
-#		var current_room : Node2D = get_node_or_null("Location")
-#		var room_music : AudioStreamOGGVorbis = current_room.music
-#		musicPlayer.set_stream(room_music)
-#		musicPlayer.play()
 		return
-	
-	# The existing room music:
-	# Actually, we should get_room_music() using the tree...
-#	var room_music : AudioStream = musicPlayer.get_stream()
 
 	for track in current_playlist:
 		var file_name : String = track.get_attribute_by_name("fileName").value.data
@@ -1119,7 +1056,6 @@ func play_next_from_playlist() -> void:
 		var _popped : Component = current_playlist.pop_front()
 		sfxPlayer.set_stream(audio_stream)
 		sfxPlayer.play()
-#		print("sfxPlayer Volume (dB): " + str(sfxPlayer.volume_db))
 
 
 func check_exit_for_logic(exit_node : ClickableExit) -> void:
@@ -1136,7 +1072,6 @@ func check_exit_for_logic(exit_node : ClickableExit) -> void:
 		just_exit_after_walk = true
 	
 	current_target_id = target_id
-#	set_cursor_and_selected_item(null) # Huh?
 	set_game_state(WALKING_TO_ACTION)
 	walk_player_to(exit_node.approachPosition.global_position)
 
@@ -1144,14 +1079,7 @@ func check_exit_for_logic(exit_node : ClickableExit) -> void:
 func _on_Player_animation_finished(_anim_name: String) -> void:
 	if State.game == EXPLORING:
 		return
-		#current_object_clicked = null
-		# Making this null causes problems; example scenario:
-			# 1. We are WALKING_TO_ACTION
-			# 2. We click on a ClickableObject.
-			# 3. This sets game state to EXPLORING
-			# 4. We come here and set the current object clicked to null.
-			# 5. We click the EXAMINE button
-			# 6. We get an error, trying to examine a null object.
+
 	if State.game == DIALOGUE:
 		push_error("GAME state leak: invalid DIALOGUE state" 
 			+ " after player walk animation finished.")
@@ -1159,13 +1087,10 @@ func _on_Player_animation_finished(_anim_name: String) -> void:
 		push_error("GAME state leak: invalid TRANSITIONING state " 
 			+ " after player walk animation finished.")
 
-	# Else, if game state is WALKING_TO_ACTION:
-#	print("Player Animation Finished: current state is "
-#		+ state.get_game_state_name_from_enum(state.game))
-
+	# Else, if game state is WALKING_TO_ACTION...
 	if current_object_clicked is ClickableExit:
 		if just_exit_after_walk:
-			# There is no logic, so just exit dammit.
+			# There is no logic, so just exit.
 			just_exit_after_walk = false
 			exit_room_from(current_object_clicked)
 			return
@@ -1178,7 +1103,6 @@ func _on_Player_animation_finished(_anim_name: String) -> void:
 
 
 func enable_mouse(yes : bool) -> void:
-#	mouse_cursor_visible = yes
 	if yes:
 		cursorSprite.texture = IDLE_CURSOR
 	else:
@@ -1187,25 +1111,21 @@ func enable_mouse(yes : bool) -> void:
 
 # This is for the dialogue option button (fix the nomenclature at some point):
 func _on_option_button_pressed(target_id):
-	for i in optionsContainer.get_children():
+	for i in $UI/MarginContainer/OptionsUI/OptionsContainer.get_children():
 		i.queue_free()
-	optionArrowDn.disabled = true
-	optionArrowUp.disabled = true
+	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = true
+	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp.disabled = true
 	number_of_visible_options = 0
 	option_buttons.clear()
 	render_element(target_id)
 
 
 func _on_ButtonMouth_mouse_entered() -> void:
-#	if mouseButtonMouth.disabled:
-#		return
 	command_line.verb = "Talk to"
 	update_command_line()
 
 
 func _on_ButtonMouth_mouse_exited() -> void:
-#	if mouseButtonMouth.disabled:
-#		return
 	command_line.verb = "Walk to"
 	update_command_line()
 
@@ -1221,10 +1141,6 @@ func _on_ButtonEye_mouse_exited() -> void:
 
 
 func _on_ButtonHand_mouse_entered() -> void:
-#	if mouseButtonHand.disabled:
-#		return
-#	if not current_object_clicked is ClickableItem:
-#		push_error("ButtonHand appeared for object that is not a ClickableItem.")
 	if current_object_clicked is ClickableItem:
 		if current_object_clicked.portable:
 			command_line.verb = "Take"
@@ -1236,9 +1152,6 @@ func _on_ButtonHand_mouse_entered() -> void:
 
 
 func _on_ButtonHand_mouse_exited() -> void:
-	if mouseButtonHand.disabled:
-		return
-		
 	command_line.verb = "Walk to"
 	update_command_line()
 
@@ -1252,24 +1165,22 @@ func _on_ButtonMouth_pressed() -> void:
 
 
 func _on_ButtonEye_pressed() -> void:
-#	var target_id : String = combine_verb_object(EXAMINE, current_object_clicked)
 	var target_id : String = get_id_from_verb_object_reply("examine", current_object_clicked.reply_id)
 	
 	set_ui_state(IDLE)
 	set_cursor_and_selected_item(null)
 	set_game_state(EXPLORING) # It probably already is in EXPLORING.
 	
-	# When examining items, you first approach them.
-	# When examining characters, you comment from where you are.
+	# When examining items, player first approaches them and then replies.
+	# When examining characters, player replies from original position.
 	if current_object_clicked is ClickableItem:
-		set_game_state(WALKING_TO_ACTION)
+		set_game_state(WALKING_TO_ACTION) # This gets checked in act()
 		set_cursor_and_selected_item(null)
 	act(target_id)
 
 
 func _on_ButtonHand_pressed() -> void:
 	var target_id : String = get_id_from_verb_object_reply("handle", current_object_clicked.reply_id)
-
 	set_game_state(WALKING_TO_ACTION)
 	set_ui_state(IDLE)
 	set_cursor_and_selected_item(null)
@@ -1285,7 +1196,6 @@ func _on_ClickableObject_clicked(node_clicked : ClickableObject) -> void:
 	
 	# If WALKING_TO_ACTION, we forget the previous intent:
 	if State.game == WALKING_TO_ACTION:
-		# and walk player to their current position?
 		set_game_state(EXPLORING)
 	
 	current_object_clicked = node_clicked
@@ -1294,22 +1204,15 @@ func _on_ClickableObject_clicked(node_clicked : ClickableObject) -> void:
 		
 		IDLE:
 			if current_object_clicked is ClickableExit:
-				# The function check exit and go runs the exit's AW dialogue and (if appropriate)
-				# lets the player exit.
 				check_exit_for_logic(current_object_clicked)
 				return
-				
 		
 		MENU_OPEN:
-			# For when we add menu animation: we first switch to IDLE, to play closing animation: 
 			set_ui_state(IDLE)
 			set_cursor_and_selected_item(null)
 			
 			if current_object_clicked is ClickableExit:
 				check_exit_for_logic(current_object_clicked)
-			
-			# Then, we reopen menu, playing opening animation (see after match body)...
-			
 		
 		HOLDING_ITEM:
 			if inventory_item_selected == null:
@@ -1318,25 +1221,19 @@ func _on_ClickableObject_clicked(node_clicked : ClickableObject) -> void:
 					+ "but inventory_item_selected is NULL.")
 				return
 			
-#			if current_object_clicked is ClickableExit:
-#				set_ui_state(IDLE)
-#				return
-			
 			if current_object_clicked is ClickableObject:
-#				print("Inventory Item Selected is " + str(inventory_item_selected))
-#				print("Current Object Clicked is " + str(current_object_clicked))
 				var target_id = get_id_from_objects_replies(inventory_item_selected.reply_id, current_object_clicked.reply_id)
 				set_game_state(WALKING_TO_ACTION)
 				set_ui_state(IDLE)
 				set_cursor_and_selected_item(null)
 				act(target_id)
-#				set_ui_state(IDLE)
 				return
 	
 			push_error("Current object clicked not of known type.")
 			set_cursor_and_selected_item(null)
 			set_ui_state(IDLE)
 			return
+		
 		_:
 			push_error("Upon clicking ClickableObject: UI in invalid state.")
 			set_cursor_and_selected_item(null)
@@ -1345,7 +1242,6 @@ func _on_ClickableObject_clicked(node_clicked : ClickableObject) -> void:
 	
 	set_ui_state(MENU_OPEN)
 	set_cursor_and_selected_item(null)
-#	set_game_state(EXPLORING) # This already done near beginning of this function.
 
 
 func _on_DialogueTimer_timeout() -> void:
@@ -1394,7 +1290,7 @@ func _end_dialogue():
 func reset_dialogue_bubbles() -> void:
 	var speakerBubbles : Array = get_tree().get_nodes_in_group("allBubbles")
 	
-	titleLabel.text = ""
+	$UI/Title/Label.text = ""
 	
 	for sb in speakerBubbles:
 		sb.global_position = Vector2.ZERO # Getting it out of the screen
@@ -1434,8 +1330,6 @@ func check_contains_1(my_array : Array)-> bool:
 		return false
 
 	if my_array.size() == 0:
-#		print("No element found for specific action or cutScene. "
-#			+ "May use 'generic' substitution if applicable.")
 		return false
 		
 	return true
@@ -1445,7 +1339,8 @@ func get_id_from_cut_scene(cut_scene_name: String) -> String:
 	var compatible_elements : Array = []
 	var element_counter : int = 0 # Just stats.
 	
-#	for element_id in player_actions_aw_board.elements: # For optimisation.
+	# Use next commented line to optimise the iteration only to the board of player actions:
+#	for element_id in player_actions_aw_board.elements:
 	for element_id in story.elements:
 		element_counter += 1
 		var element : Element = story.elements[element_id]
@@ -1634,7 +1529,7 @@ func get_id_from_objects_replies(obj_reply_1 : String, obj_reply_2 : String) -> 
 
 
 func _on_inventory_container_mouse_in_slot(item) -> void:
-		
+	
 	# We don't want anything to happen while TRANSITIONING or DIALOGUE:
 	if State.game == TRANSITIONING or State.game == DIALOGUE:
 		return
@@ -1717,15 +1612,9 @@ func _on_inventory_container_item_selected(item : Item) -> void:
 			
 			set_ui_state(IDLE)
 			set_cursor_and_selected_item(null)
-#			print("_on_inventory_container_item_selected while holding item")
 			set_game_state(EXPLORING) # It probably already is in EXPLORING.
 			act(target_id)
 			
-#			says([player], "I can't use the " + inventory_item_selected.object_name + " with the " + item.object_name + ".")
-#			set_ui_state(IDLE)
-#			set_cursor_and_selected_item(null)
-#			# Remember: inventory_item_selected gets nulled from set_ui_state(IDLE).
-
 			objectLabel.text = item.object_name
 
 
@@ -1752,9 +1641,6 @@ func _on_inventory_container_item_examined(item)-> void:
 			set_game_state(EXPLORING) # It probably already is in EXPLORING.
 			act(target_id)
 			
-			
-			
-			
 		
 		HOLDING_ITEM:
 			if inventory_item_selected == null:
@@ -1773,63 +1659,46 @@ func _on_inventory_container_item_examined(item)-> void:
 			
 			set_ui_state(IDLE)
 			set_cursor_and_selected_item(null)
-#			print("_on_inventory_container_item_selected while holding item")
 			set_game_state(EXPLORING) # It probably already is in EXPLORING.
 			act(target_id)
 			
-#			says([player], "I can't use the " + inventory_item_selected.object_name + " with the " + item.object_name + ".")
-#			set_ui_state(IDLE)
-#			set_cursor_and_selected_item(null)
-#			# Remember: inventory_item_selected gets nulled from set_ui_state(IDLE).
-
 			objectLabel.text = item.object_name
 
-
-
-func _on_object_mouse_in(_aNode : ClickableObject):
-	pass
 
 func set_cursor_hovering_over(aNode):
 	set_cursor(aNode)
 	current_object_hovered = aNode # This isn't currently used somewhere.
 
 
-func _on_object_mouse_exited():
-	pass
-
 
 func _on_OptionArrowButtonUp_pressed() -> void:
-	optionArrowDn.disabled = false
+	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = false
 	for i in range(option_buttons.size(), 0, -1):
 		if not option_buttons[i - 1].visible:
 			option_buttons[i - 1].visible = true
 			number_of_visible_options += 1
 			if number_of_visible_options == option_buttons.size():
-				optionArrowUp.disabled = true
+				$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp.disabled = true
 			break
 
 
 func _on_OptionArrowButtonDn_pressed() -> void:
-	optionArrowUp.disabled = false
+	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp.disabled = false
 	for ob in option_buttons:
 		if ob.visible:
 			ob.visible = false
 			number_of_visible_options -= 1
 			if number_of_visible_options <= MAX_NUMBER_VISIBLE_OPTIONS:
-				optionArrowDn.disabled = true
+				$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = true
 			break
 
 
 func _on_MusicSlider_value_changed(value: float) -> void:
 	set_volumes_from_linear(value, registered_settings.sfx_volume)
-#	print("Slider Value: " + str(value))
-#	print("dB: " + str(linear2db(value)))
 
 
 func _on_SFXSlider_value_changed(value: float) -> void:
 	set_volumes_from_linear(registered_settings.music_volume, value)
-#	print("Slider Value: " + str(value))
-#	print("dB: " + str(linear2db(value)))
 
 
 func _on_DialogueSpeedSlider_value_changed(value: float) -> void:
@@ -1918,7 +1787,3 @@ func _on_MouseCursorArea2D_area_exited(_area: Area2D) -> void:
 		IDLE:
 			erase_command_line()
 			set_cursor_hovering_over(null)
-
-
-#After DIALOGUE finishes, must check if cursor Area2D overlaps any other Area2D.
-#This determines if cursor changes.

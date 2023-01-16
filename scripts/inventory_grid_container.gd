@@ -1,5 +1,8 @@
 extends HBoxContainer
 
+# This inventory system is stol-- em... BORROWED from
+# a YouTube tutorial by HeartBeast.
+
 const Inventory = preload("res://resources/Inventory.tres")
 const NewSlot = preload("res://scenes_inventory/InventorySlot.tscn")
 
@@ -38,7 +41,6 @@ func update_inventory_slot(item_index):
 	var inventorySlotDisplay = get_child(item_index)
 	var item = Inventory.items[item_index]
 	inventorySlotDisplay.display_item(item)
-#	print("Updated inventory slot no." + str(item_index + 1))
 
 
 func _on_slot_item_examined(item):
@@ -50,8 +52,6 @@ func _on_slot_item_selected(item):
 	# The container receives the signal from the slot and emits its own to Main:
 	emit_signal("item_selected", item)
 
-#	for item_index in indexes:
-#		update_inventory_slot(item_index)
 
 func _on_slot_mouse_in_slot(item):
 	emit_signal("mouse_in", item)
