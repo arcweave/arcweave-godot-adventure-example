@@ -332,10 +332,6 @@ var data = {
 				"3156841a-77f5-4125-b5b5-d1db426c4fbe"
 			],
 			"branches": [],
-			"comments": [
-				"ffc9fec0-2e30-4163-ab3d-cd5a2eb98bbb",
-				"eae458d2-9a6c-427e-a47a-bff43c9c4577"
-			],
 			"elements": [
 				"b214aa0e-e0e3-4a3d-b048-2d5424901713",
 				"6ca31259-b57b-4f89-92e2-87512c43b68f",
@@ -541,9 +537,6 @@ var data = {
 				"8f8025b8-4885-4779-878c-f9984298ffab"
 			],
 			"branches": [],
-			"comments": [
-				"22e25632-8794-4974-b909-c213aa290224"
-			],
 			"elements": [
 				"c8abca6a-04a8-47c3-aaa6-207d7b1d505c",
 				"8fd94d1f-db99-4ac9-a054-a4d057c9fe13",
@@ -1088,9 +1081,6 @@ var data = {
 				"b84756cb-7bd0-48da-9f96-abc1844f2322"
 			],
 			"branches": [
-				"84598b75-340f-433e-96c8-1aa0e7da2d7f",
-				"fdf6dbef-9bd1-41b3-b52b-5202dccce83a",
-				"5e082934-d4ab-4f55-b9c7-93e74ab25fd2",
 				"17208a41-6648-4281-a9c1-db4c4e502d17",
 				"bba6058e-0d98-4ef2-86e4-9a92c3776307",
 				"94334159-ca11-42dc-82ef-48980e34837d",
@@ -1235,12 +1225,6 @@ var data = {
 				"cc480339-490c-48be-a53b-da420729a9e2",
 				"134909e0-def8-4734-a223-ba1f9894abe9",
 				"c70fa773-e274-461b-8ec2-7c4f2c30d17d",
-				"c9694e4f-22d2-4bba-b986-83935ab7bd17",
-				"ff7cb44e-0277-4f8f-8863-65f00758851f",
-				"f49d9f66-9a53-40d2-b79c-4579da0a30c6",
-				"16a19535-9987-4f22-88f7-b89ce9d4053b",
-				"1d9fdbd3-3db9-4d3d-82b4-39b407a93fc8",
-				"85e67c74-704f-4725-a0bd-61df7ac62c3e",
 				"fc7c264c-476d-472d-8649-41bed055e7a2",
 				"0d46a60c-7767-4652-9293-a303be0a4899",
 				"cf032d1e-d535-4f0f-8aa4-d94bcd9315bc",
@@ -1256,7 +1240,10 @@ var data = {
 				"552c8e1b-7599-4c5d-80b6-9245d266b798",
 				"070057a6-15c0-4785-8449-66689bd1ef29",
 				"149004ac-6e05-4491-a8a8-bc40274ba29e",
-				"9eab4517-7f4b-47eb-a83d-21ac0f9fd1a8"
+				"9eab4517-7f4b-47eb-a83d-21ac0f9fd1a8",
+				"baedf98d-7d7f-48f8-8e7e-3b71bb43736f",
+				"72a38b01-421e-48a0-9dfa-36801fb370f9",
+				"fe17a969-0563-4cae-9e63-e8a9e05329fd"
 			]
 		}
 	},
@@ -5387,7 +5374,7 @@ var data = {
 			"title": "handle Amstrad 6128 ",
 			"content": null,
 			"outputs": [
-				"f49d9f66-9a53-40d2-b79c-4579da0a30c6"
+				"baedf98d-7d7f-48f8-8e7e-3b71bb43736f"
 			],
 			"autoHeight": true,
 			"components": [
@@ -7171,7 +7158,7 @@ var data = {
 			"title": "handle games magazines ",
 			"content": null,
 			"outputs": [
-				"c9694e4f-22d2-4bba-b986-83935ab7bd17"
+				"72a38b01-421e-48a0-9dfa-36801fb370f9"
 			],
 			"autoHeight": true,
 			"components": [
@@ -7697,7 +7684,7 @@ var data = {
 			"title": "gameScripts.handle",
 			"content": null,
 			"outputs": [
-				"ff7cb44e-0277-4f8f-8863-65f00758851f"
+				"fe17a969-0563-4cae-9e63-e8a9e05329fd"
 			],
 			"autoHeight": true,
 			"components": [
@@ -8547,15 +8534,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"16a19535-9987-4f22-88f7-b89ce9d4053b": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "5c7b8f9b-ac9d-4137-a7f1-5bcd80480c42",
-			"targetid": "e61a9dba-b86d-4a9c-bde0-6fe51033da85",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
-		},
 		"170b2e6c-dea5-40ca-9519-87c0177cb15c": {
 			"type": "Flowchart",
 			"label": null,
@@ -8629,15 +8607,6 @@ var data = {
 			"targetid": "7a432781-639c-41fa-9bec-7973aeb5e418",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"1d9fdbd3-3db9-4d3d-82b4-39b407a93fc8": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "4a01ded9-ba9a-4a26-a72c-3dfe78ce5bfa",
-			"targetid": "2a7a5b4e-c9c5-4609-98aa-7fb6d4df1d00",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
 		},
 		"1e403494-1ef6-4a1d-b867-c56097a262e6": {
 			"type": "Flowchart",
@@ -10218,6 +10187,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"72a38b01-421e-48a0-9dfa-36801fb370f9": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "e6586366-8957-45f9-81af-76fbc6eef241",
+			"targetid": "2a7a5b4e-c9c5-4609-98aa-7fb6d4df1d00",
+			"sourceType": "elements",
+			"targetType": "jumpers"
+		},
 		"739d1701-6373-40ee-951c-031b62be967d": {
 			"type": "Bezier",
 			"label": null,
@@ -10463,15 +10441,6 @@ var data = {
 			"targetid": "e133c6cb-b45f-482b-ad87-01d64c6527c4",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"85e67c74-704f-4725-a0bd-61df7ac62c3e": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "e7dfadb5-54cf-446b-9783-3909d5b3dd76",
-			"targetid": "299bbb69-3bf5-45fb-bd9c-f90f12d90356",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
 		},
 		"86186988-53c5-4e74-a45a-842fec267184": {
 			"type": "Flowchart",
@@ -11531,6 +11500,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"baedf98d-7d7f-48f8-8e7e-3b71bb43736f": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "a410d939-32cd-494c-9976-076c55e9d14f",
+			"targetid": "e61a9dba-b86d-4a9c-bde0-6fe51033da85",
+			"sourceType": "elements",
+			"targetType": "jumpers"
+		},
 		"baff4be6-59a4-4675-b3e2-000b1a05ff64": {
 			"type": "Flowchart",
 			"label": null,
@@ -11763,15 +11741,6 @@ var data = {
 			"targetid": "a8ba89d6-bf23-4626-b26e-41824bf6e4cf",
 			"sourceType": "conditions",
 			"targetType": "elements"
-		},
-		"c9694e4f-22d2-4bba-b986-83935ab7bd17": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "e6586366-8957-45f9-81af-76fbc6eef241",
-			"targetid": "5e082934-d4ab-4f55-b9c7-93e74ab25fd2",
-			"sourceType": "elements",
-			"targetType": "branches"
 		},
 		"c9dd27d4-6006-48f5-8f60-5ea4cba1e800": {
 			"type": "Bezier",
@@ -12594,15 +12563,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "branches"
 		},
-		"f49d9f66-9a53-40d2-b79c-4579da0a30c6": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "a410d939-32cd-494c-9976-076c55e9d14f",
-			"targetid": "84598b75-340f-433e-96c8-1aa0e7da2d7f",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
 		"f4eb8352-73c2-4bb7-abe1-72d4b047f59e": {
 			"type": "Flowchart",
 			"label": null,
@@ -12768,6 +12728,15 @@ var data = {
 			"targetFace": "top",
 			"targetType": "branches"
 		},
+		"fe17a969-0563-4cae-9e63-e8a9e05329fd": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "f971cb1e-6df5-4ebc-990f-984d589ab117",
+			"targetid": "299bbb69-3bf5-45fb-bd9c-f90f12d90356",
+			"sourceType": "elements",
+			"targetType": "jumpers"
+		},
 		"fe289e83-b745-435c-90d8-8186fd4789c1": {
 			"type": "Flowchart",
 			"label": null,
@@ -12786,15 +12755,6 @@ var data = {
 			"sourceFace": "right",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"ff7cb44e-0277-4f8f-8863-65f00758851f": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "f971cb1e-6df5-4ebc-990f-984d589ab117",
-			"targetid": "fdf6dbef-9bd1-41b3-b52b-5202dccce83a",
-			"sourceType": "elements",
-			"targetType": "branches"
 		}
 	},
 	"branches": {
@@ -12850,12 +12810,6 @@ var data = {
 				"ifCondition": "bd97a1a7-62b8-4046-b97e-8d21e0d53041"
 			}
 		},
-		"5e082934-d4ab-4f55-b9c7-93e74ab25fd2": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "4a01ded9-ba9a-4a26-a72c-3dfe78ce5bfa"
-			}
-		},
 		"5e84430e-58fd-42a3-8635-5c9a1c24f225": {
 			"theme": "default",
 			"conditions": {
@@ -12884,12 +12838,6 @@ var data = {
 			"theme": "default",
 			"conditions": {
 				"ifCondition": "70124714-fb0d-476f-b565-81a342c03803"
-			}
-		},
-		"84598b75-340f-433e-96c8-1aa0e7da2d7f": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "5c7b8f9b-ac9d-4137-a7f1-5bcd80480c42"
 			}
 		},
 		"84bc0cf3-1b8e-4a78-a18f-72b174c9b8f7": {
@@ -13062,12 +13010,6 @@ var data = {
 			"theme": "default",
 			"conditions": {
 				"ifCondition": "9c3095c8-eee8-4cf2-8681-960a36a320e4"
-			}
-		},
-		"fdf6dbef-9bd1-41b3-b52b-5202dccce83a": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "e7dfadb5-54cf-446b-9783-3909d5b3dd76"
 			}
 		}
 	},
@@ -14078,10 +14020,6 @@ var data = {
 			"output": "a9c7b73a-590c-4015-ba43-740d84748a61",
 			"script": "(state.i_magazines == 1)"
 		},
-		"4a01ded9-ba9a-4a26-a72c-3dfe78ce5bfa": {
-			"output": "1d9fdbd3-3db9-4d3d-82b4-39b407a93fc8",
-			"script": "(state.i_magazines == 1)"
-		},
 		"50bee757-3904-4fbd-ad14-48297e9b01de": {
 			"output": "739d1701-6373-40ee-951c-031b62be967d",
 			"script": null
@@ -14097,10 +14035,6 @@ var data = {
 		"5bafa565-4858-4be4-b31c-630c037fdfeb": {
 			"output": "6db228b3-826e-4c53-a52b-08016632bf15",
 			"script": "(state.i_gameScripts == 1)"
-		},
-		"5c7b8f9b-ac9d-4137-a7f1-5bcd80480c42": {
-			"output": "16a19535-9987-4f22-88f7-b89ce9d4053b",
-			"script": "(state.i_amstrad == 1)"
 		},
 		"5cab3096-86c0-412f-b4c1-ae0aaed31687": {
 			"output": "cea76fc5-a75b-40e9-b696-a01ba5609629",
@@ -14242,10 +14176,6 @@ var data = {
 			"output": "604f24e8-22ef-4827-bdea-09965b0f6010",
 			"script": "(state.t_key == 0)"
 		},
-		"e7dfadb5-54cf-446b-9783-3909d5b3dd76": {
-			"output": "85e67c74-704f-4725-a0bd-61df7ac62c3e",
-			"script": "(state.i_gameScripts == 1)"
-		},
 		"e8b832cf-64d3-4589-a83b-10c370fd4679": {
 			"output": "950ce8ad-40f4-4728-9e56-7ea27a5f9adc",
 			"script": "(state.i_key == 2)"
@@ -14259,7 +14189,7 @@ var data = {
 			"script": "(state.i_gameScripts == 2)"
 		}
 	},
-	"name": "Restored - Regrets Jan2023",
+	"name": "Regrets",
 	"cover": {
 		"file": "1652863140_6284b0a41ad71.png",
 		"type": "cover-image"
@@ -14354,7 +14284,7 @@ func element_17_content(state):
 
 func element_18_content(state):
 	var content_result: String = ""
-	content_result += "[b]INTRODUCTION[/b]\nWelcome to this example project, which demonstrates Arcweave's integration with the [url=https://godotengine.org/en]Godot game engine[/url].\n "
+	content_result += "[b]INTRODUCTION[/b]\nWelcome to this example project, which demonstrates Arcweave's integration with the [url=https://godotengine.org]Godot game engine[/url].\n "
 	return content_result.trim_suffix(" ")
 
 func element_19_content(state):
@@ -14462,7 +14392,7 @@ func element_38_content(state):
 
 func element_39_content(state):
 	var content_result: String = ""
-	content_result += "This project uses Arcweave's plugin for Godot, which you can find in the [url=https://godotengine.org/asset-library/]Godot Asset Library[/url].\n "
+	content_result += "This project uses Arcweave's plugin for Godot, which you can find in the [url=https://godotengine.org/asset-library/asset/1601]Godot Asset Library[/url].\n "
 	return content_result.trim_suffix(" ")
 
 func element_41_content(state):
@@ -15608,7 +15538,7 @@ func element_279_content(state):
 
 func element_280_content(state):
 	var content_result: String = ""
-	content_result += "You can find the Godot project files in [b][this repo](LINK HERE)[/b]. Just download and import them to Godot.\n "
+	content_result += "You can find the Godot project files in [url=https://github.com/Arcweave/arcweave-godot-adventure-example]this repo[/url]. Just download and import them to Godot.\n "
 	return content_result.trim_suffix(" ")
 
 func element_281_content(state):
