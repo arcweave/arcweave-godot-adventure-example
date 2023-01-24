@@ -866,7 +866,7 @@ func define_option_txt(option : Dictionary) -> String:
 	# If no label or title exists, we gotta throw a writer error,
 	# while the game renders "PLACEHOLDER TEXT" as option text.
 	if final_option_text == "PLACEHOLDER TEXT":
-		push_writer_error("PLACEHOLDER TEXT used for option. Consider adding labels along the way or a title to target element with ID: " + option.targetId)
+		push_writer_error("PLACEHOLDER TEXT used for option. Consider adding labels along the way or a title to target element with ID: " + option.targetid)
 	
 	return final_option_text
 
