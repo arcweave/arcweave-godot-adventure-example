@@ -4,6 +4,8 @@
 
 As a first example of integration between Arcweave and a game engine, we created *Regrets*, a short point and click adventure game using [Godot](https://godotengine.org/).
 
+You can play the game on your browser, [here](https://arcweave.itch.io/regrets).
+
 We wrote the game's story and logic using Arcweave and used our own [Arcweave plugin for Godot](https://github.com/Arcweave/arcweave-godot-plugin) to pass the data to the game engine.
 
 The Data of the game is already included in this repo. If you want to preview, edit or change the **Arcweave** project, you can import the backup file of this project [arcweave_project/regrets.arcw](arcweave_project/regrets.arcw), using our **Import Project** feature in your Arcweave [**Project List**](https://arcweave.com/app/list).
