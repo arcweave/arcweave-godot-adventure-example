@@ -185,6 +185,7 @@ func _unhandled_input(event) -> void:
 					return
 					
 				# Else (if UI is already IDLE), we walk to mouse position:
+				print("Walking player to global mouse position: " + str(get_global_mouse_position()))
 				walk_player_to(get_global_mouse_position())
 				
 			if event.is_action_pressed("ui_skip"):
@@ -461,7 +462,7 @@ func disable_cursor_collisions(yes: bool = true)->void:
 	$UI/MouseCursor/Cursor/MouseCursorArea2D/MouseCursorCollision.disabled = yes
 
 
-func set_ui_state(new_state):
+func set_ui_state(new_state : int, inventory_item : Item = null):
 	
 	match new_state:
 		
@@ -469,7 +470,7 @@ func set_ui_state(new_state):
 			open_mouse_menu(false)
 			if not State.game == WALKING_TO_ACTION:
 				erase_command_line()
-#			current_object_clicked = null
+
 		
 		MENU_OPEN:
 			if current_object_clicked == null and inventory_item_selected == null:
@@ -481,12 +482,12 @@ func set_ui_state(new_state):
 		
 		HOLDING_ITEM:
 			open_mouse_menu(false)
-#			current_object_clicked = null
 		
 		_:
 			push_error("Attempt to assign invalid ui state.")
 			return
 	
+	set_cursor_and_selected_item(inventory_item) # null or item
 	if State.ui != new_state:
 		State.ui = new_state
 
@@ -1585,11 +1586,10 @@ func _on_inventory_container_item_selected(item : Item) -> void:
 		IDLE, MENU_OPEN:
 			if inventory_item_selected is Item:
 				push_error("Upon clicking inventory item: UI not in HOLDING_ITEM state, "
-					+ " but inventory_item_selected not NULL.")
+					+ " but inventory_item_selected is: " + str(inventory_item_selected.object_name))
 				return
 			
-			set_ui_state(HOLDING_ITEM)
-			set_cursor_and_selected_item(item)
+			set_ui_state(HOLDING_ITEM, item)
 			command_line.verb = "Use"
 			command_line.object_1 = item.object_name
 			command_line.preposition = "with"
