@@ -329,10 +329,14 @@ var data = {
 				"72879444-d9d4-400a-b1f8-f30ee7717109"
 			],
 			"jumpers": [
-				"3156841a-77f5-4125-b5b5-d1db426c4fbe"
+				"3156841a-77f5-4125-b5b5-d1db426c4fbe",
+				"ab17aa3f-6633-495f-a068-17b77c99dfdb"
 			],
-			"branches": [],
+			"branches": [
+				"ab45f74e-37e8-4388-8dca-3738f2a7ae9b"
+			],
 			"elements": [
+				"3d360510-987d-47aa-9198-c0ddc34c75b2",
 				"b214aa0e-e0e3-4a3d-b048-2d5424901713",
 				"6ca31259-b57b-4f89-92e2-87512c43b68f",
 				"89a0a6ba-43f1-4a9c-8352-9c11eb04d367",
@@ -374,7 +378,12 @@ var data = {
 				"9bb14fd9-5c4a-4ff4-aba4-7fdcaddd0bc7",
 				"502464cc-2a81-473a-8d6f-a68e37dc84b1",
 				"71784f2d-83c6-4d54-b2ca-27f49b20823c",
-				"bdbe70e8-d996-47e6-b66a-6da794eea11d"
+				"bdbe70e8-d996-47e6-b66a-6da794eea11d",
+				"6bfd346f-57e6-4edc-9258-f42c7f687cb9",
+				"f90d9093-5edb-4ec1-9287-9d089573007f",
+				"8431d647-a596-4a52-b603-0d3da53c2043",
+				"83f270e6-a8ac-495d-b068-c606ae9e73a0",
+				"0b55cd81-4176-4454-9fda-9f8f45bf65fd"
 			]
 		},
 		"2ad15ff6-f2ba-4f1d-9d9d-68938c683d7e": {
@@ -576,7 +585,6 @@ var data = {
 			"name": "Andreas DIAL 1",
 			"notes": [
 				"c63dca7c-4f09-4fd1-990c-746dbf6fb970",
-				"76247e3c-b8ec-42b1-b563-7bc0eeb1850c",
 				"41b28eb9-26a0-4cd0-b6c6-c1922947a3d0",
 				"8a94fa2d-44f9-47df-8f89-f8de04a084ea",
 				"71d64596-2185-4bef-8ed4-636239e0bfba",
@@ -600,17 +608,18 @@ var data = {
 				"f5d57de9-79c5-469f-be16-9327e669bec2"
 			],
 			"branches": [
-				"e5b6d441-02a3-441a-99a1-ee70b3a1b4b9",
-				"c5554514-8dd1-4ef7-b4c3-b4f03aed6ef6",
-				"bd91e2e8-349c-49be-be72-c66c0af2b91b",
-				"f645865d-ffae-4738-a1ac-dc753f07b26b",
-				"6aab0958-7559-4f60-b19b-523f093614fd",
+				"ec2d31bb-8863-416c-9514-651fe4bb8b83",
+				"a9bc106d-2f72-455b-9595-314185648ca6",
 				"cc73ec95-4bb3-47c6-952a-da921afebeb8",
 				"aba686de-0609-406b-9efe-4c58ff989270",
 				"796625ef-5451-4f2f-9258-bd00109f5ce6",
-				"65a09950-53b9-4501-b8ae-31f857991ab1",
-				"c6fb74f0-36b2-4b1f-b35f-f31bae43c1e8",
-				"a06dee3f-ccf1-4134-85ad-17a174af906f"
+				"2dbbbc0a-a09f-434a-b9da-1fe642626fd3",
+				"83f584b1-591a-41db-bf37-aebf3ca941d4",
+				"6ee39048-6968-4f54-91fb-7313b9000546",
+				"6d4bc6d7-e256-4a1c-afd9-bc18fca3b33f",
+				"1db7b6c8-6c4b-402b-ad4c-9edc9be43923",
+				"f9a23cb5-d228-4e05-853c-5a883b078be7",
+				"d0a0bac9-f2da-47d3-be90-52bc3019c836"
 			],
 			"elements": [
 				"2327014e-7de8-4ada-a6ed-f3839f4bca3a",
@@ -657,7 +666,6 @@ var data = {
 				"fd90fd1a-c6c8-4f96-97ae-a49eacd77f81"
 			],
 			"connections": [
-				"782e3520-f242-4683-9a74-3c6354dff40b",
 				"68f17a83-e794-4525-b10d-31dbb55b0ce5",
 				"35c3c8af-60f6-4d70-981c-1661c46c573b",
 				"73cb697d-616d-4d23-85a0-080276b19225",
@@ -669,12 +677,7 @@ var data = {
 				"6ae495c4-e19b-4c7c-89f7-fdef1600428c",
 				"1cb7a382-cd9c-42b0-a7e8-b9cfc675ce75",
 				"341992d5-81ba-4b14-b1d7-303fd66a9551",
-				"ad13b8bf-81ab-435f-b85b-b7a5b231eb6e",
-				"7dd95531-05c5-4237-b1a0-b6556c0e28e0",
 				"339a4baf-1583-47ea-90ab-0b5252fad229",
-				"914520c8-dfb2-40a2-976e-8e57dca37ea4",
-				"6cfb7893-6092-4651-b326-a5e80cdc6d71",
-				"b23ff728-cfa0-4326-8ec0-2410d3ac7d5c",
 				"ed20e11f-2e5e-493c-993e-2f1e87d9958d",
 				"375899e6-4b9d-493d-b5ca-4f136605dbc1",
 				"dd655422-6075-4493-9680-1d54d0e3e653",
@@ -682,8 +685,6 @@ var data = {
 				"9f3cc392-fa7a-4316-a444-501ae343eedf",
 				"38153743-1bab-4354-8586-5b3ddcc851c1",
 				"9ca39cc2-4e51-428b-a8be-7a7496a63399",
-				"cd723ca6-9735-469a-99ea-4cb14519bce0",
-				"a1c54841-274a-4b6c-94ae-9df42ca14c37",
 				"61eeb89c-af77-4507-be96-d3253b07c1ec",
 				"dc655eb8-0fb8-4e1e-96d0-4f56fe984793",
 				"024d7d64-521f-43b5-a9dc-8cd198007d9b",
@@ -698,8 +699,6 @@ var data = {
 				"4d5eb45a-0791-482c-9999-7758d74b968f",
 				"41f2fa13-0dc7-4aeb-a620-036d960f912a",
 				"d5d302b2-ffe8-42ed-a6f2-de71d7a504fb",
-				"cea76fc5-a75b-40e9-b696-a01ba5609629",
-				"49b84a63-8a41-4e1c-a236-473a0e26fa8d",
 				"a6296c2c-6130-4601-9095-4c4a2b1afc77",
 				"b8ea2f4d-de76-4741-8633-5a528c275e8c",
 				"b135ad07-aefe-46f5-9bc9-ace5d1261192",
@@ -716,15 +715,25 @@ var data = {
 				"e1845092-2911-43d7-8bae-671707a47ec2",
 				"f44b1778-7ba0-4671-bee6-38971ed59b94",
 				"e396703d-8f86-4f32-811a-aa8812b3768c",
-				"7b18d14b-dfd8-4590-93ba-9b74b4ace571",
 				"49b27f78-ea0a-43fe-8928-6c64ffe19963",
-				"f0d58d50-a693-4cc4-9bc3-cef3cd551e62",
-				"01bdc155-2890-41cc-8ce8-dd9c7b482d6e",
-				"b852b858-560f-4025-af44-fc76f293b842",
 				"aebb2211-e171-42b3-a180-f852d393bb11",
-				"d13bcee3-dcac-47da-9473-366bb98ae80e",
 				"a3046ddb-1d49-43a8-ae42-2ef1fc9ebb87",
-				"050db801-13a7-4034-9f16-00d98def3108"
+				"5eeb5c87-cbc3-4d2b-9ce9-c9ffd1f7cc2a",
+				"4bb8c52d-3e1e-4c58-ae60-3cc066288756",
+				"e8e6ad40-4fd7-4828-828c-021e19c6e4e0",
+				"803f78f1-5d2f-431d-afc7-34e6c16d493a",
+				"3f833ddc-39c7-489f-812a-249346202b66",
+				"7bcc3efd-c7c2-41f5-a457-5d496991123c",
+				"e8afd918-4224-4659-a83a-f6fb8f16eb55",
+				"607eced2-6ecf-4e9d-ba7e-1f37006c6093",
+				"3590aa16-f026-4fb5-9895-dc08b4cba4a0",
+				"46339467-6cc0-4afc-bf29-9bc66278afa4",
+				"b724f6a2-0fa3-4f85-9cfd-1382959acd77",
+				"684e00a8-f3a0-4f3f-b239-859621acedc1",
+				"7f78b2b8-5170-46eb-a404-b04127287f98",
+				"9ad1bab7-ce82-490c-a3cd-6cadf74518f8",
+				"5f4f0848-44ac-4417-9e67-e8106acd40d8",
+				"b75077e6-89e8-4e25-ade5-ffe51c7a3490"
 			]
 		},
 		"a1177092-9af1-4411-8870-6b7cc160b7d1": {
@@ -754,12 +763,12 @@ var data = {
 				"45fcb004-7a24-405c-b862-de11ad1539b2"
 			],
 			"branches": [
-				"31a618b5-57ce-4680-aacc-57276e9c233e",
 				"ccbe4238-3306-42fe-b3a4-3225a8dfdec6",
 				"ca770d55-694f-4fc6-8128-689cd6ed7706",
-				"dc8047fb-6806-4684-b6f1-fb664fc9f9a3",
-				"3e29624e-42fa-4b4e-965e-6e0e6748c651",
-				"3716d803-3eda-4cb8-b7af-a6e42b082dbb"
+				"4e7f917e-14b8-4bda-8a0a-3a20753f2b24",
+				"9f2aca5b-2015-4465-8832-d127548c2856",
+				"c2757573-71d8-4d90-91e2-9632ee0ad11c",
+				"3e0e0de0-4709-492f-ba24-dbc3b4b6d5e4"
 			],
 			"comments": [],
 			"elements": [
@@ -817,24 +826,24 @@ var data = {
 				"5cbdcb15-7269-4b77-8edb-a6fb110a8d78",
 				"6a949406-97db-4884-b2ed-3064f4ea144b",
 				"f138e361-e1c6-4128-a330-feb7aebebe70",
-				"953e1c66-3bfc-4092-9f73-92defc1c0ec4",
 				"716f6b01-e45a-4ab4-b636-66a4478e8aef",
-				"a27af859-11ca-4ce8-b514-c437fc53b42b",
 				"358eb26c-1b4b-47c4-885a-d943e45a2686",
-				"739d1701-6373-40ee-951c-031b62be967d",
 				"e4386ddb-e9ac-405f-b24c-000f3d1359a1",
 				"13381572-7c47-4f17-b94d-b7c50851263a",
 				"602cc66b-aa5e-4649-ad95-06ca279acd65",
 				"d4e62654-373f-472b-a437-8399fe647059",
-				"768f43c1-ea7d-4d17-ad32-b8e49a8d44a5",
-				"39cdce7c-c895-41fe-8ba9-e365c59f7adb",
-				"a71d718a-c02a-4f74-a57d-b41d8d32cea4",
-				"b244de7e-ccd8-423c-8bd7-8fa8da3eb022",
 				"dd55cbca-777c-4894-893c-a535c5e3554a",
-				"78a04485-cecc-45bf-8917-aaf1a044b548",
-				"3dc1ed36-3276-477f-a94c-380436a237f0",
-				"38ba38e0-5703-46ca-8719-78a2d222eec7",
-				"f86d9a57-21cf-4480-ae51-beb3a7496ec5"
+				"f86d9a57-21cf-4480-ae51-beb3a7496ec5",
+				"cd7c5c75-2b40-41a3-b869-20ebf417b398",
+				"67c80974-307e-4218-a9c0-e2cbe6f215aa",
+				"5c840425-eb3a-4c26-9049-9f1c222f82e9",
+				"a342ec18-fb83-4200-97c6-7be3b36642c8",
+				"412f272e-3db1-445e-83a2-42cc1175a810",
+				"f8c93751-83fd-402c-93fa-41f87fbced5e",
+				"440a0d43-1405-443f-95c3-ad60a98d6c7c",
+				"90f111e5-d4a7-4ada-a81c-dfed9910a88c",
+				"c3ad4652-3317-4dd3-b59e-1b607b1603d4",
+				"7f2a6043-fa59-40b3-b713-d92e5ecf7c05"
 			]
 		},
 		"b3b6b708-84a2-4a57-bf80-f3b0bb489e49": {
@@ -861,8 +870,8 @@ var data = {
 				"d099418d-619f-4669-9ee9-19295c79a725",
 				"5e84430e-58fd-42a3-8635-5c9a1c24f225",
 				"32c8b6a5-085d-4397-9f62-2480530198c4",
-				"20a50dfb-e265-4356-8b19-10ab4b931c6e",
-				"87d3f51e-a423-4993-884a-dc6ceddae472"
+				"87d3f51e-a423-4993-884a-dc6ceddae472",
+				"b27765f1-5f6b-459f-9150-0c351ad68e3d"
 			],
 			"elements": [
 				"8ad66265-0e9d-4ea1-a66e-904e26178c2d",
@@ -1020,9 +1029,6 @@ var data = {
 				"1e403494-1ef6-4a1d-b867-c56097a262e6",
 				"7d0c3164-d312-4514-9345-feb40e1b45b5",
 				"63ccae77-7a55-4be4-964a-ca1889f68fe1",
-				"a8f48e97-1cd4-4abf-b2d5-d7ca7c82b08b",
-				"03c4400f-7a87-4c62-bff0-85340ae4b9fa",
-				"2270c1cd-0705-48d4-ae38-919842392414",
 				"37666856-2923-429e-93da-467877ddf699",
 				"cf347783-18e7-4707-a578-c925b40c0609",
 				"4e0930bc-b132-4715-849b-9ca3b536f422",
@@ -1042,7 +1048,10 @@ var data = {
 				"0def973e-94be-4e78-9cef-fa92f301940e",
 				"b18ea6c7-459a-47a0-a115-a610bb38e407",
 				"59362d7d-1124-454c-876c-b3c97f0cce3f",
-				"f9c3e867-07e5-40c2-a196-45228207c7c4"
+				"f9c3e867-07e5-40c2-a196-45228207c7c4",
+				"d7f0d9d0-ccb7-453a-ac9e-bd0d86bd27e2",
+				"645fd8af-d5aa-4a90-a0a9-31957671c3f8",
+				"0c0bd322-078b-4a3a-bb0f-3dcd96450f07"
 			]
 		},
 		"e0b7438a-17a9-4469-a7f8-2047cdfd0fbf": {
@@ -1084,7 +1093,7 @@ var data = {
 				"17208a41-6648-4281-a9c1-db4c4e502d17",
 				"bba6058e-0d98-4ef2-86e4-9a92c3776307",
 				"94334159-ca11-42dc-82ef-48980e34837d",
-				"3813c9e4-e17e-4d55-97a8-e9ee42a57de7"
+				"255cb9b3-b9ed-4cf9-a4e4-5c58bf9ddf6b"
 			],
 			"comments": [],
 			"customId": "PLAYER_ACTIONS",
@@ -1221,12 +1230,9 @@ var data = {
 				"5b5e21fb-1d01-4e1f-859a-c16b60007b6a",
 				"8ea8d336-38b0-47b1-8815-056155ce37c4",
 				"85923094-4884-4352-bbe9-df91dc610df1",
-				"0449b5a0-9d91-435c-9b4a-57976e3eef2e",
-				"cc480339-490c-48be-a53b-da420729a9e2",
 				"134909e0-def8-4734-a223-ba1f9894abe9",
 				"c70fa773-e274-461b-8ec2-7c4f2c30d17d",
 				"fc7c264c-476d-472d-8649-41bed055e7a2",
-				"0d46a60c-7767-4652-9293-a303be0a4899",
 				"cf032d1e-d535-4f0f-8aa4-d94bcd9315bc",
 				"c954836f-9ef5-43b9-8bd8-765c146468d5",
 				"c0522bab-b08e-4aa1-89b9-501aaf6d17c9",
@@ -1241,9 +1247,12 @@ var data = {
 				"070057a6-15c0-4785-8449-66689bd1ef29",
 				"149004ac-6e05-4491-a8a8-bc40274ba29e",
 				"9eab4517-7f4b-47eb-a83d-21ac0f9fd1a8",
-				"baedf98d-7d7f-48f8-8e7e-3b71bb43736f",
 				"72a38b01-421e-48a0-9dfa-36801fb370f9",
-				"fe17a969-0563-4cae-9e63-e8a9e05329fd"
+				"fe17a969-0563-4cae-9e63-e8a9e05329fd",
+				"05a835be-5f86-45d8-b3ce-e4abc586e6ee",
+				"f55cf8c4-8d14-4030-8293-10b7b9160a5c",
+				"f4b7f196-45c3-471a-b1d5-50b769ea776c",
+				"79cd035f-239a-42ac-8825-d30a0d06227b"
 			]
 		}
 	},
@@ -1260,21 +1269,21 @@ var data = {
 		},
 		"2e108806-8040-4c22-813a-c5d1816584cb": {
 			"theme": "lightBlue",
-			"content": "Any i_item state:\\n[b]0[/b]: nowhere\\n[b]1[/b]: initial position / before been taken\\n[b]2[/b]: taken by the player\\n[b]3[/b]: used/gone\\nNote all objects start in play; some start out of play (nowhere)."
+			"content": "Any i_item state:\\n[b]0[/b]: nowhere&lt;br&gt;[b]1[/b]: initial position / before been taken&lt;br&gt;[b]2[/b]: taken by the player&lt;br&gt;[b]3[/b]: used/gone\\nNote all objects start in play; some start out of play (nowhere)."
 		},
 		"2e16a59f-c03f-4287-a296-7e0cec8499b9": {
 			"theme": "pink",
-			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like INVENTORY: ADD and INVENTORY: REMOVE inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the key) getting added or removed.",
+			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like &lt;span class=\"mention mention-component\" data-id=\"ce5d1948-6893-44ef-845c-e81c48926efc\" data-type=\"component\"&gt;INVENTORY: ADD&lt;/span&gt; and &lt;span class=\"mention mention-component\" data-id=\"2936dbdb-7639-4d36-b6a3-c9ee79df168a\" data-type=\"component\"&gt;INVENTORY: REMOVE&lt;/span&gt; inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the &lt;span class=\"mention mention-component\" data-id=\"7dc10d72-cac3-475e-9076-5c984e2884b0\" data-type=\"component\"&gt;key&lt;/span&gt;) getting added or removed.",
 			"autoHeight": false
 		},
 		"3220f565-1eae-45e4-97a5-079ece22a793": {
 			"theme": "pink",
-			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like INVENTORY: ADD and INVENTORY: REMOVE inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the Amstrad 6128) getting added or removed.",
+			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like &lt;span class=\"mention mention-component\" data-id=\"ce5d1948-6893-44ef-845c-e81c48926efc\" data-type=\"component\"&gt;INVENTORY: ADD&lt;/span&gt; and &lt;span class=\"mention mention-component\" data-id=\"2936dbdb-7639-4d36-b6a3-c9ee79df168a\" data-type=\"component\"&gt;INVENTORY: REMOVE&lt;/span&gt; inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;) getting added or removed.",
 			"autoHeight": true
 		},
 		"4135d03e-e053-4b54-9165-925da8b7a5ed": {
 			"theme": "pink",
-			"content": "When the game engine encounters a FOLLOW RANDOM OUTPUT component attached to the current element, it sends the flow to one of the element's outputs in random.\\n(Of course, this doesn't work in Arcweave's Play Mode, where all outputs will simply appear as options.)",
+			"content": "When the game engine encounters a &lt;span class=\"mention mention-component\" data-id=\"9394ffb5-bf06-4b15-b02c-3123b1b05067\" data-type=\"component\"&gt;FOLLOW RANDOM OUTPUT&lt;/span&gt; component attached to the current element, it sends the flow to one of the element's outputs in random.\\n(Of course, this doesn't work in Arcweave's Play Mode, where all outputs will simply appear as options.)",
 			"autoHeight": true
 		},
 		"41b28eb9-26a0-4cd0-b6c6-c1922947a3d0": {
@@ -1284,22 +1293,22 @@ var data = {
 		},
 		"494229c4-4c0b-4d3e-b405-7aa0cd8c6f3b": {
 			"theme": "pink",
-			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like INVENTORY: ADD and INVENTORY: REMOVE inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the Amstrad 6128) getting added or removed.",
+			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like &lt;span class=\"mention mention-component\" data-id=\"ce5d1948-6893-44ef-845c-e81c48926efc\" data-type=\"component\"&gt;INVENTORY: ADD&lt;/span&gt; and &lt;span class=\"mention mention-component\" data-id=\"2936dbdb-7639-4d36-b6a3-c9ee79df168a\" data-type=\"component\"&gt;INVENTORY: REMOVE&lt;/span&gt; inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;) getting added or removed.",
 			"autoHeight": true
 		},
 		"4a1f36cb-5df3-45ba-8bd3-887c019d974b": {
 			"theme": "purple",
-			"content": "Those 3 elements are only used by Arcweave's Play Mode.\\nThe game engine uses the elements in the Player Actions board, which direct the flow to the same jumpers.\\nThis repetition is a convention so that both systems work: the Play Mode and the game engine.",
+			"content": "Those 3 elements are only used by Arcweave's Play Mode.\\nThe game engine uses the elements in the &lt;span class=\"mention mention-board\" data-id=\"e346ed24-8a00-4176-be50-92e02e99b9e6\" data-type=\"board\"&gt;Player Actions&lt;/span&gt; board, which direct the flow to the same jumpers.\\nThis repetition is a convention so that both systems work: the Play Mode and the game engine.",
 			"autoHeight": true
 		},
 		"580e4d95-e8ad-4da6-979a-b0c6889d0ee1": {
 			"theme": "blue",
-			"content": "[b]TALK TO ANDREAS[/b]\\nSince Andreas is our NPC, he has the largest dialogue tree. Dialogue with him starts from this element, but soon branches out to various boards.\\nNote that the game engine searches for the starting element for the action TALK TO ANDREAS in the Player Actions board.",
+			"content": "[b]TALK TO ANDREAS[/b]\\nSince &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; is our NPC, he has the largest dialogue tree. Dialogue with him starts from this element, but soon branches out to various boards.\\nNote that the game engine searches for the starting element for the action TALK TO ANDREAS in the &lt;span class=\"mention mention-board\" data-id=\"e346ed24-8a00-4176-be50-92e02e99b9e6\" data-type=\"board\"&gt;Player Actions&lt;/span&gt; board.",
 			"autoHeight": true
 		},
 		"5d8f06fc-f994-484c-b9e7-4df6ee5c3fa0": {
 			"theme": "pink",
-			"content": "When the game engine encounters a FOLLOW RANDOM OUTPUT component attached to the current element, it sends the flow to one of the element's outputs in random.\\n(Of course, this doesn't work in Arcweave's Play Mode, where all outputs will simply appear as options.)",
+			"content": "When the game engine encounters a &lt;span class=\"mention mention-component\" data-id=\"9394ffb5-bf06-4b15-b02c-3123b1b05067\" data-type=\"component\"&gt;FOLLOW RANDOM OUTPUT&lt;/span&gt; component attached to the current element, it sends the flow to one of the element's outputs in random.\\n(Of course, this doesn't work in Arcweave's Play Mode, where all outputs will simply appear as options.)",
 			"autoHeight": true
 		},
 		"6070a26a-5b39-4718-9b50-42667ec29332": {
@@ -1314,7 +1323,7 @@ var data = {
 		},
 		"67e12be9-0276-4f10-90ee-c6caf21f30e9": {
 			"theme": "pink",
-			"content": "The PAUSE component creates a pause after delivering the current element's content.\\n(The pause's length is set in the game engine, of course.)",
+			"content": "The &lt;span class=\"mention mention-component\" data-id=\"a76b1b28-2731-4b50-a428-2a72c5d2b125\" data-type=\"component\"&gt;PAUSE&lt;/span&gt; component creates a pause after delivering the current element's content.\\n(The pause's length is set in the game engine, of course.)",
 			"autoHeight": true
 		},
 		"6ee9c825-fc1c-42f9-89ac-4750456403e5": {
@@ -1334,32 +1343,27 @@ var data = {
 		},
 		"737086d1-bbae-4ff9-ba0b-181bf108b6fe": {
 			"theme": "pink",
-			"content": "We use an audio component to play a sound effect over a specific dialogue line, like the joke drum break, here.",
-			"autoHeight": true
-		},
-		"76247e3c-b8ec-42b1-b563-7bc0eeb1850c": {
-			"theme": "lightBlue",
-			"content": "[b]t_andreasWho states[/b]:\\n[b]0[/b]: not mentioned yet\\n[b]1[/b]: Name and \"as an NPC\" mentioned.",
+			"content": "We use an audio component to play a sound effect over a specific dialogue line, like the &lt;span class=\"mention mention-component\" data-id=\"270833c2-3f2d-41c6-adc5-f6436e2869b0\" data-type=\"component\"&gt;joke drum break&lt;/span&gt;, here.",
 			"autoHeight": true
 		},
 		"807f5ccf-7baa-4c3d-86ac-39a4a2d5bd58": {
 			"theme": "pink",
-			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like INVENTORY: ADD and INVENTORY: REMOVE inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the games magazines) getting added or removed.",
+			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like &lt;span class=\"mention mention-component\" data-id=\"ce5d1948-6893-44ef-845c-e81c48926efc\" data-type=\"component\"&gt;INVENTORY: ADD&lt;/span&gt; and &lt;span class=\"mention mention-component\" data-id=\"2936dbdb-7639-4d36-b6a3-c9ee79df168a\" data-type=\"component\"&gt;INVENTORY: REMOVE&lt;/span&gt; inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt;) getting added or removed.",
 			"autoHeight": true
 		},
 		"84699a0a-1da4-4683-812a-2f2ec368d5b7": {
 			"theme": "blue",
-			"content": "[b]GIVE SOMETHING TO ANDREAS[/b]\\nTo keep this action separate, we have created a board for all the dialogue resulting from trying to give an item to Andreas.",
+			"content": "[b]GIVE SOMETHING TO ANDREAS[/b]\\nTo keep this action separate, we have created a board for all the dialogue resulting from trying to give an item to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;.",
 			"autoHeight": true
 		},
 		"8996ff56-8856-4085-89ad-e105e8fa78f9": {
 			"theme": "pink",
-			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like INVENTORY: ADD and INVENTORY: REMOVE inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the games magazines) getting added or removed.",
+			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like &lt;span class=\"mention mention-component\" data-id=\"ce5d1948-6893-44ef-845c-e81c48926efc\" data-type=\"component\"&gt;INVENTORY: ADD&lt;/span&gt; and &lt;span class=\"mention mention-component\" data-id=\"2936dbdb-7639-4d36-b6a3-c9ee79df168a\" data-type=\"component\"&gt;INVENTORY: REMOVE&lt;/span&gt; inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt;) getting added or removed.",
 			"autoHeight": true
 		},
 		"8a607ca9-ae75-4147-af25-6dd81335969b": {
 			"theme": "pink",
-			"content": "The component OVERLAP NEXT tells the game engine that the current content is not to be immediately rendered, but saved to be rendered along with that of the next element.\\n(This allows the content of only 2 elements to overlap, but the engine code could be altered to allow more.)",
+			"content": "The component &lt;span class=\"mention mention-component\" data-id=\"1ff6f2bd-7675-4f5e-958e-3d6ca5f102c2\" data-type=\"component\"&gt;OVERLAP NEXT&lt;/span&gt; tells the game engine that the current content is not to be immediately rendered, but saved to be rendered along with that of the next element.\\n(This allows the content of only 2 elements to overlap, but the engine code could be altered to allow more.)",
 			"autoHeight": true
 		},
 		"8a94fa2d-44f9-47df-8f89-f8de04a084ea": {
@@ -1369,17 +1373,17 @@ var data = {
 		},
 		"8dbfd679-484e-4778-8fe4-7f4f5e15c047": {
 			"theme": "pink",
-			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like INVENTORY: ADD and INVENTORY: REMOVE inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the adventure game scripts) getting added or removed.",
+			"content": "[b]ACTIVITIES: INVENTORY ADD/REMOVE[/b]\\nActivity components, like &lt;span class=\"mention mention-component\" data-id=\"ce5d1948-6893-44ef-845c-e81c48926efc\" data-type=\"component\"&gt;INVENTORY: ADD&lt;/span&gt; and &lt;span class=\"mention mention-component\" data-id=\"2936dbdb-7639-4d36-b6a3-c9ee79df168a\" data-type=\"component\"&gt;INVENTORY: REMOVE&lt;/span&gt; inform the game engine that a change must occur regarding the player's possessions, with the other item components (here: the &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt;) getting added or removed.",
 			"autoHeight": true
 		},
 		"934cb014-7e49-4e59-bb53-3e3a7f7e72c8": {
 			"theme": "blue",
-			"content": "[b]OBJECTS' RESPONSES[/b]\\nThis board has the dialogue trees for various player actions, like EXAMINE GAMES MAGAZINES.\\nNote that the game engine looks up the starting elements for those actions in the Player Actions board.",
+			"content": "[b]OBJECTS' RESPONSES[/b]\\nThis board has the dialogue trees for various player actions, like EXAMINE GAMES MAGAZINES.\\nNote that the game engine looks up the starting elements for those actions in the &lt;span class=\"mention mention-board\" data-id=\"e346ed24-8a00-4176-be50-92e02e99b9e6\" data-type=\"board\"&gt;Player Actions&lt;/span&gt; board.",
 			"autoHeight": true
 		},
 		"9e9c40b7-d690-4ef2-955b-5732edba0d82": {
 			"theme": "lightBlue",
-			"content": "[b]Any i_item states[/b]:\\n[b]0[/b]: nowhere / out of play\\n[b]1[/b]: initial position / before been taken\\n[b]2[/b]: taken by the player\\n[b]3[/b]: used/gone\\nNot all objects start in play; some start out of play.",
+			"content": "[b]Any i_item states[/b]:\\n[b]0[/b]: nowhere / out of play&lt;br&gt;[b]1[/b]: initial position / before been taken&lt;br&gt;[b]2[/b]: taken by the player&lt;br&gt;[b]3[/b]: used/gone\\nNot all objects start in play; some start out of play.",
 			"autoHeight": false
 		},
 		"be40a917-6e8b-498e-a1b8-d8722ef46aba": {
@@ -1389,7 +1393,7 @@ var data = {
 		},
 		"c5f17f7e-9b3b-4b83-a5df-2230e7dd9dbf": {
 			"theme": "lightBlue",
-			"content": "Any i_item state:\\n[b]0[/b]: nowhere\\n[b]1[/b]: initial position / before been taken\\n[b]2[/b]: taken by the player\\n[b]3[/b]: used/gone\\nNot all objects start in play; some start out of play (nowhere).",
+			"content": "Any i_item state:\\n[b]0[/b]: nowhere&lt;br&gt;[b]1[/b]: initial position / before been taken&lt;br&gt;[b]2[/b]: taken by the player&lt;br&gt;[b]3[/b]: used/gone\\nNot all objects start in play; some start out of play (nowhere).",
 			"autoHeight": false
 		},
 		"c63dca7c-4f09-4fd1-990c-746dbf6fb970": {
@@ -1409,12 +1413,12 @@ var data = {
 		},
 		"d7375fc1-1f43-4bba-ac4d-5451a2095804": {
 			"theme": "orange",
-			"content": "The TITLE component informs the game engine this element's content will not be a spoken line but a title.",
+			"content": "The &lt;span class=\"mention mention-component\" data-id=\"c39bbc27-aa0e-4753-9c59-b2b8ab31384e\" data-type=\"component\"&gt;TITLE&lt;/span&gt; component informs the game engine this element's content will not be a spoken line but a title.",
 			"autoHeight": true
 		},
 		"da041e96-3ebf-4e77-bc1d-d44f31264281": {
 			"theme": "pink",
-			"content": "The EXIT THROUGH EXIT component tells the game engine the room must change, as if the player walked through the attached exit (here: the final exit component).",
+			"content": "The &lt;span class=\"mention mention-component\" data-id=\"78398b84-0d0b-4038-9f72-44b2459435a2\" data-type=\"component\"&gt;EXIT THROUGH EXIT&lt;/span&gt; component tells the game engine the room must change, as if the player walked through the attached exit (here: the &lt;span class=\"mention mention-component\" data-id=\"74a88987-534b-44c6-8434-22ea6de90349\" data-type=\"component\"&gt;final exit&lt;/span&gt; component).",
 			"autoHeight": true
 		},
 		"f8e1172e-ab6e-4a9d-b710-49e0ef2b536a": {
@@ -1429,7 +1433,7 @@ var data = {
 		},
 		"ff22480a-3405-4e36-96b3-f33a9e26b999": {
 			"theme": "blue",
-			"content": "[b]PLAYER ACTIONS[/b]\\nThis board contains all the elements springing from a VERB + OBJECT combination (e.g. EXAMINE MAGAZINES) or an OBJECT + OBJECT combination (e.g. GIVE AMSTRAD TO ANDREAS).\\n[b][i]The combinations are signified by the relevant attached components.[/i][/b]\\nIf some specific combinations are missing (e.g. USE AMSTRAD WITH PIANO), the game will look up at some [b]generic replies[/b] blocking the action (e.g. USE GENERIC WITH GENERIC --&amp;gt; \"This doesn't seem to work.\" or EXAMINE GENERIC --&amp;gt; \"You don't see anything special about that.\") There is a GENERIC REPLY ITEM component created for this purpose.\\nIn most cases, all those starting elements point to a jumper, leading the flow to another board (like Object Responses or Andreas DIAL 1), containing the dialogue tree for the occasion. In cases of very short replies (as with EXAMINE ANDREAS), their elements are included here for simplicity.",
+			"content": "[b]PLAYER ACTIONS[/b]\\nThis board contains all the elements springing from a VERB + OBJECT combination (e.g. EXAMINE MAGAZINES) or an OBJECT + OBJECT combination (e.g. GIVE AMSTRAD TO ANDREAS).\\n[b][i]The combinations are signified by the relevant attached components.[/i][/b]\\nIf some specific combinations are missing (e.g. USE AMSTRAD WITH PIANO), the game will look up at some [b]generic replies[/b] blocking the action (e.g. USE GENERIC WITH GENERIC --&amp;gt; \"This doesn't seem to work.\" or EXAMINE GENERIC --&amp;gt; \"You don't see anything special about that.\") There is a &lt;span class=\"mention mention-component\" data-id=\"95d2c620-df08-4996-b9a3-0011e69ae8ba\" data-type=\"component\"&gt;GENERIC REPLY ITEM&lt;/span&gt; component created for this purpose.\\nIn most cases, all those starting elements point to a jumper, leading the flow to another board (like &lt;span class=\"mention mention-board\" data-id=\"33921d60-74db-4a1f-8e49-21b8b9547d52\" data-type=\"board\"&gt;Object Responses&lt;/span&gt; or &lt;span class=\"mention mention-board\" data-id=\"9b928a67-67a8-40d4-ae86-e6275c091e88\" data-type=\"board\"&gt;Andreas DIAL 1&lt;/span&gt;), containing the dialogue tree for the occasion. In cases of very short replies (as with EXAMINE ANDREAS), their elements are included here for simplicity.",
 			"autoHeight": true
 		}
 	},
@@ -1448,7 +1452,7 @@ var data = {
 			"contentRef": "element_0_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"009b01ae-a87a-4a4a-8d36-2c0e5ee9ea08": {
@@ -1465,12 +1469,12 @@ var data = {
 			"contentRef": "element_1_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"00f102f0-27b9-403a-851a-91844e2c684a": {
 			"theme": "cyan",
-			"title": "walk through final exit ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"ed8f3513-ee16-4784-8f79-bb56c47f593b\" data-type=\"component\"&gt;walk&lt;/span&gt; through &lt;span class=\"mention mention-component\" data-id=\"74a88987-534b-44c6-8434-22ea6de90349\" data-type=\"component\"&gt;final exit&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"c70fa773-e274-461b-8ec2-7c4f2c30d17d"
@@ -1479,7 +1483,11 @@ var data = {
 			"components": [
 				"74a88987-534b-44c6-8434-22ea6de90349",
 				"ed8f3513-ee16-4784-8f79-bb56c47f593b"
-			]
+			],
+			"cover": {
+				"type": "image",
+				"file": "/Images/Images/Images/bedroom.png"
+			}
 		},
 		"01871858-3e6f-4ab5-821f-9ac7873a4ed3": {
 			"theme": "default",
@@ -1495,7 +1503,7 @@ var data = {
 			"contentRef": "element_3_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"019d8e70-ad9f-4800-9c62-9edc10f63750": {
@@ -1513,7 +1521,7 @@ var data = {
 			"contentRef": "element_4_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0241136a-af98-43e9-9bf0-805afe4db5f3": {
@@ -1521,7 +1529,7 @@ var data = {
 			"title": "Give scripts to Andreas",
 			"content": null,
 			"outputs": [
-				"cc480339-490c-48be-a53b-da420729a9e2"
+				"f55cf8c4-8d14-4030-8293-10b7b9160a5c"
 			],
 			"autoHeight": true,
 			"components": [
@@ -1543,7 +1551,7 @@ var data = {
 			"contentRef": "element_6_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"05195b1d-5155-47e1-994f-b9158c55ab5d": {
@@ -1551,6 +1559,7 @@ var data = {
 			"title": null,
 			"content": "TO_BE_REPLACED",
 			"outputs": [],
+			"autoHeight": true,
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
@@ -1559,7 +1568,7 @@ var data = {
 		},
 		"060a9d93-5e58-4f03-855a-6269c387edc3": {
 			"theme": "cyan",
-			"title": "Give Amstrad 6128 to Andreas",
+			"title": "Give &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt; to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"ec673ede-ee9b-40f0-bf0b-d8c8a39b1ad8"
@@ -1571,7 +1580,7 @@ var data = {
 			"contentRef": "element_8_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0621a78a-435a-49ec-9ea1-8226dbadfae0": {
@@ -1600,7 +1609,7 @@ var data = {
 			"contentRef": "element_10_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"06d0639c-3893-4ced-ae00-db3cdeecaa42": {
@@ -1617,7 +1626,7 @@ var data = {
 			"contentRef": "element_11_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"071e4dd2-30ce-41fa-8e5d-d85261d9c893": {
@@ -1634,7 +1643,7 @@ var data = {
 			"contentRef": "element_12_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0742accc-ab6c-4806-b78e-945311e198d1": {
@@ -1651,7 +1660,7 @@ var data = {
 			"contentRef": "element_13_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"07ac8233-6e5a-4fb0-9782-9d7873fa60d7": {
@@ -1669,7 +1678,7 @@ var data = {
 		},
 		"084244db-843d-475f-bc9e-4c388183c7cf": {
 			"theme": "cyan",
-			"title": "give games magazines to Andreas ",
+			"title": "give &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt; to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"4f23e27a-99db-4ea4-a529-55aa19aef281"
@@ -1706,7 +1715,7 @@ var data = {
 			"contentRef": "element_17_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0a407c8e-059c-41e4-8728-0f86fdd1bc23": {
@@ -1734,7 +1743,7 @@ var data = {
 			"contentRef": "element_19_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0bf58f25-7d36-436f-bf49-4d659f4a9d70": {
@@ -1743,7 +1752,7 @@ var data = {
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"63ccae77-7a55-4be4-964a-ca1889f68fe1",
-				"03c4400f-7a87-4c62-bff0-85340ae4b9fa"
+				"d7f0d9d0-ccb7-453a-ac9e-bd0d86bd27e2"
 			],
 			"autoHeight": true,
 			"components": [
@@ -1752,7 +1761,7 @@ var data = {
 			"contentRef": "element_20_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0bf89a41-740e-4f61-8771-d0dc267ae4c4": {
@@ -1769,7 +1778,7 @@ var data = {
 			"contentRef": "element_21_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0d2dfb82-ac29-4cd6-aa6c-045e2fcd1950": {
@@ -1786,12 +1795,12 @@ var data = {
 			"contentRef": "element_22_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"0ec8e707-6916-4483-9f3a-a5c85acd1a5a": {
 			"theme": "lightBlue",
-			"title": "Take games magazines",
+			"title": "Take &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"62fc3472-1253-44c0-be46-71dd4daf547b"
@@ -1806,7 +1815,7 @@ var data = {
 			"contentRef": "element_23_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"0f59ff51-74c0-40b4-8a9a-8e585d763009": {
@@ -1823,7 +1832,7 @@ var data = {
 			"contentRef": "element_24_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"106a088d-b0a2-4e02-8f0f-1fa387ed3715": {
@@ -1840,7 +1849,7 @@ var data = {
 			"contentRef": "element_25_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"10b2f140-77c2-4fdf-8e35-e883d9b5536e": {
@@ -1858,7 +1867,7 @@ var data = {
 			"contentRef": "element_26_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"10e7d31c-361c-475a-a6ad-e53ff2803c0a": {
@@ -1876,7 +1885,7 @@ var data = {
 			"contentRef": "element_27_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"13962aea-6f1a-46c7-84fe-cdb651a127f4": {
@@ -1893,7 +1902,7 @@ var data = {
 			"contentRef": "element_28_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"1434cd2c-ed8e-4adf-b41d-34b2814b8f5b": {
@@ -1910,7 +1919,7 @@ var data = {
 			"contentRef": "element_29_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"14601de6-ad11-47a1-ac29-c52019d89d18": {
@@ -1927,7 +1936,7 @@ var data = {
 			"contentRef": "element_30_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"14b401ce-5189-4c4a-a2c8-5acfff8a0b07": {
@@ -1944,7 +1953,7 @@ var data = {
 			"contentRef": "element_31_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"156443a6-2914-41f2-97ad-bfe84b7f9890": {
@@ -1961,12 +1970,12 @@ var data = {
 			"contentRef": "element_32_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"157b3954-49ba-421d-a57c-33921e832795": {
 			"theme": "lightBlue",
-			"title": "Examine games magazines 2",
+			"title": "Examine &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt; 2",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"9ceb5a90-837b-4e68-b125-842b3af99248"
@@ -1980,7 +1989,7 @@ var data = {
 			"contentRef": "element_33_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"160c1d14-dc36-489c-b49d-fd71421bb7b1": {
@@ -1996,7 +2005,7 @@ var data = {
 			"contentRef": "element_34_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"170e46b2-6d06-4aa3-8165-0787933bafc1": {
@@ -2026,7 +2035,7 @@ var data = {
 			"contentRef": "element_36_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"17ebfdcb-35ea-4930-835b-0fc04a18308a": {
@@ -2043,7 +2052,7 @@ var data = {
 			"contentRef": "element_37_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"1848c19f-05af-4a76-b947-e292dfc74de0": {
@@ -2072,7 +2081,7 @@ var data = {
 		},
 		"195fb2b6-c572-42f3-b926-be5919ee0010": {
 			"theme": "cyan",
-			"title": "Give key to Andreas",
+			"title": "Give &lt;span class=\"mention mention-component\" data-id=\"7dc10d72-cac3-475e-9076-5c984e2884b0\" data-type=\"component\"&gt;key&lt;/span&gt; to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;",
 			"content": null,
 			"outputs": [
 				"92adce3e-165c-412a-a2d2-31b6e52a2132"
@@ -2097,7 +2106,7 @@ var data = {
 			"contentRef": "element_41_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"1b275574-5e90-4e86-956f-9e42592d24b5": {
@@ -2113,7 +2122,7 @@ var data = {
 			"contentRef": "element_42_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"1b78eb88-93a0-460e-8f71-f1bcd3c142ec": {
@@ -2129,7 +2138,7 @@ var data = {
 			"contentRef": "element_43_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"1c036277-c2a4-4ecb-aec2-8cb77ee2b2d3": {
@@ -2146,12 +2155,12 @@ var data = {
 			"contentRef": "element_44_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"1c5d185b-dd68-43de-bc9e-570d92b0dc3e": {
 			"theme": "purple",
-			"title": "adventure game scripts",
+			"title": "<span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\">adventure game scripts</span>",
 			"content": null,
 			"outputs": [
 				"3a1b49b6-9793-47b8-82c6-480ecc9476e4",
@@ -2163,7 +2172,7 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"1c8ee116-452d-4547-88e9-901bfd1f568f": {
@@ -2194,7 +2203,7 @@ var data = {
 			"contentRef": "element_47_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"1d9ba566-09f4-46e1-b461-6b02b9774d6f": {
@@ -2225,7 +2234,7 @@ var data = {
 			"contentRef": "element_49_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"1f82a775-485a-44e1-97cb-e37d01c151e8": {
@@ -2233,10 +2242,10 @@ var data = {
 			"title": "Why",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
-				"49b84a63-8a41-4e1c-a236-473a0e26fa8d",
+				"46339467-6cc0-4afc-bf29-9bc66278afa4",
 				"a6296c2c-6130-4601-9095-4c4a2b1afc77",
 				"aebb2211-e171-42b3-a180-f852d393bb11",
-				"d13bcee3-dcac-47da-9473-366bb98ae80e"
+				"684e00a8-f3a0-4f3f-b239-859621acedc1"
 			],
 			"autoHeight": true,
 			"components": [
@@ -2245,7 +2254,7 @@ var data = {
 			"contentRef": "element_50_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"203d1b15-84f2-452c-b8aa-996798df4cd2": {
@@ -2262,7 +2271,7 @@ var data = {
 			"contentRef": "element_51_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"20ba7f6e-ba9b-4bf6-bc04-15f5c7f9ddb6": {
@@ -2279,7 +2288,7 @@ var data = {
 			"contentRef": "element_52_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2225f8dd-ef66-49d9-8aa8-829ec289a738": {
@@ -2295,7 +2304,7 @@ var data = {
 			"contentRef": "element_53_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"22c762b5-459b-47d0-ba1b-46d5250d7198": {
@@ -2313,7 +2322,7 @@ var data = {
 			"contentRef": "element_54_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2327014e-7de8-4ada-a6ed-f3839f4bca3a": {
@@ -2330,7 +2339,7 @@ var data = {
 			"contentRef": "element_55_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"252fce59-ed4d-4cdb-80b9-d62bbdc18b3e": {
@@ -2346,7 +2355,7 @@ var data = {
 			"contentRef": "element_56_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"27c7d059-a113-4f19-9cc6-f2f6f1885c57": {
@@ -2362,7 +2371,7 @@ var data = {
 			"contentRef": "element_57_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"287c4643-3b73-4254-86c7-3ebfaff63e6d": {
@@ -2380,7 +2389,7 @@ var data = {
 			"contentRef": "element_58_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"28dc23e5-194e-464d-8478-0beb4d79a4f2": {
@@ -2410,7 +2419,7 @@ var data = {
 			"contentRef": "element_60_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"292133c5-321a-4a22-9e6d-0417a93b2a1a": {
@@ -2426,7 +2435,7 @@ var data = {
 			"contentRef": "element_61_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"29cfc2da-d441-491c-9b95-ac3ebde384c1": {
@@ -2434,7 +2443,8 @@ var data = {
 			"title": null,
 			"content": "TO_BE_REPLACED",
 			"outputs": [
-				"214d43e0-6a06-4222-a65c-201b6967ceea"
+				"214d43e0-6a06-4222-a65c-201b6967ceea",
+				"f90d9093-5edb-4ec1-9287-9d089573007f"
 			],
 			"autoHeight": true,
 			"components": [
@@ -2443,7 +2453,7 @@ var data = {
 			"contentRef": "element_62_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"2aa8f654-ae5a-4776-b96a-9b41a4ed3607": {
@@ -2459,12 +2469,12 @@ var data = {
 			"contentRef": "element_63_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2ab878df-7364-4f79-b45c-02c0c3168e51": {
 			"theme": "cyan",
-			"title": "handle page ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"ef85094c-2389-4ee6-9f5c-051aea3a64a1\" data-type=\"component\"&gt;handle&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"173545f9-d103-4b34-87ef-690608f94240\" data-type=\"component\"&gt;page&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"8ea8d336-38b0-47b1-8815-056155ce37c4"
@@ -2489,7 +2499,7 @@ var data = {
 			"contentRef": "element_65_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2c7c9e2e-0333-4b96-98c1-75da3f570204": {
@@ -2505,7 +2515,7 @@ var data = {
 			"contentRef": "element_66_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2cbb0fdb-fd8a-4418-94c6-90a366f5cd90": {
@@ -2522,7 +2532,7 @@ var data = {
 			"contentRef": "element_67_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2d82c38e-ae35-46af-a599-6b8a502d5686": {
@@ -2551,7 +2561,7 @@ var data = {
 			"contentRef": "element_69_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2e03dd54-3403-4006-9a17-da5a2c1071d2": {
@@ -2568,7 +2578,7 @@ var data = {
 			"contentRef": "element_70_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"2f50daf2-b85a-43e2-abae-b96714214945": {
@@ -2584,7 +2594,7 @@ var data = {
 			"contentRef": "element_71_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"313a3413-be6c-4112-a753-fe4c45831f25": {
@@ -2602,7 +2612,7 @@ var data = {
 			"contentRef": "element_72_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"31f7644b-bde4-43e4-8f58-e66c361681aa": {
@@ -2619,7 +2629,7 @@ var data = {
 			"contentRef": "element_73_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"324b28f4-14da-45f9-8f1c-b4ffa3c288d7": {
@@ -2636,7 +2646,7 @@ var data = {
 			"contentRef": "element_74_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"324bf92f-9371-4497-9dab-29a6843cfe99": {
@@ -2668,7 +2678,7 @@ var data = {
 			"contentRef": "element_76_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"32d99df9-50d1-4e2c-8fdb-53e7a5002f46": {
@@ -2698,7 +2708,7 @@ var data = {
 			"contentRef": "element_78_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"334b618e-c6be-4fbf-968c-e07f51ab569d": {
@@ -2714,7 +2724,7 @@ var data = {
 			"contentRef": "element_79_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"33fa2dee-8669-4f44-8183-bc9ffdd308f5": {
@@ -2731,7 +2741,7 @@ var data = {
 			"contentRef": "element_80_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"34f1ab04-203e-4cdf-9847-abfa5e6c1c1f": {
@@ -2748,7 +2758,7 @@ var data = {
 			"contentRef": "element_81_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3511593a-3359-49e5-881d-926d1796d131": {
@@ -2765,7 +2775,7 @@ var data = {
 			"contentRef": "element_82_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3547f4ca-62e0-44c5-a4fc-a4495edb44da": {
@@ -2782,7 +2792,7 @@ var data = {
 		},
 		"35a5385c-c582-4bea-ae49-9035c4d38ea2": {
 			"theme": "lightBlue",
-			"title": "I can't seem to get over my Amstrad 6128.",
+			"title": "I can't seem to get over my &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;.",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"8f544e2a-e939-4765-abe3-7426ceeac2e6"
@@ -2794,7 +2804,7 @@ var data = {
 			"contentRef": "element_84_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"374277ff-ad85-4c90-8ba2-cfc6f452970b": {
@@ -2810,7 +2820,7 @@ var data = {
 			"contentRef": "element_85_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3755f2ba-3874-4824-addd-61598bf442dd": {
@@ -2827,7 +2837,7 @@ var data = {
 			"contentRef": "element_86_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3804e652-af28-437c-b80e-e89ca685f2ad": {
@@ -2844,7 +2854,7 @@ var data = {
 			"contentRef": "element_87_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"38d3f9a6-b2a6-41d4-8709-8dc5a84ccdf0": {
@@ -2875,7 +2885,7 @@ var data = {
 			"contentRef": "element_89_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"398cccbb-a1c3-426c-b054-0a14f40279cf": {
@@ -2892,12 +2902,12 @@ var data = {
 			"contentRef": "element_90_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"39ea9bfb-592d-4577-a3e8-461180d482d2": {
 			"theme": "cyan",
-			"title": "examine games magazines ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt; ",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"fc7c264c-476d-472d-8649-41bed055e7a2"
@@ -2922,7 +2932,7 @@ var data = {
 			"contentRef": "element_92_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3a3bec19-f391-4461-8c54-21705b2ae172": {
@@ -2952,7 +2962,7 @@ var data = {
 			"contentRef": "element_94_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3ae911db-c94b-4d10-9b04-86727f35701e": {
@@ -2960,6 +2970,7 @@ var data = {
 			"title": null,
 			"content": "TO_BE_REPLACED",
 			"outputs": [],
+			"autoHeight": true,
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
@@ -2980,7 +2991,7 @@ var data = {
 			"contentRef": "element_96_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3b6c5ea0-8e69-4528-8036-9285b84a9aae": {
@@ -3009,7 +3020,7 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"3cee3450-a510-4b62-80b9-5962bb7bfd8f": {
@@ -3027,7 +3038,24 @@ var data = {
 			"contentRef": "element_99_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
+			}
+		},
+		"3d360510-987d-47aa-9198-c0ddc34c75b2": {
+			"theme": "pink",
+			"title": "Consider predicament",
+			"content": "TO_BE_REPLACED",
+			"outputs": [
+				"8431d647-a596-4a52-b603-0d3da53c2043"
+			],
+			"autoHeight": true,
+			"components": [
+				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
+			],
+			"contentRef": "element_100_content",
+			"cover": {
+				"type": "image",
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"3f790750-8525-4f53-a986-3a66d39edf13": {
@@ -3041,11 +3069,11 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_100_content"
+			"contentRef": "element_101_content"
 		},
 		"3fcc5c7e-d67e-4ac6-a712-ca5eb388dd62": {
 			"theme": "default",
-			"title": "",
+			"title": "No time for therapy",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"a2873ba8-1202-470c-aebb-ca6cd4036792"
@@ -3054,10 +3082,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_101_content",
+			"contentRef": "element_102_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4151b7da-3074-46f5-944b-cba6efea0f4d": {
@@ -3073,10 +3101,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_102_content",
+			"contentRef": "element_103_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"42f4c8b7-e8a0-4856-ada5-59b88cbfe5d2": {
@@ -3089,11 +3117,11 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_103_content"
+			"contentRef": "element_104_content"
 		},
 		"42fd0da8-03fb-4306-bb96-42fa8ee42295": {
 			"theme": "default",
-			"title": "You need to let go ( adventure game scripts  )",
+			"title": "You need to let go ( &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt;  )",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"4b682093-f908-429a-983a-2cbf1f9bdc0a"
@@ -3101,10 +3129,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_104_content",
+			"contentRef": "element_105_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"442f8c93-fae1-469d-b1e9-a0c79fc4c4cf": {
@@ -3118,10 +3146,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_105_content",
+			"contentRef": "element_106_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"44387e76-9c16-455c-accd-f5bf79f898c3": {
@@ -3133,7 +3161,7 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_106_content"
+			"contentRef": "element_107_content"
 		},
 		"45153e05-d9f1-41a5-929c-dafcb57fe60b": {
 			"theme": "default",
@@ -3146,10 +3174,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_107_content",
+			"contentRef": "element_108_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"45a0cfc8-e28f-441a-a1d8-04243ed310b5": {
@@ -3164,10 +3192,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_108_content",
+			"contentRef": "element_109_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"46115c98-a78e-49dd-8be7-0924d6834f03": {
@@ -3182,15 +3210,15 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"270833c2-3f2d-41c6-adc5-f6436e2869b0"
 			],
-			"contentRef": "element_109_content",
+			"contentRef": "element_110_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"46198e76-cb3a-4b5b-9b98-4411a81a842e": {
 			"theme": "lightBlue",
-			"title": "examine grand piano reply",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"8f930cc8-f93a-4932-93ed-bf8f837487f8\" data-type=\"component\"&gt;grand piano&lt;/span&gt; reply",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"4efa143d-bbc1-4fd6-9220-9f5d5981c536"
@@ -3199,10 +3227,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_110_content",
+			"contentRef": "element_111_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"46ac16db-72a9-4ad5-8d95-3dede3b9d66b": {
@@ -3216,10 +3244,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_111_content",
+			"contentRef": "element_112_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"47c57553-a530-46f4-9eb3-f5bf9977000f": {
@@ -3233,10 +3261,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_112_content",
+			"contentRef": "element_113_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"48b9a5cf-b392-41f4-bfaf-b6bd738bbb95": {
@@ -3250,10 +3278,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_113_content",
+			"contentRef": "element_114_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"49517953-787b-407e-bd88-520264086469": {
@@ -3267,7 +3295,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_114_content"
+			"contentRef": "element_115_content"
 		},
 		"4aa37e37-2737-4df1-a09b-f58d71b6cb93": {
 			"theme": "default",
@@ -3279,10 +3307,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_115_content",
+			"contentRef": "element_116_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4ac2fe04-9614-4f1d-b71c-d5c99b33c10b": {
@@ -3297,15 +3325,15 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_116_content",
+			"contentRef": "element_117_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4bb97507-256a-40ac-ada0-40a176ebc697": {
 			"theme": "cyan",
-			"title": "Give scripts to Andreas 1",
+			"title": "Give scripts to &lt;span class=\"mention-component mention\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-label=\"Andreas\" data-type=\"component\"&gt;Andreas&lt;/span&gt; 1",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"cd1e919c-ef47-4fbf-816a-89ff9a106f9c"
@@ -3314,10 +3342,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_117_content",
+			"contentRef": "element_118_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4bbc34ed-2199-48d4-a2e2-e570bc071921": {
@@ -3330,10 +3358,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_118_content",
+			"contentRef": "element_119_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1": {
@@ -3341,19 +3369,19 @@ var data = {
 			"title": "bottleneck_4",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
+				"5c840425-eb3a-4c26-9049-9f1c222f82e9",
+				"440a0d43-1405-443f-95c3-ad60a98d6c7c",
 				"e352cf34-b60f-45f6-a49e-6d881dee8288",
-				"39cdce7c-c895-41fe-8ba9-e365c59f7adb",
-				"78a04485-cecc-45bf-8917-aaf1a044b548",
-				"3dc1ed36-3276-477f-a94c-380436a237f0",
-				"38ba38e0-5703-46ca-8719-78a2d222eec7"
+				"cd7c5c75-2b40-41a3-b869-20ebf417b398",
+				"7f2a6043-fa59-40b3-b713-d92e5ecf7c05"
 			],
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_119_content",
+			"contentRef": "element_120_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4ca52d6d-63d2-47a9-9284-28cad2aa626a": {
@@ -3367,10 +3395,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_120_content",
+			"contentRef": "element_121_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4d2f22bf-d848-4f6c-8484-3f09aed38890": {
@@ -3382,7 +3410,7 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_121_content"
+			"contentRef": "element_122_content"
 		},
 		"4dd4a481-02cc-4f98-9d6f-d872329e0c5e": {
 			"theme": "cyan",
@@ -3396,10 +3424,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_122_content",
+			"contentRef": "element_123_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"4ea610d0-ea28-4e1d-9e00-3c70141c20bd": {
@@ -3413,7 +3441,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_123_content"
+			"contentRef": "element_124_content"
 		},
 		"50498537-2219-4017-a4cd-25bc42bb300f": {
 			"theme": "cyan",
@@ -3426,10 +3454,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_124_content",
+			"contentRef": "element_125_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"50d6b087-424e-45ff-8a08-8fc32ac91fbf": {
@@ -3443,10 +3471,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_125_content",
+			"contentRef": "element_126_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"50e4e757-a667-44c9-99e3-de2ef65c4578": {
@@ -3456,11 +3484,15 @@ var data = {
 			"outputs": [
 				"7de0add8-d0ba-4f65-9000-deb2d3cab212"
 			],
-			"autoHeight": false,
+			"autoHeight": true,
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_126_content"
+			"contentRef": "element_127_content",
+			"cover": {
+				"type": "image",
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
+			}
 		},
 		"51c3eb6d-daf4-4268-bc43-214077896bdc": {
 			"theme": "default",
@@ -3473,10 +3505,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_127_content",
+			"contentRef": "element_128_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"54842290-0c44-48db-a146-2b1cbd427c68": {
@@ -3490,10 +3522,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_128_content",
+			"contentRef": "element_129_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"54aac729-ce88-4470-b836-675afa18709b": {
@@ -3509,10 +3541,10 @@ var data = {
 				"ce5d1948-6893-44ef-845c-e81c48926efc",
 				"d95da3c0-0c71-47bd-9d40-d909dbfaaeef"
 			],
-			"contentRef": "element_129_content",
+			"contentRef": "element_130_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"5614eb8a-d412-44b1-baeb-68bac261ff7c": {
@@ -3528,10 +3560,10 @@ var data = {
 				"78398b84-0d0b-4038-9f72-44b2459435a2",
 				"74a88987-534b-44c6-8434-22ea6de90349"
 			],
-			"contentRef": "element_130_content",
+			"contentRef": "element_131_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"57904202-50a7-40f6-a476-51cbb33fe51e": {
@@ -3544,10 +3576,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_131_content",
+			"contentRef": "element_132_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"589e682e-e6f0-4824-838b-4a3beb749753": {
@@ -3562,10 +3594,10 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_132_content",
+			"contentRef": "element_133_content",
 			"cover": {
 				"type": "image",
-				"file": "/Godot API UI.png"
+				"file": "/Images/Images/Images/Images/Images/Godot API UI.png"
 			}
 		},
 		"5abd9177-a9af-4f50-a2ed-499e58d91201": {
@@ -3578,7 +3610,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_133_content"
+			"contentRef": "element_134_content"
 		},
 		"5aefd732-5873-4e19-afcd-355ceca5f0df": {
 			"theme": "default",
@@ -3592,10 +3624,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_134_content",
+			"contentRef": "element_135_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"5b08afa8-5aed-46d0-ba4c-44f5059fae34": {
@@ -3609,10 +3641,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_135_content",
+			"contentRef": "element_136_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"5bb02148-99f6-480d-9fe7-9b54d5fa2535": {
@@ -3626,10 +3658,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_136_content",
+			"contentRef": "element_137_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"5bb142f6-5f4e-4c79-a022-f2ba29bf675a": {
@@ -3643,10 +3675,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_137_content",
+			"contentRef": "element_138_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"5d20c729-d169-44a1-a1de-6891646c4b06": {
@@ -3660,10 +3692,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_138_content",
+			"contentRef": "element_139_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"5da73543-1af8-49e6-a2b3-60b793e2bfa8": {
@@ -3677,10 +3709,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_139_content",
+			"contentRef": "element_140_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"5f2fd7f7-e0ca-4c2f-923d-75e60c7acef8": {
@@ -3694,10 +3726,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_140_content",
+			"contentRef": "element_141_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"5f8f4dd8-807f-4027-84ee-a2b45a4510dc": {
@@ -3711,10 +3743,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_141_content",
+			"contentRef": "element_142_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"600cfcf0-9466-47b0-802d-ca1dff6caa8c": {
@@ -3728,10 +3760,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_142_content",
+			"contentRef": "element_143_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"614a864d-0209-48dd-973d-b26e0ae97a60": {
@@ -3744,10 +3776,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_143_content",
+			"contentRef": "element_144_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"62097a36-f919-469f-9333-3bf3f4e257a0": {
@@ -3761,10 +3793,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_144_content",
+			"contentRef": "element_145_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"628ce470-2231-4b08-800f-bda36403c6bf": {
@@ -3779,10 +3811,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_145_content",
+			"contentRef": "element_146_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"65265dc7-94e5-407b-993f-23d5f08f4a63": {
@@ -3798,10 +3830,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_146_content",
+			"contentRef": "element_147_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"653dd428-28bf-465e-af91-c0b121e1b148": {
@@ -3817,7 +3849,7 @@ var data = {
 			"components": [
 				"9394ffb5-bf06-4b15-b02c-3123b1b05067"
 			],
-			"contentRef": "element_147_content"
+			"contentRef": "element_148_content"
 		},
 		"659038e7-cb8d-4963-ae68-be610a8eaa1a": {
 			"theme": "default",
@@ -3830,15 +3862,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_148_content",
+			"contentRef": "element_149_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"65c88433-2929-4590-bb9c-91e015e71221": {
 			"theme": "default",
-			"title": null,
+			"title": "",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"d8c18e32-ae6a-4c5c-82d9-208cf4fc7d2c"
@@ -3847,10 +3879,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_149_content",
+			"contentRef": "element_150_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"66367d89-36e5-4cc8-ba3d-83826fa64bd2": {
@@ -3864,15 +3896,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_150_content",
+			"contentRef": "element_151_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"66edd6cd-0622-4105-b843-ee919cdb87d9": {
 			"theme": "default",
-			"title": "",
+			"title": "Let's play",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"21beefa2-31ea-4d60-a4e4-6eb98f96b78e"
@@ -3881,10 +3913,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_151_content",
+			"contentRef": "element_152_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"6a6099a0-fe55-46fd-8b36-e706ad78f3d5": {
@@ -3898,10 +3930,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_152_content",
+			"contentRef": "element_153_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"6afbb6b0-5fcf-46d0-a593-3428ade536bc": {
@@ -3915,10 +3947,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_153_content",
+			"contentRef": "element_154_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"6b46f082-9ff0-4ee3-9e5c-bf380f4752e9": {
@@ -3932,10 +3964,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_154_content",
+			"contentRef": "element_155_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"6c0ab12d-b26b-4e41-91da-a6cfff8711f6": {
@@ -3949,10 +3981,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_155_content",
+			"contentRef": "element_156_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"6c6f0e14-8f8d-4660-b2cd-32bfaea9ca82": {
@@ -3965,7 +3997,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_156_content"
+			"contentRef": "element_157_content"
 		},
 		"6ca31259-b57b-4f89-92e2-87512c43b68f": {
 			"theme": "default",
@@ -3978,10 +4010,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_157_content",
+			"contentRef": "element_158_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"6dc672bb-bdc5-47ca-a265-9340fa2dc5fb": {
@@ -3995,10 +4027,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_158_content",
+			"contentRef": "element_159_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"6e16d0f3-e996-41ef-a881-563665e8ca43": {
@@ -4012,7 +4044,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_159_content"
+			"contentRef": "element_160_content"
 		},
 		"6fd476a5-be56-4f70-987c-ac6f38d09514": {
 			"theme": "lightBlue",
@@ -4025,10 +4057,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_160_content",
+			"contentRef": "element_161_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7096cf29-6f05-43b3-8d01-218008939831": {
@@ -4038,10 +4070,11 @@ var data = {
 			"outputs": [
 				"3d1b7707-9bed-4e29-87d3-c8b07038e249"
 			],
+			"autoHeight": true,
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_161_content"
+			"contentRef": "element_162_content"
 		},
 		"718429bb-145b-4b79-ad1c-01aa45a9c065": {
 			"theme": "default",
@@ -4054,10 +4087,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_162_content",
+			"contentRef": "element_163_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7297a288-1be6-4318-9b91-c717aba0363f": {
@@ -4070,24 +4103,24 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_163_content"
+			"contentRef": "element_164_content"
 		},
 		"73926738-9ea6-4336-94cc-571a169d15ab": {
 			"theme": "pink",
-			"title": "",
+			"title": "This place feels familiar.",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
-				"45b6e319-f4aa-4543-b8eb-5f4f2fd6c150"
+				"45b6e319-f4aa-4543-b8eb-5f4f2fd6c150",
+				"83f270e6-a8ac-495d-b068-c606ae9e73a0"
 			],
 			"autoHeight": true,
 			"components": [
-				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
-				"a76b1b28-2731-4b50-a428-2a72c5d2b125"
+				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_164_content",
+			"contentRef": "element_165_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"746abc55-0290-4dbc-b75e-8258faa46612": {
@@ -4101,15 +4134,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_165_content",
+			"contentRef": "element_166_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"74d38de5-b8f7-4491-86f7-c81ec1fa4711": {
 			"theme": "lightBlue",
-			"title": "Andreas talk to",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; talk to",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"68f17a83-e794-4525-b10d-31dbb55b0ce5"
@@ -4118,10 +4151,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_166_content",
+			"contentRef": "element_167_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"75566f59-61c7-4dc0-a6a4-47c698e1520b": {
@@ -4135,10 +4168,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_167_content",
+			"contentRef": "element_168_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"768d36ad-07c8-4353-bcd6-958766082540": {
@@ -4151,10 +4184,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_168_content",
+			"contentRef": "element_169_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7690144a-5467-4a23-851f-779c7d07ea3b": {
@@ -4168,10 +4201,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_169_content",
+			"contentRef": "element_170_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"76d35fdb-7f80-4540-b7ae-327e692b3fbb": {
@@ -4185,15 +4218,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_170_content",
+			"contentRef": "element_171_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"76ee23a5-b77d-4d30-9302-0e9b2f948996": {
 			"theme": "purple",
-			"title": "games magazines",
+			"title": "<span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\">games magazines</span>",
 			"content": null,
 			"outputs": [
 				"56d831a7-5682-41ba-b8f0-385690fee3a2",
@@ -4205,7 +4238,7 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"76f12f0a-90e3-4756-8688-cb17099fd84a": {
@@ -4219,15 +4252,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_172_content",
+			"contentRef": "element_173_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"78b6ec2d-4d9d-4b43-8a26-2b333eec5d95": {
 			"theme": "pink",
-			"title": "Andreas examine reply",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; examine reply",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"4f81b5ff-e360-41cb-831c-accf0830ac7d"
@@ -4236,10 +4269,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_173_content",
+			"contentRef": "element_174_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"78dd6e96-8038-499c-988c-32c95ef253be": {
@@ -4252,7 +4285,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_174_content"
+			"contentRef": "element_175_content"
 		},
 		"7a432781-639c-41fa-9bec-7973aeb5e418": {
 			"theme": "default",
@@ -4265,10 +4298,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_175_content",
+			"contentRef": "element_176_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7a4cd099-907a-4087-b9f3-ec3bec5b4260": {
@@ -4282,10 +4315,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_176_content",
+			"contentRef": "element_177_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7b1d8a14-a91e-4d0a-bd69-756b23907fdf": {
@@ -4299,10 +4332,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"a76b1b28-2731-4b50-a428-2a72c5d2b125"
 			],
-			"contentRef": "element_177_content",
+			"contentRef": "element_178_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"7b6098aa-c01b-4e37-bb08-5ce93db6dd65": {
@@ -4315,10 +4348,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_178_content",
+			"contentRef": "element_179_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7bac81d2-353f-43ec-9bf5-9622a1cafa0d": {
@@ -4333,10 +4366,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_179_content",
+			"contentRef": "element_180_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"7bcc5363-e1f2-4491-8471-f36f3190a843": {
@@ -4347,10 +4380,10 @@ var data = {
 				"af97d053-a63f-4349-be3b-96ecbca2092a"
 			],
 			"components": [],
-			"contentRef": "element_180_content",
+			"contentRef": "element_181_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"7c089f95-400b-451d-a846-adb015e3336c": {
@@ -4364,10 +4397,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_181_content",
+			"contentRef": "element_182_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7c210b1b-9892-4760-8542-4a07646a1438": {
@@ -4381,10 +4414,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_182_content",
+			"contentRef": "element_183_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"7ea7e417-00d0-45ac-8e0b-48fd29ea67d4": {
@@ -4399,10 +4432,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_183_content",
+			"contentRef": "element_184_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"7f7f8915-d9fa-4e27-8b64-5221551cc48b": {
@@ -4416,10 +4449,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_184_content",
+			"contentRef": "element_185_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"817ef224-40b0-485c-a3bb-2c52ccc3cff4": {
@@ -4433,7 +4466,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_185_content"
+			"contentRef": "element_186_content"
 		},
 		"82dd14d4-6348-4c8b-a2dd-e89c188031f3": {
 			"theme": "default",
@@ -4446,10 +4479,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_186_content",
+			"contentRef": "element_187_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8336a23a-b0c2-4b0e-bbb5-ca371b2f5052": {
@@ -4463,10 +4496,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_187_content",
+			"contentRef": "element_188_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8429a1c5-2750-497a-a521-3a73fc58de67": {
@@ -4479,10 +4512,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_188_content",
+			"contentRef": "element_189_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"85a5e7b4-89f6-4d6e-8b39-7621e2e34661": {
@@ -4496,10 +4529,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_189_content",
+			"contentRef": "element_190_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"85db24a8-293c-4307-b388-0cce6c432922": {
@@ -4513,10 +4546,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_190_content",
+			"contentRef": "element_191_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8769209e-6d10-48e6-af54-1cb6513b76f6": {
@@ -4530,10 +4563,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_191_content",
+			"contentRef": "element_192_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"889f302b-0977-4f3d-84e0-c4ee90837b24": {
@@ -4546,15 +4579,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_192_content",
+			"contentRef": "element_193_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"88a00fe2-dcf9-4271-b330-900e06e7aa21": {
 			"theme": "cyan",
-			"title": "examine grand piano ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"8f930cc8-f93a-4932-93ed-bf8f837487f8\" data-type=\"component\"&gt;grand piano&lt;/span&gt; ",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"1c9dbeff-ac2f-4ed1-b484-3fcb6272d443"
@@ -4564,7 +4597,7 @@ var data = {
 				"5a015efe-9472-4480-80cd-ede2c35404c3",
 				"8f930cc8-f93a-4932-93ed-bf8f837487f8"
 			],
-			"contentRef": "element_193_content"
+			"contentRef": "element_194_content"
 		},
 		"88b0767d-0600-4322-85db-e65f4869c4ba": {
 			"theme": "default",
@@ -4577,10 +4610,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_194_content",
+			"contentRef": "element_195_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"88b99695-f921-4d3c-aa28-0e8276c6149b": {
@@ -4594,10 +4627,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_195_content",
+			"contentRef": "element_196_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"89438d1b-f435-4600-914d-2ddc15b8e48f": {
@@ -4612,10 +4645,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"1ff6f2bd-7675-4f5e-958e-3d6ca5f102c2"
 			],
-			"contentRef": "element_196_content",
+			"contentRef": "element_197_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"895683a2-4fca-43fd-aa83-fde7e46fab43": {
@@ -4628,7 +4661,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_197_content"
+			"contentRef": "element_198_content"
 		},
 		"89a0a6ba-43f1-4a9c-8352-9c11eb04d367": {
 			"theme": "default",
@@ -4641,10 +4674,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_198_content",
+			"contentRef": "element_199_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"89d5b28a-2001-4a2d-be1a-fba602696ad9": {
@@ -4658,10 +4691,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_199_content",
+			"contentRef": "element_200_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"89e6af7f-c084-4172-b1d7-1525b43727c0": {
@@ -4676,10 +4709,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_200_content",
+			"contentRef": "element_201_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8ad66265-0e9d-4ea1-a66e-904e26178c2d": {
@@ -4693,10 +4726,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_201_content",
+			"contentRef": "element_202_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8b5b539b-6a9b-41d8-8bab-9f8ddc72463f": {
@@ -4709,10 +4742,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_202_content",
+			"contentRef": "element_203_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8b6c3dc6-95ae-44d1-839c-25c38ead4769": {
@@ -4726,10 +4759,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_203_content",
+			"contentRef": "element_204_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"8b6c8286-a213-4c61-a449-7594bfeeb39c": {
@@ -4743,10 +4776,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_204_content",
+			"contentRef": "element_205_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8b7d1e96-885b-49e3-bdd7-1b2345b9f78e": {
@@ -4761,10 +4794,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_205_content",
+			"contentRef": "element_206_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8cd2ae8c-c7cb-4a00-9540-b3e4d3a2d80d": {
@@ -4779,10 +4812,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_206_content",
+			"contentRef": "element_207_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8cd64283-55e8-4158-94e7-8dc9fe3788f9": {
@@ -4796,10 +4829,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_207_content",
+			"contentRef": "element_208_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"8d665585-1c94-47e9-99dd-03af5eb98f6e": {
@@ -4814,10 +4847,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"a76b1b28-2731-4b50-a428-2a72c5d2b125"
 			],
-			"contentRef": "element_208_content",
+			"contentRef": "element_209_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8db7f79f-47d7-43b8-8b66-461d6cefdbcc": {
@@ -4842,10 +4875,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_210_content",
+			"contentRef": "element_211_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"8fd94d1f-db99-4ac9-a054-a4d057c9fe13": {
@@ -4858,7 +4891,7 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_211_content"
+			"contentRef": "element_212_content"
 		},
 		"911e78b1-d98d-4f4b-b8f0-e453806b4e3b": {
 			"theme": "default",
@@ -4871,10 +4904,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_212_content",
+			"contentRef": "element_213_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"929dfd94-d8a4-4ac2-b521-fab2679f7d27": {
@@ -4888,10 +4921,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_213_content",
+			"contentRef": "element_214_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9303a43f-9f87-4bd5-9ea8-f35daaf92f10": {
@@ -4904,7 +4937,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_214_content"
+			"contentRef": "element_215_content"
 		},
 		"932c50a1-9130-45c3-8671-61d0e469cd77": {
 			"theme": "default",
@@ -4917,15 +4950,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_215_content",
+			"contentRef": "element_216_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"93cf51b8-ec9e-4f41-b443-d58ff9ef9b75": {
 			"theme": "pink",
-			"title": "Activity: INVENTORY: ADD: key",
+			"title": "Activity: &lt;span class=\"mention mention-component\" data-id=\"ce5d1948-6893-44ef-845c-e81c48926efc\" data-type=\"component\"&gt;INVENTORY: ADD&lt;/span&gt;: &lt;span class=\"mention mention-component\" data-id=\"7dc10d72-cac3-475e-9076-5c984e2884b0\" data-type=\"component\"&gt;key&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"885dfbb7-1436-4ef3-8071-815e79cec803"
@@ -4935,10 +4968,10 @@ var data = {
 				"ce5d1948-6893-44ef-845c-e81c48926efc",
 				"7dc10d72-cac3-475e-9076-5c984e2884b0"
 			],
-			"contentRef": "element_216_content",
+			"contentRef": "element_217_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"943630d2-389b-401e-ae03-372a628f504c": {
@@ -4952,10 +4985,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_217_content",
+			"contentRef": "element_218_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"95b94977-ee79-44e4-9555-fdf707d01577": {
@@ -4969,10 +5002,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_218_content",
+			"contentRef": "element_219_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"96caa701-3d5d-45c4-bf91-293dd26ff686": {
@@ -4986,10 +5019,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_219_content",
+			"contentRef": "element_220_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9788d95c-a718-4147-9223-ecc24a5699e8": {
@@ -5004,10 +5037,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_220_content",
+			"contentRef": "element_221_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9830aa19-97bb-4eb8-997a-4cdca0bf4a1d": {
@@ -5021,10 +5054,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_221_content",
+			"contentRef": "element_222_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"98c940da-f667-45b0-8b53-33d00e207913": {
@@ -5037,11 +5070,11 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_222_content"
+			"contentRef": "element_223_content"
 		},
 		"990f948a-2a15-4ee2-9eec-596e0302593e": {
 			"theme": "lightBlue",
-			"title": "Examine Amstrad 6128",
+			"title": "Examine &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"75fb2116-c867-42c6-b926-4c02f7b4155b"
@@ -5050,10 +5083,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_223_content",
+			"contentRef": "element_224_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"99479b75-a383-4312-b874-5468ab418c9b": {
@@ -5067,10 +5100,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_224_content",
+			"contentRef": "element_225_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9a4165cb-d3d9-4582-8bb5-d88eb957ce57": {
@@ -5083,10 +5116,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_225_content",
+			"contentRef": "element_226_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"9b031067-332b-4b40-925a-eab936590917": {
@@ -5100,10 +5133,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_226_content",
+			"contentRef": "element_227_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9bd0f86f-6751-4d40-8cf9-7e93eb8a1088": {
@@ -5118,10 +5151,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_227_content",
+			"contentRef": "element_228_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"9bdb8a88-8daa-4b26-8731-cd3458131e39": {
@@ -5135,15 +5168,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_228_content",
+			"contentRef": "element_229_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9c34ec03-291d-4c28-a041-a6c8173d54c6": {
 			"theme": "cyan",
-			"title": "Unlock final exit with key ",
+			"title": "Unlock &lt;span class=\"mention mention-component\" data-id=\"74a88987-534b-44c6-8434-22ea6de90349\" data-type=\"component\"&gt;final exit&lt;/span&gt; with &lt;span class=\"mention mention-component\" data-id=\"7dc10d72-cac3-475e-9076-5c984e2884b0\" data-type=\"component\"&gt;key&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"134909e0-def8-4734-a223-ba1f9894abe9"
@@ -5152,7 +5185,11 @@ var data = {
 			"components": [
 				"74a88987-534b-44c6-8434-22ea6de90349",
 				"7dc10d72-cac3-475e-9076-5c984e2884b0"
-			]
+			],
+			"cover": {
+				"type": "image",
+				"file": "/Images/Images/Images/bedroom.png"
+			}
 		},
 		"9c8e251c-2d11-4ff9-8a07-7ee5dbef5a2f": {
 			"theme": "pink",
@@ -5163,11 +5200,11 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_230_content"
+			"contentRef": "element_231_content"
 		},
 		"9d13cbf9-8729-40c1-94ad-cfa75c6a8825": {
 			"theme": "cyan",
-			"title": "handle grand piano",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"ef85094c-2389-4ee6-9f5c-051aea3a64a1\" data-type=\"component\"&gt;handle&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"8f930cc8-f93a-4932-93ed-bf8f837487f8\" data-type=\"component\"&gt;grand piano&lt;/span&gt;",
 			"content": null,
 			"outputs": [
 				"542c4c3a-f72f-4ce6-a3f3-821f777c8df4"
@@ -5189,10 +5226,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_232_content",
+			"contentRef": "element_233_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9d61abac-c6ed-4741-b434-34afeec392ea": {
@@ -5206,15 +5243,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_233_content",
+			"contentRef": "element_234_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9ed200c4-ebfe-4ee2-944a-e9aa56b71983": {
 			"theme": "lightBlue",
-			"title": "Amstrad 6128 take",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt; take",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"368883b3-f69c-470d-8e91-cecc120b4048"
@@ -5223,10 +5260,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_234_content",
+			"contentRef": "element_235_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"9ee41f27-6dfd-4ba2-98ec-573306775f6d": {
@@ -5240,10 +5277,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_235_content",
+			"contentRef": "element_236_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9f55ad10-544b-4447-8ba4-3db079065153": {
@@ -5256,10 +5293,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_236_content",
+			"contentRef": "element_237_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"9fb73618-30bf-47bb-afe4-7fa329b68d18": {
@@ -5275,11 +5312,11 @@ var data = {
 			"components": [
 				"9394ffb5-bf06-4b15-b02c-3123b1b05067"
 			],
-			"contentRef": "element_237_content"
+			"contentRef": "element_238_content"
 		},
 		"a2324b0b-5ce6-4104-9f92-d01f1c1151c1": {
 			"theme": "cyan",
-			"title": "examine page ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"173545f9-d103-4b34-87ef-690608f94240\" data-type=\"component\"&gt;page&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"25547025-06e8-444f-9e1f-7c8c38588677"
@@ -5301,15 +5338,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_239_content",
+			"contentRef": "element_240_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a23a7708-9f76-4a8e-a2bd-e7d61257028d": {
 			"theme": "purple",
-			"title": "Give irrelevant to Andreas",
+			"title": "Give irrelevant to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;",
 			"content": null,
 			"outputs": [
 				"126e7f2b-8c04-41ac-b7fe-82fea71d8e59"
@@ -5330,10 +5367,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_241_content",
+			"contentRef": "element_242_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a3668117-5e64-4241-adad-411683ea0f2f": {
@@ -5346,10 +5383,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_242_content",
+			"contentRef": "element_243_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a4021a72-1d20-4cef-9cba-d42e616dbbab": {
@@ -5363,18 +5400,18 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_243_content",
+			"contentRef": "element_244_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a410d939-32cd-494c-9976-076c55e9d14f": {
 			"theme": "cyan",
-			"title": "handle Amstrad 6128 ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"ef85094c-2389-4ee6-9f5c-051aea3a64a1\" data-type=\"component\"&gt;handle&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
-				"baedf98d-7d7f-48f8-8e7e-3b71bb43736f"
+				"05a835be-5f86-45d8-b3ce-e4abc586e6ee"
 			],
 			"autoHeight": true,
 			"components": [
@@ -5392,10 +5429,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_245_content",
+			"contentRef": "element_246_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a64b3600-c280-491c-8c12-e619f3fd25af": {
@@ -5409,15 +5446,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_246_content",
+			"contentRef": "element_247_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a6dace93-3d51-480a-9be5-7e0c7025d6ec": {
 			"theme": "lightBlue",
-			"title": "Take adventure game scripts",
+			"title": "Take &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"b0b8c369-2458-4a02-b642-bf65c43960ca"
@@ -5429,10 +5466,10 @@ var data = {
 				"033582a9-c2ea-4fb5-97d9-f252d1303850",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_247_content",
+			"contentRef": "element_248_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"a70231c1-06f9-40ff-a8ed-8e0e283e2643": {
@@ -5446,10 +5483,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_248_content",
+			"contentRef": "element_249_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a7cf23eb-f245-44a4-b10b-119bf3ebfe8e": {
@@ -5463,15 +5500,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_249_content",
+			"contentRef": "element_250_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a800ffa4-e880-47bf-9e05-8e09af50ee57": {
 			"theme": "default",
-			"title": "You need to let go (Amstrad 6128)",
+			"title": "You need to let go (&lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;)",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"90734b43-0c8d-4359-a0af-58ec83b7ef0e"
@@ -5479,10 +5516,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_250_content",
+			"contentRef": "element_251_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a8091c7d-59f8-4627-b819-467f2caf2dfa": {
@@ -5498,10 +5535,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_251_content",
+			"contentRef": "element_252_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a81acbb4-af69-4fea-9b78-07e03e1bd49b": {
@@ -5514,10 +5551,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_252_content",
+			"contentRef": "element_253_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"a8ba89d6-bf23-4626-b26e-41824bf6e4cf": {
@@ -5531,10 +5568,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_253_content",
+			"contentRef": "element_254_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"a8ef249b-247d-42ea-b4a6-21ba94ec0a78": {
@@ -5547,10 +5584,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_254_content",
+			"contentRef": "element_255_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"a952933d-84c8-4020-8fcb-ea6ceea11353": {
@@ -5565,10 +5602,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_255_content",
+			"contentRef": "element_256_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"a9a8fee4-612e-48b3-ad7d-eb776cd3f613": {
@@ -5583,15 +5620,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_256_content",
+			"contentRef": "element_257_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"aab445ad-d6d4-41a3-b408-96e47f37553f": {
 			"theme": "cyan",
-			"title": "give Amstrad 6128 to Andreas ",
+			"title": "give &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt; to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"bd99f64c-f862-4bc7-97af-691eb72015be"
@@ -5613,10 +5650,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_258_content",
+			"contentRef": "element_259_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b1585e7e-d3a6-4615-b537-c6542b90d822": {
@@ -5630,10 +5667,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_259_content",
+			"contentRef": "element_260_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b1ef4620-f851-4641-a828-183b37748680": {
@@ -5647,10 +5684,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_260_content",
+			"contentRef": "element_261_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b20635af-b34e-4bb9-905c-c94f40a351dc": {
@@ -5664,10 +5701,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_261_content",
+			"contentRef": "element_262_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b214aa0e-e0e3-4a3d-b048-2d5424901713": {
@@ -5682,10 +5719,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_262_content",
+			"contentRef": "element_263_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"b3894de5-fc86-4fba-93a5-2e180b6b1591": {
@@ -5699,10 +5736,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_263_content",
+			"contentRef": "element_264_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b43b2dfc-9cee-46d2-9c19-091d6fe7eb3d": {
@@ -5716,10 +5753,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_264_content",
+			"contentRef": "element_265_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b440793b-8de7-44f1-820a-f72bcda64611": {
@@ -5733,10 +5770,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_265_content",
+			"contentRef": "element_266_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b4d488ff-8948-4739-9225-f7b164d14d50": {
@@ -5750,10 +5787,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_266_content",
+			"contentRef": "element_267_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b4d5cc97-0d1d-40b5-8591-9218f37a82da": {
@@ -5766,15 +5803,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_267_content",
+			"contentRef": "element_268_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b599f4b7-3b4e-4c9c-acca-415feb55b632": {
 			"theme": "lightBlue",
-			"title": "grand piano",
+			"title": "<span class=\"mention mention-component\" data-id=\"8f930cc8-f93a-4932-93ed-bf8f837487f8\" data-type=\"component\">grand piano</span>",
 			"content": null,
 			"outputs": [
 				"7db73510-bc91-437a-a90e-e1334ef73864",
@@ -5785,12 +5822,12 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b61617cc-79c0-4df2-a30e-0cd617b24df4": {
 			"theme": "cyan",
-			"title": "talk to Andreas ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"539c79e4-5d08-4536-bd36-f884c49134e1\" data-type=\"component\"&gt;talk&lt;/span&gt; to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"268c9993-aacd-4e3e-bea7-49567698e23c"
@@ -5805,12 +5842,14 @@ var data = {
 			"theme": "default",
 			"title": "",
 			"content": "TO_BE_REPLACED",
-			"outputs": [],
+			"outputs": [
+				"6bfd346f-57e6-4edc-9258-f42c7f687cb9"
+			],
 			"components": [
 				"bdac7ded-ed9f-4a1b-9d62-c3b2c33eb3b4",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_270_content"
+			"contentRef": "element_271_content"
 		},
 		"b920f87b-8801-43ea-b1c6-8df428863726": {
 			"theme": "cyan",
@@ -5823,7 +5862,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_271_content"
+			"contentRef": "element_272_content"
 		},
 		"b9620719-3d36-461e-bfe8-d31c5ec20b67": {
 			"theme": "default",
@@ -5836,10 +5875,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_272_content",
+			"contentRef": "element_273_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b968c619-ea6a-47de-8a3b-e227a015b50c": {
@@ -5854,10 +5893,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_273_content",
+			"contentRef": "element_274_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"b9ebb4e5-3411-4323-9c81-9d685bd47c98": {
@@ -5871,10 +5910,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_274_content",
+			"contentRef": "element_275_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ba6bebec-1d10-4d34-9674-70970391178e": {
@@ -5890,10 +5929,10 @@ var data = {
 				"2936dbdb-7639-4d36-b6a3-c9ee79df168a",
 				"d95da3c0-0c71-47bd-9d40-d909dbfaaeef"
 			],
-			"contentRef": "element_275_content",
+			"contentRef": "element_276_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ba9df472-5e76-49a0-9978-eb05895ae7f3": {
@@ -5907,10 +5946,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_276_content",
+			"contentRef": "element_277_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"baad19c9-d809-4de3-abad-bbbd3f20870e": {
@@ -5924,7 +5963,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_277_content"
+			"contentRef": "element_278_content"
 		},
 		"bb7dbfc3-e2c2-488a-9030-601e6c09a353": {
 			"theme": "lightBlue",
@@ -5937,15 +5976,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_278_content",
+			"contentRef": "element_279_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"be1c8c97-1a91-410b-b1ff-bc6f626e1492": {
 			"theme": "lightBlue",
-			"title": "Examine adventure game scripts",
+			"title": "Examine &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"f17a3c8b-cc15-4c6c-acc5-8f3e01cac25a"
@@ -5954,10 +5993,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_279_content",
+			"contentRef": "element_280_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"be8d9670-c10f-40a6-ba32-ab623e5b4e44": {
@@ -5969,7 +6008,7 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_280_content"
+			"contentRef": "element_281_content"
 		},
 		"bef4498b-ee5c-41a6-bb68-719260a2f784": {
 			"theme": "default",
@@ -5982,10 +6021,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_281_content",
+			"contentRef": "element_282_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"bf0bf2be-a0f2-4264-8d8c-b7d8a855f345": {
@@ -5998,10 +6037,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_282_content",
+			"contentRef": "element_283_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"bf22fdaa-5181-4d6c-902a-284cd81c7c56": {
@@ -6015,10 +6054,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_283_content",
+			"contentRef": "element_284_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"bff4b2ed-a50c-49b5-996a-a245677300f5": {
@@ -6032,10 +6071,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_284_content",
+			"contentRef": "element_285_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c04d679c-0a62-4312-82b7-93b4641f4e60": {
@@ -6049,15 +6088,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_285_content",
+			"contentRef": "element_286_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c21c5e07-7763-45eb-b298-80b26970699a": {
 			"theme": "purple",
-			"title": "Amstrad 6128",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;",
 			"content": null,
 			"outputs": [
 				"cc399d5b-0bbb-4abc-aa7f-614835b3b25e",
@@ -6069,7 +6108,7 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"c3df6736-33a0-4138-ab71-b31478268908": {
@@ -6083,10 +6122,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_287_content",
+			"contentRef": "element_288_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c3f95a4a-9597-4073-b887-5bb4a904747b": {
@@ -6099,15 +6138,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_288_content",
+			"contentRef": "element_289_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c4724676-2871-42e1-953e-c10d2189f312": {
 			"theme": "default",
-			"title": "What is this place?",
+			"title": "",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"691e9831-5899-43a0-bd84-1c09c7f35822"
@@ -6116,10 +6155,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_289_content",
+			"contentRef": "element_290_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c4950b0f-baa4-4f3e-a00d-500af58ac14e": {
@@ -6135,10 +6174,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_290_content",
+			"contentRef": "element_291_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c4ef7abc-f108-41ba-a4a2-b84a1a33f83e": {
@@ -6151,10 +6190,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_291_content",
+			"contentRef": "element_292_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c5c0de6d-5a8f-4614-ad4b-01699dfe03e9": {
@@ -6167,10 +6206,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_292_content",
+			"contentRef": "element_293_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c5f19a3f-b06a-4f67-8170-cd07912d8963": {
@@ -6191,20 +6230,20 @@ var data = {
 			"title": "bottleneck_1",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
-				"7dd95531-05c5-4237-b1a0-b6556c0e28e0",
-				"6cfb7893-6092-4651-b326-a5e80cdc6d71",
-				"b23ff728-cfa0-4326-8ec0-2410d3ac7d5c",
-				"cd723ca6-9735-469a-99ea-4cb14519bce0",
-				"a3046ddb-1d49-43a8-ae42-2ef1fc9ebb87",
-				"050db801-13a7-4034-9f16-00d98def3108"
+				"4bb8c52d-3e1e-4c58-ae60-3cc066288756",
+				"803f78f1-5d2f-431d-afc7-34e6c16d493a",
+				"3f833ddc-39c7-489f-812a-249346202b66",
+				"607eced2-6ecf-4e9d-ba7e-1f37006c6093",
+				"e8afd918-4224-4659-a83a-f6fb8f16eb55",
+				"a3046ddb-1d49-43a8-ae42-2ef1fc9ebb87"
 			],
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_294_content",
+			"contentRef": "element_295_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c6931721-8ca5-4b87-83eb-49aac0fd30f1": {
@@ -6218,10 +6257,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_295_content",
+			"contentRef": "element_296_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c75c252b-58c0-4bff-bbbf-e495ab9e6f43": {
@@ -6235,10 +6274,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_296_content",
+			"contentRef": "element_297_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c7ff7cb5-3cd2-40f6-8695-fcfd2941b646": {
@@ -6250,7 +6289,7 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_297_content"
+			"contentRef": "element_298_content"
 		},
 		"c8abca6a-04a8-47c3-aaa6-207d7b1d505c": {
 			"theme": "cyan",
@@ -6261,10 +6300,10 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_298_content",
+			"contentRef": "element_299_content",
 			"cover": {
 				"type": "image",
-				"file": "/Godot console.png"
+				"file": "/Images/Images/Godot console.png"
 			}
 		},
 		"c91a8394-36f7-4b52-961b-6e0ea7f1fdd0": {
@@ -6278,10 +6317,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_299_content",
+			"contentRef": "element_300_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c91f1816-fdef-4219-812f-2aac74f4b95a": {
@@ -6298,10 +6337,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_300_content",
+			"contentRef": "element_301_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"c92ecb28-ad81-42a7-a203-18f6c1db7a1b": {
@@ -6314,7 +6353,7 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_301_content"
+			"contentRef": "element_302_content"
 		},
 		"c9b0abcf-8dbc-4cf9-a6e0-b19cbfba1ef4": {
 			"theme": "default",
@@ -6327,10 +6366,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_302_content",
+			"contentRef": "element_303_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ca50d732-7e84-4898-9044-0aac680e650f": {
@@ -6344,15 +6383,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_303_content",
+			"contentRef": "element_304_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"cb074c80-a5ca-4cf0-9eab-e0f76bd56a17": {
 			"theme": "cyan",
-			"title": "examine Andreas ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; ",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"cf032d1e-d535-4f0f-8aa4-d94bcd9315bc"
@@ -6362,7 +6401,7 @@ var data = {
 				"5a015efe-9472-4480-80cd-ede2c35404c3",
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_304_content"
+			"contentRef": "element_305_content"
 		},
 		"cc38b899-7d83-44eb-adf3-a334d5f5c7a5": {
 			"theme": "lightBlue",
@@ -6375,10 +6414,10 @@ var data = {
 				"d8bc4ee7-ad09-4298-8e69-96ce0e0c0f0e",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_305_content",
+			"contentRef": "element_306_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"cc3e4019-1559-452c-a6cd-a3b1a34af293": {
@@ -6393,10 +6432,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"a76b1b28-2731-4b50-a428-2a72c5d2b125"
 			],
-			"contentRef": "element_306_content",
+			"contentRef": "element_307_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ccca62b3-f0a1-4c97-b372-08fc537daa7d": {
@@ -6408,7 +6447,7 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_307_content"
+			"contentRef": "element_308_content"
 		},
 		"cd467466-3bac-4454-a76c-7eea9b09d70c": {
 			"theme": "default",
@@ -6422,15 +6461,15 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_308_content",
+			"contentRef": "element_309_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"cd794986-f7f0-4f19-beff-a196a6edb570": {
 			"theme": "cyan",
-			"title": "Give scripts to Andreas 2",
+			"title": "Give scripts to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt; 2",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"67c2622b-1ee2-4047-8169-0ffe20622472"
@@ -6439,10 +6478,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_309_content",
+			"contentRef": "element_310_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"cdb9f587-4a48-4b44-b62d-cc0f95eb6ab1": {
@@ -6456,10 +6495,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_310_content",
+			"contentRef": "element_311_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ce0f902c-bbc2-465a-8198-3779835998a1": {
@@ -6473,10 +6512,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_311_content",
+			"contentRef": "element_312_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ce185db1-9b99-4c69-a8af-1caf598615b7": {
@@ -6490,10 +6529,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_312_content",
+			"contentRef": "element_313_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"cf68fe38-590a-4584-92c4-5c3c8c89219d": {
@@ -6507,15 +6546,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_313_content",
+			"contentRef": "element_314_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d08f5c42-0195-4278-bf44-0e5134b3ca49": {
 			"theme": "cyan",
-			"title": "examine notes ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"183c8876-c343-4a6e-9d9e-aceebc77e722\" data-type=\"component\"&gt;notes&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"ad9747e8-c893-4f88-924d-4d4ca013bbc2"
@@ -6536,10 +6575,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_315_content",
+			"contentRef": "element_316_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d1143ddc-7c6d-4a11-b3c5-4dd1c1050a87": {
@@ -6553,10 +6592,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_316_content",
+			"contentRef": "element_317_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d22cdcd0-1a87-45dc-9942-b1a9f89c2d84": {
@@ -6569,10 +6608,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_317_content",
+			"contentRef": "element_318_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"d27a6e22-1e17-4809-b1c8-29e80c526055": {
@@ -6585,10 +6624,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_318_content",
+			"contentRef": "element_319_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d3c70741-5d4c-4dd4-8373-aca8833145d2": {
@@ -6602,10 +6641,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_319_content",
+			"contentRef": "element_320_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d471990f-e606-400a-9455-71df2b0bf1e1": {
@@ -6619,10 +6658,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_320_content",
+			"contentRef": "element_321_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d5129e91-63c3-49bf-8aba-062d2f84bf77": {
@@ -6635,7 +6674,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_321_content"
+			"contentRef": "element_322_content"
 		},
 		"d52f2b56-29b5-4bf8-b6c1-bc209955a6b1": {
 			"theme": "default",
@@ -6648,10 +6687,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_322_content",
+			"contentRef": "element_323_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d54673ce-fe98-4d46-a339-183b27c588b6": {
@@ -6665,10 +6704,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_323_content",
+			"contentRef": "element_324_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d73b15f6-10a4-4c4f-8a92-8b79f4f07d80": {
@@ -6682,10 +6721,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_324_content",
+			"contentRef": "element_325_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d762d204-c3bc-4490-b1f8-ddecf89e0ee1": {
@@ -6698,15 +6737,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_325_content",
+			"contentRef": "element_326_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d790484f-8493-482e-a648-2f0c61da71e9": {
 			"theme": "cyan",
-			"title": "handle notes ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"ef85094c-2389-4ee6-9f5c-051aea3a64a1\" data-type=\"component\"&gt;handle&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"183c8876-c343-4a6e-9d9e-aceebc77e722\" data-type=\"component\"&gt;notes&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"bc3d6a34-ae86-410d-a0ab-f4861284448c"
@@ -6729,10 +6768,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_327_content",
+			"contentRef": "element_328_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"d879e7b0-b168-48e0-a1e0-fc93b0bdc12b": {
@@ -6746,15 +6785,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_328_content",
+			"contentRef": "element_329_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d96abb2e-3c5f-4d98-81fb-8c67c5959a0b": {
 			"theme": "lightBlue",
-			"title": "I didn't take my childhood's adventure game scripts seriously.",
+			"title": "I didn't take my childhood's &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt; seriously.",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"8fffa721-83b8-47fa-9136-bb4b83493abd"
@@ -6762,10 +6801,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_329_content",
+			"contentRef": "element_330_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"d9753896-b01d-4665-b571-4bf6b6782974": {
@@ -6779,10 +6818,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_330_content",
+			"contentRef": "element_331_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"da7902ac-6911-4b00-b2bd-a39e02740b75": {
@@ -6812,10 +6851,10 @@ var data = {
 				"8f930cc8-f93a-4932-93ed-bf8f837487f8",
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_332_content",
+			"contentRef": "element_333_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"dd00167c-bb97-44d0-a219-1ab9723c68e7": {
@@ -6829,10 +6868,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_333_content",
+			"contentRef": "element_334_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"dd0daa91-0e2b-4750-8ed5-14c3f903422e": {
@@ -6845,7 +6884,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_334_content"
+			"contentRef": "element_335_content"
 		},
 		"ddf98e16-3755-4791-bb4c-d364ee112f3a": {
 			"theme": "default",
@@ -6858,15 +6897,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_335_content",
+			"contentRef": "element_336_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"de8007a8-4dd6-49fb-82d9-cc5201fbf29f": {
 			"theme": "pink",
-			"title": "Andreas",
+			"title": "<span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\">Andreas</span>",
 			"content": null,
 			"outputs": [
 				"9b1cb3db-8cd7-4558-9862-fc7f09879909",
@@ -6880,7 +6919,7 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ded588a6-3c61-436d-a20f-da19ed5cab3b": {
@@ -6893,10 +6932,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_337_content",
+			"contentRef": "element_338_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"df04720d-98a7-48ac-8ae2-87b48c906ed4": {
@@ -6911,10 +6950,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_338_content",
+			"contentRef": "element_339_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"df0f7a18-bacf-4c1d-9cc6-3ab4487615fe": {
@@ -6926,7 +6965,7 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_339_content"
+			"contentRef": "element_340_content"
 		},
 		"dfbf38a3-9c77-4ef0-869a-7ef8e0704468": {
 			"theme": "default",
@@ -6939,10 +6978,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_340_content",
+			"contentRef": "element_341_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e025250a-4cb7-4bcb-8066-d36a4784c364": {
@@ -6956,10 +6995,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_341_content",
+			"contentRef": "element_342_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e04c471a-31b2-48d8-a669-deeda0604f1d": {
@@ -6973,10 +7012,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_342_content",
+			"contentRef": "element_343_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e133c6cb-b45f-482b-ad87-01d64c6527c4": {
@@ -6989,7 +7028,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_343_content"
+			"contentRef": "element_344_content"
 		},
 		"e13b2675-aa3a-472d-aea4-b06d50ed4223": {
 			"theme": "default",
@@ -7003,10 +7042,10 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_344_content",
+			"contentRef": "element_345_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e18e88d1-e0f9-46a7-92ba-e0a1d38adcd6": {
@@ -7022,7 +7061,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_345_content"
+			"contentRef": "element_346_content"
 		},
 		"e1ab6bb6-cb6f-420c-94e6-528fd60b02f2": {
 			"theme": "default",
@@ -7035,15 +7074,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_346_content",
+			"contentRef": "element_347_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e1e50aaf-2940-433a-8d59-1ce2fe533f6e": {
 			"theme": "cyan",
-			"title": "Give games magazines to Andreas",
+			"title": "Give &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt; to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"4e352ca5-f2c8-4220-a5e8-880880e85ed3"
@@ -7052,10 +7091,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_347_content",
+			"contentRef": "element_348_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e2910ffd-fe24-4cea-9f02-b08a577c7c62": {
@@ -7068,15 +7107,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_348_content",
+			"contentRef": "element_349_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e2b4b9d4-2ba4-4467-b920-b44cb6fef9cd": {
 			"theme": "cyan",
-			"title": "examine Amstrad 6128 ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt; ",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"bf0512f4-f2e6-4c1d-a7a9-212d2e33d8fa"
@@ -7086,7 +7125,7 @@ var data = {
 				"5a015efe-9472-4480-80cd-ede2c35404c3",
 				"d95da3c0-0c71-47bd-9d40-d909dbfaaeef"
 			],
-			"contentRef": "element_349_content"
+			"contentRef": "element_350_content"
 		},
 		"e31b3474-aa90-4e4d-b904-1e11f8fa8cb7": {
 			"theme": "default",
@@ -7098,10 +7137,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_350_content",
+			"contentRef": "element_351_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e3794f69-a29c-45c1-9d1b-416134a74ee1": {
@@ -7115,7 +7154,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_351_content"
+			"contentRef": "element_352_content"
 		},
 		"e4240ba9-66fc-4cbb-b680-78c788ede48c": {
 			"theme": "default",
@@ -7128,10 +7167,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_352_content",
+			"contentRef": "element_353_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e519d5d2-d50d-464b-9283-84524bbf083c": {
@@ -7147,15 +7186,15 @@ var data = {
 			],
 			"autoHeight": false,
 			"components": [],
-			"contentRef": "element_353_content",
+			"contentRef": "element_354_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"e6586366-8957-45f9-81af-76fbc6eef241": {
 			"theme": "cyan",
-			"title": "handle games magazines ",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"ef85094c-2389-4ee6-9f5c-051aea3a64a1\" data-type=\"component\"&gt;handle&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt; ",
 			"content": null,
 			"outputs": [
 				"72a38b01-421e-48a0-9dfa-36801fb370f9"
@@ -7177,10 +7216,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_355_content",
+			"contentRef": "element_356_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e781a027-d7ac-4c66-838b-80d607307827": {
@@ -7194,10 +7233,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_356_content",
+			"contentRef": "element_357_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e8648409-9d4c-45b1-9de3-17223a3cfe9b": {
@@ -7211,10 +7250,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_357_content",
+			"contentRef": "element_358_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"e8d9653b-16fe-4c5d-9b54-2d33a026426d": {
@@ -7228,10 +7267,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_358_content",
+			"contentRef": "element_359_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ea8c21fb-8f04-4bdc-a557-3b50085b6f6d": {
@@ -7245,15 +7284,15 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_359_content",
+			"contentRef": "element_360_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"ea9a3ad2-50d7-4b1d-95b7-82860b60312a": {
 			"theme": "default",
-			"title": "Let go (games magazines)",
+			"title": "Let go (&lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt;)",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"de72b54e-0f6e-47db-b848-fdacad3e7e57"
@@ -7262,10 +7301,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_360_content",
+			"contentRef": "element_361_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"eb457221-30cd-44dc-97c6-45f212dbfda1": {
@@ -7279,10 +7318,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_361_content",
+			"contentRef": "element_362_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"eb9940b5-d074-4bba-b6b8-8b6b287acc80": {
@@ -7298,10 +7337,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_362_content",
+			"contentRef": "element_363_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"eba9249c-5c40-4b60-ac19-efb24c3da118": {
@@ -7314,11 +7353,11 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_363_content"
+			"contentRef": "element_364_content"
 		},
 		"ebe0e497-4fbb-40ff-9573-49a065dee51c": {
 			"theme": "cyan",
-			"title": "Give key to Andreas",
+			"title": "Give &lt;span class=\"mention mention-component\" data-id=\"7dc10d72-cac3-475e-9076-5c984e2884b0\" data-type=\"component\"&gt;key&lt;/span&gt; to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"92ab3177-feb6-4ded-b36c-a6c07b524d7e"
@@ -7327,10 +7366,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_364_content",
+			"contentRef": "element_365_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"ebf5b13e-8fb0-4dc0-91ad-27b27abf3394": {
@@ -7344,10 +7383,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_365_content",
+			"contentRef": "element_366_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"ec4f0a28-b1b8-4f05-8d71-f038c6bd8eff": {
@@ -7360,10 +7399,10 @@ var data = {
 			"components": [
 				"c39bbc27-aa0e-4753-9c59-b2b8ab31384e"
 			],
-			"contentRef": "element_366_content",
+			"contentRef": "element_367_content",
 			"cover": {
 				"type": "image",
-				"file": "/finale.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/Images/finale.png"
 			}
 		},
 		"ed8081a6-0b4f-473b-9863-e62c32bd821b": {
@@ -7377,10 +7416,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_367_content",
+			"contentRef": "element_368_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f0bf0eff-baf1-461e-8bf9-b6c224572432": {
@@ -7394,10 +7433,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_368_content",
+			"contentRef": "element_369_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f10e2400-fb1f-414c-8553-e386c917126b": {
@@ -7411,10 +7450,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_369_content",
+			"contentRef": "element_370_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f15f80b1-0b2f-4e2b-ad98-aab35a8afbe7": {
@@ -7428,10 +7467,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_370_content",
+			"contentRef": "element_371_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f25641eb-503b-4232-aa20-bbb0f4fdc3a5": {
@@ -7444,10 +7483,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_371_content",
+			"contentRef": "element_372_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f280e115-e8ab-4276-a100-d1e222ad6c0a": {
@@ -7461,10 +7500,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_372_content",
+			"contentRef": "element_373_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f3049e9f-e42b-469e-a227-2c30a1190776": {
@@ -7479,10 +7518,10 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_373_content",
+			"contentRef": "element_374_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"f3054493-102b-4186-9024-eee9ed5101db": {
@@ -7495,10 +7534,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_374_content",
+			"contentRef": "element_375_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f3bb198b-34f9-403b-a586-2bef136ea8d5": {
@@ -7512,10 +7551,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_375_content",
+			"contentRef": "element_376_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f3d95239-15cf-4193-80a6-e68119c91e3c": {
@@ -7528,7 +7567,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_376_content"
+			"contentRef": "element_377_content"
 		},
 		"f4f69ae5-3445-472c-8ca7-b2ead9c62021": {
 			"theme": "pink",
@@ -7558,10 +7597,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_378_content",
+			"contentRef": "element_379_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f5904889-2172-4ffc-bf9b-37ced89197b5": {
@@ -7575,10 +7614,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_379_content",
+			"contentRef": "element_380_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f680bc9c-eb1d-4e49-9a75-42944a570870": {
@@ -7592,10 +7631,10 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_380_content",
+			"contentRef": "element_381_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f68f4469-1637-49e9-b441-1fc45fe65a29": {
@@ -7609,15 +7648,15 @@ var data = {
 			"components": [
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf"
 			],
-			"contentRef": "element_381_content",
+			"contentRef": "element_382_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f7295ec5-d339-4e78-91bb-f416437ae3aa": {
 			"theme": "cyan",
-			"title": "examine key",
+			"title": "&lt;span class=\"mention mention-component\" data-id=\"5a015efe-9472-4480-80cd-ede2c35404c3\" data-type=\"component\"&gt;examine&lt;/span&gt; &lt;span class=\"mention mention-component\" data-id=\"7dc10d72-cac3-475e-9076-5c984e2884b0\" data-type=\"component\"&gt;key&lt;/span&gt;",
 			"content": null,
 			"outputs": [
 				"12b50d28-afbb-405c-8dc9-54561e15d5ec"
@@ -7640,15 +7679,15 @@ var data = {
 				"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_383_content",
+			"contentRef": "element_384_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f8b4a52f-8405-483e-940c-61893356e67e": {
 			"theme": "lightBlue",
-			"title": "Examine games magazines",
+			"title": "Examine &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt;",
 			"content": "TO_BE_REPLACED",
 			"outputs": [
 				"ab85cbb1-463e-4c43-93aa-5bd174a3a832"
@@ -7657,10 +7696,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_384_content",
+			"contentRef": "element_385_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		},
 		"f909b601-7c32-4371-b383-5a1a501491e0": {
@@ -7673,10 +7712,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_385_content",
+			"contentRef": "element_386_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"f971cb1e-6df5-4ebc-990f-984d589ab117": {
@@ -7697,11 +7736,12 @@ var data = {
 			"title": null,
 			"content": "TO_BE_REPLACED",
 			"outputs": [],
+			"autoHeight": true,
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_387_content"
+			"contentRef": "element_388_content"
 		},
 		"fae4a032-e982-4d4b-b8ca-42799f3d857e": {
 			"theme": "default",
@@ -7714,10 +7754,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_388_content",
+			"contentRef": "element_389_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"fc27a812-526a-4687-ba80-9a7179d6a159": {
@@ -7730,7 +7770,7 @@ var data = {
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7",
 				"f5297f72-36ac-4047-8236-dd23d1da3de3"
 			],
-			"contentRef": "element_389_content"
+			"contentRef": "element_390_content"
 		},
 		"fc4c31e0-63fd-4cdc-a033-1473653ae20a": {
 			"theme": "pink",
@@ -7741,10 +7781,10 @@ var data = {
 			],
 			"autoHeight": true,
 			"components": [],
-			"contentRef": "element_390_content",
+			"contentRef": "element_391_content",
 			"cover": {
 				"type": "image",
-				"file": "/plugin_activated.png"
+				"file": "/Images/Images/Images/Images/plugin_activated.png"
 			}
 		},
 		"fd90fd1a-c6c8-4f96-97ae-a49eacd77f81": {
@@ -7756,7 +7796,7 @@ var data = {
 			"components": [
 				"c39bbc27-aa0e-4753-9c59-b2b8ab31384e"
 			],
-			"contentRef": "element_391_content"
+			"contentRef": "element_392_content"
 		},
 		"fe4cf530-8f8b-43f5-92da-41c2030efb86": {
 			"theme": "default",
@@ -7769,7 +7809,7 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_392_content"
+			"contentRef": "element_393_content"
 		},
 		"fec3e966-74db-4948-9dd1-aa96d940ddaf": {
 			"theme": "default",
@@ -7782,10 +7822,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_393_content",
+			"contentRef": "element_394_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"fff42783-9155-4ea0-b7d8-ad40f610488f": {
@@ -7799,10 +7839,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_394_content",
+			"contentRef": "element_395_content",
 			"cover": {
 				"type": "image",
-				"file": "/pianoRoom.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Images/pianoRoom.png"
 			}
 		},
 		"fff52248-6c0c-478c-862e-df4b784614a3": {
@@ -7816,10 +7856,10 @@ var data = {
 			"components": [
 				"2cc43715-13b0-4cad-92d7-5b4f61fe66a7"
 			],
-			"contentRef": "element_395_content",
+			"contentRef": "element_396_content",
 			"cover": {
 				"type": "image",
-				"file": "/bedroom.png"
+				"file": "/Images/Images/Images/bedroom.png"
 			}
 		}
 	},
@@ -8004,6 +8044,9 @@ var data = {
 		"aaebc854-7d4d-40df-980d-23dbf1f26c9b": {
 			"elementId": "99479b75-a383-4312-b874-5468ab418c9b"
 		},
+		"ab17aa3f-6633-495f-a068-17b77c99dfdb": {
+			"elementId": "7bcc5363-e1f2-4491-8471-f36f3190a843"
+		},
 		"ad31e165-f869-4c33-b020-51ea6cb670dc": {
 			"elementId": "da7d5031-6f3d-402f-913f-ae04670affc9"
 		},
@@ -8117,15 +8160,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"01bdc155-2890-41cc-8ce8-dd9c7b482d6e": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "6b776b96-bd55-46a2-8e1b-532282070b00",
-			"targetid": "4bd9815b-e8e3-4473-a4b9-da362dabcd85",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
-		},
 		"024d7d64-521f-43b5-a9dc-8cd198007d9b": {
 			"type": "Flowchart",
 			"label": null,
@@ -8164,15 +8198,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"03c4400f-7a87-4c62-bff0-85340ae4b9fa": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "0bf58f25-7d36-436f-bf49-4d659f4a9d70",
-			"targetid": "20a50dfb-e265-4356-8b19-10ab4b931c6e",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
 		"041f601e-cfdf-4a17-940f-87326ba2a3fd": {
 			"type": "Flowchart",
 			"label": null,
@@ -8182,25 +8207,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"0449b5a0-9d91-435c-9b4a-57976e3eef2e": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "cb06a534-2bbc-49ae-94bf-edd331e558ea",
-			"targetid": "bd0d1275-460e-416f-a0dc-9ddc9ab1eea9",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
-		},
-		"050db801-13a7-4034-9f16-00d98def3108": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
-			"targetid": "e5b6d441-02a3-441a-99a1-ee70b3a1b4b9",
-			"sourceFace": "right",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
 		"05511b39-21ea-4eba-b252-59fbf1eb442a": {
 			"type": "Bezier",
 			"label": null,
@@ -8209,6 +8215,15 @@ var data = {
 			"targetid": "170e46b2-6d06-4aa3-8165-0787933bafc1",
 			"sourceType": "elements",
 			"targetType": "elements"
+		},
+		"05a835be-5f86-45d8-b3ce-e4abc586e6ee": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "a410d939-32cd-494c-9976-076c55e9d14f",
+			"targetid": "e61a9dba-b86d-4a9c-bde0-6fe51033da85",
+			"sourceType": "elements",
+			"targetType": "jumpers"
 		},
 		"0655c250-ef68-493f-b5fc-1dc7ed0bfc23": {
 			"type": "Flowchart",
@@ -8301,14 +8316,24 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"0d46a60c-7767-4652-9293-a303be0a4899": {
+		"0b55cd81-4176-4454-9fda-9f8f45bf65fd": {
 			"type": "Bezier",
 			"label": null,
 			"theme": "default",
-			"sourceid": "86caac87-7d05-4345-b699-f924057bf6f8",
-			"targetid": "b84756cb-7bd0-48da-9f96-abc1844f2322",
+			"sourceid": "3e80a5ec-fdb3-47a5-848b-bddbd0e56c67",
+			"targetid": "29cfc2da-d441-491c-9b95-ac3ebde384c1",
 			"sourceType": "conditions",
-			"targetType": "jumpers"
+			"targetFace": "right",
+			"targetType": "elements"
+		},
+		"0c0bd322-078b-4a3a-bb0f-3dcd96450f07": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "02ffcafa-e129-413f-8dca-ab3c61643d5a",
+			"targetid": "c91a8394-36f7-4b52-961b-6e0ea7f1fdd0",
+			"sourceType": "conditions",
+			"targetType": "elements"
 		},
 		"0d7005fa-5673-499e-b6d2-bc75ebc72670": {
 			"type": "Bezier",
@@ -8472,12 +8497,13 @@ var data = {
 		},
 		"137db6db-573c-4902-bfe4-3fd119eb4e6e": {
 			"type": "Bezier",
-			"label": "Take Amstrad 6128",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "c21c5e07-7763-45eb-b298-80b26970699a",
 			"targetid": "6b33c13c-11af-454e-8d55-037acebd05cf",
 			"sourceType": "elements",
-			"targetType": "branches"
+			"targetType": "branches",
+			"labelRef": "connection_37_label"
 		},
 		"149004ac-6e05-4491-a8a8-bc40274ba29e": {
 			"type": "Straight",
@@ -8673,12 +8699,13 @@ var data = {
 		},
 		"214d43e0-6a06-4222-a65c-201b6967ceea": {
 			"type": "Flowchart",
-			"label": null,
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "29cfc2da-d441-491c-9b95-ac3ebde384c1",
 			"targetid": "73926738-9ea6-4336-94cc-571a169d15ab",
 			"sourceType": "elements",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_59_label"
 		},
 		"21a26c6f-a34c-4754-b866-0477ac01409f": {
 			"type": "Flowchart",
@@ -8705,15 +8732,6 @@ var data = {
 			"sourceid": "8cd64283-55e8-4158-94e7-8dc9fe3788f9",
 			"targetid": "0742accc-ab6c-4806-b78e-945311e198d1",
 			"sourceType": "elements",
-			"targetType": "elements"
-		},
-		"2270c1cd-0705-48d4-ae38-919842392414": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "b6c81284-5041-4c30-a8ac-4cdc3001d997",
-			"targetid": "c91a8394-36f7-4b52-961b-6e0ea7f1fdd0",
-			"sourceType": "conditions",
 			"targetType": "elements"
 		},
 		"244bda26-b23f-441f-a7ce-52dd1008be55": {
@@ -8846,7 +8864,7 @@ var data = {
 			"targetType": "elements"
 		},
 		"2b7c3775-e983-4d00-897c-b231756c9d3b": {
-			"type": "Bezier",
+			"type": "Straight",
 			"label": null,
 			"theme": "default",
 			"sourceid": "c5f19a3f-b06a-4f67-8170-cd07912d8963",
@@ -8953,12 +8971,13 @@ var data = {
 		},
 		"31e2eb6e-37f6-4633-9198-f88ea4f28a21": {
 			"type": "Flowchart",
-			"label": "PLAY the piano",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "b599f4b7-3b4e-4c9c-acca-415feb55b632",
 			"targetid": "cc38b899-7d83-44eb-adf3-a334d5f5c7a5",
 			"sourceType": "elements",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_88_label"
 		},
 		"32997868-6244-4446-b634-12f7c2285d96": {
 			"type": "Bezier",
@@ -9023,6 +9042,15 @@ var data = {
 			"targetid": "6bf7d818-581c-4b61-881d-4eaf57164ee9",
 			"sourceType": "elements",
 			"targetType": "jumpers"
+		},
+		"3590aa16-f026-4fb5-9895-dc08b4cba4a0": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "d01eccf0-4b73-4507-84f4-287bf1f59d0c",
+			"targetid": "7a4cd099-907a-4087-b9f3-ec3bec5b4260",
+			"sourceType": "conditions",
+			"targetType": "elements"
 		},
 		"35c3c8af-60f6-4d70-981c-1661c46c573b": {
 			"type": "Flowchart",
@@ -9118,33 +9146,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"38ba38e0-5703-46ca-8719-78a2d222eec7": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
-			"targetid": "31a618b5-57ce-4680-aacc-57276e9c233e",
-			"sourceFace": "right",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
-		"39cdce7c-c895-41fe-8ba9-e365c59f7adb": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
-			"targetid": "3716d803-3eda-4cb8-b7af-a6e42b082dbb",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
 		"3a1b49b6-9793-47b8-82c6-480ecc9476e4": {
 			"type": "Bezier",
-			"label": "Examine adventure game scripts",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "1c5d185b-dd68-43de-bc9e-570d92b0dc3e",
 			"targetid": "0524c47f-1beb-4c06-b3f3-553e4b7ed562",
 			"sourceType": "elements",
-			"targetType": "jumpers"
+			"targetType": "jumpers",
+			"labelRef": "connection_107_label"
 		},
 		"3a7012b8-1c2a-4bbf-b16e-a7c5d0faada1": {
 			"type": "Straight",
@@ -9174,23 +9184,13 @@ var data = {
 			"targetType": "elements"
 		},
 		"3d1b7707-9bed-4e29-87d3-c8b07038e249": {
-			"type": "Bezier",
+			"type": "Straight",
 			"label": null,
 			"theme": "default",
 			"sourceid": "7096cf29-6f05-43b3-8d01-218008939831",
 			"targetid": "3ae911db-c94b-4d10-9b04-86727f35701e",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"3dc1ed36-3276-477f-a94c-380436a237f0": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
-			"targetid": "3e29624e-42fa-4b4e-965e-6e0e6748c651",
-			"sourceFace": "right",
-			"sourceType": "elements",
-			"targetType": "branches"
 		},
 		"3e70125a-0263-45c3-8781-1ce9c01a4830": {
 			"type": "Flowchart",
@@ -9209,6 +9209,16 @@ var data = {
 			"targetid": "186a4218-8b60-414e-9b81-030bb31d78a8",
 			"sourceType": "elements",
 			"targetType": "elements"
+		},
+		"3f833ddc-39c7-489f-812a-249346202b66": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
+			"targetid": "a9bc106d-2f72-455b-9595-314185648ca6",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
 		},
 		"3fb98cd1-dd9e-4a1b-9b58-938526ae31ee": {
 			"type": "Flowchart",
@@ -9257,6 +9267,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"412f272e-3db1-445e-83a2-42cc1175a810": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "b8a33180-d329-4ac0-9130-76e973b0fbd0",
+			"targetid": "96caa701-3d5d-45c4-bf91-293dd26ff686",
+			"sourceType": "conditions",
+			"targetType": "elements"
+		},
 		"41978084-9ab6-4b22-a210-add6c18518a5": {
 			"type": "Flowchart",
 			"label": null,
@@ -9293,6 +9312,17 @@ var data = {
 			"targetid": "e13b2675-aa3a-472d-aea4-b06d50ed4223",
 			"sourceType": "conditions",
 			"targetType": "elements"
+		},
+		"440a0d43-1405-443f-95c3-ad60a98d6c7c": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
+			"targetid": "c2757573-71d8-4d90-91e2-9632ee0ad11c",
+			"sourceFace": "right",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
 		},
 		"4461d55f-a4f0-414c-bd5e-f1e09ec0469f": {
 			"type": "Bezier",
@@ -9333,12 +9363,24 @@ var data = {
 		},
 		"45b6e319-f4aa-4543-b8eb-5f4f2fd6c150": {
 			"type": "Flowchart",
-			"label": null,
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "73926738-9ea6-4336-94cc-571a169d15ab",
 			"targetid": "65c88433-2929-4590-bb9c-91e015e71221",
 			"sourceType": "elements",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_130_label"
+		},
+		"46339467-6cc0-4afc-bf29-9bc66278afa4": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "1f82a775-485a-44e1-97cb-e37d01c151e8",
+			"targetid": "1db7b6c8-6c4b-402b-ad4c-9edc9be43923",
+			"sourceFace": "right",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
 		},
 		"481dff66-bc24-46f3-989d-93504c351a20": {
 			"type": "Bezier",
@@ -9378,16 +9420,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "jumpers"
 		},
-		"49b84a63-8a41-4e1c-a236-473a0e26fa8d": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "1f82a775-485a-44e1-97cb-e37d01c151e8",
-			"targetid": "65a09950-53b9-4501-b8ae-31f857991ab1",
-			"sourceFace": "right",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
 		"49d4ddf9-67c8-4167-8bc5-02e127cd3286": {
 			"type": "Bezier",
 			"label": null,
@@ -9408,7 +9440,7 @@ var data = {
 			"targetType": "elements"
 		},
 		"4b02a38c-55d4-438e-b9a9-5a4525e51c78": {
-			"type": "Bezier",
+			"type": "Straight",
 			"label": null,
 			"theme": "default",
 			"sourceid": "da7902ac-6911-4b00-b2bd-a39e02740b75",
@@ -9426,13 +9458,23 @@ var data = {
 			"targetType": "elements"
 		},
 		"4b942448-b2c7-48f9-8679-6435dd120015": {
-			"type": "Bezier",
+			"type": "Straight",
 			"label": null,
 			"theme": "default",
 			"sourceid": "3a3bec19-f391-4461-8c54-21705b2ae172",
 			"targetid": "f3d95239-15cf-4193-80a6-e68119c91e3c",
 			"sourceType": "elements",
 			"targetType": "elements"
+		},
+		"4bb8c52d-3e1e-4c58-ae60-3cc066288756": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
+			"targetid": "2dbbbc0a-a09f-434a-b9da-1fe642626fd3",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
 		},
 		"4bff80d3-dfa8-4657-86fd-74e5fee01dfd": {
 			"type": "Flowchart",
@@ -9642,13 +9684,14 @@ var data = {
 		},
 		"512e9aa8-1d67-4b12-a560-b4c299198309": {
 			"type": "Bezier",
-			"label": "Back",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "8fd94d1f-db99-4ac9-a054-a4d057c9fe13",
 			"targetid": "589e682e-e6f0-4824-838b-4a3beb749753",
 			"sourceType": "elements",
 			"targetFace": "right",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_164_label"
 		},
 		"52085edd-c01c-468c-871c-c5ce42b0dda2": {
 			"type": "Flowchart",
@@ -9782,12 +9825,13 @@ var data = {
 		},
 		"56d831a7-5682-41ba-b8f0-385690fee3a2": {
 			"type": "Bezier",
-			"label": "Examine games magazines",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "76ee23a5-b77d-4d30-9302-0e9b2f948996",
 			"targetid": "bf5dd6b9-9375-45a8-b7c5-9556cccdca90",
 			"sourceType": "elements",
-			"targetType": "jumpers"
+			"targetType": "jumpers",
+			"labelRef": "connection_179_label"
 		},
 		"57f96f84-8941-40e1-9275-1b7a40ab43bb": {
 			"type": "Flowchart",
@@ -9883,6 +9927,17 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"5c840425-eb3a-4c26-9049-9f1c222f82e9": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
+			"targetid": "9f2aca5b-2015-4465-8832-d127548c2856",
+			"sourceFace": "right",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
+		},
 		"5cbdcb15-7269-4b77-8edb-a6fb110a8d78": {
 			"type": "Flowchart",
 			"label": null,
@@ -9894,12 +9949,31 @@ var data = {
 		},
 		"5dd8a817-54bc-407c-8710-04ce63facd4d": {
 			"type": "Bezier",
-			"label": "Back",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "3547f4ca-62e0-44c5-a4fc-a4495edb44da",
 			"targetid": "589e682e-e6f0-4824-838b-4a3beb749753",
 			"sourceType": "elements",
+			"targetType": "elements",
+			"labelRef": "connection_192_label"
+		},
+		"5eeb5c87-cbc3-4d2b-9ce9-c9ffd1f7cc2a": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "23762ec4-9901-4d7a-89dd-500b52900bc5",
+			"targetid": "fff42783-9155-4ea0-b7d8-ad40f610488f",
+			"sourceType": "conditions",
 			"targetType": "elements"
+		},
+		"5f4f0848-44ac-4417-9e67-e8106acd40d8": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "fcd9cf30-3b97-452d-ba5d-f096028c5a0e",
+			"targetid": "4bd9815b-e8e3-4473-a4b9-da362dabcd85",
+			"sourceType": "conditions",
+			"targetType": "jumpers"
 		},
 		"5fff2650-80f8-4441-8659-e3dca26f01c5": {
 			"type": "Straight",
@@ -9928,6 +10002,17 @@ var data = {
 			"sourceType": "conditions",
 			"targetFace": "left",
 			"targetType": "elements"
+		},
+		"607eced2-6ecf-4e9d-ba7e-1f37006c6093": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
+			"targetid": "6d4bc6d7-e256-4a1c-afd9-bc18fca3b33f",
+			"sourceFace": "right",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
 		},
 		"60ae2f60-53a8-488a-85f3-b382c5a5a2e4": {
 			"type": "Flowchart",
@@ -9965,6 +10050,15 @@ var data = {
 			"sourceid": "0bf58f25-7d36-436f-bf49-4d659f4a9d70",
 			"targetid": "cf68fe38-590a-4584-92c4-5c3c8c89219d",
 			"sourceType": "elements",
+			"targetType": "elements"
+		},
+		"645fd8af-d5aa-4a90-a0a9-31957671c3f8": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "0515eea8-3a07-412e-a31c-53caa80a14bd",
+			"targetid": "746abc55-0290-4dbc-b75e-8258faa46612",
+			"sourceType": "conditions",
 			"targetType": "elements"
 		},
 		"65d3312e-0657-42e8-8316-feaf1256ce62": {
@@ -10023,6 +10117,27 @@ var data = {
 			"sourceType": "elements",
 			"targetFace": "left",
 			"targetType": "elements"
+		},
+		"67c80974-307e-4218-a9c0-e2cbe6f215aa": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "b080ee62-73b6-4250-b0fe-fb951726eef6",
+			"targetid": "8f002d6a-2fda-4226-8e80-ecd57ae8b6b2",
+			"sourceType": "conditions",
+			"targetFace": "left",
+			"targetType": "elements"
+		},
+		"684e00a8-f3a0-4f3f-b239-859621acedc1": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "1f82a775-485a-44e1-97cb-e37d01c151e8",
+			"targetid": "f9a23cb5-d228-4e05-853c-5a883b078be7",
+			"sourceFace": "right",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
 		},
 		"6899d6da-a2c2-44f7-8e37-85e9632e7a15": {
 			"type": "Straight",
@@ -10105,14 +10220,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"6cfb7893-6092-4651-b326-a5e80cdc6d71": {
-			"type": "Bezier",
-			"label": null,
+		"6bfd346f-57e6-4edc-9258-f42c7f687cb9": {
+			"type": "Flowchart",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
-			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
-			"targetid": "f645865d-ffae-4738-a1ac-dc753f07b26b",
+			"sourceid": "b84e1269-bdee-4897-94ed-a2854eb0bd52",
+			"targetid": "ab17aa3f-6633-495f-a068-17b77c99dfdb",
 			"sourceType": "elements",
-			"targetType": "branches"
+			"targetType": "jumpers",
+			"labelRef": "connection_221_label"
 		},
 		"6db228b3-826e-4c53-a52b-08016632bf15": {
 			"type": "Flowchart",
@@ -10196,15 +10312,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "jumpers"
 		},
-		"739d1701-6373-40ee-951c-031b62be967d": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "50bee757-3904-4fbd-ad14-48297e9b01de",
-			"targetid": "f5904889-2172-4ffc-bf9b-37ced89197b5",
-			"sourceType": "conditions",
-			"targetType": "elements"
-		},
 		"73b13cfa-ff67-4dc1-be5b-d1479835f45b": {
 			"type": "Flowchart",
 			"label": null,
@@ -10216,12 +10323,13 @@ var data = {
 		},
 		"73bc2204-1645-44cf-9cd1-12217043d681": {
 			"type": "Bezier",
-			"label": "Back",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "c8abca6a-04a8-47c3-aaa6-207d7b1d505c",
 			"targetid": "589e682e-e6f0-4824-838b-4a3beb749753",
 			"sourceType": "elements",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_232_label"
 		},
 		"73cb697d-616d-4d23-85a0-080276b19225": {
 			"type": "Flowchart",
@@ -10268,16 +10376,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "branches"
 		},
-		"768f43c1-ea7d-4d17-ad32-b8e49a8d44a5": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "33e5c1f7-42ec-401e-977e-ca1a28870078",
-			"targetid": "8f002d6a-2fda-4226-8e80-ecd57ae8b6b2",
-			"sourceType": "conditions",
-			"targetFace": "left",
-			"targetType": "elements"
-		},
 		"771229a4-5181-4f29-acdd-7c34209605fc": {
 			"type": "Flowchart",
 			"label": null,
@@ -10286,25 +10384,6 @@ var data = {
 			"targetid": "cdb9f587-4a48-4b44-b62d-cc0f95eb6ab1",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"782e3520-f242-4683-9a74-3c6354dff40b": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "07992cdc-9f85-44d4-a6d0-bb3a1a2e2131",
-			"targetid": "f909b601-7c32-4371-b383-5a1a501491e0",
-			"sourceType": "conditions",
-			"targetType": "elements"
-		},
-		"78a04485-cecc-45bf-8917-aaf1a044b548": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
-			"targetid": "dc8047fb-6806-4684-b6f1-fb664fc9f9a3",
-			"sourceFace": "right",
-			"sourceType": "elements",
-			"targetType": "branches"
 		},
 		"79a713f3-91c8-40b8-80c3-e5dc9e46f269": {
 			"type": "Flowchart",
@@ -10315,14 +10394,14 @@ var data = {
 			"sourceType": "conditions",
 			"targetType": "jumpers"
 		},
-		"7b18d14b-dfd8-4590-93ba-9b74b4ace571": {
-			"type": "Flowchart",
+		"79cd035f-239a-42ac-8825-d30a0d06227b": {
+			"type": "Bezier",
 			"label": null,
 			"theme": "default",
-			"sourceid": "562b2ae5-e80c-44a5-877c-af21c209c879",
-			"targetid": "2327014e-7de8-4ada-a6ed-f3839f4bca3a",
+			"sourceid": "ccb9dc05-a287-4152-9896-2852476e20c9",
+			"targetid": "b84756cb-7bd0-48da-9f96-abc1844f2322",
 			"sourceType": "conditions",
-			"targetType": "elements"
+			"targetType": "jumpers"
 		},
 		"7b4d34c3-a49c-4e35-b4f7-34a63a8af5a8": {
 			"type": "Flowchart",
@@ -10331,6 +10410,16 @@ var data = {
 			"sourceid": "2c6b20b4-0459-4693-af88-47ecf8355d4e",
 			"targetid": "76f12f0a-90e3-4756-8688-cb17099fd84a",
 			"sourceType": "elements",
+			"targetType": "elements"
+		},
+		"7bcc3efd-c7c2-41f5-a457-5d496991123c": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "b292fcad-8038-47fd-a047-8bdf617087b8",
+			"targetid": "f909b601-7c32-4371-b383-5a1a501491e0",
+			"sourceType": "conditions",
+			"targetFace": "left",
 			"targetType": "elements"
 		},
 		"7c5b725e-6e5a-41db-ae7a-7f4fdd6296bc": {
@@ -10362,12 +10451,13 @@ var data = {
 		},
 		"7db73510-bc91-437a-a90e-e1334ef73864": {
 			"type": "Flowchart",
-			"label": "EXAMINE grand piano ",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "b599f4b7-3b4e-4c9c-acca-415feb55b632",
 			"targetid": "46198e76-cb3a-4b5b-9b98-4411a81a842e",
 			"sourceType": "elements",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_246_label"
 		},
 		"7dcb4d8a-b3b7-43d8-9914-45602529e1c4": {
 			"type": "Bezier",
@@ -10378,15 +10468,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"7dd95531-05c5-4237-b1a0-b6556c0e28e0": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
-			"targetid": "bd91e2e8-349c-49be-be72-c66c0af2b91b",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
 		"7de0add8-d0ba-4f65-9000-deb2d3cab212": {
 			"type": "Bezier",
 			"label": null,
@@ -10394,6 +10475,36 @@ var data = {
 			"sourceid": "50e4e757-a667-44c9-99e3-de2ef65c4578",
 			"targetid": "87d3f51e-a423-4993-884a-dc6ceddae472",
 			"sourceType": "elements",
+			"targetType": "branches"
+		},
+		"7f2a6043-fa59-40b3-b713-d92e5ecf7c05": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
+			"targetid": "3e0e0de0-4709-492f-ba24-dbc3b4b6d5e4",
+			"sourceFace": "right",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
+		},
+		"7f78b2b8-5170-46eb-a404-b04127287f98": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "e285a37e-6f7e-43ef-a9c2-ba0593b75f2b",
+			"targetid": "2327014e-7de8-4ada-a6ed-f3839f4bca3a",
+			"sourceType": "conditions",
+			"targetType": "elements"
+		},
+		"803f78f1-5d2f-431d-afc7-34e6c16d493a": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
+			"targetid": "6ee39048-6968-4f54-91fb-7313b9000546",
+			"sourceType": "elements",
+			"targetFace": "left",
 			"targetType": "branches"
 		},
 		"80456dba-a0c5-4fa8-829b-6c285e54f87e": {
@@ -10421,6 +10532,26 @@ var data = {
 			"theme": "default",
 			"sourceid": "45153e05-d9f1-41a5-929c-dafcb57fe60b",
 			"targetid": "ea9a3ad2-50d7-4b1d-95b7-82860b60312a",
+			"sourceType": "elements",
+			"targetType": "elements"
+		},
+		"83f270e6-a8ac-495d-b068-c606ae9e73a0": {
+			"type": "Bezier",
+			"label": "TO_BE_REPLACED",
+			"theme": "default",
+			"sourceid": "73926738-9ea6-4336-94cc-571a169d15ab",
+			"targetid": "ab45f74e-37e8-4388-8dca-3738f2a7ae9b",
+			"sourceFace": "left",
+			"sourceType": "elements",
+			"targetType": "branches",
+			"labelRef": "connection_255_label"
+		},
+		"8431d647-a596-4a52-b603-0d3da53c2043": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "3d360510-987d-47aa-9198-c0ddc34c75b2",
+			"targetid": "73926738-9ea6-4336-94cc-571a169d15ab",
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
@@ -10645,6 +10776,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"90f111e5-d4a7-4ada-a81c-dfed9910a88c": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "43bb20c8-d4de-4e98-930e-1388375e2602",
+			"targetid": "cb3304cc-c92d-464d-8a64-8fde7eff7f46",
+			"sourceType": "conditions",
+			"targetType": "jumpers"
+		},
 		"90f5efff-dfae-49f6-ac75-2bdb1e500761": {
 			"type": "Bezier",
 			"label": null,
@@ -10652,15 +10792,6 @@ var data = {
 			"sourceid": "c4950b0f-baa4-4f3e-a00d-500af58ac14e",
 			"targetid": "82dd14d4-6348-4c8b-a2dd-e89c188031f3",
 			"sourceType": "elements",
-			"targetType": "elements"
-		},
-		"914520c8-dfb2-40a2-976e-8e57dca37ea4": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "9c3095c8-eee8-4cf2-8681-960a36a320e4",
-			"targetid": "8429a1c5-2750-497a-a521-3a73fc58de67",
-			"sourceType": "conditions",
 			"targetType": "elements"
 		},
 		"924e7226-a092-4e48-8a2c-6d2e3f158146": {
@@ -10739,15 +10870,6 @@ var data = {
 			"targetFace": "left",
 			"targetType": "elements"
 		},
-		"953e1c66-3bfc-4092-9f73-92defc1c0ec4": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "bd97a1a7-62b8-4046-b97e-8d21e0d53041",
-			"targetid": "e31b3474-aa90-4e4d-b904-1e11f8fa8cb7",
-			"sourceType": "conditions",
-			"targetType": "elements"
-		},
 		"96c5accc-d1e1-4347-a4ed-1f7f3adaadfc": {
 			"type": "Flowchart",
 			"label": null,
@@ -10794,6 +10916,16 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"9ad1bab7-ce82-490c-a3cd-6cadf74518f8": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "da83e849-96f6-4216-a926-c27c9399bab0",
+			"targetid": "d0a0bac9-f2da-47d3-be90-52bc3019c836",
+			"sourceType": "conditions",
+			"targetFace": "left",
+			"targetType": "branches"
+		},
 		"9aff198f-9d7d-47cf-8498-3080028c79d4": {
 			"type": "Flowchart",
 			"label": null,
@@ -10806,12 +10938,13 @@ var data = {
 		},
 		"9b1cb3db-8cd7-4558-9862-fc7f09879909": {
 			"type": "Flowchart",
-			"label": "Talk to Andreas",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "de8007a8-4dd6-49fb-82d9-cc5201fbf29f",
 			"targetid": "d18499dc-4c50-463b-813c-0f0142ec5669",
 			"sourceType": "elements",
-			"targetType": "jumpers"
+			"targetType": "jumpers",
+			"labelRef": "connection_298_label"
 		},
 		"9b2cd2c5-6e2b-44ad-a451-caaee9af501b": {
 			"type": "Flowchart",
@@ -10991,15 +11124,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"a1c54841-274a-4b6c-94ae-9df42ca14c37": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "1343248c-4fc7-41eb-9285-0025007fc8ec",
-			"targetid": "7a4cd099-907a-4087-b9f3-ec3bec5b4260",
-			"sourceType": "conditions",
-			"targetType": "elements"
-		},
 		"a26d69a1-bc45-41d4-9a6d-06f32ebf69e9": {
 			"type": "Flowchart",
 			"label": null,
@@ -11008,15 +11132,6 @@ var data = {
 			"targetid": "64d85cc6-870c-483f-b90f-0b4a9234b471",
 			"sourceType": "elements",
 			"targetType": "jumpers"
-		},
-		"a27af859-11ca-4ce8-b514-c437fc53b42b": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "cfd60c77-69d3-4379-99c7-2c49496a7c45",
-			"targetid": "96caa701-3d5d-45c4-bf91-293dd26ff686",
-			"sourceType": "conditions",
-			"targetType": "elements"
 		},
 		"a2873ba8-1202-470c-aebb-ca6cd4036792": {
 			"type": "Flowchart",
@@ -11057,6 +11172,15 @@ var data = {
 			"targetFace": "left",
 			"targetType": "elements"
 		},
+		"a342ec18-fb83-4200-97c6-7be3b36642c8": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "89a25ab7-a504-4f65-a61d-4f54f1ecc883",
+			"targetid": "e31b3474-aa90-4e4d-b904-1e11f8fa8cb7",
+			"sourceType": "conditions",
+			"targetType": "elements"
+		},
 		"a6239d6d-6e52-447e-947f-99e1544f7481": {
 			"type": "Flowchart",
 			"label": null,
@@ -11093,24 +11217,6 @@ var data = {
 			"sourceid": "589e682e-e6f0-4824-838b-4a3beb749753",
 			"targetid": "3547f4ca-62e0-44c5-a4fc-a4495edb44da",
 			"sourceType": "elements",
-			"targetType": "elements"
-		},
-		"a71d718a-c02a-4f74-a57d-b41d8d32cea4": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "9f9b54e9-01a0-4426-9906-ecbc314f6773",
-			"targetid": "cb3304cc-c92d-464d-8a64-8fde7eff7f46",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
-		},
-		"a8f48e97-1cd4-4abf-b2d5-d7ca7c82b08b": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "840b4837-ad55-43e5-ae36-46fc31012d0b",
-			"targetid": "746abc55-0290-4dbc-b75e-8258faa46612",
-			"sourceType": "conditions",
 			"targetType": "elements"
 		},
 		"a9c7b73a-590c-4015-ba43-740d84748a61": {
@@ -11197,15 +11303,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"ad13b8bf-81ab-435f-b85b-b7a5b231eb6e": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "bb05db27-edee-4c73-a6d6-6ee3b82f57e8",
-			"targetid": "fff42783-9155-4ea0-b7d8-ad40f610488f",
-			"sourceType": "conditions",
-			"targetType": "elements"
-		},
 		"ad61a563-46a5-4724-b7be-1aae22e62046": {
 			"type": "Flowchart",
 			"label": null,
@@ -11218,16 +11315,17 @@ var data = {
 		},
 		"ad91bfc3-dae4-4be3-a43c-2fe795fa2f24": {
 			"type": "Flowchart",
-			"label": "EXIT to Green Room (bottom of screen).",
+			"label": "TO_BE_REPLACED",
 			"theme": "blue",
 			"sourceid": "e519d5d2-d50d-464b-9283-84524bbf083c",
 			"targetid": "da7d5031-6f3d-402f-913f-ae04670affc9",
 			"sourceType": "elements",
 			"targetFace": "right",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_338_label"
 		},
 		"ad9747e8-c893-4f88-924d-4d4ca013bbc2": {
-			"type": "Bezier",
+			"type": "Straight",
 			"label": null,
 			"theme": "default",
 			"sourceid": "d08f5c42-0195-4278-bf44-0e5134b3ca49",
@@ -11322,24 +11420,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"b23ff728-cfa0-4326-8ec0-2410d3ac7d5c": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
-			"targetid": "c5554514-8dd1-4ef7-b4c3-b4f03aed6ef6",
-			"sourceType": "elements",
-			"targetType": "branches"
-		},
-		"b244de7e-ccd8-423c-8bd7-8fa8da3eb022": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "d608fb1f-cb98-4048-ae77-286c254488be",
-			"targetid": "45fcb004-7a24-405c-b862-de11ad1539b2",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
-		},
 		"b286d8ad-7c8f-4bd3-915c-471e8ced84e7": {
 			"type": "Flowchart",
 			"label": null,
@@ -11413,6 +11493,24 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"b724f6a2-0fa3-4f85-9cfd-1382959acd77": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "da6e4e0d-1e35-488f-9290-b63a689832f2",
+			"targetid": "929dfd94-d8a4-4ac2-b521-fab2679f7d27",
+			"sourceType": "conditions",
+			"targetType": "elements"
+		},
+		"b75077e6-89e8-4e25-ade5-ffe51c7a3490": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "9357677f-25bd-49f1-b65d-3b8bb5a4fdac",
+			"targetid": "f5d57de9-79c5-469f-be16-9327e669bec2",
+			"sourceType": "conditions",
+			"targetType": "jumpers"
+		},
 		"b762b82d-5a73-40f6-a716-ec69619fb4c7": {
 			"type": "Bezier",
 			"label": null,
@@ -11450,15 +11548,6 @@ var data = {
 			"sourceFace": "right",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"b852b858-560f-4025-af44-fc76f293b842": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "bcd6b6e7-029f-4e1b-837c-0b104420a47d",
-			"targetid": "f5d57de9-79c5-469f-be16-9327e669bec2",
-			"sourceType": "conditions",
-			"targetType": "jumpers"
 		},
 		"b8ea2f4d-de76-4741-8633-5a528c275e8c": {
 			"type": "Flowchart",
@@ -11499,15 +11588,6 @@ var data = {
 			"sourceFace": "right",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"baedf98d-7d7f-48f8-8e7e-3b71bb43736f": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "a410d939-32cd-494c-9976-076c55e9d14f",
-			"targetid": "e61a9dba-b86d-4a9c-bde0-6fe51033da85",
-			"sourceType": "elements",
-			"targetType": "jumpers"
 		},
 		"baff4be6-59a4-4675-b3e2-000b1a05ff64": {
 			"type": "Flowchart",
@@ -11629,7 +11709,7 @@ var data = {
 		},
 		"c140e551-e66c-46e4-8adb-eff707f70584": {
 			"type": "Flowchart",
-			"label": "&amp;gt;",
+			"label": null,
 			"theme": "default",
 			"sourceid": "3804e652-af28-437c-b80e-e89ca685f2ad",
 			"targetid": "1f82a775-485a-44e1-97cb-e37d01c151e8",
@@ -11664,6 +11744,15 @@ var data = {
 			"sourceFace": "right",
 			"sourceType": "elements",
 			"targetType": "branches"
+		},
+		"c3ad4652-3317-4dd3-b59e-1b607b1603d4": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "653b2567-faa6-483f-a2a9-fc52f1c6b661",
+			"targetid": "45fcb004-7a24-405c-b862-de11ad1539b2",
+			"sourceType": "conditions",
+			"targetType": "jumpers"
 		},
 		"c42146e9-5d6e-4f27-9513-50bb5a2fe85f": {
 			"type": "Flowchart",
@@ -11773,12 +11862,13 @@ var data = {
 		},
 		"caf33da1-5c40-43c5-b370-0fbc880d3b56": {
 			"type": "Flowchart",
-			"label": "EXIT through wooden door.",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "e519d5d2-d50d-464b-9283-84524bbf083c",
 			"targetid": "00bd6ae0-0f43-4570-87f1-749c18454891",
 			"sourceType": "elements",
-			"targetType": "jumpers"
+			"targetType": "jumpers",
+			"labelRef": "connection_396_label"
 		},
 		"cc30749d-68c5-48f5-bc6b-51bec420bdc0": {
 			"type": "Flowchart",
@@ -11792,12 +11882,13 @@ var data = {
 		},
 		"cc399d5b-0bbb-4abc-aa7f-614835b3b25e": {
 			"type": "Bezier",
-			"label": "Examine Amstrad 6128",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "c21c5e07-7763-45eb-b298-80b26970699a",
 			"targetid": "956fe729-9bc1-4741-809b-88a6ff56fd75",
 			"sourceType": "elements",
-			"targetType": "jumpers"
+			"targetType": "jumpers",
+			"labelRef": "connection_398_label"
 		},
 		"cc3cfd18-b9f8-40a1-a012-d45efdca8150": {
 			"type": "Straight",
@@ -11807,15 +11898,6 @@ var data = {
 			"targetid": "fc27a812-526a-4687-ba80-9a7179d6a159",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"cc480339-490c-48be-a53b-da420729a9e2": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "0241136a-af98-43e9-9bf0-805afe4db5f3",
-			"targetid": "3813c9e4-e17e-4d55-97a8-e9ee42a57de7",
-			"sourceType": "elements",
-			"targetType": "branches"
 		},
 		"ccaafbec-318b-45cd-bff7-8253504e0b69": {
 			"type": "Flowchart",
@@ -11853,13 +11935,14 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"cd723ca6-9735-469a-99ea-4cb14519bce0": {
+		"cd7c5c75-2b40-41a3-b869-20ebf417b398": {
 			"type": "Bezier",
 			"label": null,
 			"theme": "default",
-			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
-			"targetid": "6aab0958-7559-4f60-b19b-523f093614fd",
+			"sourceid": "4c82339d-8d1a-4b8f-ae2b-b1ba31082fb1",
+			"targetid": "4e7f917e-14b8-4bda-8a0a-3a20753f2b24",
 			"sourceType": "elements",
+			"targetFace": "left",
 			"targetType": "branches"
 		},
 		"ce0ab302-399c-4235-ab68-d19aebf4cc49": {
@@ -11888,15 +11971,6 @@ var data = {
 			"sourceid": "29201a49-1785-4fd3-bcf5-52117f154bf7",
 			"targetid": "8b7d1e96-885b-49e3-bdd7-1b2345b9f78e",
 			"sourceType": "elements",
-			"targetType": "elements"
-		},
-		"cea76fc5-a75b-40e9-b696-a01ba5609629": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "5cab3096-86c0-412f-b4c1-ae0aaed31687",
-			"targetid": "929dfd94-d8a4-4ac2-b521-fab2679f7d27",
-			"sourceType": "conditions",
 			"targetType": "elements"
 		},
 		"ceb09d88-47bb-44a0-bea1-42bcf8b2e072": {
@@ -11929,13 +12003,14 @@ var data = {
 		},
 		"cff67516-7793-435a-962d-d2a2d045d162": {
 			"type": "Bezier",
-			"label": "Take adventure game scripts",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "1c5d185b-dd68-43de-bc9e-570d92b0dc3e",
 			"targetid": "e63e5cb6-c037-4f1a-85dd-f7f9f132dd75",
 			"sourceFace": "right",
 			"sourceType": "elements",
-			"targetType": "branches"
+			"targetType": "branches",
+			"labelRef": "connection_411_label"
 		},
 		"d09c71a6-df6b-4a3a-a49b-2fd5a7de85a5": {
 			"type": "Bezier",
@@ -11965,16 +12040,6 @@ var data = {
 			"targetid": "f3bb198b-34f9-403b-a586-2bef136ea8d5",
 			"sourceType": "elements",
 			"targetType": "elements"
-		},
-		"d13bcee3-dcac-47da-9473-366bb98ae80e": {
-			"type": "Flowchart",
-			"label": null,
-			"theme": "default",
-			"sourceid": "1f82a775-485a-44e1-97cb-e37d01c151e8",
-			"targetid": "c6fb74f0-36b2-4b1f-b35f-f31bae43c1e8",
-			"sourceFace": "right",
-			"sourceType": "elements",
-			"targetType": "branches"
 		},
 		"d189d69e-28e2-4753-b090-42c749199d18": {
 			"type": "Flowchart",
@@ -12060,6 +12125,16 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"d7f0d9d0-ccb7-453a-ac9e-bd0d86bd27e2": {
+			"type": "Flowchart",
+			"label": null,
+			"theme": "default",
+			"sourceid": "0bf58f25-7d36-436f-bf49-4d659f4a9d70",
+			"targetid": "b27765f1-5f6b-459f-9150-0c351ad68e3d",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
+		},
 		"d896e273-d49a-4f09-8992-60dca65211c1": {
 			"type": "Flowchart",
 			"label": null,
@@ -12140,15 +12215,16 @@ var data = {
 		},
 		"dd3022e7-4892-4222-a7e6-f81c8e27e588": {
 			"type": "Flowchart",
-			"label": "Examine Andreas",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "de8007a8-4dd6-49fb-82d9-cc5201fbf29f",
 			"targetid": "897e9cee-62b7-4a98-97c7-88ad8f71b22f",
 			"sourceType": "elements",
-			"targetType": "jumpers"
+			"targetType": "jumpers",
+			"labelRef": "connection_433_label"
 		},
 		"dd3d1d36-2890-47d3-870d-cc5e085bc31a": {
-			"type": "Bezier",
+			"type": "Straight",
 			"label": null,
 			"theme": "default",
 			"sourceid": "9fb73618-30bf-47bb-afe4-7fa329b68d18",
@@ -12232,13 +12308,14 @@ var data = {
 		},
 		"e0a8ceec-38a4-4b77-8deb-07d25979ab8c": {
 			"type": "Flowchart",
-			"label": "EXIT: back to bedroom",
+			"label": "TO_BE_REPLACED",
 			"theme": "blue",
 			"sourceid": "da7d5031-6f3d-402f-913f-ae04670affc9",
 			"targetid": "e519d5d2-d50d-464b-9283-84524bbf083c",
 			"sourceFace": "left",
 			"sourceType": "elements",
-			"targetType": "elements"
+			"targetType": "elements",
+			"labelRef": "connection_443_label"
 		},
 		"e0f1aee1-4f72-4258-b43a-91037ef25bd9": {
 			"type": "Flowchart",
@@ -12369,6 +12446,26 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"e8afd918-4224-4659-a83a-f6fb8f16eb55": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "c605f559-5242-4a7a-82e6-99654b745423",
+			"targetid": "ec2d31bb-8863-416c-9514-651fe4bb8b83",
+			"sourceFace": "right",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
+		},
+		"e8e6ad40-4fd7-4828-828c-021e19c6e4e0": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "cf65ce6d-7e63-4a37-a8c2-aa8b9d3a54fd",
+			"targetid": "8429a1c5-2750-497a-a521-3a73fc58de67",
+			"sourceType": "conditions",
+			"targetType": "elements"
+		},
 		"ea5a0438-acf2-4d2f-af27-4fd4f4471da7": {
 			"type": "Flowchart",
 			"label": null,
@@ -12480,15 +12577,6 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
-		"f0d58d50-a693-4cc4-9bc3-cef3cd551e62": {
-			"type": "Bezier",
-			"label": null,
-			"theme": "default",
-			"sourceid": "4483c5c1-a59e-4937-b373-9f926163399d",
-			"targetid": "a06dee3f-ccf1-4134-85ad-17a174af906f",
-			"sourceType": "conditions",
-			"targetType": "branches"
-		},
 		"f0f0daae-8359-4333-b9f1-0e9519b4eebc": {
 			"type": "Flowchart",
 			"label": null,
@@ -12529,12 +12617,13 @@ var data = {
 		},
 		"f355089d-a75b-4ce1-b21b-264690da3834": {
 			"type": "Bezier",
-			"label": "Take games magazines",
+			"label": "TO_BE_REPLACED",
 			"theme": "default",
 			"sourceid": "76ee23a5-b77d-4d30-9302-0e9b2f948996",
 			"targetid": "b1e11a31-c71b-4b64-81dc-9c050f6ca39f",
 			"sourceType": "elements",
-			"targetType": "jumpers"
+			"targetType": "jumpers",
+			"labelRef": "connection_476_label"
 		},
 		"f370f35e-c9c4-4652-83e9-11de9632a0e2": {
 			"type": "Bezier",
@@ -12563,6 +12652,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "branches"
 		},
+		"f4b7f196-45c3-471a-b1d5-50b769ea776c": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "e9298549-ac13-42ba-ae54-e190faf36fa0",
+			"targetid": "bd0d1275-460e-416f-a0dc-9ddc9ab1eea9",
+			"sourceType": "conditions",
+			"targetType": "jumpers"
+		},
 		"f4eb8352-73c2-4bb7-abe1-72d4b047f59e": {
 			"type": "Flowchart",
 			"label": null,
@@ -12580,6 +12678,16 @@ var data = {
 			"targetid": "06b3d4d1-e1da-4adb-97c4-1818d854e486",
 			"sourceType": "elements",
 			"targetType": "elements"
+		},
+		"f55cf8c4-8d14-4030-8293-10b7b9160a5c": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "0241136a-af98-43e9-9bf0-805afe4db5f3",
+			"targetid": "255cb9b3-b9ed-4cf9-a4e4-5c58bf9ddf6b",
+			"sourceType": "elements",
+			"targetFace": "left",
+			"targetType": "branches"
 		},
 		"f55fbcf8-64c2-4e1e-8587-7be16e8b4c2c": {
 			"type": "Bezier",
@@ -12646,6 +12754,15 @@ var data = {
 			"sourceType": "elements",
 			"targetType": "elements"
 		},
+		"f8c93751-83fd-402c-93fa-41f87fbced5e": {
+			"type": "Bezier",
+			"label": null,
+			"theme": "default",
+			"sourceid": "052a8c2d-84a8-499d-aca5-34d6e40b5115",
+			"targetid": "f5904889-2172-4ffc-bf9b-37ced89197b5",
+			"sourceType": "conditions",
+			"targetType": "elements"
+		},
 		"f8e17cbb-6eba-4227-95ff-936aa2db76ff": {
 			"type": "Flowchart",
 			"label": null,
@@ -12654,6 +12771,16 @@ var data = {
 			"targetid": "3fcc5c7e-d67e-4ac6-a712-ca5eb388dd62",
 			"sourceType": "elements",
 			"targetType": "elements"
+		},
+		"f90d9093-5edb-4ec1-9287-9d089573007f": {
+			"type": "Bezier",
+			"label": "TO_BE_REPLACED",
+			"theme": "default",
+			"sourceid": "29cfc2da-d441-491c-9b95-ac3ebde384c1",
+			"targetid": "3d360510-987d-47aa-9198-c0ddc34c75b2",
+			"sourceType": "elements",
+			"targetType": "elements",
+			"labelRef": "connection_493_label"
 		},
 		"f9319b23-3250-43a2-b712-d6b8d432696a": {
 			"type": "Bezier",
@@ -12765,24 +12892,29 @@ var data = {
 				"elseCondition": "16d3de27-61bc-428f-9773-ac10bb846c2f"
 			}
 		},
+		"1db7b6c8-6c4b-402b-ad4c-9edc9be43923": {
+			"theme": "default",
+			"conditions": {
+				"ifCondition": "da6e4e0d-1e35-488f-9290-b63a689832f2"
+			}
+		},
 		"1fed6ac1-3466-4c8a-a472-b6365e9b540e": {
 			"theme": "lightBlue",
 			"conditions": {
 				"ifCondition": "ff98b03e-f16e-4825-bc10-bd46d0bd4e9b"
 			}
 		},
-		"20a50dfb-e265-4356-8b19-10ab4b931c6e": {
-			"theme": "default",
+		"255cb9b3-b9ed-4cf9-a4e4-5c58bf9ddf6b": {
+			"theme": "cyan",
 			"conditions": {
-				"ifCondition": "840b4837-ad55-43e5-ae36-46fc31012d0b",
-				"elseCondition": "b6c81284-5041-4c30-a8ac-4cdc3001d997"
+				"ifCondition": "e9298549-ac13-42ba-ae54-e190faf36fa0",
+				"elseCondition": "ccb9dc05-a287-4152-9896-2852476e20c9"
 			}
 		},
-		"31a618b5-57ce-4680-aacc-57276e9c233e": {
+		"2dbbbc0a-a09f-434a-b9da-1fe642626fd3": {
 			"theme": "default",
 			"conditions": {
-				"ifCondition": "9f9b54e9-01a0-4426-9906-ecbc314f6773",
-				"elseCondition": "d608fb1f-cb98-4048-ae77-286c254488be"
+				"ifCondition": "23762ec4-9901-4d7a-89dd-500b52900bc5"
 			}
 		},
 		"32c8b6a5-085d-4397-9f62-2480530198c4": {
@@ -12791,23 +12923,17 @@ var data = {
 				"ifCondition": "60265906-3157-4b23-86bf-35ce3b44ebc7"
 			}
 		},
-		"3716d803-3eda-4cb8-b7af-a6e42b082dbb": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "33e5c1f7-42ec-401e-977e-ca1a28870078"
-			}
-		},
-		"3813c9e4-e17e-4d55-97a8-e9ee42a57de7": {
+		"3e0e0de0-4709-492f-ba24-dbc3b4b6d5e4": {
 			"theme": "cyan",
 			"conditions": {
-				"ifCondition": "cb06a534-2bbc-49ae-94bf-edd331e558ea",
-				"elseCondition": "86caac87-7d05-4345-b699-f924057bf6f8"
+				"ifCondition": "43bb20c8-d4de-4e98-930e-1388375e2602",
+				"elseCondition": "653b2567-faa6-483f-a2a9-fc52f1c6b661"
 			}
 		},
-		"3e29624e-42fa-4b4e-965e-6e0e6748c651": {
+		"4e7f917e-14b8-4bda-8a0a-3a20753f2b24": {
 			"theme": "default",
 			"conditions": {
-				"ifCondition": "bd97a1a7-62b8-4046-b97e-8d21e0d53041"
+				"ifCondition": "b080ee62-73b6-4250-b0fe-fb951726eef6"
 			}
 		},
 		"5e84430e-58fd-42a3-8635-5c9a1c24f225": {
@@ -12816,28 +12942,34 @@ var data = {
 				"ifCondition": "a2bc7e0d-951b-466f-8e3d-765cc697c6bb"
 			}
 		},
-		"65a09950-53b9-4501-b8ae-31f857991ab1": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "5cab3096-86c0-412f-b4c1-ae0aaed31687"
-			}
-		},
-		"6aab0958-7559-4f60-b19b-523f093614fd": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "1343248c-4fc7-41eb-9285-0025007fc8ec"
-			}
-		},
 		"6b33c13c-11af-454e-8d55-037acebd05cf": {
 			"theme": "default",
 			"conditions": {
 				"ifCondition": "74ed06a7-99d6-48f7-8bbb-743249ce2b0b"
 			}
 		},
+		"6d4bc6d7-e256-4a1c-afd9-bc18fca3b33f": {
+			"theme": "default",
+			"conditions": {
+				"ifCondition": "d01eccf0-4b73-4507-84f4-287bf1f59d0c"
+			}
+		},
+		"6ee39048-6968-4f54-91fb-7313b9000546": {
+			"theme": "default",
+			"conditions": {
+				"ifCondition": "cf65ce6d-7e63-4a37-a8c2-aa8b9d3a54fd"
+			}
+		},
 		"796625ef-5451-4f2f-9258-bd00109f5ce6": {
 			"theme": "default",
 			"conditions": {
 				"ifCondition": "70124714-fb0d-476f-b565-81a342c03803"
+			}
+		},
+		"83f584b1-591a-41db-bf37-aebf3ca941d4": {
+			"theme": "default",
+			"conditions": {
+				"ifCondition": "f32a37c0-2be4-4d3c-98e5-9c42d68be80f"
 			}
 		},
 		"84bc0cf3-1b8e-4a78-a18f-72b174c9b8f7": {
@@ -12873,11 +13005,16 @@ var data = {
 				"elseCondition": "734aa15d-1385-4afb-bb7b-77b176f9a626"
 			}
 		},
-		"a06dee3f-ccf1-4134-85ad-17a174af906f": {
+		"9f2aca5b-2015-4465-8832-d127548c2856": {
 			"theme": "default",
 			"conditions": {
-				"ifCondition": "6b776b96-bd55-46a2-8e1b-532282070b00",
-				"elseCondition": "bcd6b6e7-029f-4e1b-837c-0b104420a47d"
+				"ifCondition": "89a25ab7-a504-4f65-a61d-4f54f1ecc883"
+			}
+		},
+		"a9bc106d-2f72-455b-9595-314185648ca6": {
+			"theme": "default",
+			"conditions": {
+				"ifCondition": "b292fcad-8038-47fd-a047-8bdf617087b8"
 			}
 		},
 		"ab2ad9a0-e3a1-4350-b9e0-f09f923b7c41": {
@@ -12885,6 +13022,12 @@ var data = {
 			"conditions": {
 				"ifCondition": "f01d4a10-b43a-4748-92c5-6b6c9350bb7a",
 				"elseCondition": "98f8ccbc-cd11-4020-9120-3ecdcd04070b"
+			}
+		},
+		"ab45f74e-37e8-4388-8dca-3738f2a7ae9b": {
+			"theme": "default",
+			"conditions": {
+				"ifCondition": "3e80a5ec-fdb3-47a5-848b-bddbd0e56c67"
 			}
 		},
 		"aba686de-0609-406b-9efe-4c58ff989270": {
@@ -12898,6 +13041,13 @@ var data = {
 			"theme": "lightBlue",
 			"conditions": {
 				"ifCondition": "e41c8ec6-e3b6-45c4-9502-2cfeab37a99e"
+			}
+		},
+		"b27765f1-5f6b-459f-9150-0c351ad68e3d": {
+			"theme": "cyan",
+			"conditions": {
+				"ifCondition": "0515eea8-3a07-412e-a31c-53caa80a14bd",
+				"elseCondition": "02ffcafa-e129-413f-8dca-ab3c61643d5a"
 			}
 		},
 		"b6c6702a-5e27-4e28-ae27-a1ca50cbc1d6": {
@@ -12919,22 +13069,11 @@ var data = {
 				"elseCondition": "441072ec-f2dc-4dff-81b4-92a34bb186a8"
 			}
 		},
-		"bd91e2e8-349c-49be-be72-c66c0af2b91b": {
+		"c2757573-71d8-4d90-91e2-9632ee0ad11c": {
 			"theme": "default",
 			"conditions": {
-				"ifCondition": "bb05db27-edee-4c73-a6d6-6ee3b82f57e8"
-			}
-		},
-		"c5554514-8dd1-4ef7-b4c3-b4f03aed6ef6": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "07992cdc-9f85-44d4-a6d0-bb3a1a2e2131"
-			}
-		},
-		"c6fb74f0-36b2-4b1f-b35f-f31bae43c1e8": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "562b2ae5-e80c-44a5-877c-af21c209c879"
+				"ifCondition": "b8a33180-d329-4ac0-9130-76e973b0fbd0",
+				"elseCondition": "052a8c2d-84a8-499d-aca5-34d6e40b5115"
 			}
 		},
 		"ca770d55-694f-4fc6-8128-689cd6ed7706": {
@@ -12968,11 +13107,11 @@ var data = {
 				"ifCondition": "332e7fbe-8973-4047-bbc6-084d344c0d4f"
 			}
 		},
-		"dc8047fb-6806-4684-b6f1-fb664fc9f9a3": {
-			"theme": "default",
+		"d0a0bac9-f2da-47d3-be90-52bc3019c836": {
+			"theme": "cyan",
 			"conditions": {
-				"ifCondition": "cfd60c77-69d3-4379-99c7-2c49496a7c45",
-				"elseCondition": "50bee757-3904-4fbd-ad14-48297e9b01de"
+				"ifCondition": "fcd9cf30-3b97-452d-ba5d-f096028c5a0e",
+				"elseCondition": "9357677f-25bd-49f1-b65d-3b8bb5a4fdac"
 			}
 		},
 		"e082b90a-8e28-45ca-9c10-690413df873d": {
@@ -12985,12 +13124,6 @@ var data = {
 			"theme": "default",
 			"conditions": {
 				"ifCondition": "45574d36-7430-4f01-be89-85190853b466"
-			}
-		},
-		"e5b6d441-02a3-441a-99a1-ee70b3a1b4b9": {
-			"theme": "default",
-			"conditions": {
-				"ifCondition": "4483c5c1-a59e-4937-b373-9f926163399d"
 			}
 		},
 		"e63e5cb6-c037-4f1a-85dd-f7f9f132dd75": {
@@ -13006,10 +13139,16 @@ var data = {
 				"elseCondition": "2ee95cc8-5175-4679-9161-973cdb4d9a33"
 			}
 		},
-		"f645865d-ffae-4738-a1ac-dc753f07b26b": {
+		"ec2d31bb-8863-416c-9514-651fe4bb8b83": {
 			"theme": "default",
 			"conditions": {
-				"ifCondition": "9c3095c8-eee8-4cf2-8681-960a36a320e4"
+				"ifCondition": "da83e849-96f6-4216-a926-c27c9399bab0"
+			}
+		},
+		"f9a23cb5-d228-4e05-853c-5a883b078be7": {
+			"theme": "default",
+			"conditions": {
+				"ifCondition": "e285a37e-6f7e-43ef-a9c2-ba0593b75f2b"
 			}
 		}
 	},
@@ -13102,7 +13241,7 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/Protagonist.png"
+				"file": "/Images/Protagonist.png"
 			}
 		},
 		"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf": {
@@ -13114,7 +13253,7 @@ var data = {
 			],
 			"cover": {
 				"type": "image",
-				"file": "/Andreas.png"
+				"file": "/Images/Images/Images/Images/Images/Images/Andreas.png"
 			}
 		},
 		"37522243-0f2e-4435-a8ec-af95fe52c19f": {
@@ -13122,12 +13261,12 @@ var data = {
 			"children": [
 				"183c8876-c343-4a6e-9d9e-aceebc77e722",
 				"173545f9-d103-4b34-87ef-690608f94240",
-				"95d2c620-df08-4996-b9a3-0011e69ae8ba",
 				"7dc10d72-cac3-475e-9076-5c984e2884b0",
 				"a4412312-b5d7-4826-8335-b51291c6e817",
 				"8f930cc8-f93a-4932-93ed-bf8f837487f8",
 				"033582a9-c2ea-4fb5-97d9-f252d1303850",
-				"d95da3c0-0c71-47bd-9d40-d909dbfaaeef"
+				"d95da3c0-0c71-47bd-9d40-d909dbfaaeef",
+				"95d2c620-df08-4996-b9a3-0011e69ae8ba"
 			]
 		},
 		"478704c4-75de-4eae-9d99-53ac04ccd6a9": {
@@ -13827,16 +13966,6 @@ var data = {
 		}
 	},
 	"variables": {
-		"17a7482e-aaa2-4a8c-bdb3-8b41daaae231": {
-			"name": "t_andreasThanks",
-			"type": "boolean",
-			"value": false
-		},
-		"2267f43c-8bed-4f34-b9a7-389cae7a854a": {
-			"name": "t_miniGame",
-			"type": "integer",
-			"value": 0
-		},
 		"2820fb0d-ccc9-42b8-a096-e00e311e42b4": {
 			"name": "i_key",
 			"type": "integer",
@@ -13857,18 +13986,8 @@ var data = {
 			"type": "integer",
 			"value": 0
 		},
-		"4cee9eba-c8dc-4ed2-a692-897b430682db": {
-			"name": "t_andreasPlace",
-			"type": "integer",
-			"value": 0
-		},
 		"54320480-b0bb-410d-bc26-181e07f72b5e": {
 			"name": "t_magazines",
-			"type": "integer",
-			"value": 0
-		},
-		"59564026-71a1-46c7-8a51-878172d44315": {
-			"name": "t_give_gameScripts",
 			"type": "integer",
 			"value": 0
 		},
@@ -13887,20 +14006,11 @@ var data = {
 				"fda40f6c-6226-49ba-91a1-4b8da5c1b4a4",
 				"6f2bb026-f603-4e52-89cf-fb5de9b0cc44",
 				"4b7e8e06-2ca3-401b-873f-10e131049641",
-				"7d4fcb81-beb5-4782-9ff5-4d4c7971c1d5",
 				"75e9d466-5d59-4e5a-83cb-b92563d0b24b",
 				"2820fb0d-ccc9-42b8-a096-e00e311e42b4",
-				"4cee9eba-c8dc-4ed2-a692-897b430682db",
 				"812fb843-0caf-4fdb-b4b3-15231df7d88b",
-				"17a7482e-aaa2-4a8c-bdb3-8b41daaae231",
-				"f7adee65-c9a2-4f1b-b93c-73f3c85b970e",
-				"bf6773f4-325e-4400-b3da-6b982689a952",
-				"d4c5e543-32b7-40f2-81e1-9a00cd5da7dc",
-				"f5c683f6-349d-45c7-b6a2-f5690bbe1a5d",
-				"2267f43c-8bed-4f34-b9a7-389cae7a854a",
 				"37f22eb3-1b54-4c5b-8f46-f749d0e57fc9",
-				"e4a8d01e-7f5f-4fac-a571-847f16d8b867",
-				"59564026-71a1-46c7-8a51-878172d44315"
+				"e4a8d01e-7f5f-4fac-a571-847f16d8b867"
 			]
 		},
 		"75e9d466-5d59-4e5a-83cb-b92563d0b24b": {
@@ -13908,18 +14018,8 @@ var data = {
 			"type": "integer",
 			"value": 0
 		},
-		"7d4fcb81-beb5-4782-9ff5-4d4c7971c1d5": {
-			"name": "t_andreasWho",
-			"type": "integer",
-			"value": 0
-		},
 		"812fb843-0caf-4fdb-b4b3-15231df7d88b": {
 			"name": "t_andreasBottleneck",
-			"type": "integer",
-			"value": 0
-		},
-		"bf6773f4-325e-4400-b3da-6b982689a952": {
-			"name": "t_therapy",
 			"type": "integer",
 			"value": 0
 		},
@@ -13933,25 +14033,10 @@ var data = {
 			"type": "integer",
 			"value": 1
 		},
-		"d4c5e543-32b7-40f2-81e1-9a00cd5da7dc": {
-			"name": "counter",
-			"type": "integer",
-			"value": 0
-		},
 		"e4a8d01e-7f5f-4fac-a571-847f16d8b867": {
 			"name": "playerRoll",
 			"type": "integer",
 			"value": 0
-		},
-		"f5c683f6-349d-45c7-b6a2-f5690bbe1a5d": {
-			"name": "t_hateLocked",
-			"type": "boolean",
-			"value": false
-		},
-		"f7adee65-c9a2-4f1b-b93c-73f3c85b970e": {
-			"name": "t_andreasBlessing",
-			"type": "boolean",
-			"value": false
 		},
 		"fda40f6c-6226-49ba-91a1-4b8da5c1b4a4": {
 			"name": "t_gameScripts",
@@ -13960,13 +14045,17 @@ var data = {
 		}
 	},
 	"conditions": {
-		"07992cdc-9f85-44d4-a6d0-bb3a1a2e2131": {
-			"output": "782e3520-f242-4683-9a74-3c6354dff40b",
-			"script": "(state.t_andreasWho == 1)"
+		"02ffcafa-e129-413f-8dca-ab3c61643d5a": {
+			"output": "0c0bd322-078b-4a3a-bb0f-3dcd96450f07",
+			"script": null
 		},
-		"1343248c-4fc7-41eb-9285-0025007fc8ec": {
-			"output": "a1c54841-274a-4b6c-94ae-9df42ca14c37",
-			"script": "(state.t_andreasPlace == 0)"
+		"0515eea8-3a07-412e-a31c-53caa80a14bd": {
+			"output": "645fd8af-d5aa-4a90-a0a9-31957671c3f8",
+			"script": "self.utils.aw_visits(state, \"a70231c1-06f9-40ff-a8ed-8e0e283e2643\")"
+		},
+		"052a8c2d-84a8-499d-aca5-34d6e40b5115": {
+			"output": "f8c93751-83fd-402c-93fa-41f87fbced5e",
+			"script": null
 		},
 		"16d3de27-61bc-428f-9773-ac10bb846c2f": {
 			"output": "eccd8bf1-c4a2-43ce-a8de-d16930aeb862",
@@ -13980,9 +14069,13 @@ var data = {
 			"output": "e396703d-8f86-4f32-811a-aa8812b3768c",
 			"script": null
 		},
+		"23762ec4-9901-4d7a-89dd-500b52900bc5": {
+			"output": "5eeb5c87-cbc3-4d2b-9ce9-c9ffd1f7cc2a",
+			"script": "not self.utils.aw_visits(state, \"fff42783-9155-4ea0-b7d8-ad40f610488f\")"
+		},
 		"24a693a5-81cc-417a-88c5-a440c0868875": {
 			"output": "c566cc61-8711-4c0d-b8af-eec846999072",
-			"script": "(state.t_andreasBottleneck == 3)"
+			"script": "(state.get_var(\"t_andreasBottleneck\") == 3)"
 		},
 		"2ee95cc8-5175-4679-9161-973cdb4d9a33": {
 			"output": "bfa1be44-caf5-494c-b852-dfc1942004c3",
@@ -13990,59 +14083,51 @@ var data = {
 		},
 		"332e7fbe-8973-4047-bbc6-084d344c0d4f": {
 			"output": "d68cc8b5-4eb2-496b-a0b2-941bd4c8efa1",
-			"script": "(state.t_gameScripts == 1)"
-		},
-		"33e5c1f7-42ec-401e-977e-ca1a28870078": {
-			"output": "768f43c1-ea7d-4d17-ad32-b8e49a8d44a5",
-			"script": "(state.t_therapy == 0)"
+			"script": "(state.get_var(\"t_gameScripts\") == 1)"
 		},
 		"38a93cd4-6188-4fa0-9639-fe5afca01ce8": {
 			"output": "43b7d30b-ccf5-4f13-a35b-bd86f53c65f5",
-			"script": "(state.i_magazines == 3)"
+			"script": "(state.get_var(\"i_magazines\") == 3)"
 		},
 		"3ab18fc0-1424-4470-83ef-7cc7ccfa897f": {
 			"output": "c954836f-9ef5-43b9-8bd8-765c146468d5",
-			"script": "(state.i_key == 2)"
+			"script": "(state.get_var(\"i_key\") == 2)"
+		},
+		"3e80a5ec-fdb3-47a5-848b-bddbd0e56c67": {
+			"output": "0b55cd81-4176-4454-9fda-9f8f45bf65fd",
+			"script": "not self.utils.aw_visits(state, \"3d360510-987d-47aa-9198-c0ddc34c75b2\")"
 		},
 		"4309d763-94be-4536-92fe-eb0815254592": {
 			"output": "512ce391-1fd6-45e9-b585-ae3e9496eef3",
-			"script": "(state.t_magazines == 0)"
+			"script": "(state.get_var(\"t_magazines\") == 0)"
+		},
+		"43bb20c8-d4de-4e98-930e-1388375e2602": {
+			"output": "90f111e5-d4a7-4ada-a81c-dfed9910a88c",
+			"script": "not self.utils.aw_visits(state, \"66edd6cd-0622-4105-b843-ee919cdb87d9\")"
 		},
 		"441072ec-f2dc-4dff-81b4-92a34bb186a8": {
 			"output": "c0522bab-b08e-4aa1-89b9-501aaf6d17c9",
 			"script": null
 		},
-		"4483c5c1-a59e-4937-b373-9f926163399d": {
-			"output": "f0d58d50-a693-4cc4-9bc3-cef3cd551e62",
-			"script": "(state.t_andreasWho == 1)"
-		},
 		"45574d36-7430-4f01-be89-85190853b466": {
 			"output": "a9c7b73a-590c-4015-ba43-740d84748a61",
-			"script": "(state.i_magazines == 1)"
-		},
-		"50bee757-3904-4fbd-ad14-48297e9b01de": {
-			"output": "739d1701-6373-40ee-951c-031b62be967d",
-			"script": null
+			"script": "(state.get_var(\"i_magazines\") == 1)"
 		},
 		"52017a41-a966-4002-871a-e3512ac0ec46": {
 			"output": "80456dba-a0c5-4fa8-829b-6c285e54f87e",
-			"script": "(state.t_andreasBottleneck == 4)"
-		},
-		"562b2ae5-e80c-44a5-877c-af21c209c879": {
-			"output": "7b18d14b-dfd8-4590-93ba-9b74b4ace571",
-			"script": "(state.t_therapy == 0)"
+			"script": "(state.get_var(\"t_andreasBottleneck\") == 4)"
 		},
 		"5bafa565-4858-4be4-b31c-630c037fdfeb": {
 			"output": "6db228b3-826e-4c53-a52b-08016632bf15",
-			"script": "(state.i_gameScripts == 1)"
-		},
-		"5cab3096-86c0-412f-b4c1-ae0aaed31687": {
-			"output": "cea76fc5-a75b-40e9-b696-a01ba5609629",
-			"script": "not state.t_andreasThanks"
+			"script": "(state.get_var(\"i_gameScripts\") == 1)"
 		},
 		"60265906-3157-4b23-86bf-35ce3b44ebc7": {
 			"output": "b5c64c8e-5829-4a88-88da-0af0daf36516",
-			"script": "(state.i_key < 2)"
+			"script": "(state.get_var(\"i_key\") < 2)"
+		},
+		"653b2567-faa6-483f-a2a9-fc52f1c6b661": {
+			"output": "c3ad4652-3317-4dd3-b59e-1b607b1603d4",
+			"script": null
 		},
 		"6694c699-d99e-45f5-9979-febdc89e25ef": {
 			"output": "08b36bd4-634a-4cb3-8f5f-a12271c4c02b",
@@ -14054,19 +14139,15 @@ var data = {
 		},
 		"69eae36f-f754-48a6-8512-578a11cbebd4": {
 			"output": "f70eca86-a81b-4550-a64e-adf6eb1bc8a8",
-			"script": "(state.i_amstrad == 2)"
-		},
-		"6b776b96-bd55-46a2-8e1b-532282070b00": {
-			"output": "01bdc155-2890-41cc-8ce8-dd9c7b482d6e",
-			"script": "(state.t_miniGame <= 0)"
+			"script": "(state.get_var(\"i_amstrad\") == 2)"
 		},
 		"6c9fe615-d987-4973-8338-a4fe8601876d": {
 			"output": "dd24db2a-dbfc-4c9b-8a08-61d0fee772ab",
-			"script": "(state.i_gameScripts == 1)"
+			"script": "(state.get_var(\"i_gameScripts\") == 1)"
 		},
 		"70124714-fb0d-476f-b565-81a342c03803": {
 			"output": "d5d302b2-ffe8-42ed-a6f2-de71d7a504fb",
-			"script": "(state.t_andreasBottleneck <= 1)"
+			"script": "(state.get_var(\"t_andreasBottleneck\") <= 1)"
 		},
 		"734aa15d-1385-4afb-bb7b-77b176f9a626": {
 			"output": "bc4a92a2-097a-49b2-9d6c-ce80d0a6dae6",
@@ -14074,127 +14155,138 @@ var data = {
 		},
 		"74ed06a7-99d6-48f7-8bbb-743249ce2b0b": {
 			"output": "9ef6a72b-0664-4356-9b11-c916566d5120",
-			"script": "(state.i_amstrad == 1)"
+			"script": "(state.get_var(\"i_amstrad\") == 1)"
 		},
 		"8161623f-c836-4f55-a828-e94bcfd5f3e2": {
 			"output": "acbed279-47c7-4258-8753-7908968af477",
-			"script": "(state.i_key < 2)"
+			"script": "(state.get_var(\"i_key\") < 2)"
 		},
-		"840b4837-ad55-43e5-ae36-46fc31012d0b": {
-			"output": "a8f48e97-1cd4-4abf-b2d5-d7ca7c82b08b",
-			"script": "state.t_hateLocked"
+		"89a25ab7-a504-4f65-a61d-4f54f1ecc883": {
+			"output": "a342ec18-fb83-4200-97c6-7be3b36642c8",
+			"script": "self.utils.aw_visits(state, \"3fcc5c7e-d67e-4ac6-a712-ca5eb388dd62\")"
 		},
-		"86caac87-7d05-4345-b699-f924057bf6f8": {
-			"output": "0d46a60c-7767-4652-9293-a303be0a4899",
+		"9357677f-25bd-49f1-b65d-3b8bb5a4fdac": {
+			"output": "b75077e6-89e8-4e25-ade5-ffe51c7a3490",
 			"script": null
 		},
 		"98f8ccbc-cd11-4020-9120-3ecdcd04070b": {
 			"output": "79a713f3-91c8-40b8-80c3-e5dc9e46f269",
 			"script": null
 		},
-		"9c3095c8-eee8-4cf2-8681-960a36a320e4": {
-			"output": "914520c8-dfb2-40a2-976e-8e57dca37ea4",
-			"script": "(state.t_andreasWho == 1)"
-		},
-		"9f9b54e9-01a0-4426-9906-ecbc314f6773": {
-			"output": "a71d718a-c02a-4f74-a57d-b41d8d32cea4",
-			"script": "(state.t_miniGame <= 0)"
-		},
 		"a2bc7e0d-951b-466f-8e3d-765cc697c6bb": {
 			"output": "32997868-6244-4446-b634-12f7c2285d96",
-			"script": "((state.t_key == 1) and (state.i_key < 2))"
+			"script": "((state.get_var(\"t_key\") == 1) and (state.get_var(\"i_key\") < 2))"
 		},
-		"b6c81284-5041-4c30-a8ac-4cdc3001d997": {
-			"output": "2270c1cd-0705-48d4-ae38-919842392414",
-			"script": null
+		"b080ee62-73b6-4250-b0fe-fb951726eef6": {
+			"output": "67c80974-307e-4218-a9c0-e2cbe6f215aa",
+			"script": "not self.utils.aw_visits(state, \"3fcc5c7e-d67e-4ac6-a712-ca5eb388dd62\")"
+		},
+		"b292fcad-8038-47fd-a047-8bdf617087b8": {
+			"output": "7bcc3efd-c7c2-41f5-a457-5d496991123c",
+			"script": "self.utils.aw_visits(state, \"fff42783-9155-4ea0-b7d8-ad40f610488f\")"
 		},
 		"b6dc57db-ee41-4b8e-b144-a4f2867f0e14": {
 			"output": "f370f35e-c9c4-4652-83e9-11de9632a0e2",
-			"script": "(state.t_andreasBottleneck <= 1)"
+			"script": "(state.get_var(\"t_andreasBottleneck\") <= 1)"
 		},
 		"b7beb375-f94c-4075-8754-de09d40e49c2": {
 			"output": "9ddcd53d-ed76-4b04-8cf4-547bf58bf2f0",
-			"script": "(state.t_gameScripts == 0)"
+			"script": "(state.get_var(\"t_gameScripts\") == 0)"
 		},
-		"bb05db27-edee-4c73-a6d6-6ee3b82f57e8": {
-			"output": "ad13b8bf-81ab-435f-b85b-b7a5b231eb6e",
-			"script": "(state.t_andreasWho == 0)"
+		"b8a33180-d329-4ac0-9130-76e973b0fbd0": {
+			"output": "412f272e-3db1-445e-83a2-42cc1175a810",
+			"script": "not self.utils.aw_visits(state, \"3fcc5c7e-d67e-4ac6-a712-ca5eb388dd62\")"
 		},
 		"bc5af137-831e-429c-bd88-faa4043746c4": {
 			"output": "e4a3f846-7a24-4329-a20b-056bf7568a81",
 			"script": null
 		},
-		"bcd6b6e7-029f-4e1b-837c-0b104420a47d": {
-			"output": "b852b858-560f-4025-af44-fc76f293b842",
-			"script": null
-		},
-		"bd97a1a7-62b8-4046-b97e-8d21e0d53041": {
-			"output": "953e1c66-3bfc-4092-9f73-92defc1c0ec4",
-			"script": "(state.t_therapy == 1)"
-		},
 		"c170161b-49b9-4a66-84dc-60eacdd9dbf4": {
 			"output": "5ad38d27-e3b7-478c-95cc-dfcee67ac88a",
-			"script": "(state.regrets == 0)"
+			"script": "(state.get_var(\"regrets\") == 0)"
 		},
 		"c65d8a4d-33cb-4318-9873-8bd8a5bd63b1": {
 			"output": "0f2de36d-d569-482f-851f-c9e2b200d999",
-			"script": "(state.regrets > 0)"
+			"script": "(state.get_var(\"regrets\") > 0)"
 		},
-		"cb06a534-2bbc-49ae-94bf-edd331e558ea": {
-			"output": "0449b5a0-9d91-435c-9b4a-57976e3eef2e",
-			"script": "(state.t_give_gameScripts == 0)"
+		"ccb9dc05-a287-4152-9896-2852476e20c9": {
+			"output": "79cd035f-239a-42ac-8825-d30a0d06227b",
+			"script": null
 		},
-		"cfd60c77-69d3-4379-99c7-2c49496a7c45": {
-			"output": "a27af859-11ca-4ce8-b514-c437fc53b42b",
-			"script": "(state.t_therapy == 0)"
+		"cf65ce6d-7e63-4a37-a8c2-aa8b9d3a54fd": {
+			"output": "e8e6ad40-4fd7-4828-828c-021e19c6e4e0",
+			"script": "self.utils.aw_visits(state, \"fff42783-9155-4ea0-b7d8-ad40f610488f\")"
+		},
+		"d01eccf0-4b73-4507-84f4-287bf1f59d0c": {
+			"output": "3590aa16-f026-4fb5-9895-dc08b4cba4a0",
+			"script": "not self.utils.aw_visits(state, \"7a4cd099-907a-4087-b9f3-ec3bec5b4260\")"
 		},
 		"d3bb6b9e-c676-4142-b7c5-3952f7440579": {
 			"output": "c1f2b981-5f79-4993-9326-8706a9f1a5b7",
-			"script": "(state.i_amstrad == 1)"
+			"script": "(state.get_var(\"i_amstrad\") == 1)"
 		},
 		"d4d45506-974c-4bdc-a2cf-e01b40f20758": {
 			"output": "bddb8af0-734e-464d-a010-5c244e545a92",
-			"script": "(state.t_magazines == 1)"
+			"script": "(state.get_var(\"t_magazines\") == 1)"
 		},
-		"d608fb1f-cb98-4048-ae77-286c254488be": {
-			"output": "b244de7e-ccd8-423c-8bd7-8fa8da3eb022",
-			"script": null
+		"da6e4e0d-1e35-488f-9290-b63a689832f2": {
+			"output": "b724f6a2-0fa3-4f85-9cfd-1382959acd77",
+			"script": "not self.utils.aw_visits(state, \"929dfd94-d8a4-4ac2-b521-fab2679f7d27\")"
+		},
+		"da83e849-96f6-4216-a926-c27c9399bab0": {
+			"output": "9ad1bab7-ce82-490c-a3cd-6cadf74518f8",
+			"script": "self.utils.aw_visits(state, \"fff42783-9155-4ea0-b7d8-ad40f610488f\")"
 		},
 		"dea7b2db-130a-41be-9b9e-dd8f551eb656": {
 			"output": "ab19334c-7676-42f6-994e-c4e441ccf531",
-			"script": "(state.t_amstrad == 1)"
+			"script": "(state.get_var(\"t_amstrad\") == 1)"
 		},
 		"df201076-2c08-42b7-a54e-6c8fe444c70c": {
 			"output": "f9319b23-3250-43a2-b712-d6b8d432696a",
-			"script": "(state.t_andreasBottleneck == 2)"
+			"script": "(state.get_var(\"t_andreasBottleneck\") == 2)"
+		},
+		"e285a37e-6f7e-43ef-a9c2-ba0593b75f2b": {
+			"output": "7f78b2b8-5170-46eb-a404-b04127287f98",
+			"script": "not self.utils.aw_visits(state, \"3fcc5c7e-d67e-4ac6-a712-ca5eb388dd62\")"
 		},
 		"e41c8ec6-e3b6-45c4-9502-2cfeab37a99e": {
 			"output": "52085edd-c01c-468c-871c-c5ce42b0dda2",
-			"script": "(state.i_magazines == 2)"
+			"script": "(state.get_var(\"i_magazines\") == 2)"
 		},
 		"e76cc3d1-ab1d-4440-88cb-e5d44db096aa": {
 			"output": "604f24e8-22ef-4827-bdea-09965b0f6010",
-			"script": "(state.t_key == 0)"
+			"script": "(state.get_var(\"t_key\") == 0)"
 		},
 		"e8b832cf-64d3-4589-a83b-10c370fd4679": {
 			"output": "950ce8ad-40f4-4728-9e56-7ea27a5f9adc",
-			"script": "(state.i_key == 2)"
+			"script": "(state.get_var(\"i_key\") == 2)"
+		},
+		"e9298549-ac13-42ba-ae54-e190faf36fa0": {
+			"output": "f4b7f196-45c3-471a-b1d5-50b769ea776c",
+			"script": "not self.utils.aw_visits(state, \"4bb97507-256a-40ac-ada0-40a176ebc697\")"
 		},
 		"f01d4a10-b43a-4748-92c5-6b6c9350bb7a": {
 			"output": "d896e273-d49a-4f09-8992-60dca65211c1",
-			"script": "(state.t_amstrad == 0)"
+			"script": "(state.get_var(\"t_amstrad\") == 0)"
+		},
+		"f32a37c0-2be4-4d3c-98e5-9c42d68be80f": {
+			"output": null,
+			"script": null
+		},
+		"fcd9cf30-3b97-452d-ba5d-f096028c5a0e": {
+			"output": "5f4f0848-44ac-4417-9e67-e8106acd40d8",
+			"script": "not self.utils.aw_visits(state, \"66edd6cd-0622-4105-b843-ee919cdb87d9\")"
 		},
 		"ff98b03e-f16e-4825-bc10-bd46d0bd4e9b": {
 			"output": "f80ee052-2073-4123-82ff-16a3ca57c3a8",
-			"script": "(state.i_gameScripts == 2)"
+			"script": "(state.get_var(\"i_gameScripts\") == 2)"
 		}
 	},
-	"name": "Regrets",
+	"name": "Restored - Re-Regrets",
 	"cover": {
 		"file": "1652863140_6284b0a41ad71.png",
 		"type": "cover-image"
-	},
-	"globalFunctions": {}
+	}
 }
 
 func _init(utils: Utils):
@@ -14205,6 +14297,9 @@ func _init(utils: Utils):
 	for element_id in self.data.elements:
 		if self.data.elements[element_id].content and self.data.elements[element_id].contentRef:
 			self.data.elements[element_id].content = funcref(self, self.data.elements[element_id].contentRef)
+	for connection_id in self.data.connections:
+		if self.data.connections[connection_id].label and self.data.connections[connection_id].labelRef:
+			self.data.connections[connection_id].labelRef = funcref(self, self.data.connections[connection_id].labelRef)
 
 func element_0_content(state):
 	var content_result: String = ""
@@ -14214,7 +14309,6 @@ func element_0_content(state):
 func element_1_content(state):
 	var content_result: String = ""
 	content_result += "Oh, are you one of those NPCs who are there to play silly mini-games with the player?\n "
-	state.t_miniGame = 1
 	return content_result.trim_suffix(" ")
 
 func element_3_content(state):
@@ -14239,7 +14333,7 @@ func element_7_content(state):
 
 func element_8_content(state):
 	var content_result: String = ""
-	content_result += "An Amstrad 6128?!?\n "
+	content_result += "An &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;?!?\n "
 	return content_result.trim_suffix(" ")
 
 func element_9_content(state):
@@ -14310,7 +14404,8 @@ func element_22_content(state):
 func element_23_content(state):
 	var content_result: String = ""
 	content_result += "OK, I'll just get a couple of my favourite issues.\n "
-	state.i_magazines = 2
+	state.set_var("i_magazines", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_24_content(state):
@@ -14331,8 +14426,9 @@ func element_26_content(state):
 func element_27_content(state):
 	var content_result: String = ""
 	content_result += "It's locked.\n "
-	if (state.t_key == 0):
-		state.t_key = 1
+	if (state.get_var("t_key") == 0):
+		state.set_var("t_key", 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_28_content(state):
@@ -14497,7 +14593,7 @@ func element_61_content(state):
 
 func element_62_content(state):
 	var content_result: String = ""
-	content_result += "Hey.\n "
+	content_result += "Hey!\n "
 	return content_result.trim_suffix(" ")
 
 func element_63_content(state):
@@ -14602,8 +14698,9 @@ func element_83_content(state):
 
 func element_84_content(state):
 	var content_result: String = ""
-	content_result += "I can't seem to get over selling my Amstrad 6128.\n "
-	state.t_amstrad = 2
+	content_result += "I can't seem to get over selling my &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;.\n "
+	state.set_var("t_amstrad", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_85_content(state):
@@ -14668,991 +14765,1007 @@ func element_99_content(state):
 
 func element_100_content(state):
 	var content_result: String = ""
-	content_result += "\"Click items or characters to interact with them with the MOUSE MENU.\"\n "
+	content_result += "Where am I?\n "
 	return content_result.trim_suffix(" ")
 
 func element_101_content(state):
 	var content_result: String = ""
-	content_result += "We don't have time for hard inner work and years of therapy.\n "
-	state.t_therapy = 1
+	content_result += "\"Click items or characters to interact with them with the MOUSE MENU.\"\n "
 	return content_result.trim_suffix(" ")
 
 func element_102_content(state):
 	var content_result: String = ""
-	content_result += "And I'm wise.\n "
+	content_result += "We don't have time for hard inner work and years of therapy.\n "
 	return content_result.trim_suffix(" ")
 
 func element_103_content(state):
 	var content_result: String = ""
-	content_result += "The key to getting out of here!\n "
+	content_result += "And I'm wise.\n "
 	return content_result.trim_suffix(" ")
 
 func element_104_content(state):
 	var content_result: String = ""
-	content_result += "Forgive your past self. And ask your inner child to forgive you.\n "
-	state.regrets -= 1
+	content_result += "The key to getting out of here!\n "
 	return content_result.trim_suffix(" ")
 
 func element_105_content(state):
 	var content_result: String = ""
-	content_result += "My name is Andreas.\n "
+	content_result += "Forgive your past self. And ask your inner child to forgive you.\n "
+	state.set_var("regrets", state.get_var("regrets") - 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_106_content(state):
 	var content_result: String = ""
-	content_result += "Don't need that.\n "
+	content_result += "My name is Andreas.\n "
 	return content_result.trim_suffix(" ")
 
 func element_107_content(state):
 	var content_result: String = ""
-	content_result += "No time for gaming anymore. And no space for old gaming magazines.\n "
+	content_result += "Don't need that.\n "
 	return content_result.trim_suffix(" ")
 
 func element_108_content(state):
 	var content_result: String = ""
-	content_result += "Still locked.\n "
+	content_result += "No time for gaming anymore. And no space for old gaming magazines.\n "
 	return content_result.trim_suffix(" ")
 
 func element_109_content(state):
 	var content_result: String = ""
-	content_result += "Well, I had lots of ISSUES in junior high.\n "
+	content_result += "Still locked.\n "
 	return content_result.trim_suffix(" ")
 
 func element_110_content(state):
 	var content_result: String = ""
-	content_result += "Impressive!\n "
+	content_result += "Well, I had lots of ISSUES in junior high.\n "
 	return content_result.trim_suffix(" ")
 
 func element_111_content(state):
 	var content_result: String = ""
-	content_result += "By the way, this isn't tarot.\n "
+	content_result += "Impressive!\n "
 	return content_result.trim_suffix(" ")
 
 func element_112_content(state):
 	var content_result: String = ""
-	content_result += "Of course.\n "
+	content_result += "By the way, this isn't tarot.\n "
 	return content_result.trim_suffix(" ")
 
 func element_113_content(state):
 	var content_result: String = ""
-	content_result += "Hah. Why not?\n "
+	content_result += "Of course.\n "
 	return content_result.trim_suffix(" ")
 
 func element_114_content(state):
 	var content_result: String = ""
-	content_result += "Let's see how I can move around this place...\n "
+	content_result += "Hah. Why not?\n "
 	return content_result.trim_suffix(" ")
 
 func element_115_content(state):
 	var content_result: String = ""
-	content_result += "You're a wise... old... person?\n "
+	content_result += "Let's see how I can move around this place...\n "
 	return content_result.trim_suffix(" ")
 
 func element_116_content(state):
 	var content_result: String = ""
-	content_result += "Yeah, I don't blame you.\n "
+	content_result += "You're a wise... old... person?\n "
 	return content_result.trim_suffix(" ")
 
 func element_117_content(state):
 	var content_result: String = ""
-	content_result += "Em... Would you care to have a look?\n "
-	state.t_give_gameScripts = 1
+	content_result += "Yeah, I don't blame you.\n "
 	return content_result.trim_suffix(" ")
 
 func element_118_content(state):
 	var content_result: String = ""
-	content_result += "An ffffff?\n "
+	content_result += "Em... Would you care to have a look?\n "
 	return content_result.trim_suffix(" ")
 
 func element_119_content(state):
 	var content_result: String = ""
-	if (state.t_andreasBottleneck < 4):
-		state.t_andreasBottleneck = 4
+	content_result += "An ffffff?\n "
 	return content_result.trim_suffix(" ")
 
 func element_120_content(state):
 	var content_result: String = ""
-	content_result += "And frankly not one of the best I've seen.\n "
+	content_result += " "
+	if (state.get_var("t_andreasBottleneck") < 4):
+		state.set_var("t_andreasBottleneck", 4)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_121_content(state):
 	var content_result: String = ""
-	content_result += "The Godot project has several script files. They have as many comments as possible, so you can follow their logic.\n "
+	content_result += "And frankly not one of the best I've seen.\n "
 	return content_result.trim_suffix(" ")
 
 func element_122_content(state):
 	var content_result: String = ""
-	content_result += "And what do you expect me to do with them?\n "
+	content_result += "The Godot project has several script files. They have as many comments as possible, so you can follow their logic.\n "
 	return content_result.trim_suffix(" ")
 
 func element_123_content(state):
 	var content_result: String = ""
-	content_result += "\"Drink water.\"\n "
+	content_result += "And what do you expect me to do with them?\n "
 	return content_result.trim_suffix(" ")
 
 func element_124_content(state):
 	var content_result: String = ""
-	content_result += "Great. Here goes.\n "
+	content_result += "\"Drink water.\"\n "
 	return content_result.trim_suffix(" ")
 
 func element_125_content(state):
 	var content_result: String = ""
-	content_result += "Do you have any?\n "
+	content_result += "Great. Here goes.\n "
 	return content_result.trim_suffix(" ")
 
 func element_126_content(state):
 	var content_result: String = ""
-	content_result += "I have no regrets!\n "
+	content_result += "Do you have any?\n "
 	return content_result.trim_suffix(" ")
 
 func element_127_content(state):
 	var content_result: String = ""
-	content_result += "Ha.\n "
+	content_result += "I have no regrets!\n "
 	return content_result.trim_suffix(" ")
 
 func element_128_content(state):
 	var content_result: String = ""
-	content_result += "Exactly.\n "
+	content_result += "Ha.\n "
 	return content_result.trim_suffix(" ")
 
 func element_129_content(state):
 	var content_result: String = ""
-	state.i_amstrad = 2
+	content_result += "Exactly.\n "
 	return content_result.trim_suffix(" ")
 
 func element_130_content(state):
 	var content_result: String = ""
-	content_result += "Yep. It works!\n "
+	content_result += " "
+	state.set_var("i_amstrad", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_131_content(state):
 	var content_result: String = ""
-	content_result += "I would write programs on it.\n "
+	content_result += "Yep. It works!\n "
 	return content_result.trim_suffix(" ")
 
 func element_132_content(state):
 	var content_result: String = ""
-	content_result += "To see the [b]Arcweave web API[/b] in action, make changes to this project and sync them with the Godot game, with the click of a button.\nPaste your API key and Project Hash into the plugin's fields and click [b]Refresh Project[/b].\nAfter the data transfer is complete, you can run the game.\n "
+	content_result += "I would write programs on it.\n "
 	return content_result.trim_suffix(" ")
 
 func element_133_content(state):
 	var content_result: String = ""
-	content_result += "That's me, pep-talking myself.\n "
+	content_result += "To see the [b]Arcweave web API[/b] in action, make changes to this project and sync them with the Godot game, with the click of a button.\nPaste your API key and Project Hash into the plugin's fields and click [b]Refresh Project[/b].\nAfter the data transfer is complete, you can run the game.\n "
 	return content_result.trim_suffix(" ")
 
 func element_134_content(state):
 	var content_result: String = ""
-	content_result += "Then, you're it.\n "
+	content_result += "That's me, pep-talking myself.\n "
 	return content_result.trim_suffix(" ")
 
 func element_135_content(state):
 	var content_result: String = ""
-	content_result += "Of course they suck.\n "
+	content_result += "Then, you're it.\n "
 	return content_result.trim_suffix(" ")
 
 func element_136_content(state):
 	var content_result: String = ""
-	content_result += "Good. Off you go, then.\n "
+	content_result += "Of course they suck.\n "
 	return content_result.trim_suffix(" ")
 
 func element_137_content(state):
 	var content_result: String = ""
-	content_result += "Aha!\n "
+	content_result += "Good. Off you go, then.\n "
 	return content_result.trim_suffix(" ")
 
 func element_138_content(state):
 	var content_result: String = ""
-	content_result += "I resold it, third hand, back in the early 90s.\n "
+	content_result += "Aha!\n "
 	return content_result.trim_suffix(" ")
 
 func element_139_content(state):
 	var content_result: String = ""
-	content_result += "... and I'm about to call it a day.\n "
+	content_result += "I resold it, third hand, back in the early 90s.\n "
 	return content_result.trim_suffix(" ")
 
 func element_140_content(state):
 	var content_result: String = ""
-	content_result += "Are you ready?\n "
+	content_result += "... and I'm about to call it a day.\n "
 	return content_result.trim_suffix(" ")
 
 func element_141_content(state):
 	var content_result: String = ""
-	content_result += "You already have the key.\n "
+	content_result += "Are you ready?\n "
 	return content_result.trim_suffix(" ")
 
 func element_142_content(state):
 	var content_result: String = ""
-	content_result += "Someone who unapologetically embraces their narcissistic personality disorder!\n "
+	content_result += "You already have the key.\n "
 	return content_result.trim_suffix(" ")
 
 func element_143_content(state):
 	var content_result: String = ""
-	content_result += "No time for that, now.\n "
+	content_result += "Someone who unapologetically embraces their narcissistic personality disorder!\n "
 	return content_result.trim_suffix(" ")
 
 func element_144_content(state):
 	var content_result: String = ""
-	content_result += "So, ready to share any of your regrets?\n "
+	content_result += "No time for that, now.\n "
 	return content_result.trim_suffix(" ")
 
 func element_145_content(state):
 	var content_result: String = ""
-	content_result += "How do I let go?\n "
+	content_result += "So, ready to share any of your regrets?\n "
 	return content_result.trim_suffix(" ")
 
 func element_146_content(state):
 	var content_result: String = ""
-	if (state.t_andreasBottleneck < 2):
-		state.t_andreasBottleneck = 2
+	content_result += "How do I let go?\n "
 	return content_result.trim_suffix(" ")
 
 func element_147_content(state):
 	var content_result: String = ""
-	content_result += "\n "
+	content_result += " "
+	if (state.get_var("t_andreasBottleneck") < 2):
+		state.set_var("t_andreasBottleneck", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_148_content(state):
 	var content_result: String = ""
-	content_result += "Games I was going to make... soon after.\n "
-	if (state.t_gameScripts < 1):
-		state.t_gameScripts = 1
+	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
 func element_149_content(state):
 	var content_result: String = ""
-	content_result += "It doesn't exactly look like it, but it feels...\n "
+	content_result += "Games I was going to make... soon after.\n "
+	if (state.get_var("t_gameScripts") < 1):
+		state.set_var("t_gameScripts", 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_150_content(state):
 	var content_result: String = ""
-	content_result += "You can keep them as a souvenir.\n "
+	content_result += "It doesn't exactly look like it, but it feels...\n "
 	return content_result.trim_suffix(" ")
 
 func element_151_content(state):
 	var content_result: String = ""
-	content_result += "Let's play a game of numbers.\n "
+	content_result += "You can keep them as a souvenir.\n "
 	return content_result.trim_suffix(" ")
 
 func element_152_content(state):
 	var content_result: String = ""
-	content_result += "Bought second hand, back in the late 80s.\n "
-	if (state.t_amstrad < 1):
-		state.t_amstrad = 1
-	state.regrets += 1
+	content_result += "Let's play a game of numbers.\n "
 	return content_result.trim_suffix(" ")
 
 func element_153_content(state):
 	var content_result: String = ""
-	content_result += "Great!\n "
+	content_result += "Bought second hand, back in the late 80s.\n "
+	if (state.get_var("t_amstrad") < 1):
+		state.set_var("t_amstrad", 1)
+	state.set_var("regrets", state.get_var("regrets") + 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_154_content(state):
 	var content_result: String = ""
-	content_result += "A puzzle, finally!\n "
+	content_result += "Great!\n "
 	return content_result.trim_suffix(" ")
 
 func element_155_content(state):
 	var content_result: String = ""
-	state.playerRoll = self.utils.aw_roll(100, 1)
-	content_result += str(state.playerRoll) + str("!")
+	content_result += "A puzzle, finally!\n "
 	return content_result.trim_suffix(" ")
 
 func element_156_content(state):
 	var content_result: String = ""
-	content_result += "I'd better leave them here. Otherwise I'll forget.\n "
+	content_result += " "
+	state.set_var("playerRoll", self.utils.aw_roll(100, 1))
+	content_result += str(state.get_var("playerRoll")) + str("!")
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_157_content(state):
 	var content_result: String = ""
-	content_result += "Perhaps this white piece of paper on the corkboard gives some instructions.\n "
+	content_result += "I'd better leave them here. Otherwise I'll forget.\n "
 	return content_result.trim_suffix(" ")
 
 func element_158_content(state):
 	var content_result: String = ""
-	content_result += "But no, seriously. Those magazines made me want to become a game writer.\n "
+	content_result += "Perhaps this white piece of paper on the corkboard gives some instructions.\n "
 	return content_result.trim_suffix(" ")
 
 func element_159_content(state):
 	var content_result: String = ""
-	content_result += "\"The items you take are displayed under the action window, as your INVENTORY.\"\n "
+	content_result += "But no, seriously. Those magazines made me want to become a game writer.\n "
 	return content_result.trim_suffix(" ")
 
 func element_160_content(state):
 	var content_result: String = ""
-	content_result += "Er... Sorry, I thought you were someone else.\n "
+	content_result += "\"The items you take are displayed under the action window, as your INVENTORY.\"\n "
 	return content_result.trim_suffix(" ")
 
 func element_161_content(state):
 	var content_result: String = ""
-	content_result += "Hello, dear $##$, how do you do?\n "
+	content_result += "Er... Sorry, I thought you were someone else.\n "
 	return content_result.trim_suffix(" ")
 
 func element_162_content(state):
 	var content_result: String = ""
-	content_result += "This is a game.\n "
+	content_result += "Hello, dear $##$, how do you do?\n "
 	return content_result.trim_suffix(" ")
 
 func element_163_content(state):
 	var content_result: String = ""
-	content_result += "Hmm... Good point.\n "
+	content_result += "This is a game.\n "
 	return content_result.trim_suffix(" ")
 
 func element_164_content(state):
 	var content_result: String = ""
-	content_result += "This place feels familiar.\n "
+	content_result += "Hmm... Good point.\n "
 	return content_result.trim_suffix(" ")
 
 func element_165_content(state):
 	var content_result: String = ""
-	content_result += "I hate symbols, too.\n "
+	content_result += "This place feels familiar.\n "
+	if self.utils.aw_visits(state, "3d360510-987d-47aa-9198-c0ddc34c75b2"):
+		content_result += "I have considered my predicament, but still...\n "
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_166_content(state):
 	var content_result: String = ""
-	content_result += "Hey.\n "
+	content_result += "I hate symbols, too.\n "
 	return content_result.trim_suffix(" ")
 
 func element_167_content(state):
 	var content_result: String = ""
-	content_result += "I went through a phase.\n "
+	content_result += "Hey.\n "
 	return content_result.trim_suffix(" ")
 
 func element_168_content(state):
 	var content_result: String = ""
-	content_result += "What's that?\n "
+	content_result += "I went through a phase.\n "
 	return content_result.trim_suffix(" ")
 
 func element_169_content(state):
 	var content_result: String = ""
-	content_result += "Let's go for it!\n "
+	content_result += "What's that?\n "
 	return content_result.trim_suffix(" ")
 
 func element_170_content(state):
 	var content_result: String = ""
-	content_result += "You're about to finish this game...\n "
+	content_result += "Let's go for it!\n "
 	return content_result.trim_suffix(" ")
 
-func element_172_content(state):
+func element_171_content(state):
 	var content_result: String = ""
-	content_result += "Is there something stopping you from accomplishing things?\n "
+	content_result += "You're about to finish this game...\n "
 	return content_result.trim_suffix(" ")
 
 func element_173_content(state):
 	var content_result: String = ""
-	content_result += "I think I know this guy from somewhere.\n "
+	content_result += "Is there something stopping you from accomplishing things?\n "
 	return content_result.trim_suffix(" ")
 
 func element_174_content(state):
 	var content_result: String = ""
-	content_result += "I don't see anything special about that.\n "
+	content_result += "I think I know this guy from somewhere.\n "
 	return content_result.trim_suffix(" ")
 
 func element_175_content(state):
 	var content_result: String = ""
-	content_result += "Somebody thought it would be funny--or meaningful in some way?-- for me to just be here.\n "
+	content_result += "I don't see anything special about that.\n "
 	return content_result.trim_suffix(" ")
 
 func element_176_content(state):
 	var content_result: String = ""
-	content_result += "What is this place?\n "
-	state.t_andreasPlace = 1
+	content_result += "Somebody thought it would be funny--or meaningful in some way?-- for me to just be here.\n "
 	return content_result.trim_suffix(" ")
 
 func element_177_content(state):
 	var content_result: String = ""
-	content_result += "Well, what are you waiting for?\n "
+	content_result += "What is this place?\n "
 	return content_result.trim_suffix(" ")
 
 func element_178_content(state):
 	var content_result: String = ""
-	content_result += "Then your future self can thank your past self and your inner child can thank you.\n "
+	content_result += "Well, what are you waiting for?\n "
 	return content_result.trim_suffix(" ")
 
 func element_179_content(state):
 	var content_result: String = ""
-	content_result += "Bummer.\n "
+	content_result += "Then your future self can thank your past self and your inner child can thank you.\n "
 	return content_result.trim_suffix(" ")
 
 func element_180_content(state):
 	var content_result: String = ""
-	content_result += "\n "
+	content_result += "Bummer.\n "
 	return content_result.trim_suffix(" ")
 
 func element_181_content(state):
 	var content_result: String = ""
-	content_result += "Any inner conflicts?\n "
+	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
 func element_182_content(state):
 	var content_result: String = ""
-	content_result += "Come back if and when you're ready.\n "
+	content_result += "Any inner conflicts?\n "
 	return content_result.trim_suffix(" ")
 
 func element_183_content(state):
 	var content_result: String = ""
-	content_result += "I wonder where it can be right now.\n "
+	content_result += "Come back if and when you're ready.\n "
 	return content_result.trim_suffix(" ")
 
 func element_184_content(state):
 	var content_result: String = ""
-	content_result += "Biggest number wins.\n "
+	content_result += "I wonder where it can be right now.\n "
 	return content_result.trim_suffix(" ")
 
 func element_185_content(state):
 	var content_result: String = ""
-	content_result += "Violence is not the answer to this one.\n "
+	content_result += "Biggest number wins.\n "
 	return content_result.trim_suffix(" ")
 
 func element_186_content(state):
 	var content_result: String = ""
-	content_result += "The Nemesis and/or Villain and/or Antagonist?\n "
+	content_result += "Violence is not the answer to this one.\n "
 	return content_result.trim_suffix(" ")
 
 func element_187_content(state):
 	var content_result: String = ""
-	content_result += "The terms 'door' and 'key' shouldn't be taken literally, here.\n "
+	content_result += "The Nemesis and/or Villain and/or Antagonist?\n "
 	return content_result.trim_suffix(" ")
 
 func element_188_content(state):
 	var content_result: String = ""
-	content_result += "You are an NPC and you KNOW it?\n "
+	content_result += "The terms 'door' and 'key' shouldn't be taken literally, here.\n "
 	return content_result.trim_suffix(" ")
 
 func element_189_content(state):
 	var content_result: String = ""
-	content_result += "1... 2... 3...\n "
+	content_result += "You are an NPC and you KNOW it?\n "
 	return content_result.trim_suffix(" ")
 
 func element_190_content(state):
 	var content_result: String = ""
-	content_result += "Close.\n "
+	content_result += "1... 2... 3...\n "
 	return content_result.trim_suffix(" ")
 
 func element_191_content(state):
 	var content_result: String = ""
-	content_result += "Examine them carefully, for the memories to awaken.\n "
+	content_result += "Close.\n "
 	return content_result.trim_suffix(" ")
 
 func element_192_content(state):
 	var content_result: String = ""
-	content_result += "Quit this demo and go write your own game or something!\n "
+	content_result += "Examine them carefully, for the memories to awaken.\n "
 	return content_result.trim_suffix(" ")
 
 func element_193_content(state):
 	var content_result: String = ""
-	content_result += "\n "
+	content_result += "Quit this demo and go write your own game or something!\n "
 	return content_result.trim_suffix(" ")
 
 func element_194_content(state):
 	var content_result: String = ""
-	content_result += "OK, you can't be forced into such a process.\n "
+	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
 func element_195_content(state):
 	var content_result: String = ""
-	content_result += "A locked door symbolizes things that stop us from moving on.\n "
+	content_result += "OK, you can't be forced into such a process.\n "
 	return content_result.trim_suffix(" ")
 
 func element_196_content(state):
 	var content_result: String = ""
-	state.andreasRoll = self.utils.aw_roll(100, 1)
-	content_result += str(state.andreasRoll) + str("!")
+	content_result += "A locked door symbolizes things that stop us from moving on.\n "
 	return content_result.trim_suffix(" ")
 
 func element_197_content(state):
 	var content_result: String = ""
-	content_result += "\"Left-click on one to use it. Right-click to examine it.\"\n "
+	content_result += " "
+	state.set_var("andreasRoll", self.utils.aw_roll(100, 1))
+	content_result += str(state.get_var("andreasRoll")) + str("!")
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_198_content(state):
 	var content_result: String = ""
-	content_result += "I need some help with all this.\n "
+	content_result += "\"Left-click on one to use it. Right-click to examine it.\"\n "
 	return content_result.trim_suffix(" ")
 
 func element_199_content(state):
 	var content_result: String = ""
-	content_result += "It seems like it.\n "
+	content_result += "I need some help with all this.\n "
 	return content_result.trim_suffix(" ")
 
 func element_200_content(state):
 	var content_result: String = ""
-	content_result += "Aargh... Everything is so dreamy, here.\n "
+	content_result += "It seems like it.\n "
 	return content_result.trim_suffix(" ")
 
 func element_201_content(state):
 	var content_result: String = ""
-	content_result += "Being in denial will keep you here forever.\n "
+	content_result += "Aargh... Everything is so dreamy, here.\n "
 	return content_result.trim_suffix(" ")
 
 func element_202_content(state):
 	var content_result: String = ""
-	content_result += "Adventure games were always released for Amiga 500 and IBM compatibles. Never for Amstrad 6128.\n "
+	content_result += "Being in denial will keep you here forever.\n "
 	return content_result.trim_suffix(" ")
 
 func element_203_content(state):
 	var content_result: String = ""
-	content_result += "Somebody has it in a display case, next to an aquarium with lion fish.\n "
+	content_result += "Adventure games were always released for Amiga 500 and IBM compatibles. Never for Amstrad 6128.\n "
 	return content_result.trim_suffix(" ")
 
 func element_204_content(state):
 	var content_result: String = ""
-	content_result += "It's where we chill.\n "
+	content_result += "Somebody has it in a display case, next to an aquarium with lion fish.\n "
 	return content_result.trim_suffix(" ")
 
 func element_205_content(state):
 	var content_result: String = ""
-	content_result += "Good choice.\n "
+	content_result += "It's where we chill.\n "
 	return content_result.trim_suffix(" ")
 
 func element_206_content(state):
 	var content_result: String = ""
-	content_result += "I'll keep this in mind, thanks.\n "
+	content_result += "Good choice.\n "
 	return content_result.trim_suffix(" ")
 
 func element_207_content(state):
 	var content_result: String = ""
-	content_result += "Most people today would mistake it for a piece of junk, anyway.\n "
+	content_result += "I'll keep this in mind, thanks.\n "
 	return content_result.trim_suffix(" ")
 
 func element_208_content(state):
 	var content_result: String = ""
-	content_result += "I'll just pretend I didn't hear that.\n "
+	content_result += "Most people today would mistake it for a piece of junk, anyway.\n "
 	return content_result.trim_suffix(" ")
 
-func element_210_content(state):
+func element_209_content(state):
 	var content_result: String = ""
-	content_result += "I'm not sure I am ready to move on.\n "
+	content_result += "I'll just pretend I didn't hear that.\n "
 	return content_result.trim_suffix(" ")
 
 func element_211_content(state):
 	var content_result: String = ""
-	content_result += "To find your API key (or token), go to:\n[quote]My Account &amp;amp;gt; API Token &amp;amp;gt; Show API Token\n[/quote]... and copy it to the clipboard.\n "
+	content_result += "I'm not sure I am ready to move on.\n "
 	return content_result.trim_suffix(" ")
 
 func element_212_content(state):
 	var content_result: String = ""
-	content_result += "Look around your bedroom. You will discover things you have regretted about.\n "
+	content_result += "To find your API key (or token), go to:\n[quote]&lt;p&gt;My Account &amp;gt; API Token &amp;gt; Show API Token&lt;/p&gt;[/quote]... and copy it to the clipboard.\n "
 	return content_result.trim_suffix(" ")
 
 func element_213_content(state):
 	var content_result: String = ""
-	content_result += "I never thanked you.\n "
-	state.t_andreasThanks = true
+	content_result += "Look around your bedroom. You will discover things you have regretted about.\n "
 	return content_result.trim_suffix(" ")
 
 func element_214_content(state):
 	var content_result: String = ""
-	content_result += "What does that even mean?\n "
+	content_result += "I never thanked you.\n "
 	return content_result.trim_suffix(" ")
 
 func element_215_content(state):
 	var content_result: String = ""
-	content_result += "My life would have been so much more interesting!\n "
+	content_result += "What does that even mean?\n "
 	return content_result.trim_suffix(" ")
 
 func element_216_content(state):
 	var content_result: String = ""
-	content_result += "\n "
+	content_result += "My life would have been so much more interesting!\n "
 	return content_result.trim_suffix(" ")
 
 func element_217_content(state):
 	var content_result: String = ""
-	content_result += "Er... You?\n "
+	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
 func element_218_content(state):
 	var content_result: String = ""
-	content_result += "It was my first computer.\n "
+	content_result += "Er... You?\n "
 	return content_result.trim_suffix(" ")
 
 func element_219_content(state):
 	var content_result: String = ""
-	content_result += "I'm ready!\n "
+	content_result += "It was my first computer.\n "
 	return content_result.trim_suffix(" ")
 
 func element_220_content(state):
 	var content_result: String = ""
-	content_result += "Em... Okay.\n "
+	content_result += "I'm ready!\n "
 	return content_result.trim_suffix(" ")
 
 func element_221_content(state):
 	var content_result: String = ""
-	content_result += "Ha!\n "
+	content_result += "Em... Okay.\n "
 	return content_result.trim_suffix(" ")
 
 func element_222_content(state):
 	var content_result: String = ""
-	content_result += "Yes. That would solve most of my problems.\n "
+	content_result += "Ha!\n "
 	return content_result.trim_suffix(" ")
 
 func element_223_content(state):
 	var content_result: String = ""
-	content_result += "I used to have an Amstrad just like this one.\n "
+	content_result += "Yes. That would solve most of my problems.\n "
 	return content_result.trim_suffix(" ")
 
 func element_224_content(state):
 	var content_result: String = ""
-	content_result += "Which character archetype do you represent?\n "
+	content_result += "I used to have an Amstrad just like this one.\n "
 	return content_result.trim_suffix(" ")
 
 func element_225_content(state):
 	var content_result: String = ""
-	content_result += "Arcweave can help you write the story for the game of your dreams!\n "
+	content_result += "Which character archetype do you represent?\n "
 	return content_result.trim_suffix(" ")
 
 func element_226_content(state):
 	var content_result: String = ""
-	content_result += "I'm old.\n "
+	content_result += "Arcweave can help you write the story for the game of your dreams!\n "
 	return content_result.trim_suffix(" ")
 
 func element_227_content(state):
 	var content_result: String = ""
-	content_result += "I'll explore a bit.\n "
+	content_result += "I'm old.\n "
 	return content_result.trim_suffix(" ")
 
 func element_228_content(state):
 	var content_result: String = ""
+	content_result += "I'll explore a bit.\n "
+	return content_result.trim_suffix(" ")
+
+func element_229_content(state):
+	var content_result: String = ""
 	content_result += "Nah, I'm good.\n "
 	return content_result.trim_suffix(" ")
 
-func element_230_content(state):
+func element_231_content(state):
 	var content_result: String = ""
 	content_result += "That's it for now. Off you go, to play the prototype!\n "
 	return content_result.trim_suffix(" ")
 
-func element_232_content(state):
+func element_233_content(state):
 	var content_result: String = ""
 	content_result += "Why?\n "
 	return content_result.trim_suffix(" ")
 
-func element_233_content(state):
+func element_234_content(state):
 	var content_result: String = ""
 	content_result += "As a matter of fact, it WILL happen like magic.\n "
 	return content_result.trim_suffix(" ")
 
-func element_234_content(state):
+func element_235_content(state):
 	var content_result: String = ""
 	content_result += "Let's pretend this is actually my room.\n "
 	return content_result.trim_suffix(" ")
 
-func element_235_content(state):
+func element_236_content(state):
 	var content_result: String = ""
 	content_result += "The locked door means you definitely have some.\n "
 	return content_result.trim_suffix(" ")
 
-func element_236_content(state):
+func element_237_content(state):
 	var content_result: String = ""
 	content_result += "Look, kid. It's the same old cliche.\n "
 	return content_result.trim_suffix(" ")
 
-func element_237_content(state):
+func element_238_content(state):
 	var content_result: String = ""
 	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
-func element_239_content(state):
+func element_240_content(state):
 	var content_result: String = ""
 	content_result += "You want to know if you are a good writer.\n "
 	return content_result.trim_suffix(" ")
 
-func element_241_content(state):
+func element_242_content(state):
 	var content_result: String = ""
 	content_result += "But there is a fix.\n "
 	return content_result.trim_suffix(" ")
 
-func element_242_content(state):
+func element_243_content(state):
 	var content_result: String = ""
 	content_result += "I hear you. I've only been playing adventures and RPGs, all my life.\n "
 	return content_result.trim_suffix(" ")
 
-func element_243_content(state):
+func element_244_content(state):
 	var content_result: String = ""
 	content_result += "Any obstacles?\n "
 	return content_result.trim_suffix(" ")
 
-func element_245_content(state):
+func element_246_content(state):
 	var content_result: String = ""
 	content_result += "Then, you can forgive your inner child, and the inner child forgives your past self.\n "
 	return content_result.trim_suffix(" ")
 
-func element_246_content(state):
+func element_247_content(state):
 	var content_result: String = ""
 	content_result += "I would write my stories on it.\n "
 	return content_result.trim_suffix(" ")
 
-func element_247_content(state):
-	var content_result: String = ""
-	content_result += "Taken.\n "
-	if (state.i_gameScripts < 2):
-		state.i_gameScripts = 2
-	return content_result.trim_suffix(" ")
-
 func element_248_content(state):
 	var content_result: String = ""
-	content_result += "I hate locked doors.\n "
-	state.t_hateLocked = true
+	content_result += "Taken.\n "
+	if (state.get_var("i_gameScripts") < 2):
+		state.set_var("i_gameScripts", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_249_content(state):
 	var content_result: String = ""
-	content_result += "It's your room, next door, right?\n "
+	content_result += "I hate locked doors.\n "
 	return content_result.trim_suffix(" ")
 
 func element_250_content(state):
 	var content_result: String = ""
-	content_result += "You really need to let go of this notion.\n "
-	state.regrets -= 1
+	content_result += "It's your room, next door, right?\n "
 	return content_result.trim_suffix(" ")
 
 func element_251_content(state):
 	var content_result: String = ""
-	content_result += "And? What would you have done with it, today?\n "
+	content_result += "You really need to let go of this notion.\n "
+	state.set_var("regrets", state.get_var("regrets") - 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_252_content(state):
 	var content_result: String = ""
-	content_result += "I hope your game turns out better than this one.\n "
+	content_result += "And? What would you have done with it, today?\n "
 	return content_result.trim_suffix(" ")
 
 func element_253_content(state):
 	var content_result: String = ""
-	content_result += "Let's try this key.\n "
+	content_result += "I hope your game turns out better than this one.\n "
 	return content_result.trim_suffix(" ")
 
 func element_254_content(state):
 	var content_result: String = ""
-	content_result += "Your brain uses symbols, whether you like it or not.\n "
+	content_result += "Let's try this key.\n "
 	return content_result.trim_suffix(" ")
 
 func element_255_content(state):
 	var content_result: String = ""
-	content_result += "Cool.\n "
+	content_result += "Your brain uses symbols, whether you like it or not.\n "
 	return content_result.trim_suffix(" ")
 
 func element_256_content(state):
 	var content_result: String = ""
-	content_result += "Locked doors need keys.\n "
+	content_result += "Cool.\n "
 	return content_result.trim_suffix(" ")
 
-func element_258_content(state):
+func element_257_content(state):
 	var content_result: String = ""
-	content_result += "Hey.\n "
+	content_result += "Locked doors need keys.\n "
 	return content_result.trim_suffix(" ")
 
 func element_259_content(state):
 	var content_result: String = ""
-	content_result += "But some other time, perhaps.\n "
+	content_result += "Hey.\n "
 	return content_result.trim_suffix(" ")
 
 func element_260_content(state):
 	var content_result: String = ""
-	content_result += "With the count of 3, both of us will say a number from 1 to 100.\n "
+	content_result += "But some other time, perhaps.\n "
 	return content_result.trim_suffix(" ")
 
 func element_261_content(state):
 	var content_result: String = ""
-	content_result += "Those are documents of your own inner strength and creativity.\n "
+	content_result += "With the count of 3, both of us will say a number from 1 to 100.\n "
 	return content_result.trim_suffix(" ")
 
 func element_262_content(state):
 	var content_result: String = ""
-	content_result += "Let's click on it with the MOUSE and then choose the MAGNIFYING GLASS icon, shall we?\n "
+	content_result += "Those are documents of your own inner strength and creativity.\n "
 	return content_result.trim_suffix(" ")
 
 func element_263_content(state):
 	var content_result: String = ""
-	content_result += "IBM compatibles were picking up.\n "
+	content_result += "Let's click on it with the MOUSE and then choose the MAGNIFYING GLASS icon, shall we?\n "
 	return content_result.trim_suffix(" ")
 
 func element_264_content(state):
 	var content_result: String = ""
-	content_result += "So, is there anything I can help you with?\n "
+	content_result += "IBM compatibles were picking up.\n "
 	return content_result.trim_suffix(" ")
 
 func element_265_content(state):
 	var content_result: String = ""
-	content_result += "It was my mum's fault.\n "
+	content_result += "So, is there anything I can help you with?\n "
 	return content_result.trim_suffix(" ")
 
 func element_266_content(state):
 	var content_result: String = ""
-	content_result += "Even Amiga 500, the shining star of home computers, was getting left behind.\n "
+	content_result += "It was my mum's fault.\n "
 	return content_result.trim_suffix(" ")
 
 func element_267_content(state):
 	var content_result: String = ""
-	content_result += "So, how about a game?\n "
+	content_result += "Even Amiga 500, the shining star of home computers, was getting left behind.\n "
 	return content_result.trim_suffix(" ")
 
-func element_270_content(state):
+func element_268_content(state):
 	var content_result: String = ""
-	content_result += "\n "
+	content_result += "So, how about a game?\n "
 	return content_result.trim_suffix(" ")
 
 func element_271_content(state):
 	var content_result: String = ""
-	content_result += "Let's see what I can interact with, here...\n "
+	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
 func element_272_content(state):
 	var content_result: String = ""
-	content_result += "I am.\n "
+	content_result += "Let's see what I can interact with, here...\n "
 	return content_result.trim_suffix(" ")
 
 func element_273_content(state):
 	var content_result: String = ""
-	content_result += "You're right. I'm on my way.\n "
+	content_result += "I am.\n "
 	return content_result.trim_suffix(" ")
 
 func element_274_content(state):
 	var content_result: String = ""
-	content_result += "Slide-show presentations.\n "
+	content_result += "You're right. I'm on my way.\n "
 	return content_result.trim_suffix(" ")
 
 func element_275_content(state):
 	var content_result: String = ""
-	content_result += "Thank you! I appreciate it.\n "
-	state.i_amstrad = 3
+	content_result += "Slide-show presentations.\n "
 	return content_result.trim_suffix(" ")
 
 func element_276_content(state):
 	var content_result: String = ""
-	content_result += "Research.\n "
+	content_result += "Thank you! I appreciate it.\n "
+	state.set_var("i_amstrad", 3)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_277_content(state):
 	var content_result: String = ""
-	content_result += "Let's see how my inventory works...\n "
+	content_result += "Research.\n "
 	return content_result.trim_suffix(" ")
 
 func element_278_content(state):
 	var content_result: String = ""
-	content_result += "Actually, do you know any party games?\n "
-	state.t_miniGame = 1
+	content_result += "Let's see how my inventory works...\n "
 	return content_result.trim_suffix(" ")
 
 func element_279_content(state):
 	var content_result: String = ""
-	content_result += "When I was 10, I used to write scripts for adventure games.\n "
+	content_result += "Actually, do you know any party games?\n "
 	return content_result.trim_suffix(" ")
 
 func element_280_content(state):
 	var content_result: String = ""
-	content_result += "You can find the Godot project files in [url=https://github.com/Arcweave/arcweave-godot-adventure-example]this repo[/url]. Just download and import them to Godot.\n "
+	content_result += "When I was 10, I used to write scripts for adventure games.\n "
 	return content_result.trim_suffix(" ")
 
 func element_281_content(state):
 	var content_result: String = ""
-	content_result += "Me?\n "
+	content_result += "You can find the Godot project files in [url=https://github.com/Arcweave/arcweave-godot-adventure-example]this repo[/url]. Just download and import them to Godot.\n "
 	return content_result.trim_suffix(" ")
 
 func element_282_content(state):
 	var content_result: String = ""
-	content_result += "You're a gh... er...\n "
+	content_result += "Me?\n "
 	return content_result.trim_suffix(" ")
 
 func element_283_content(state):
 	var content_result: String = ""
-	content_result += "Great! I feel so much better about all this.\n "
+	content_result += "You're a gh... er...\n "
 	return content_result.trim_suffix(" ")
 
 func element_284_content(state):
 	var content_result: String = ""
-	content_result += "Oh, I knew that.\n "
+	content_result += "Great! I feel so much better about all this.\n "
 	return content_result.trim_suffix(" ")
 
 func element_285_content(state):
 	var content_result: String = ""
-	content_result += "You must understand...\n "
+	content_result += "Oh, I knew that.\n "
 	return content_result.trim_suffix(" ")
 
-func element_287_content(state):
+func element_286_content(state):
 	var content_result: String = ""
-	content_result += "Not literally, obviously.\n "
+	content_result += "You must understand...\n "
 	return content_result.trim_suffix(" ")
 
 func element_288_content(state):
 	var content_result: String = ""
-	content_result += "It's a simple process, really.\n "
+	content_result += "Not literally, obviously.\n "
 	return content_result.trim_suffix(" ")
 
 func element_289_content(state):
 	var content_result: String = ""
-	content_result += "No, I mean, what is this room, here?\n "
+	content_result += "It's a simple process, really.\n "
 	return content_result.trim_suffix(" ")
 
 func element_290_content(state):
 	var content_result: String = ""
-	content_result += "Take a guess.\n "
+	content_result += "No, I mean, what is this room, here?\n "
 	return content_result.trim_suffix(" ")
 
 func element_291_content(state):
 	var content_result: String = ""
-	content_result += "Yeah. Those were the days...\n "
+	content_result += "Take a guess.\n "
 	return content_result.trim_suffix(" ")
 
 func element_292_content(state):
 	var content_result: String = ""
-	content_result += "No, silly.\n "
+	content_result += "Yeah. Those were the days...\n "
 	return content_result.trim_suffix(" ")
 
-func element_294_content(state):
+func element_293_content(state):
 	var content_result: String = ""
-	if (state.t_andreasBottleneck == 0):
-		state.t_andreasBottleneck = 1
+	content_result += "No, silly.\n "
 	return content_result.trim_suffix(" ")
 
 func element_295_content(state):
 	var content_result: String = ""
-	content_result += "Well... yes?\n "
+	content_result += " "
+	if (state.get_var("t_andreasBottleneck") == 0):
+		state.set_var("t_andreasBottleneck", 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_296_content(state):
 	var content_result: String = ""
-	content_result += "As an NPC.\n "
-	state.t_andreasWho = 1
+	content_result += "Well... yes?\n "
 	return content_result.trim_suffix(" ")
 
 func element_297_content(state):
 	var content_result: String = ""
-	content_result += "I already have one of those.\n "
+	content_result += "As an NPC.\n "
 	return content_result.trim_suffix(" ")
 
 func element_298_content(state):
 	var content_result: String = ""
-	content_result += "To check that the data transfer was successful, open Godot's console. It should look like this and include no error lines (in red colour).\n "
+	content_result += "I already have one of those.\n "
 	return content_result.trim_suffix(" ")
 
 func element_299_content(state):
 	var content_result: String = ""
-	content_result += "I hate symbols.\n "
+	content_result += "To check that the data transfer was successful, open Godot's console. It should look like this and include no error lines (in red colour).\n "
 	return content_result.trim_suffix(" ")
 
 func element_300_content(state):
 	var content_result: String = ""
-	content_result += "Thanks.\n "
-	state.i_magazines = 3
+	content_result += "I hate symbols.\n "
 	return content_result.trim_suffix(" ")
 
 func element_301_content(state):
 	var content_result: String = ""
-	content_result += "Glad to hear it.\n "
+	content_result += "Thanks.\n "
+	state.set_var("i_magazines", 3)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_302_content(state):
 	var content_result: String = ""
-	content_result += "The Fool?\n "
+	content_result += "Glad to hear it.\n "
 	return content_result.trim_suffix(" ")
 
 func element_303_content(state):
 	var content_result: String = ""
-	content_result += "Here is the key to your freedom.\n "
-	state.i_key = 2
+	content_result += "The Fool?\n "
 	return content_result.trim_suffix(" ")
 
 func element_304_content(state):
 	var content_result: String = ""
-	content_result += "\n "
+	content_result += "Here is the key to your freedom.\n "
+	state.set_var("i_key", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_305_content(state):
@@ -15662,446 +15775,569 @@ func element_305_content(state):
 
 func element_306_content(state):
 	var content_result: String = ""
-	content_result += "Come on.\n "
+	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
 func element_307_content(state):
 	var content_result: String = ""
-	content_result += "No thanks.\n "
+	content_result += "Come on.\n "
 	return content_result.trim_suffix(" ")
 
 func element_308_content(state):
 	var content_result: String = ""
-	content_result += "Let me know if you change your mind.\n "
+	content_result += "No thanks.\n "
 	return content_result.trim_suffix(" ")
 
 func element_309_content(state):
 	var content_result: String = ""
-	content_result += "Are you sure you don't want to have a look at my scripts?\n "
+	content_result += "Let me know if you change your mind.\n "
 	return content_result.trim_suffix(" ")
 
 func element_310_content(state):
 	var content_result: String = ""
-	content_result += "It's you.\n "
+	content_result += "Are you sure you don't want to have a look at my scripts?\n "
 	return content_result.trim_suffix(" ")
 
 func element_311_content(state):
 	var content_result: String = ""
-	content_result += "I see.\n "
+	content_result += "It's you.\n "
 	return content_result.trim_suffix(" ")
 
 func element_312_content(state):
 	var content_result: String = ""
-	content_result += "Er... Someone else not currently present?\n "
+	content_result += "I see.\n "
 	return content_result.trim_suffix(" ")
 
 func element_313_content(state):
 	var content_result: String = ""
-	content_result += "Games work with CYMBALS?\n "
+	content_result += "Er... Someone else not currently present?\n "
 	return content_result.trim_suffix(" ")
 
-func element_315_content(state):
+func element_314_content(state):
 	var content_result: String = ""
-	content_result += "Let's hear them, then.\n "
+	content_result += "Games work with CYMBALS?\n "
 	return content_result.trim_suffix(" ")
 
 func element_316_content(state):
 	var content_result: String = ""
-	content_result += "To me, they mean nothing.\n "
+	content_result += "Let's hear them, then.\n "
 	return content_result.trim_suffix(" ")
 
 func element_317_content(state):
 	var content_result: String = ""
-	content_result += "Or a sidekick.\n "
+	content_result += "To me, they mean nothing.\n "
 	return content_result.trim_suffix(" ")
 
 func element_318_content(state):
 	var content_result: String = ""
-	content_result += "These are some of the adventure game scripts I was writing when I was 10.\n "
+	content_result += "Or a sidekick.\n "
 	return content_result.trim_suffix(" ")
 
 func element_319_content(state):
 	var content_result: String = ""
-	content_result += "The way out of my bedroom seems to be locked.\n "
+	content_result += "These are some of the &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt; I was writing when I was 10.\n "
 	return content_result.trim_suffix(" ")
 
 func element_320_content(state):
 	var content_result: String = ""
-	content_result += "Internet pornography.\n "
+	content_result += "The way out of my bedroom seems to be locked.\n "
 	return content_result.trim_suffix(" ")
 
 func element_321_content(state):
 	var content_result: String = ""
-	content_result += "This doesn't seem to work.\n "
+	content_result += "Internet pornography.\n "
 	return content_result.trim_suffix(" ")
 
 func element_322_content(state):
 	var content_result: String = ""
-	content_result += "A story guru, ladies and gentlemen!\n "
+	content_result += "This doesn't seem to work.\n "
 	return content_result.trim_suffix(" ")
 
 func element_323_content(state):
 	var content_result: String = ""
-	content_result += "As a sidenote: I see you as a friend.\n "
+	content_result += "A story guru, ladies and gentlemen!\n "
 	return content_result.trim_suffix(" ")
 
 func element_324_content(state):
 	var content_result: String = ""
-	content_result += "Why? What about you?\n "
+	content_result += "As a sidenote: I see you as a friend.\n "
 	return content_result.trim_suffix(" ")
 
 func element_325_content(state):
 	var content_result: String = ""
-	content_result += "But I have more regrets!\n "
+	content_result += "Why? What about you?\n "
 	return content_result.trim_suffix(" ")
 
-func element_327_content(state):
+func element_326_content(state):
 	var content_result: String = ""
-	content_result += "... like my childhood bedroom.\n "
+	content_result += "But I have more regrets!\n "
 	return content_result.trim_suffix(" ")
 
 func element_328_content(state):
 	var content_result: String = ""
-	content_result += "I have a few\n "
-	if (state.t_andreasBottleneck == 1):
-		content_result += "more\n "
-	content_result += "questions.\n "
+	content_result += "... like my childhood bedroom.\n "
 	return content_result.trim_suffix(" ")
 
 func element_329_content(state):
 	var content_result: String = ""
-	content_result += "I didn't take my childhood's adventure game scripts seriously.\n "
-	if (state.t_gameScripts < 2):
-		state.t_gameScripts = 2
+	content_result += "I have a few\n "
+	if (state.get_var("t_andreasBottleneck") == 1):
+		content_result += "more\n "
+	content_result += "questions.\n "
 	return content_result.trim_suffix(" ")
 
 func element_330_content(state):
 	var content_result: String = ""
-	content_result += "Hm, I think you must dig a little deeper.\n "
+	content_result += "I didn't take my childhood's &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt; seriously.\n "
+	if (state.get_var("t_gameScripts") < 2):
+		state.set_var("t_gameScripts", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
-func element_332_content(state):
+func element_331_content(state):
 	var content_result: String = ""
-	content_result += "[u]You see[/u]:\n[quote][b]Andreas\ngrand piano[/b]\n[/quote][u]Exit[/u]:\n[quote][b]exit to bedroom[/b]\n[/quote] "
+	content_result += "Hm, I think you must dig a little deeper.\n "
 	return content_result.trim_suffix(" ")
 
 func element_333_content(state):
 	var content_result: String = ""
-	content_result += "I did become a game writer, eventually, but those magazines are gone.\n "
+	content_result += "[u]You see[/u]:\n[quote]&lt;p&gt;[b]&amp;lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&amp;gt;Andreas&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;&amp;lt;span class=\"mention mention-component\" data-id=\"8f930cc8-f93a-4932-93ed-bf8f837487f8\" data-type=\"component\"&amp;gt;grand piano&amp;lt;/span&amp;gt;[/b]&lt;/p&gt;[/quote][u]Exit[/u]:\n[quote]&lt;p&gt;[b]exit to bedroom[/b]&lt;/p&gt;[/quote] "
 	return content_result.trim_suffix(" ")
 
 func element_334_content(state):
 	var content_result: String = ""
-	content_result += "No, thanks.\n "
+	content_result += "I did become a game writer, eventually, but those magazines are gone.\n "
 	return content_result.trim_suffix(" ")
 
 func element_335_content(state):
 	var content_result: String = ""
-	content_result += "I'd really rather not talk about it.\n "
+	content_result += "No, thanks.\n "
 	return content_result.trim_suffix(" ")
 
-func element_337_content(state):
+func element_336_content(state):
 	var content_result: String = ""
-	content_result += "A whole world of fiction is nothing but a wrapping around the central protagonist.\n "
+	content_result += "I'd really rather not talk about it.\n "
 	return content_result.trim_suffix(" ")
 
 func element_338_content(state):
 	var content_result: String = ""
-	content_result += "I love sophisticated games.\n "
+	content_result += "A whole world of fiction is nothing but a wrapping around the central protagonist.\n "
 	return content_result.trim_suffix(" ")
 
 func element_339_content(state):
 	var content_result: String = ""
-	content_result += "To export your project for Godot, go to:\n[quote]Export &amp;amp;gt; Engine &amp;amp;gt; Export for Godot\n[/quote]This will download the project's data as two .gd (GDScript) files, compressed in one .zip file.\nUnzip and drag those files into the Godot project folder, at [b]res://addons/arcweave[/b], which is where the Arcweave plugin exists in your project.\n "
+	content_result += "I love sophisticated games.\n "
 	return content_result.trim_suffix(" ")
 
 func element_340_content(state):
 	var content_result: String = ""
-	content_result += "What about all the other doors?\n "
+	content_result += "To export your project for Godot, go to:\n[quote]&lt;p&gt;Export &amp;gt; Engine &amp;gt; Export for Godot&lt;/p&gt;[/quote]This will download the project's data as two .gd (GDScript) files, compressed in one .zip file.\nUnzip and drag those files into the Godot project folder, at [b]res://addons/arcweave[/b], which is where the Arcweave plugin exists in your project.\n "
 	return content_result.trim_suffix(" ")
 
 func element_341_content(state):
 	var content_result: String = ""
-	content_result += "Er... Me?\n "
+	content_result += "What about all the other doors?\n "
 	return content_result.trim_suffix(" ")
 
 func element_342_content(state):
 	var content_result: String = ""
-	content_result += "I would play games on it. Good old early-90s games.\n "
+	content_result += "Er... Me?\n "
 	return content_result.trim_suffix(" ")
 
 func element_343_content(state):
 	var content_result: String = ""
-	content_result += "I can always come back and read it again later.\n "
+	content_result += "I would play games on it. Good old early-90s games.\n "
 	return content_result.trim_suffix(" ")
 
 func element_344_content(state):
 	var content_result: String = ""
-	content_result += "It will go well with all those games magazines you already gave me.\n "
+	content_result += "I can always come back and read it again later.\n "
 	return content_result.trim_suffix(" ")
 
 func element_345_content(state):
 	var content_result: String = ""
-	content_result += "\"GAME INSTRUCTIONS\"\n "
+	content_result += "It will go well with all those &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt; you already gave me.\n "
 	return content_result.trim_suffix(" ")
 
 func element_346_content(state):
 	var content_result: String = ""
-	content_result += "The key to freedom is letting go of them.\n "
-	state.t_key = 2
+	content_result += "\"GAME INSTRUCTIONS\"\n "
 	return content_result.trim_suffix(" ")
 
 func element_347_content(state):
 	var content_result: String = ""
-	content_result += "Wow! Where did you get all these?\n "
+	content_result += "The key to freedom is letting go of them.\n "
+	state.set_var("t_key", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_348_content(state):
 	var content_result: String = ""
-	content_result += "Maybe, play that game, after all?\n "
+	content_result += "Wow! Where did you get all these?\n "
 	return content_result.trim_suffix(" ")
 
 func element_349_content(state):
 	var content_result: String = ""
-	content_result += "\n "
+	content_result += "Maybe, play that game, after all?\n "
 	return content_result.trim_suffix(" ")
 
 func element_350_content(state):
 	var content_result: String = ""
-	content_result += "OK, I'm off!\n "
+	content_result += "\n "
 	return content_result.trim_suffix(" ")
 
 func element_351_content(state):
 	var content_result: String = ""
-	content_result += "I'll leave it where it is.\n "
+	content_result += "OK, I'm off!\n "
 	return content_result.trim_suffix(" ")
 
 func element_352_content(state):
 	var content_result: String = ""
-	content_result += "I didn't know that.\n "
+	content_result += "I'll leave it where it is.\n "
 	return content_result.trim_suffix(" ")
 
 func element_353_content(state):
 	var content_result: String = ""
-	content_result += "You see:\n "
-	if (state.i_amstrad == 1):
-		content_result += "[quote]\n[b]Amstrad 6128[/b]\n[/quote] "
-	if (state.i_magazines == 1):
-		content_result += "[quote]\n[b]games magazines[/b]\n[/quote] "
-	if (state.i_gameScripts == 1):
-		content_result += "[quote]\n[b]adventure game scripts[/b]\n[/quote] "
-	content_result += "\nExits:\n[quote][b]exit to Green Room\nfinal exit[/b]\n[/quote] "
+	content_result += "I didn't know that.\n "
 	return content_result.trim_suffix(" ")
 
-func element_355_content(state):
+func element_354_content(state):
 	var content_result: String = ""
-	content_result += "I suppose that was good enough a reason to move on from it.\n "
+	content_result += "You see:\n "
+	if (state.get_var("i_amstrad") == 1):
+		content_result += "[quote]&lt;p&gt;&lt;br&gt;[b]&amp;lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&amp;gt;Amstrad 6128&amp;lt;/span&amp;gt;[/b]&lt;/p&gt;[/quote] "
+	if (state.get_var("i_magazines") == 1):
+		content_result += "[quote]&lt;p&gt;&lt;br&gt;[b]&amp;lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&amp;gt;games magazines&amp;lt;/span&amp;gt;[/b]&lt;/p&gt;[/quote] "
+	if (state.get_var("i_gameScripts") == 1):
+		content_result += "[quote]&lt;p&gt;&lt;br&gt;[b]&amp;lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&amp;gt;adventure game scripts&amp;lt;/span&amp;gt;[/b]&lt;/p&gt;[/quote] "
+	content_result += "\nExits:\n[quote]&lt;p&gt;[b]exit to Green Room&amp;lt;br&amp;gt;&amp;lt;span class=\"mention mention-component\" data-id=\"74a88987-534b-44c6-8434-22ea6de90349\" data-type=\"component\"&amp;gt;final exit&amp;lt;/span&amp;gt;[/b]&lt;/p&gt;[/quote] "
 	return content_result.trim_suffix(" ")
 
 func element_356_content(state):
 	var content_result: String = ""
-	content_result += "When I got into university, I decided to get serious. Use computers for serious causes.\n "
+	content_result += "I suppose that was good enough a reason to move on from it.\n "
 	return content_result.trim_suffix(" ")
 
 func element_357_content(state):
 	var content_result: String = ""
-	content_result += "You have to take responsibility.\n "
+	content_result += "When I got into university, I decided to get serious. Use computers for serious causes.\n "
 	return content_result.trim_suffix(" ")
 
 func element_358_content(state):
 	var content_result: String = ""
-	if (state.andreasRoll == state.playerRoll):
-		content_result += "It's a draw.\n "
-	else:
-		content_result += str([state.andreasRoll, state.playerRoll].max()) + str(" ")
-		content_result += "wins and\n "
-		content_result += str([state.andreasRoll, state.playerRoll].min()) + str(" ")
-		content_result += "loses.\n "
+	content_result += "You have to take responsibility.\n "
 	return content_result.trim_suffix(" ")
 
 func element_359_content(state):
 	var content_result: String = ""
-	content_result += "It took me 30 years to go beyond that belief and become a game writer.\n "
+	content_result += " "
+	if (state.get_var("andreasRoll") == state.get_var("playerRoll")):
+		content_result += "It's a draw.\n "
+	else:
+		content_result += str([state.get_var("andreasRoll"), state.get_var("playerRoll")].max()) + str(" ")
+		content_result += "wins and\n "
+		content_result += str([state.get_var("andreasRoll"), state.get_var("playerRoll")].min()) + str(" ")
+		content_result += "loses.\n "
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_360_content(state):
 	var content_result: String = ""
-	content_result += "You need to let go of\n "
-	if (state.regrets <= 2):
-		content_result += "this, too.\n "
-	else:
-		content_result += "this.\n "
-	state.regrets -= 1
+	content_result += "It took me 30 years to go beyond that belief and become a game writer.\n "
 	return content_result.trim_suffix(" ")
 
 func element_361_content(state):
 	var content_result: String = ""
-	content_result += "Looks like a point and click adventure game to me.\n "
+	content_result += "You need to let go of\n "
+	if (state.get_var("regrets") <= 2):
+		content_result += "this, too.\n "
+	else:
+		content_result += "this.\n "
+	state.set_var("regrets", state.get_var("regrets") - 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_362_content(state):
 	var content_result: String = ""
-	if (state.t_andreasBottleneck < 3):
-		state.t_andreasBottleneck = 3
+	content_result += "Looks like a point and click adventure game to me.\n "
 	return content_result.trim_suffix(" ")
 
 func element_363_content(state):
 	var content_result: String = ""
-	content_result += "This one has my mum's writing.\n "
+	content_result += " "
+	if (state.get_var("t_andreasBottleneck") < 3):
+		state.set_var("t_andreasBottleneck", 3)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_364_content(state):
 	var content_result: String = ""
-	content_result += "I need it, to leave this place.\n "
+	content_result += "This one has my mum's writing.\n "
 	return content_result.trim_suffix(" ")
 
 func element_365_content(state):
 	var content_result: String = ""
-	content_result += "Probably in some private collection.\n "
+	content_result += "I need it, to leave this place.\n "
 	return content_result.trim_suffix(" ")
 
 func element_366_content(state):
 	var content_result: String = ""
-	content_result += "SHAMELESS ADVERTISMENT ENSUES...\n "
+	content_result += "Probably in some private collection.\n "
 	return content_result.trim_suffix(" ")
 
 func element_367_content(state):
 	var content_result: String = ""
-	content_result += "Finally!\n "
+	content_result += "SHAMELESS ADVERTISMENT ENSUES...\n "
 	return content_result.trim_suffix(" ")
 
 func element_368_content(state):
 	var content_result: String = ""
-	content_result += "By the way, being in denial will keep you here forever.\n "
+	content_result += "Finally!\n "
 	return content_result.trim_suffix(" ")
 
 func element_369_content(state):
 	var content_result: String = ""
-	content_result += "The truth is a little more nuanced.\n "
+	content_result += "By the way, being in denial will keep you here forever.\n "
 	return content_result.trim_suffix(" ")
 
 func element_370_content(state):
 	var content_result: String = ""
-	content_result += "So that's where I knew you from!\n "
+	content_result += "The truth is a little more nuanced.\n "
 	return content_result.trim_suffix(" ")
 
 func element_371_content(state):
 	var content_result: String = ""
-	content_result += "Now, go!\n "
+	content_result += "So that's where I knew you from!\n "
 	return content_result.trim_suffix(" ")
 
 func element_372_content(state):
 	var content_result: String = ""
-	content_result += "I suppose it won't happen like magic.\n "
+	content_result += "Now, go!\n "
 	return content_result.trim_suffix(" ")
 
 func element_373_content(state):
 	var content_result: String = ""
-	content_result += "What a waste of time.\n "
+	content_result += "I suppose it won't happen like magic.\n "
 	return content_result.trim_suffix(" ")
 
 func element_374_content(state):
 	var content_result: String = ""
-	content_result += "I threw away all my magazines on computer games from the 90s.\n "
-	if (state.t_magazines < 2):
-		state.t_magazines = 2
+	content_result += "What a waste of time.\n "
 	return content_result.trim_suffix(" ")
 
 func element_375_content(state):
 	var content_result: String = ""
-	content_result += "Sure.\n "
+	content_result += "I threw away all my magazines on computer games from the 90s.\n "
+	if (state.get_var("t_magazines") < 2):
+		state.set_var("t_magazines", 2)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
 func element_376_content(state):
 	var content_result: String = ""
-	content_result += "I'd rather not.\n "
+	content_result += "Sure.\n "
 	return content_result.trim_suffix(" ")
 
-func element_378_content(state):
+func element_377_content(state):
 	var content_result: String = ""
-	content_result += "But it was my first computer.\n "
+	content_result += "I'd rather not.\n "
 	return content_result.trim_suffix(" ")
 
 func element_379_content(state):
 	var content_result: String = ""
-	content_result += "Actually, I could use some more therapy.\n "
+	content_result += "But it was my first computer.\n "
 	return content_result.trim_suffix(" ")
 
 func element_380_content(state):
 	var content_result: String = ""
-	content_result += "Well, let me know if this changes in the near future.\n "
+	content_result += "Actually, I could use some more therapy.\n "
 	return content_result.trim_suffix(" ")
 
 func element_381_content(state):
 	var content_result: String = ""
-	content_result += "But they've done their job. You became a game writer, correct?\n "
+	content_result += "Well, let me know if this changes in the near future.\n "
 	return content_result.trim_suffix(" ")
 
-func element_383_content(state):
+func element_382_content(state):
 	var content_result: String = ""
-	content_result += "Okay. I'm not going anywhere.\n "
+	content_result += "But they've done their job. You became a game writer, correct?\n "
 	return content_result.trim_suffix(" ")
 
 func element_384_content(state):
 	var content_result: String = ""
-	content_result += "Games magazines! I had lots of these issues, in junior high.\n "
-	if (state.t_magazines < 1):
-		state.t_magazines = 1
-	state.regrets += 1
+	content_result += "Okay. I'm not going anywhere.\n "
 	return content_result.trim_suffix(" ")
 
 func element_385_content(state):
 	var content_result: String = ""
-	content_result += "What are you doing here?\n "
+	content_result += "Games magazines! I had lots of these issues, in junior high.\n "
+	if (state.get_var("t_magazines") < 1):
+		state.set_var("t_magazines", 1)
+	state.set_var("regrets", state.get_var("regrets") + 1)
+	content_result += " "
 	return content_result.trim_suffix(" ")
 
-func element_387_content(state):
+func element_386_content(state):
 	var content_result: String = ""
-	content_result += "No answer.\n "
+	content_result += "What are you doing here?\n "
 	return content_result.trim_suffix(" ")
 
 func element_388_content(state):
 	var content_result: String = ""
-	content_result += "Thanks!\n "
+	content_result += "No answer.\n "
 	return content_result.trim_suffix(" ")
 
 func element_389_content(state):
 	var content_result: String = ""
-	content_result += "\"Then, choose one of the icons: MAGNIFYING CLASS to examine, HAND to take or touch, MOUTH to talk.\"\n "
+	content_result += "Thanks!\n "
 	return content_result.trim_suffix(" ")
 
 func element_390_content(state):
 	var content_result: String = ""
-	content_result += "Notice the Godot project has the Arcweave plugin already installed and activated.\n "
+	content_result += "\"Then, choose one of the icons: MAGNIFYING CLASS to examine, HAND to take or touch, MOUTH to talk.\"\n "
 	return content_result.trim_suffix(" ")
 
 func element_391_content(state):
 	var content_result: String = ""
-	content_result += "Em... Error, I guess? No bottleneck greater that 4.\n "
+	content_result += "Notice the Godot project has the Arcweave plugin already installed and activated.\n "
 	return content_result.trim_suffix(" ")
 
 func element_392_content(state):
 	var content_result: String = ""
-	content_result += "\"Carpe Diem.\"\n "
+	content_result += "Em... Error, I guess? No bottleneck greater that 4.\n "
 	return content_result.trim_suffix(" ")
 
 func element_393_content(state):
 	var content_result: String = ""
-	content_result += "I suppose it's through hard inner work and years of therapy?\n "
+	content_result += "\"Carpe Diem.\"\n "
 	return content_result.trim_suffix(" ")
 
 func element_394_content(state):
 	var content_result: String = ""
-	content_result += "Who are you?\n "
+	content_result += "I suppose it's through hard inner work and years of therapy?\n "
 	return content_result.trim_suffix(" ")
 
 func element_395_content(state):
 	var content_result: String = ""
-	content_result += "30 years.\n "
-	state.regrets += 1
+	content_result += "Who are you?\n "
 	return content_result.trim_suffix(" ")
 
+func element_396_content(state):
+	var content_result: String = ""
+	content_result += "30 years.\n "
+	state.set_var("regrets", state.get_var("regrets") + 1)
+	content_result += " "
+	return content_result.trim_suffix(" ")
 
+func connection_37_label(state):
+	var content_result: String = ""
+	content_result += "Take &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_59_label(state):
+	var content_result: String = ""
+	content_result += "Look at this place...\n "
+	if self.utils.aw_visits(state, "73926738-9ea6-4336-94cc-571a169d15ab"):
+		content_result += "again.\n "
+	content_result += " "
+	return content_result.trim_suffix(" ")
+
+func connection_88_label(state):
+	var content_result: String = ""
+	content_result += "PLAY the piano\n "
+	return content_result.trim_suffix(" ")
+
+func connection_107_label(state):
+	var content_result: String = ""
+	content_result += "Examine &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_130_label(state):
+	var content_result: String = ""
+	content_result += "&amp;gt; Continue.\n "
+	return content_result.trim_suffix(" ")
+
+func connection_164_label(state):
+	var content_result: String = ""
+	content_result += "Back\n "
+	return content_result.trim_suffix(" ")
+
+func connection_179_label(state):
+	var content_result: String = ""
+	content_result += "Examine &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_192_label(state):
+	var content_result: String = ""
+	content_result += "Back\n "
+	return content_result.trim_suffix(" ")
+
+func connection_221_label(state):
+	var content_result: String = ""
+	content_result += " "
+	self.utils.aw_resetAll(state, [])
+	content_result += " "
+	return content_result.trim_suffix(" ")
+
+func connection_232_label(state):
+	var content_result: String = ""
+	content_result += "Back\n "
+	return content_result.trim_suffix(" ")
+
+func connection_246_label(state):
+	var content_result: String = ""
+	content_result += "EXAMINE &lt;span class=\"mention mention-component\" data-id=\"8f930cc8-f93a-4932-93ed-bf8f837487f8\" data-type=\"component\"&gt;grand piano&lt;/span&gt; \n "
+	return content_result.trim_suffix(" ")
+
+func connection_255_label(state):
+	var content_result: String = ""
+	content_result += "&amp;gt; Back to hey.\n "
+	return content_result.trim_suffix(" ")
+
+func connection_298_label(state):
+	var content_result: String = ""
+	content_result += "Talk to &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_338_label(state):
+	var content_result: String = ""
+	content_result += "EXIT to Green Room (bottom of screen).\n "
+	return content_result.trim_suffix(" ")
+
+func connection_396_label(state):
+	var content_result: String = ""
+	content_result += "EXIT through wooden door.\n "
+	return content_result.trim_suffix(" ")
+
+func connection_398_label(state):
+	var content_result: String = ""
+	content_result += "Examine &lt;span class=\"mention mention-component\" data-id=\"d95da3c0-0c71-47bd-9d40-d909dbfaaeef\" data-type=\"component\"&gt;Amstrad 6128&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_411_label(state):
+	var content_result: String = ""
+	content_result += "Take &lt;span class=\"mention mention-component\" data-id=\"033582a9-c2ea-4fb5-97d9-f252d1303850\" data-type=\"component\"&gt;adventure game scripts&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_433_label(state):
+	var content_result: String = ""
+	content_result += "Examine &lt;span class=\"mention mention-component\" data-id=\"2d1e3aaa-d1a3-4565-a540-c0fb9853e2cf\" data-type=\"component\"&gt;Andreas&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_443_label(state):
+	var content_result: String = ""
+	content_result += "EXIT: back to bedroom\n "
+	return content_result.trim_suffix(" ")
+
+func connection_476_label(state):
+	var content_result: String = ""
+	content_result += "Take &lt;span class=\"mention mention-component\" data-id=\"a4412312-b5d7-4826-8335-b51291c6e817\" data-type=\"component\"&gt;games magazines&lt;/span&gt;\n "
+	return content_result.trim_suffix(" ")
+
+func connection_493_label(state):
+	var content_result: String = ""
+	content_result += "Consider your predicament...\n "
+	return content_result.trim_suffix(" ")
 
 func get_data():
 	return self.data

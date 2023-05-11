@@ -83,6 +83,11 @@ _global_script_classes=[ {
 "class": "Utils",
 "language": "GDScript",
 "path": "res://addons/arcweave/utils.gd"
+}, {
+"base": "Object",
+"class": "Variable",
+"language": "GDScript",
+"path": "res://addons/arcweave/variable.gd"
 } ]
 _global_script_class_icons={
 "Board": "",
@@ -99,7 +104,8 @@ _global_script_class_icons={
 "StateExport": "",
 "StateHandler": "",
 "Story": "",
-"Utils": ""
+"Utils": "",
+"Variable": ""
 }
 
 [application]
