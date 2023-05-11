@@ -127,7 +127,7 @@ func load_saved_game() -> void:
 	var data = file.get_var()
 	file.close()
 	
-	story.set_state(data.story_variables) # This must go before setCurrentElement
+	story.set_state(data.story_state) # This must go before setCurrentElement
 	story.set_current_element(data.element_id)
 	dangling_dialogue = data.has_dangling_dialogue
 	# Load room and place the player sprite:
@@ -145,7 +145,7 @@ func start_new_game()->void:
 
 func save_state()-> void:
 	var current_element_id : String = story.get_current_element().id
-	var current_story_variables : Dictionary = story.get_state()
+	var current_story_state : Dictionary = story.get_state()
 	var current_room_path : String = get_node_or_null("Location").filename
 	var current_player_position: Vector2 = player.global_position
 	var current_player_looking_left: bool = player.sprite.flip_h
@@ -158,7 +158,7 @@ func save_state()-> void:
 	var saved_state = {
 		"element_id": current_element_id,
 		"has_dangling_dialogue": current_dangling_dialogue, # saves the global var
-		"story_variables": current_story_variables,
+		"story_state": current_story_state,
 		"room_path": current_room_path,
 		"player_position": current_player_position,
 		"player_looking_left": current_player_looking_left,
@@ -359,8 +359,6 @@ func load_room_from_path(room_path : String, player_position : Vector2)-> void:
 
 
 func dress_up_room(room_node : Node2D) -> void:
-	var story_state : Dictionary = story.get_state()
-	
 	for obj in room_node.get_node("Objects").get_children():
 		if not obj is ClickableObject:
 			continue
@@ -372,9 +370,9 @@ func dress_up_room(room_node : Node2D) -> void:
 		obj.monitorable = false
 		
 		# We check if the object's var is in the story state:
-		if obj.state_variable in story_state:
+		if obj.state_variable in story.state.variables:
 			# Then check if object is present (our convention: if its var == 1):
-			if story_state[obj.state_variable] == 1:
+			if story.state.get_var(obj.state_variable) == 1:
 				obj.visible = true
 				obj.monitorable = true
 
@@ -607,6 +605,11 @@ func render_element(element_id : String) -> void:
 	var _current_element : Element = story.set_current_element(element_id)
 	render_current_element()
 
+func select_option(option: Dictionary) -> void:
+	set_dialogue_state(RENDERING_ELEMENT)
+	story.select_option(option)
+	
+	render_current_element()
 
 func render_current_element() -> void:
 	var current_element : Element = story.get_current_element()
@@ -884,22 +887,20 @@ func render_options() -> void:
 	
 	# If the element has only one valid output, follow it immediately:
 	if options.size() == 1:
-		var only_target_element_id : String = options[0].targetid
-		render_element(only_target_element_id)
+		select_option(options[0])
 		return
 		
 	# If a "follow random" component exists, follow a random output:
 	if follow_random_output:
 		follow_random_output = false
 		var random_index : int = randi() % options.size()
-		var random_target_id : String = options[random_index].targetid
-		render_element(random_target_id)
+		select_option(options[random_index])
 		return
 		
 	# Otherwise, we create a button for each option:
 	for option in options:
 		var option_text : String = define_option_txt(option)
-		create_option_button(option_text, option.targetid)
+		create_option_button(option_text, option)
 	
 	# More than MAX_NUMBER_VISIBLE_OPTIONS require arrow buttons, to scroll:
 	var option_arrows : VBoxContainer = $UI/MarginContainer/OptionsUI/OptionsArrows
@@ -914,11 +915,11 @@ func render_options() -> void:
 	set_dialogue_state(WAITING_CHOICE)
 
 
-func create_option_button(option_txt, target_id):
+func create_option_button(option_txt, option):
 	var option_button : Button = DialogueOptionButton.instance()
 	option_button.text = option_txt
-	option_button.target_id = target_id
-	var _temp : int = option_button.connect("pressed", self, "_on_option_button_pressed", [target_id])
+	option_button.target_id = option.targetid
+	var _temp : int = option_button.connect("pressed", self, "_on_option_button_pressed", [option])
 	$UI/MarginContainer/OptionsUI/OptionsContainer.add_child(option_button)
 	option_buttons.append(option_button)
 
@@ -1110,14 +1111,14 @@ func enable_mouse(yes : bool) -> void:
 
 
 # This is for the dialogue option button (fix the nomenclature at some point):
-func _on_option_button_pressed(target_id):
+func _on_option_button_pressed(option):
 	for i in $UI/MarginContainer/OptionsUI/OptionsContainer.get_children():
 		i.queue_free()
 	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = true
 	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp.disabled = true
 	number_of_visible_options = 0
 	option_buttons.clear()
-	render_element(target_id)
+	select_option(option)
 
 
 func _on_ButtonMouth_mouse_entered() -> void:
