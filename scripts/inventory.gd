@@ -4,20 +4,39 @@ class_name InventoryHandler
 # This inventory system is stol-- em... BORROWED from
 # a YouTube tutorial by HeartBeast.
 
-export(Array, Resource) var items = [
+# The inventory slots. Empty slots are null:
+@export var items : Array[Item] = [
 	null, null, null, null, null, null, null, null
 ]
 
 
-func select_item(item_index):
-	var selected_item = items[item_index]
-	return selected_item
+func select_item(item_index : int) -> Item:
+	return items[item_index]
+
+
+# Puts the item in the first empty slot. Returns false if the inventory is full.
+func add_item(item : Item) -> bool:
+	var empty_slot : int = items.find(null)
+	if empty_slot == -1:
+		return false
+	items[empty_slot] = item
+	return true
+
+
+# Removes the item and moves the next ones one slot towards the start,
+# so the empty slots stay at the end.
+func remove_item(item : Item) -> void:
+	var index : int = items.find(item)
+	if index == -1:
+		return
+	items.remove_at(index)
+	items.append(null)
 
 
 func get_inventory_paths() -> Array:
-	var result = []
+	var result : Array = []
 	for item in items:
-		if item is Item:
+		if item != null:
 			result.append(item.resource_path)
 	return result
 
@@ -25,20 +44,8 @@ func get_inventory_paths() -> Array:
 func set_inventory_from_paths(resource_paths : Array) -> void:
 	clear_inventory()
 	for path in resource_paths:
-		print("Setting " + path + "...")
-		var new_item : Resource = load(path)
-		
-		for i in items.size():
-			if items[i] != null:
-				continue
-				
-			items[i] = new_item
-			print("Slot is now" + str(items[i]))
-			break
-	print(items)
-	
+		add_item(load(path))
 
-func clear_inventory()->void:
-	print("Clearing up inventory...")
-	for i in items.size():
-		items[i] = null
+
+func clear_inventory() -> void:
+	items.fill(null)

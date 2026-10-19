@@ -1,3 +1,3 @@
 extends Node2D
 
-onready var characterLines : Label = $CharacterLines
+@onready var characterLines : Label = $CharacterLines

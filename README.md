@@ -4,17 +4,30 @@
 
 ## Introduction
 
-As a first example of integration between Arcweave and a game engine, we created *Regrets*, a short point and click adventure game using [Godot 3.5](https://godotengine.org/).
+As a first example of integration between Arcweave and a game engine, we created *Regrets*, a short point and click adventure game using [Godot 4](https://godotengine.org/).
 
-You can play the game on your browser, [here](https://arcweave.itch.io/regrets). 
-
-We wrote the game's story and logic using Arcweave and used our own [Arcweave plugin for Godot](https://github.com/Arcweave/arcweave-godot-plugin) to pass the data to the game engine.
+We wrote the game's story and logic using Arcweave and used our own [Arcweave plugin for Godot](https://github.com/Arcweave/arcweave-godot-plugin) (v3) to pass the data to the game engine.
 
 The Data of the game is already included in this repo. If you want to preview, edit or change the **Arcweave** project, you can import the backup file of this project [arcweave_project/regrets.arcw](arcweave_project/regrets.arcw), using our **Import Project** feature in your Arcweave [**Project List**](https://arcweave.com/app/list).
 
-Moreover, we have created a couple of [YouTube video tutorials](https://www.youtube.com/watch?v=z4n4lu5ARa0) explaining the process.
+Moreover, we have created a couple of [YouTube video tutorials](https://www.youtube.com/watch?v=z4n4lu5ARa0) explaining the process. They were recorded with the Godot 3 version of the game and the plugin, so some of the code they show has changed.
 
 This document gives a brief overview of the game's structure as a Godot project.
+
+### Requirements
+
+* The **.NET** version of [Godot 4.7](https://godotengine.org/download), since the Arcweave plugin is written in C#.
+* The [.NET 8 SDK](https://dotnet.microsoft.com/download).
+
+Open the project in Godot and build it once (the hammer icon at the top right, or `Alt + B`) before running it. The game's own scripts are in GDScript; only the plugin needs .NET.
+
+Godot 4 cannot export C# projects to the web, so this version of the game runs on desktop platforms. The original Godot 3 version is still playable in your browser, [here](https://arcweave.itch.io/regrets), and its code is under the [`godot-3`](https://github.com/arcweave/arcweave-godot-adventure-example/tree/godot-3) tag of this repo.
+
+### Updating the Story Data
+
+The story data lives in the **ArcweaveAsset** resource `res://resources/aw_asset.tres`, which the `ArcweaveNode` in `Main.tscn` turns into a playable `Story`. To update it, select the resource and, in its inspector, either pick a Godot export file from Arcweave or fill in your API key and project hash, then click **Initialize Arcweave Asset**. The [plugin's README](https://github.com/Arcweave/arcweave-godot-plugin#getting-data-from-arcweave) explains both ways.
+
+Don't commit your API key: clear it from the resource before committing. The plugin's `addons/arcweave/data.save` and `env.json` files are ignored by git for the same reason.
 
 ## Scenes
 
@@ -25,7 +38,7 @@ Upon running the game, the first thing that pops up is a simple introductory scr
 Both **New Game** and **Load** change the current scene from `IntroCredits.tscn` to `Main.tscn`:
 
 ```gdscript
-get_tree().change_scene("res://scenes_main/Main.tscn")
+get_tree().change_scene_to_file("res://scenes_main/Main.tscn")
 ```
 
 The difference is that **Load** also sets the singleton `LoadGame.load_game` to `true`. More on how loading works, under [Saving & Loading the Game](#saving--loading-the-game).
@@ -42,46 +55,57 @@ Main (Node2D)
 	UI (CanvasLayer)
 		Children include: mouse menu,
 		settings menu, cursor,
-		audio players, tweens et al.
+		audio players, fader et al.
+	Rooms (Node2D)
+		Location (the current room)
 	Player (Node2D)
+	ArcweaveNode (ArcweaveNode)
 ```
 
 Various children have their own scripts defining their behaviours, like the [Player](#player) node.
+
+The `ArcweaveNode` comes with the Arcweave plugin. In its `_ready()` function, it creates a `Story` from the project data of its `ArcweaveAsset`. `Main` keeps a reference to it:
+
+```gdscript
+func _ready() -> void:
+	story = $ArcweaveNode.Story
+	...
+```
+
+The `UI` node's **Process Mode** is set to **Always**, so the settings menu keeps working while the game is paused.
 
 
 ### Player
 
 Since no physics are involved in its movement, `Player.tscn` is a simple `Node2D`. In the point-and-click fashion, the game uses a path-finding routine to move the player node from its starting point to the position of the mouse click event. 
 
-To achieve the player's movement, each `Location` scene includes a `Navigation2D` node and its required child `NavigationPolygonInstance`, to define the area the player can walk on. Each time `Main` loads a room, it stores its Navigation2D node in the variable `nav2D`:
+To achieve the player's movement, each `Location` scene includes a `NavigationRegion2D` node, whose navigation polygon defines the area the player can walk on. Each time `Main` loads a room, it stores that node in the variable `nav_region`:
 
 ```gdscript
 func load_room_from_path(room_path : String, player_position : Vector2)-> void:
 	...
-	nav2D = $Location/Navigation2D
+	nav_region = next_room.get_node("NavigationRegion2D")
 	...
 ```
 
 (An optional `Line2D` node is also included in each `Location` scene for debugging purposes, but its visibility is turned off. Turn it on to see the path the player follows with each click.)
 
-When the player clicks somewhere in the room, the Main node calls the current location's `Navigation2D` node and uses it to call its method `get_simple_path()`. Then, it assigns the returned value to the `Player` script's `path` variable:
+When the player clicks somewhere in the room, the Main node asks the `NavigationServer2D` for a path through the region's navigation map, and passes it to the `Player` script's `walk_along()` function:
 
 ```gdscript
 func walk_player_to(a_position: Vector2):
 	...
-	var new_path = nav2D.get_simple_path(source_position, target_position)
+	var nav_map : RID = nav_region.get_navigation_map()
+	var new_path : PackedVector2Array = NavigationServer2D.map_get_path(nav_map, source_position, target_position, true)
 	...
-	player.path = new_path
-	player.change_state(1) # WALK
+	player.walk_along(new_path)
 ```
 
-Note that the above function also changes the player's state from `IDLE` (`0`) to `WALK` (`1`).
+The `walk_along()` function stores the path and changes the player's state from `IDLE` (`0`) to `WALK` (`1`).
 
-Upon these two assignments, the `Player` script starts its `_process(delta)` function (called upon the state change), plays the `WALK` sprite animation, and runs the path-finding routine for the new `path` value set by `Main`.
+The state change starts the `Player` script's `_process(delta)` function, which plays the `WALK` sprite animation and moves the player along the path, calling the custom function `move_along_path()`.
 
-The path-finding happens by the `_process()` function calling the custom function `move_along_path()`.
-
-Once the player walks along the whole path, the state changes back to `IDLE` and the `_process()` function stops.
+Once the player walks along the whole path, the state changes back to `IDLE`, the `_process()` function stops, and the `Player` emits its `arrived` signal. `Main` listens to it, to start the action the player walked towards, e.g. examining an object.
 
 
 ### Locations
@@ -92,16 +116,17 @@ The structure of `LocationClass.tscn` is as follows:
 
 ```
 Location (Node2D)
-	Art (Sprite)
+	Art (Sprite2D)
 	Line2D (Line2D)
-	Navigation2D (Navigation2D)
-		NavigationPolygonInstance (NavigationPolygonInstance)
+	NavigationRegion2D (NavigationRegion2D)
 	Objects (Node2D)
 ```
 
-The `Art` is a `Sprite` of which the `Texture` is the background image of the location. It includes everything static, so no portable objects.
+The `Art` is a `Sprite2D` of which the `Texture` is the background image of the location. It includes everything static, so no portable objects.
 
-The `Line2D` and `Navigation2D` are used for the path-finding routine that moves the player around the room (see [Player](#player)).
+The `Line2D` and `NavigationRegion2D` are used for the path-finding routine that moves the player around the room (see [Player](#player)).
+
+`Main` adds the current location as a child of its `Rooms` node and keeps a reference to it in the variable `current_room`.
 
 The `Objects` node works as a parent for everything clickable in a room. (See [Clickable Objects](#clickable-objects), below.)
 
@@ -144,7 +169,7 @@ To display the name of the object, we get the property `ClickableObject.object_n
 The `portable` property is a flag `ClickableItems` have, which you can change by will:
 
 ```gdscript
-export var portable : bool = true
+@export var portable : bool = true
 ```
 Note that having `portable` does not mean the player will  be able to take the item, only that the command line will start with *Take...* Whether the player can actually add the item to the inventory depends on the Arcweave dialogue that gets triggered. (See [Inventory](#inventory).)
 
@@ -153,7 +178,7 @@ Clicking the action buttons triggers whatever dialogue is associated with the sp
 
 ### Objects' "State Variables"
 
-The `ClickableObject` class includes a String export variable called `state_variable`. This is only needed  only used when dressing up a room with the items not yet taken by the player—see [Accessing Game Variables](#accessing-variables).
+The `ClickableObject` class includes a String export variable called `state_variable`. This is only used when dressing up a room with the items not yet taken by the player—see [Accessing Game Variables](#accessing-game-variables).
 
 In a nutshell, this `state_variable`'s value should be the name of the story variable that refers to the specific item's state and begins with `i_` for "item." For example, for the Amstrad, it's `i_amstrad`. See [Adding & Removing Items](#adding--removing-items) for the enumerations of this convention and [Accessing Game Variables](#accessing-game-variables) for an example of use.
 
@@ -176,21 +201,25 @@ Note that the @-mentions in the elements' titles are meaningless. It is the atta
 
 Therefore, when the player commands EXAMINE AMSTRAD, all the game has to do is iterate through those starting elements, to find the one that has the 2 specific attached components: EXAMINE and AMSTRAD. Using it as a starting element, it renders the correct dialogue that follows.
 
-Note 1: we have put all the starting elements in the same **Player Actions** board, so you can optionally and easily optimise the iteration; instead of going through all the elements:
+Note 1: we have put all the starting elements in the same **Player Actions** board, so the game only iterates through the elements of that board, instead of all the elements in the project. `Main` finds the board by its custom ID `PLAYER_ACTIONS` and stores it in `player_actions_aw_board`:
 
-```
-...
-for element_id in story.elements:
+```gdscript
+for element in player_actions_aw_board.Elements:
 	...
 ```
 
-... you can iterate only through the ones in the specific board:
+(If there is no such board, the game falls back to all the elements: `story.GetProject().Elements.values()`.)
 
-```
-...
-for element_id in player_actions_aw_board.elements:
+Each element's attached components are in its `Components` array, and each component's attributes are read with `GetAttribute()`:
+
+```gdscript
+for component in element.Components:
+	var type : String = str(component.GetAttribute("type").data)
+	var objectName : String = str(component.GetAttribute("objectName").data)
 	...
 ```
+
+When no specific reply exists for an OBJECT + OBJECT command, the game prefers a reply for GENERIC + one of the two objects over the reply for GENERIC + GENERIC.
 
 Note 2: the game is programmed to skip the starting element, follow its (unique) connection and render the next one. This is actually done by calling the function `render_options()` upon finding a dialogue's starting element. (See [Rendering Options](#rendering-options) for a brief description of how this function works.)
 
@@ -201,14 +230,15 @@ For more on the use of Components in this project, see [Using Components](#using
 When the game finds a dialogue's starting element, it follows its unique connection and renders its target element, calling the function  `render_element(target_id)`. This function sets the `story`'s current element to the desired one.
 
 ```gdscript
-func render_element(element_id ):
-	set dialogue state to RENDERING_ELEMENT
-	set current element of Story to the target
-		using story.set_current_element(element_id)
-	call render_current_element()
+func render_element(element_id : String) -> void:
+	set_dialogue_state(RENDERING_ELEMENT)
+	story.SetCurrentElementById(element_id)
+	render_current_element()
 ```
 
-Here is some pseudocode showing the logic of the `render_element()` function:
+Setting the current element also runs its arcscript, so `story.GetCurrentRuntimeContent()` returns the content as the player should see it.
+
+Here is some pseudocode showing the logic of the `render_current_element()` function:
 
 ```
 
@@ -294,7 +324,7 @@ Render Options
 	set the dialogue state to RENDERING_OPTIONS
 
 	get the current element's options
-		(using story.get_current_options())
+		(using story.GenerateCurrentOptions())
 
 	if 0 options:
 		end the dialogue
@@ -314,7 +344,9 @@ Render Options
 	set dialogue state to WAITING_CHOICE
 ```
 
-Then, it's the player's move; picking one of the available options. And the dialogue continues.
+Each option is a `Path` in the `Paths` array of the returned `Options`. The option button shows the path's `label`, which the plugin takes from the connection labels or, failing that, from the target element's title.
+
+Then, it's the player's move; picking one of the available options. The game passes the chosen path to `story.SelectPath(path)`, which runs the arcscript of its connections and makes its target the current element. And the dialogue continues.
 
 
 ### Rendering the Content
@@ -353,7 +385,7 @@ Therefore, unless there is a TITLE or OVERLAP involved, the content gets rendere
 
 While creating this demo game, we wanted to give as much control to Arcweave as possible, not only regarding dialogue trees, but also game state and puzzle logic.
 
-For example, when the player clicks on a **door** (a ClickableExit), the game checks the story state (saved in the `state_export.gd` file and read by the plugin), to determine whether the door is locked or not. If it is locked, the player doesn't enter, but delivers the appropriate dialogue describing the exit's locked condition.
+For example, when the player clicks on a **door** (a ClickableExit), the game checks the story variables (stored in the ArcweaveAsset and read by the plugin), to determine whether the door is locked or not. If it is locked, the player doesn't enter, but delivers the appropriate dialogue describing the exit's locked condition.
 
 Should the writer decide to have the exit unlocked, they only need to change things in the Arcweave project and re-export. Godot will pick it up from there and provide an unlocked exit for the player to walk through without issues.
 
@@ -480,23 +512,31 @@ Another solution would have been to have the game consult the story state (after
 
 ## State Handling
 
-The story state is a dictionary containing all the arcweave variables used in the project. The plugin offers easy access to the story state via the methods `story.get_state()` and `story.set_state()`. 
+The story state consists of the values of all the arcweave variables used in the project, the current element and the number of times each element has been visited. The plugin saves and restores all of it via the methods `story.GetSave()` and `story.LoadSave()`.
 
 ### Saving & Loading the Game
 
-For the **Save Game** functionality, we open a file to write the story state (using `story.get_state()`), as well as data like the current room, the player sprite's position, its facing direction, and the current inventory.
+For the **Save Game** functionality, we open a file to write the story state (using `story.GetSave()`), as well as data like the current room, the player sprite's position, its facing direction, and the current inventory.
 
-To **Load** we do the reverse: check if a save file exists, open it, and read the necessary data.
+To **Load** we do the reverse: check if a save file exists, open it, read the necessary data, and pass the story state to `story.LoadSave()`.
+
+Saves carry a format version (`LoadGame.SAVE_VERSION`). The `LoadGame` singleton ignores saves with a different version, like the ones the Godot 3 version of the game wrote, so **Load** stays disabled until the player saves again.
 
 As mentioned under [Intro and Credits Screen](#intro-and-credits-screen), when we click "Load" at the Intro Screen or the Settings Menu, we essentially **Restart** the game, after setting the singleton `LoadGame.load_game` to `true`. Upon loading the Main scene, this singleton's value is checked and the `load_saved_game()` function gets called accordingly.
 
 ### Accessing Game Variables
 
-In some cases, we need to directly access story variables. Again, we do this by calling `story.get_state()` and specifying the story variable we need to call.
+In some cases, we need to directly access story variables. We do this by asking the story's project for the variable by name and reading its `Value`:
+
+```gdscript
+var variable : Object = story.GetProject().GetVariable("i_amstrad")
+if variable != null and variable.Value == 1:
+	...
+```
 
 For example, each time the player enters a room, the game calls the function `dress_up_room(room_node)` and iterates through the room's objects (children of the "Objects" node, as mentioned under [Locations](#locations)), to check which ones are present, according to the story state.
 
-This check is performed by looking up, in the story state, the value of the object's `state_variable`. (See ) If the value is `1` (according to the conventions mentioned under [Adding & Removing Items](#adding--removing-items), the item should be visible and monitorable (as an Area2D) in the location.
+This check is performed by looking up the value of the object's `state_variable` (see [Objects' "State Variables"](#objects-state-variables)). If the value is `1` (according to the conventions mentioned under [Adding & Removing Items](#adding--removing-items)), the item should be visible and monitorable (as an Area2D) in the location.
 
 ## Conclusion
 

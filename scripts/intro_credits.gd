@@ -1,28 +1,13 @@
 extends Control
 
 enum {PLAY, QUIT}
-const SAVED_GAME_PATH = "user://save.dat"
-onready var timer : Timer = $ButtonTimer
-onready var load_button : Button = $Buttons/Load
+@onready var timer : Timer = $ButtonTimer
+@onready var load_button : Button = $Buttons/Load
 var command : int = PLAY
 
 
 func _ready() -> void:
-	enable_load(check_save_file())
-
-
-func check_save_file()->bool:
-	var file = File.new()
-	if file.file_exists(SAVED_GAME_PATH):
-		return true
-	return false
-
-
-func enable_load(yes: bool)->void:
-	if yes:
-		load_button.disabled = false
-		return
-	load_button.disabled = true
+	load_button.disabled = not LoadGame.save_file_exists()
 
 
 func go(new_command : int = PLAY) -> void:
@@ -47,7 +32,7 @@ func _on_Quit_pressed() -> void:
 func _on_ButtonTimer_timeout() -> void:
 	match command:
 		PLAY:
-			var _change = get_tree().change_scene("res://scenes_main/Main.tscn")
+			get_tree().change_scene_to_file("res://scenes_main/Main.tscn")
 		QUIT:
 			get_tree().quit()
 	

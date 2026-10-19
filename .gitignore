@@ -13,3 +13,14 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Arcweave plugin files that can hold API credentials or cached project data
+addons/arcweave/data.save
+addons/arcweave/data.json
+addons/arcweave/env.json
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+*.user

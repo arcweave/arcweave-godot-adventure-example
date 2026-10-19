@@ -1,56 +1,61 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene format=3]
 
-[ext_resource path="res://assets/assets_player/player_walk_animation.png" type="Texture" id=1]
-[ext_resource path="res://scripts/player.gd" type="Script" id=2]
-[ext_resource path="res://scenes_ui/Bubble.tscn" type="PackedScene" id=3]
+[ext_resource type="Texture2D" path="res://assets/assets_player/player_walk_animation.png" id="1"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes_ui/Bubble.tscn" id="3"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "Idle"
 length = 0.1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 6 ]
+"values": [6]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="3"]
 resource_name = "Walk"
 length = 0.9
-loop = true
+loop_mode = 1
 step = 0.15
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 0 ]
+"values": [1, 2, 3, 4, 5, 0]
 }
 
-[node name="Player" type="Node2D"]
-script = ExtResource( 2 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vegyk"]
+_data = {
+&"Idle": SubResource("1"),
+&"Walk": SubResource("3")
+}
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-offset = Vector2( 0, -21 )
+[node name="Player" type="Node2D" unique_id=160466231]
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=890906801]
+texture = ExtResource("1")
+offset = Vector2(0, -21)
 hframes = 7
 frame = 6
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Sprite")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1591236061]
 reset_on_save = false
-anims/Idle = SubResource( 1 )
-anims/Walk = SubResource( 3 )
+root_node = NodePath("../Sprite2D")
+libraries/ = SubResource("AnimationLibrary_vegyk")
 
-[node name="Bubble" parent="." instance=ExtResource( 3 )]
+[node name="Bubble" parent="." unique_id=1324613095 instance=ExtResource("3")]

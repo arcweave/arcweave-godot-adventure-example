@@ -1,4 +1,5 @@
 class_name Location
 extends Node2D
 
-export var music : AudioStreamOGGVorbis
+# The music that plays in this room:
+@export var music : AudioStream

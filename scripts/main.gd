@@ -4,7 +4,7 @@ extends Node2D
 enum {EXPLORING, WALKING_TO_ACTION, TRANSITIONING, DIALOGUE} # GAME states
 enum {IDLE, MENU_OPEN, HOLDING_ITEM} # UI states
 enum {OFF, RENDERING_ELEMENT, RENDERING_OPTIONS, WAITING_CHOICE, PAUSING} # DIALOGUE states
-enum {IN, OUT} # For tween fade() function.
+enum {IN, OUT} # For the fade functions.
 
 const MAX_NUMBER_VISIBLE_OPTIONS = 3 # Max responses before arrows appear.
 const MIN_X = 120 # MIN_X & MAX_X for dialogue bubble placement
@@ -12,31 +12,35 @@ const MAX_X = 200
 const MIN_Y = 73 # Y for speaker position, for dialogue bubble placement
 const MAX_Y = 100 # (The room window lower end.)
 const PAUSE_TIME = 1.5 # The time kept when dialogue reaches a "pause" component.
+const FADE_TIME = 1.0 # Duration of the room and music fades.
 # Mouse Cursors:
-const IDLE_CURSOR : Texture = preload("res://assets/assets_ui/cursor_idle.png")
-const HOVER_CURSOR : Texture = preload("res://assets/assets_ui/cursor_hover.png")
-const EXIT_CURSOR : Texture = preload("res://assets/assets_ui/cursor_walk_out.png")
+const IDLE_CURSOR : Texture2D = preload("res://assets/assets_ui/cursor_idle.png")
+const HOVER_CURSOR : Texture2D = preload("res://assets/assets_ui/cursor_hover.png")
+const EXIT_CURSOR : Texture2D = preload("res://assets/assets_ui/cursor_walk_out.png")
 # Starting room and position:
 const FIRST_ROOM : String = "res://scenes_rooms/Bedroom.tscn"
 const PLAYER_STARTING_POSITION : Vector2 = Vector2(138, 92)
-
-const DialogueOptionButton : PackedScene = preload("res://scenes_ui/DialogueOptionButton.tscn")
-const Inventory : InventoryHandler = preload("res://resources/Inventory.tres")
-# The states are stored in a separate resource file, for access by various scripts:
-const State : StateHandler = preload("res://resources/state_handler.tres") # The game's state machines. Not the story state.
 const SAVED_SETTINGS_PATH = "user://settings.dat"
-const SAVED_GAME_PATH = "user://save.dat"
-# The following 2 vars get their values from the current room:
-var nav2D : Navigation2D = null
+const DialogueOptionButton : PackedScene = preload("res://scenes_ui/DialogueOptionButton.tscn")
+
+# The game's state machines (not the story state) and the inventory are stored in
+# separate resource files, for access by various scripts. They are vars, not consts:
+# Godot 4 would bake the values of a const resource into the script.
+var Inventory : InventoryHandler = preload("res://resources/Inventory.tres")
+var State : StateHandler = preload("res://resources/state_handler.tres")
+
+# The Arcweave story (Arcweave.Story, from the C# plugin), created by the ArcweaveNode:
+var story : Object = null
+# The Arcweave board with the starting elements of all player actions:
+var player_actions_aw_board : Object = null
+# The following 3 vars get their values from the current room:
+var current_room : Location = null
+var nav_region : NavigationRegion2D = null
 var line2D : Line2D = null
 # The following vars get values from player actions:
 var inventory_item_selected : Item = null
-var current_object_hovered : Area2D = null
-var current_object_clicked : Area2D = null
-
-var current_target_id : String = "RESET"
-var current_line_bubble: Label = null
-var player_actions_aw_board : Board = null
+var current_object_clicked : ClickableObject = null
+var current_target_id : String = ""
 # Flags related to dialogue flow:
 var dialogue_speed_factor : int = 3 # For faster dialogue go higher.
 var dialogue_pause : bool = false
@@ -44,7 +48,7 @@ var dialogue_end : bool = false
 var line_is_title : bool = false
 var overlap_current_line_with_next : bool = false
 var just_exit_after_walk : bool = false
-var overlapping_data = {}
+var overlapping_data : Dictionary = {}
 var follow_random_output : bool = false
 var dangling_dialogue : bool = true
 var dangling_exit : ClickableExit = null
@@ -55,55 +59,79 @@ var command_line : Dictionary = {
 	"preposition": "",
 	"object_2": ""
 }
-var registered_settings = { # Volumes in linear values (from 0 to 1)
-	"music_volume": -80.0,
-	"sfx_volume": -80.0,
+var registered_settings : Dictionary = { # Volumes in linear values (from 0 to 1)
+	"music_volume": 0.65,
+	"sfx_volume": 0.85,
 	"dialogue_speed": 3,
-	"walk_speed": 10
+	"walk_speed": 18.0
 }
 var number_of_visible_options : int = 0
-var option_buttons : Array = []
-var story = Story.new() # From Arcweave's plugin.
+var option_buttons : Array[Button] = []
+
+@onready var player : Node2D = $Player
+@onready var optionsUI : HBoxContainer = $UI/MarginContainer/OptionsUI
+@onready var optionsContainer : VBoxContainer = $UI/MarginContainer/OptionsUI/OptionsContainer
+@onready var optionsArrows : VBoxContainer = $UI/MarginContainer/OptionsUI/OptionsArrows
+@onready var arrowButtonUp : TextureButton = $UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp
+@onready var arrowButtonDn : TextureButton = $UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn
+@onready var objectsContainer: VBoxContainer = $UI/MarginContainer/ObjectsContainer
+@onready var objectLabel: Label = $UI/MarginContainer/ObjectsContainer/ObjectName
+@onready var titleLabel : Label = $UI/Title/Label
+@onready var mouseMenu : Node2D = $UI/MouseMenu
+@onready var fader : ColorRect = $UI/Fader
+@onready var dialogueTimer: Timer = $DialogueTimer
+@onready var cursorSprite : Sprite2D = $UI/MouseCursor/Cursor
+@onready var cursorCollision : CollisionShape2D = $UI/MouseCursor/Cursor/MouseCursorArea2D/MouseCursorCollision
+@onready var musicPlayer : AudioStreamPlayer = $UI/MusicPlayer
+@onready var sfxPlayer : AudioStreamPlayer = $UI/SFXPlayer
+@onready var inventoryGrid : HBoxContainer = $UI/MarginContainer/ObjectsContainer/InventoryContainer
+@onready var settingsRows : VBoxContainer = $UI/SettingsMenu/Popup/MarginContainer/VBoxContainer
+@onready var musicSlider : HSlider = settingsRows.get_node("MusicRow/MusicSlider")
+@onready var sfxSlider : HSlider = settingsRows.get_node("SFXRow/SFXSlider")
+@onready var dialogueSpeedSlider : HSlider = settingsRows.get_node("DialogueSpeedRow/DialogueSpeedSlider")
+@onready var walkSpeedSlider : HSlider = settingsRows.get_node("WalkSpeedRow/WalkSpeedSlider")
 
 
-onready var optionsUI : HBoxContainer = $UI/MarginContainer/OptionsUI
-onready var objectsContainer: VBoxContainer = $UI/MarginContainer/ObjectsContainer
-onready var objectLabel: Label = $UI/MarginContainer/ObjectsContainer/ObjectName
-onready var dialogueTimer: Timer = $DialogueTimer
-onready var mouseCursor : Control = $UI/MouseCursor
-onready var cursorSprite : Sprite = $UI/MouseCursor/Cursor
-onready var player : Node2D = $Player
-onready var musicPlayer : AudioStreamPlayer = $UI/MusicPlayer
-onready var sfxPlayer : AudioStreamPlayer = $UI/SFXPlayer
-onready var tween_room : Tween = $UI/TweenImage
-onready var tween_music : Tween = $UI/TweenMusic
-onready var inventoryGrid : HBoxContainer = $UI/MarginContainer/ObjectsContainer/InventoryContainer
-
-
-func push_writer_error(error_text : String):
+func push_writer_error(error_text : String) -> void:
 	push_error("ARCWEAVE WRITER ERROR: " + error_text)
 
-func push_writer_warning(warning_text : String):
+func push_writer_warning(warning_text : String) -> void:
 	push_warning("ARCWEAVE WRITER WARNING: " + warning_text)
+
+# Returns the value of a component's attribute as a String, e.g. its "objectName":
+func attr(component: Object, attribute_name: String) -> String:
+	var attribute : Object = component.GetAttribute(attribute_name)
+	if attribute == null:
+		push_writer_error("Component '" + component.Name + "' has no attribute '" + attribute_name + "'.")
+		return ""
+	return str(attribute.data)
 
 
 func _ready() -> void:
+	# The ArcweaveNode creates the Story from its ArcweaveAsset in its own _ready(),
+	# which runs before ours, since it is our child.
+	story = $ArcweaveNode.Story
 	load_player_actions_board()
 	load_settings()
 	check_load_start_game()
 
 
 # This loads the board where all starting elements are for player commands.
-# But I am not currently using it; the game currently iterates through EVERY element.
-# For larger games, use for optimisation.
+# The get_id_from_* functions only search this board, instead of the whole project.
 func load_player_actions_board()-> void:
-	for board_id in story.boards:
-		var board : Board = story.boards[board_id]
-		if board.customId == "PLAYER_ACTIONS":
+	for board in story.GetProject().Boards.values():
+		if board.CustomId == "PLAYER_ACTIONS":
 			player_actions_aw_board = board
 			return
 	push_writer_error("Board with starting elements for all player actions"
 		+ " not found. Please, create board with custom Board ID: PLAYER_ACTIONS")
+
+
+# The elements to search for the starting element of a player action:
+func get_player_action_elements() -> Array:
+	if player_actions_aw_board == null:
+		return story.GetProject().Elements.values() # Fallback: the whole project.
+	return player_actions_aw_board.Elements
 
 
 func check_load_start_game()-> void:
@@ -116,19 +144,16 @@ func check_load_start_game()-> void:
 	load_saved_game()
 
 
+	
 func load_saved_game() -> void:
-	var file = File.new()
-	if not file.file_exists(SAVED_GAME_PATH):
-		print("Saved game file not found.")
+	# Read the saved game, if there is one this version can load:
+	var data : Dictionary = LoadGame.read_saved_game()
+	if data.is_empty():
+		print("No saved game found that this version can load.")
 		start_new_game()
 		return # Again, start new game.
-		
-	file.open(SAVED_GAME_PATH, File.READ)
-	var data = file.get_var()
-	file.close()
-	
-	story.set_state(data.story_state) # This must go before setCurrentElement
-	story.set_current_element(data.element_id)
+	# Load saved data. The plugin's save also restores the current element:
+	story.LoadSave(data.story_variables)
 	dangling_dialogue = data.has_dangling_dialogue
 	# Load room and place the player sprite:
 	player.sprite.flip_h = data.player_looking_left
@@ -136,17 +161,20 @@ func load_saved_game() -> void:
 	# Load inventory:
 	Inventory.set_inventory_from_paths(data.inventory)
 	inventoryGrid.update_inventory_display()
-	
 
 
 func start_new_game()->void:
+	# The inventory is a shared resource, so it outlives a restart:
+	Inventory.clear_inventory()
+	inventoryGrid.update_inventory_display()
 	load_room_from_path(FIRST_ROOM, PLAYER_STARTING_POSITION)
 
 
 func save_state()-> void:
-	var current_element_id : String = story.get_current_element().id
-	var current_story_state : Dictionary = story.get_state()
-	var current_room_path : String = get_node_or_null("Location").filename
+	var current_element_id : String = story.GetCurrentElement().Id
+	# The story save holds the current element, the variables and the element visits:
+	var current_story_variables : Dictionary = story.GetSave()
+	var current_room_path : String = current_room.scene_file_path
 	var current_player_position: Vector2 = player.global_position
 	var current_player_looking_left: bool = player.sprite.flip_h
 	var current_inventory : Array = Inventory.get_inventory_paths()
@@ -155,25 +183,24 @@ func save_state()-> void:
 	if State.game == DIALOGUE:
 		current_dangling_dialogue = true
 		
-	var saved_state = {
+	var saved_state : Dictionary = {
+		"version": LoadGame.SAVE_VERSION,
 		"element_id": current_element_id,
 		"has_dangling_dialogue": current_dangling_dialogue, # saves the global var
-		"story_state": current_story_state,
+		"story_variables": current_story_variables,
 		"room_path": current_room_path,
 		"player_position": current_player_position,
 		"player_looking_left": current_player_looking_left,
 		"inventory": current_inventory,
 	}
 	
-	print("Saving state: " + str(saved_state))
-	
-	var file = File.new()
-	file.open(SAVED_GAME_PATH, File.WRITE)
+	var file := FileAccess.open(LoadGame.SAVED_GAME_PATH, FileAccess.WRITE)
 	file.store_var(saved_state)
 	file.close()
+	print("Game saved in room " + current_room_path + ".")
 
 
-func _unhandled_input(event) -> void:
+func _unhandled_input(event : InputEvent) -> void:
 	match State.game:
 		
 		EXPLORING:
@@ -185,7 +212,6 @@ func _unhandled_input(event) -> void:
 					return
 					
 				# Else (if UI is already IDLE), we walk to mouse position:
-				print("Walking player to global mouse position: " + str(get_global_mouse_position()))
 				walk_player_to(get_global_mouse_position())
 				
 			if event.is_action_pressed("ui_skip"):
@@ -204,7 +230,6 @@ func _unhandled_input(event) -> void:
 				# forgetting the object clicked).
 				# We walk to the new mouse position:
 				walk_player_to(get_global_mouse_position())
-#				print("_unhandled_input function, right after walking the player to.")
 				set_game_state(EXPLORING)
 				
 			if event.is_action_pressed("ui_skip"):
@@ -218,7 +243,6 @@ func _unhandled_input(event) -> void:
 		TRANSITIONING:
 			
 			if event.is_action_pressed("click") or event.is_action_pressed("ui_skip"):
-#				print("Unhandled click/cancel blocked in TRANSITIONING state.")
 				return
 				# No mouse events are allowed during the TRANSITIONING state.
 
@@ -235,121 +259,115 @@ func _unhandled_input(event) -> void:
 
 
 func save_settings() -> void:
-	var file = File.new()
-	file.open(SAVED_SETTINGS_PATH, File.WRITE)
-#	print("Saving registered settings : " + str(registered_settings))
-	file.store_line(to_json(registered_settings))
+	var file := FileAccess.open(SAVED_SETTINGS_PATH, FileAccess.WRITE)
+	file.store_line(JSON.stringify(registered_settings))
 	file.close()
 
 
 func load_settings() -> void:
-	var file = File.new()
-	
-	if not file.file_exists(SAVED_SETTINGS_PATH):
-		print("Settings file not found.")
-		set_volumes_from_linear() # The default values.
-		set_dialogue_speed()
-		set_walk_speed()
-		return
-		
-	file.open(SAVED_SETTINGS_PATH, File.READ)
-	var settings = parse_json(file.get_as_text())
-	file.close()
+	# The defaults are the values in registered_settings. Saved values override them,
+	# so a settings file with missing (or extra) keys still works:
+	var settings : Dictionary = registered_settings.duplicate()
+	if FileAccess.file_exists(SAVED_SETTINGS_PATH):
+		var saved = JSON.parse_string(FileAccess.get_file_as_string(SAVED_SETTINGS_PATH))
+		if saved is Dictionary:
+			settings.merge(saved, true)
+		else:
+			push_warning("Ignoring invalid settings file: " + SAVED_SETTINGS_PATH)
 	
 	set_volumes_from_linear(settings.music_volume, settings.sfx_volume)
-	set_dialogue_speed(settings.dialogue_speed)
+	set_dialogue_speed(int(settings.dialogue_speed))
 	set_walk_speed(settings.walk_speed)
 
 
-func set_walk_speed(value : float = 18.0)-> void:
+func set_walk_speed(value : float)-> void:
 	registered_settings.walk_speed = value
-	$UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/WalkSpeedRow/WalkSpeedSlider.value = value
-	$Player/AnimationPlayer.playback_speed = value * 1.0/10.0
+	walkSpeedSlider.value = value
+	player.animationPlayer.speed_scale = value * 1.0/10.0
 	player.speed = value * 14.0/10.0
 
 
-func set_dialogue_speed(value: int = 3)-> void:
+func set_dialogue_speed(value: int)-> void:
 	registered_settings.dialogue_speed = value
-	$UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/DialogueSpeedRow/DialogueSpeedSlider.value = value
+	dialogueSpeedSlider.value = value
 	dialogue_speed_factor = value
 
 
-func set_volumes_from_linear(music_volume : float = 0.65, sfx_volume : float = 0.85):
-	# Takes values in dB, so arguments must be already converted with linear2db()
+func set_volumes_from_linear(music_volume : float, sfx_volume : float) -> void:
+	# Takes linear values (from 0 to 1) and converts them to dB for the players:
 	registered_settings.music_volume = music_volume
 	registered_settings.sfx_volume = sfx_volume
-	$UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/MusicRow/MusicSlider.value = music_volume
-	$UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/SFXRow/SFXSlider.value = sfx_volume
-	musicPlayer.volume_db = linear2db(music_volume)
-	sfxPlayer.volume_db = linear2db(sfx_volume)
+	musicSlider.value = music_volume
+	sfxSlider.value = sfx_volume
+	musicPlayer.volume_db = linear_to_db(music_volume)
+	sfxPlayer.volume_db = linear_to_db(sfx_volume)
 
 
 func music_fade(towards : int) -> void:
-	var start : float = 0.0
 	var end : float = 0.0
 	match towards:
 		IN:
-			start = -80.0
-			end = linear2db(registered_settings.music_volume)
+			end = linear_to_db(registered_settings.music_volume)
 		OUT:
-			start = linear2db(registered_settings.music_volume)
 			end = -80.0
 		_:
 			push_error("Invalid argument for music_fade function: " + str(towards))
 	
 	if towards == IN:
 		musicPlayer.play()
-		
-	var _temp = tween_music.interpolate_property (musicPlayer, "volume_db", start, end, 1.0)
-	var _temp2 = tween_music.start()
+	
+	create_tween().tween_property(musicPlayer, "volume_db", end, FADE_TIME)
 
 
-func room_fade(towards : int) -> void:
-	var start : Color
-	var end : Color
+# Fades the room window from or to black. Await the returned tween's "finished" signal
+# to wait for the fade.
+func room_fade(towards : int) -> Tween:
+	var end : Color = Color.BLACK
 	match towards:
 		IN:
-			start = Color(0, 0, 0, 1)
 			end = Color(0, 0, 0, 0)
 		OUT:
-			start = Color(0, 0, 0, 0)
-			end = Color(0, 0, 0, 1)
+			end = Color.BLACK
 		_:
 			push_error("Invalid argument for room_fade function: " + str(towards))
-
-	var _temp = tween_room.interpolate_property($UI/Fader, "color", start, end, 1.0)
-	var _temp2 = tween_room.start()
+	
+	var tween : Tween = create_tween()
+	tween.tween_property(fader, "color", end, FADE_TIME)
+	return tween
 
 
 func load_room_from_path(room_path : String, player_position : Vector2)-> void:
 	set_game_state(TRANSITIONING)
 	set_cursor_and_selected_item(null)
-	var current_room : Node2D = get_node_or_null("Location")
-	var next_room : Node2D = load(room_path).instance()
-
+	var next_room : Location = load(room_path).instantiate()
+	
 	if current_room != null:
-		room_fade(OUT)
+		var fade_out : Tween = room_fade(OUT)
 		if musicPlayer.playing and musicPlayer.get_stream() != next_room.music:
 			music_fade(OUT)
-		yield(tween_room, "tween_completed")
+		await fade_out.finished
 		current_room.queue_free()
-		yield(get_tree(), "idle_frame")
-		
+		await get_tree().process_frame
+	
 	dress_up_room(next_room)
+	for obj in next_room.get_node("Objects").get_children():
+		if obj is ClickableObject:
+			obj.object_clicked.connect(_on_ClickableObject_clicked)
 	place_player(player_position)
-		
+	
+	# Rooms go under the Rooms node, which is drawn before (below) the player:
 	next_room.name = "Location"
-	get_tree().current_scene.add_child_below_node($UI, next_room)
-
-	room_fade(IN)
+	$Rooms.add_child(next_room)
+	current_room = next_room
+	nav_region = next_room.get_node("NavigationRegion2D")
+	line2D = next_room.get_node("Line2D")
+	
+	var fade_in : Tween = room_fade(IN)
 	if musicPlayer.get_stream() != next_room.music:
 		musicPlayer.set_stream(next_room.music)
 		music_fade(IN)
-#	yield(get_tree(), "idle_frame")
-	yield(tween_room, "tween_completed")
-
-	nav2D = $Location/Navigation2D
-	line2D = $Location/Line2D
+	await fade_in.finished
+	
 	if dangling_dialogue:
 		dangling_dialogue = false
 		set_game_state(DIALOGUE)
@@ -360,6 +378,8 @@ func load_room_from_path(room_path : String, player_position : Vector2)-> void:
 
 
 func dress_up_room(room_node : Node2D) -> void:
+	var project : Object = story.GetProject()
+	
 	for obj in room_node.get_node("Objects").get_children():
 		if not obj is ClickableObject:
 			continue
@@ -370,15 +390,17 @@ func dress_up_room(room_node : Node2D) -> void:
 		obj.visible = false
 		obj.monitorable = false
 		
-		# We check if the object's var is in the story state:
-		if obj.state_variable in story.state.variables:
-			# Then check if object is present (our convention: if its var == 1):
-			if story.state.get_var(obj.state_variable) == 1:
-				obj.visible = true
-				obj.monitorable = true
+		# Then check if object is present (our convention: if its var == 1):
+		var variable : Object = project.GetVariable(obj.state_variable)
+		if variable == null:
+			push_writer_error("Variable '" + obj.state_variable + "' of object '" + obj.name + "' not found.")
+			continue
+		if variable.Value == 1:
+			obj.visible = true
+			obj.monitorable = true
 
 
-func place_player(new_player_position : Vector2):
+func place_player(new_player_position : Vector2) -> void:
 	player.global_position = new_player_position
 
 
@@ -396,7 +418,7 @@ func show_cursor(yes : bool) -> void:
 
 # Attention: the following function only sets the cursor texture.
 # It doesn't check state nor sets the inventory_item_selected:
-func set_cursor(item):
+func set_cursor(item : Object) -> void:
 	if item is Item:
 		# This should happen when clicking on inventory items:
 		cursorSprite.texture = item.texture
@@ -417,12 +439,10 @@ func set_cursor(item):
 	push_error("Unknown argument for set_cursor function.")
 
 
-func set_game_state(new_state):
-	if not dialogueTimer.is_stopped():
-		print("dialogueTimer is currently running due to previous dialogue actions.")
-		if new_state != DIALOGUE:
-			print("Ubruptly stopping dialogueTimer, due to game state changing to other than DIALOGUE.")
-			dialogueTimer.stop()
+func set_game_state(new_state : int) -> void:
+	# Leaving the dialogue cancels any pending line timer:
+	if new_state != DIALOGUE and not dialogueTimer.is_stopped():
+		dialogueTimer.stop()
 		
 	match new_state:
 		EXPLORING:
@@ -457,10 +477,12 @@ func set_game_state(new_state):
 
 
 func disable_cursor_collisions(yes: bool = true)->void:
-	$UI/MouseCursor/Cursor/MouseCursorArea2D/MouseCursorCollision.disabled = yes
+	cursorCollision.disabled = yes
 
 
-func set_ui_state(new_state : int, inventory_item : Item = null):
+# Changing the UI state also sets the selected inventory item (and the cursor):
+# it is the given item when HOLDING_ITEM, and null otherwise.
+func set_ui_state(new_state : int, inventory_item : Item = null) -> void:
 	
 	match new_state:
 		
@@ -468,7 +490,6 @@ func set_ui_state(new_state : int, inventory_item : Item = null):
 			open_mouse_menu(false)
 			if not State.game == WALKING_TO_ACTION:
 				erase_command_line()
-
 		
 		MENU_OPEN:
 			if current_object_clicked == null and inventory_item_selected == null:
@@ -485,15 +506,13 @@ func set_ui_state(new_state : int, inventory_item : Item = null):
 			push_error("Attempt to assign invalid ui state.")
 			return
 	
-	set_cursor_and_selected_item(inventory_item) # null or item
+	set_cursor_and_selected_item(inventory_item)
 	if State.ui != new_state:
 		State.ui = new_state
 
 
-func set_dialogue_state(new_state):
+func set_dialogue_state(new_state : int) -> void:
 	if State.game != DIALOGUE:
-#		print("Set Dialogue State forcing game state from " 
-#			+ state.get_game_state_name_from_enum(state.game) + " to DIALOGUE.")
 		set_game_state(DIALOGUE)
 	
 	match new_state:
@@ -527,18 +546,17 @@ func set_dialogue_state(new_state):
 
 # This function sets the cursor and the inventory_item_selected
 # or nulls both if item == null:
-func set_cursor_and_selected_item(item) -> void:
+func set_cursor_and_selected_item(item : Item) -> void:
 	inventory_item_selected = item
 	set_cursor(item)
 
 
 func open_mouse_menu(true_false : bool) -> void:
-	var mouse_menu : Node2D = $UI/MouseMenu
-	mouse_menu.position = get_global_mouse_position()
-	mouse_menu.visible = true_false
+	mouseMenu.position = get_global_mouse_position()
+	mouseMenu.visible = true_false
 
 
-func erase_command_line():
+func erase_command_line() -> void:
 	objectLabel.text = ""
 	command_line.verb = ""
 	command_line.object_1 = ""
@@ -546,7 +564,7 @@ func erase_command_line():
 	command_line.object_2 = ""
 
 
-func update_command_line():
+func update_command_line() -> void:
 	# For later improvements: make "Walk to" as the default.
 	objectLabel.text = ""
 	objectLabel.text +=       command_line.verb
@@ -555,24 +573,26 @@ func update_command_line():
 	objectLabel.text += " " + command_line.object_2
 
 
-func walk_player_to(a_position: Vector2):
-	var source_position = player.global_position
-	var target_position = a_position
+func walk_player_to(a_position: Vector2) -> void:
+	var source_position : Vector2 = player.global_position
+	var target_position : Vector2 = a_position
 	
 	orient_player_towards(target_position)
 	
-	var new_path = nav2D.get_simple_path(source_position, target_position)
+	# The path runs through the current room's navigation polygon. If the target
+	# is outside it, the path ends at the closest walkable point.
+	var nav_map : RID = nav_region.get_navigation_map()
+	var new_path : PackedVector2Array = NavigationServer2D.map_get_path(nav_map, source_position, target_position, true)
 	line2D.points = new_path
-	player.path = new_path
-	player.change_state(1) # WALK
+	player.walk_along(new_path)
 
 
-func skip_dialogue_line():
+func skip_dialogue_line() -> void:
 	dialogueTimer.stop()
 	after_timer_do()
 
 
-func orient_player_towards(position_of_interest: Vector2):
+func orient_player_towards(position_of_interest: Vector2) -> void:
 	if position_of_interest.x < player.global_position.x:
 		player.sprite.flip_h = true
 	else:
@@ -580,6 +600,10 @@ func orient_player_towards(position_of_interest: Vector2):
 
 
 func start_dialogue(element_id: String) -> void:
+	if element_id == "":
+		# The writer error has already been pushed by the get_id_* functions.
+		_end_dialogue()
+		return
 	set_game_state(DIALOGUE)
 	set_cursor_and_selected_item(null)
 	render_element(element_id)
@@ -594,7 +618,7 @@ func act(target_id : String) -> void:
 	# The following stops the player if walking, eg. to examine a character.
 	# As a convention, we still set state to WALKING_TO_ACTION,
 	# although we stop the player on the spot.
-	# Function _on_Player_animation_finished checks the WALKING_TO_ACTION state
+	# Function _on_Player_arrived checks the WALKING_TO_ACTION state
 	# and must get it right, regardless.
 	set_game_state(WALKING_TO_ACTION)
 	walk_player_to(player.global_position)
@@ -602,19 +626,17 @@ func act(target_id : String) -> void:
 
 func render_element(element_id : String) -> void:
 	set_dialogue_state(RENDERING_ELEMENT)
-	
-	var _current_element : Element = story.set_current_element(element_id)
+	story.SetCurrentElementById(element_id)
 	render_current_element()
 
-func select_option(option: Dictionary) -> void:
+func render_path(path : Object) -> void:
 	set_dialogue_state(RENDERING_ELEMENT)
-	story.select_option(option)
-	
+	story.SelectPath(path)   # also runs the connection scripts
 	render_current_element()
 
 func render_current_element() -> void:
-	var current_element : Element = story.get_current_element()
-	var current_content : String = story.get_current_content().strip_edges()
+	var current_element : Object = story.GetCurrentElement()
+	var current_content : String = story.GetCurrentRuntimeContent().strip_edges()
 	var components_classified : Dictionary = classify_components(current_element)
 	
 	if components_classified.dialogue_commands.size() > 0:
@@ -640,6 +662,10 @@ func render_current_element() -> void:
 		# Some activities (like ADD TO INVENTORY) need items, others (like END GAME don't).
 		run_activities(components_classified.activities, components_classified.items, components_classified.exits)
 	
+	# An activity like END GAME starts a transition, which ends the dialogue:
+	if State.game == TRANSITIONING:
+		return
+	
 	if dialogueTimer.is_stopped():
 		dialogueTimer.wait_time = 0.001
 		dialogueTimer.start()
@@ -648,7 +674,7 @@ func render_current_element() -> void:
 func run_activities(activities : Array, items : Array, exits : Array) -> void:
 	
 	for activity in activities:
-		var activityName : String = activity.get_attribute_by_name("objectName").value.data
+		var activityName : String = attr(activity, "objectName")
 		
 		match activityName:
 			"endGame":
@@ -668,11 +694,10 @@ func run_activities(activities : Array, items : Array, exits : Array) -> void:
 				push_writer_error("Unknown activity component objectName: " + activityName)
 
 
-func activity_exit_through(exits : Array) -> void:
-	
+func activity_exit_through(exits : Array) -> void:	
 	if exits.size() != 1:
 		push_writer_error("Exactly 1 exit should be paired with exitThrough component. Found " 
-			+ str(exits.size()) + " instead. (Element ID: " + story.get_current_element().id + ")")
+			+ str(exits.size()) + " instead. (Element ID: " + story.GetCurrentElement().Id + ")")
 		return
 
 	var exit : ClickableExit = get_exit_node_from_component(exits[0])
@@ -681,7 +706,7 @@ func activity_exit_through(exits : Array) -> void:
 	dangling_dialogue = true
 
 
-func exit_room_from(exitNode : ClickableExit):
+func exit_room_from(exitNode : ClickableExit) -> void:
 	# Note: the WALKING_TO_ACTION game state must be set outside this function:
 	var next_room_path : String = exitNode.target_room
 	var next_player_position : Vector2 = exitNode.target_position
@@ -689,40 +714,40 @@ func exit_room_from(exitNode : ClickableExit):
 	load_room_from_path(next_room_path, next_player_position)
 
 
-func end_game():
+func end_game() -> void:
 	set_game_state(TRANSITIONING)
 	music_fade(OUT)
-	room_fade(OUT)
-	yield(tween_room, "tween_completed")
-	var _change = get_tree().change_scene("res://scenes_main/IntroCredits.tscn")
+	await room_fade(OUT).finished
+	get_tree().change_scene_to_file("res://scenes_main/IntroCredits.tscn")
+
+
+# Each item component's objectName matches an Item resource in res://resources/:
+func load_item_from_component(item_component : Object) -> Item:
+	var path : String = "res://resources/" + attr(item_component, "objectName").strip_edges() + ".tres"
+	if not ResourceLoader.exists(path):
+		push_writer_error("No inventory item resource found at " + path)
+		return null
+	return load(path)
 
 
 func activity_inventory_add(items_components : Array) -> void:
-	for item in items_components:
-		var item_objectName : String = item.get_attribute_by_name("objectName").value.data.strip_edges()
-		var new_item : Resource = load("res://resources/" + item_objectName + ".tres")
-		
-		for i in Inventory.items.size():
-			if Inventory.items[i] == null:
-				Inventory.items[i] = new_item
-				break
-		
-		dress_up_room(get_node("Location"))
-		inventoryGrid.update_inventory_display()
+	for item_component in items_components:
+		var new_item : Item = load_item_from_component(item_component)
+		if new_item != null and not Inventory.add_item(new_item):
+			push_error("Inventory full, can't add " + new_item.object_name)
+	
+	# The taken items now have a different state, so they leave the room:
+	dress_up_room(current_room)
+	inventoryGrid.update_inventory_display()
 
 
 func activity_inventory_remove(items_components : Array) -> void:
-	for item in items_components:
-		var item_objectName : String = item.get_attribute_by_name("objectName").value.data.strip_edges()
-		var item_to_remove : Resource = load("res://resources/" + item_objectName + ".tres")
-		
-		for i in Inventory.items.size():
-			if Inventory.items[i] == item_to_remove:
-				Inventory.items.pop_at(i) # Pops the item, moving the next ones one slot to start of array.
-				Inventory.items.append(null) # Adds an empty slot at end, so there is a "null" value.
-				break
-		
-		inventoryGrid.update_inventory_display()
+	for item_component in items_components:
+		var item_to_remove : Item = load_item_from_component(item_component)
+		if item_to_remove != null:
+			Inventory.remove_item(item_to_remove)
+	
+	inventoryGrid.update_inventory_display()
 
 
 func run_content(speakers : Array, content: String) -> void:
@@ -744,7 +769,7 @@ func run_content(speakers : Array, content: String) -> void:
 	var speakers_nodes : Array = get_speakers_nodes(speakers)
 	render_speech(speakers_nodes, content)
 	
-	if not overlapping_data.empty():
+	if not overlapping_data.is_empty():
 		var overlapping_speakers_nodes : Array = get_speakers_nodes(overlapping_data.speakers)
 		if not overlapping_data.speakers is Array or not overlapping_data.content is String:
 			push_writer_error("Check overlapping error with content: " + content)
@@ -757,8 +782,8 @@ func get_speakers_nodes(speakers_components : Array) -> Array:
 	var speakers_nodes : Array = []
 	for speaker_component in speakers_components:
 		# We store the speaker's 'objectName' and hexColour.
-		var objectName : String = speaker_component.get_attribute_by_name("objectName").value.data
-		var colour : String = speaker_component.get_attribute_by_name("hexColour").value.data
+		var objectName : String = attr(speaker_component, "objectName")
+		var colour : String = attr(speaker_component, "hexColour")
 
 		var speaker_node : Node = get_speaker_node_by_name(objectName)
 		speaker_node.bubble.characterLines.modulate = Color(colour)
@@ -767,17 +792,17 @@ func get_speakers_nodes(speakers_components : Array) -> Array:
 	return speakers_nodes
 
 
-func get_exit_node_from_component(exit_component : Component)-> ClickableExit:
-	for exit_node in get_node("Location/Objects").get_children():
+func get_exit_node_from_component(exit_component : Object)-> ClickableExit:
+	for exit_node in current_room.get_node("Objects").get_children():
 		if not exit_node is ClickableExit:
 			continue
 		if exit_node.get("reply_id") == null:
 			continue
-		var exit_objectName : String = exit_component.get_attribute_by_name("objectName").value.data
+		var exit_objectName : String = attr(exit_component, "objectName")
 		if exit_node.get("reply_id") == exit_objectName:
 			return exit_node
 	
-	push_writer_error("Can't find tree node for exit " + exit_component.name)
+	push_writer_error("Can't find tree node for exit " + exit_component.Name)
 	return null
 
 
@@ -786,7 +811,7 @@ func get_speaker_node_by_name(component_objectName : String) -> Node:
 	if component_objectName == player.objectName:
 		return player
 	
-	for n in get_node("Location/Objects").get_children():
+	for n in current_room.get_node("Objects").get_children():
 		if not n is Area2D:
 			continue
 		if n.get("reply_id") == null:
@@ -798,8 +823,8 @@ func get_speaker_node_by_name(component_objectName : String) -> Node:
 	return null
 
 
-func render_title(text : String):
-	$UI/Title/Label.text = text
+func render_title(text : String) -> void:
+	titleLabel.text = text
 	dialogueTimer.wait_time = get_line_reading_time(text)
 	dialogueTimer.start()
 
@@ -819,8 +844,8 @@ func render_speech(speakers_nodes : Array, content: String) -> void:
 	
 	for speaker in speakers_nodes:
 		speaker.bubble.characterLines.text = content
-		speaker.bubble.characterLines.align = 1 # Default alignment: CENTER
-		yield(get_tree(), "idle_frame")
+		speaker.bubble.characterLines.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER # Default alignment: CENTER
+		await get_tree().process_frame
 		# The yielding is needed because Godot needs to draw the label with the current text,
 		# for at least 1 frame, to return data like get_line_count() etc.
 		# Assignment happens in every iteration, but how many speakers are you gonna get anyway?
@@ -829,9 +854,9 @@ func render_speech(speakers_nodes : Array, content: String) -> void:
 		# Positioning the talking bubble, depending on the position of its speaker.
 		speaker.bubble.global_position.x = clamp(speaker.global_position.x, MIN_X, MAX_X)
 		if speaker.global_position.x < MIN_X - 35:
-			speaker.bubble.characterLines.align = 0 # Aligning LEFT
+			speaker.bubble.characterLines.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT # Aligning LEFT
 		elif speaker.global_position.x > MAX_X + 35:
-			speaker.bubble.characterLines.align = 2 # Aligning RIGHT
+			speaker.bubble.characterLines.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT # Aligning RIGHT
 	
 		if number_of_lines >= 3:
 			speaker.bubble.global_position.y = max(speaker.global_position.y, 95)
@@ -854,25 +879,17 @@ func render_speech(speakers_nodes : Array, content: String) -> void:
 	dialogueTimer.wait_time = line_reading_time
 	dialogueTimer.start()
 
-
-func define_option_txt(option : Dictionary) -> String:
-	# This function returns the text that will appear as option for the player:
-	var final_option_text : String = "PLACEHOLDER TEXT"
-	var target_element : Element = story.elements[option.targetid]
-	
-	# Just in case no label gets found, we start by using the target's title:
-	if target_element.title.strip_edges() != "":
-		final_option_text = target_element.title
-	# We now check for labels along the way--the connectionPath:
-	for connection in option.connectionPath:
-		if connection.label:
-			final_option_text = connection.label
-	# If no label or title exists, we gotta throw a writer error,
-	# while the game renders "PLACEHOLDER TEXT" as option text.
-	if final_option_text == "PLACEHOLDER TEXT":
-		push_writer_error("PLACEHOLDER TEXT used for option. Consider adding labels along the way or a title to target element with ID: " + option.targetid)
-	
-	return final_option_text
+func define_option_txt(path : Object) -> String:
+	# This function returns the text that will appear as option for the player.
+	# The plugin sets the path's label from the connection labels along the way,
+	# or else from the target element's title:
+	var text : String = path.label.strip_edges()
+	if text == "":
+		# If no label or title exists, we gotta throw a writer error,
+		# while the game renders "PLACEHOLDER TEXT" as option text.
+		push_writer_error("PLACEHOLDER TEXT used for option. Consider adding labels along the way or a title to target element with ID: " + path.TargetElement.Id)
+		return "PLACEHOLDER TEXT"
+	return text
 
 
 func render_options() -> void:
@@ -880,52 +897,51 @@ func render_options() -> void:
 		set_game_state(DIALOGUE)
 	set_dialogue_state(RENDERING_OPTIONS)
 
-	var options : Array = story.get_current_options()
+	# The plugin returns null Paths when the element has no valid outputs:
+	var paths : Array = []
+	var options : Object = story.GenerateCurrentOptions()
+	if options != null and options.Paths != null:
+		paths = options.Paths
+
 	# If the element has no valid outputs, end the dialogue:
-	if options.empty() or dialogue_end:
+	if paths.is_empty() or dialogue_end:
 		_end_dialogue()
 		return
-	
+
 	# If the element has only one valid output, follow it immediately:
-	if options.size() == 1:
-		select_option(options[0])
+	if paths.size() == 1:
+		render_path(paths[0])
 		return
-		
+
 	# If a "follow random" component exists, follow a random output:
 	if follow_random_output:
 		follow_random_output = false
-		var random_index : int = randi() % options.size()
-		select_option(options[random_index])
+		render_path(paths.pick_random())
 		return
-		
+
 	# Otherwise, we create a button for each option:
-	for option in options:
-		var option_text : String = define_option_txt(option)
-		create_option_button(option_text, option)
+	for path in paths:
+		create_option_button(define_option_txt(path), path)
 	
 	# More than MAX_NUMBER_VISIBLE_OPTIONS require arrow buttons, to scroll:
-	var option_arrows : VBoxContainer = $UI/MarginContainer/OptionsUI/OptionsArrows
-	number_of_visible_options = options.size()
-	if number_of_visible_options > MAX_NUMBER_VISIBLE_OPTIONS:
-		option_arrows.visible = true
-		$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = false
-	else:
-		option_arrows.visible = false
-		$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = true
+	number_of_visible_options = paths.size()
+	var needs_arrows : bool = number_of_visible_options > MAX_NUMBER_VISIBLE_OPTIONS
+	optionsArrows.visible = needs_arrows
+	arrowButtonDn.disabled = not needs_arrows
 
 	set_dialogue_state(WAITING_CHOICE)
 
 
-func create_option_button(option_txt, option):
-	var option_button : Button = DialogueOptionButton.instance()
+func create_option_button(option_txt : String, path : Object) -> void:
+	var option_button : Button = DialogueOptionButton.instantiate()
 	option_button.text = option_txt
-	option_button.target_id = option.targetid
-	var _temp : int = option_button.connect("pressed", self, "_on_option_button_pressed", [option])
-	$UI/MarginContainer/OptionsUI/OptionsContainer.add_child(option_button)
+	option_button.target_id = path.TargetElement.Id
+	option_button.pressed.connect(_on_option_button_pressed.bind(path))
+	optionsContainer.add_child(option_button)
 	option_buttons.append(option_button)
 
 
-func classify_components(element : Element) -> Dictionary:
+func classify_components(element : Object) -> Dictionary:
 	# The attached components will be classified as follows:
 	var speakers : Array = []
 	var items : Array = []
@@ -946,12 +962,10 @@ func classify_components(element : Element) -> Dictionary:
 		"dialogue_commands": dialogue_commands
 	}
 	
-	# We get an array of all the attached components (Dictionaries):
-	var components : Array = element.components
 	# Iterate through the element's attached components:
-	for component in components:
-		if component.attributes.empty():
-			push_writer_error("No attributes found in component: " + component.name)
+	for component in element.Components:
+		if component.Attributes.is_empty():
+			push_writer_error("No attributes found in component: " + component.Name)
 			continue # go to the next component.
 		
 		# Finding the component's "type". 
@@ -959,48 +973,38 @@ func classify_components(element : Element) -> Dictionary:
 		# The following array is to eventually check the component has only one type:
 		var component_types : Array = [] # It must have only one member eventually.
 		
-		# Iterate through the component's attributes:
-		for attribute_id in component.attributes:
-			var attribute : Dictionary = component.attributes[attribute_id]
+		for attribute in component.Attributes:
+			if attribute.Name != "type":
+				continue
 			
-			if attribute.name == "type":
-				
-				match attribute.value.data:
-					
-					"character":
-						speakers.append(component)
+			var type_name : String = str(attribute.data)
+			match type_name:
+				"character":
+					speakers.append(component)
+				"item":
+					items.append(component)
+				"activity":
+					activities.append(component)
+				"animation":
+					animations.append(component)
+				"audio":
+					audios.append(component)
+				"dialogueFlow":
+					dialogue_commands.append(component)
+				"exit":
+					exits.append(component)
+				"actionVerb":
+					pass
+				_:
+					push_writer_error("Unknown type found for component: " + component.Name)
 			
-					"item":
-						items.append(component)
-				
-					"activity":
-						activities.append(component)
-				
-					"animation":
-						animations.append(component)
-					
-					"audio":
-						audios.append(component)
-						
-					"dialogueFlow":
-						dialogue_commands.append(component)
-						
-					"exit":
-						exits.append(component)
-						
-					"actionVerb":
-						pass
-						
-					_:
-						push_writer_error("Unknown type found for component: " + component.name)
-				
-				component_types.append(attribute.value.data)
+			component_types.append(type_name)
 
 		if component_types.size() == 0:
-			push_writer_error("No 'type' attribute in component: " + component.name)
+			push_writer_error("No 'type' attribute in component: " + component.Name)
 
 		if component_types.size() > 1:
-			push_writer_error("More than 1 'type' attributes :" + str(component_types) + " in component: " + component.name)
+			push_writer_error("More than 1 'type' attributes :" + str(component_types) + " in component: " + component.Name)
 		# Attention: after the error, we still have the problematic component classified in multiple types.
 		
 	return components_classified
@@ -1008,11 +1012,10 @@ func classify_components(element : Element) -> Dictionary:
 
 func run_dialogue_commands(commands : Array) -> void:
 	for command in commands:
-		var objectName : String = command.get_attribute_by_name("objectName").value.data.strip_edges()
+		var objectName : String = attr(command, "objectName").strip_edges()
 		match objectName:
 			"pause":
 				# This makes a pause AFTER the rendering of the current element.
-				print("Found PAUSE component.")
 				dialogue_pause = true
 			
 			"stop":
@@ -1045,19 +1048,20 @@ func play_next_from_playlist() -> void:
 	if current_playlist.size() == 0:
 		return
 
-	for track in current_playlist:
-		var file_name : String = track.get_attribute_by_name("fileName").value.data
+	# Removing tracks from the playlist in a queue fashion, until one plays.
+	# The SFXPlayer "finished" signal calls this function again, for the next track.
+	while current_playlist.size() > 0:
+		var track : Object = current_playlist.pop_front()
+		var file_name : String = attr(track, "fileName")
 		var path : String = "res://assets/assets_audio/" + file_name
 		
 		if not ResourceLoader.exists(path):
 			push_writer_error("Can't find audio file " + file_name + " in project's assets.")
 			continue
 		
-		var audio_stream : AudioStream = load(path)
-		# Removing current track from playlist in a queue fashion:
-		var _popped : Component = current_playlist.pop_front()
-		sfxPlayer.set_stream(audio_stream)
+		sfxPlayer.set_stream(load(path))
 		sfxPlayer.play()
+		return
 
 
 func check_exit_for_logic(exit_node : ClickableExit) -> void:
@@ -1078,16 +1082,18 @@ func check_exit_for_logic(exit_node : ClickableExit) -> void:
 	walk_player_to(exit_node.approachPosition.global_position)
 
 
-func _on_Player_animation_finished(_anim_name: String) -> void:
+func _on_Player_arrived() -> void:
 	if State.game == EXPLORING:
 		return
 
 	if State.game == DIALOGUE:
 		push_error("GAME state leak: invalid DIALOGUE state" 
-			+ " after player walk animation finished.")
+			+ " after player walk finished.")
+		return
 	if State.game == TRANSITIONING:
 		push_error("GAME state leak: invalid TRANSITIONING state " 
-			+ " after player walk animation finished.")
+			+ " after player walk finished.")
+		return
 
 	# Else, if game state is WALKING_TO_ACTION...
 	if current_object_clicked is ClickableExit:
@@ -1101,25 +1107,19 @@ func _on_Player_animation_finished(_anim_name: String) -> void:
 	if current_object_clicked is ClickableObject:
 		orient_player_towards(current_object_clicked.global_position)
 	start_dialogue(current_target_id)
-	current_target_id = "RESET"
-
-
-func enable_mouse(yes : bool) -> void:
-	if yes:
-		cursorSprite.texture = IDLE_CURSOR
-	else:
-		cursorSprite.texture = null
+	current_target_id = ""
 
 
 # This is for the dialogue option button (fix the nomenclature at some point):
-func _on_option_button_pressed(option):
-	for i in $UI/MarginContainer/OptionsUI/OptionsContainer.get_children():
-		i.queue_free()
-	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = true
-	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp.disabled = true
+func _on_option_button_pressed(path : Object) -> void:
+	for option_button in optionsContainer.get_children():
+		option_button.queue_free()
+	arrowButtonDn.disabled = true
+	arrowButtonUp.disabled = true
 	number_of_visible_options = 0
 	option_buttons.clear()
-	select_option(option)
+	render_path(path)
+
 
 
 func _on_ButtonMouth_mouse_entered() -> void:
@@ -1250,9 +1250,11 @@ func _on_DialogueTimer_timeout() -> void:
 	after_timer_do()
 
 
-func after_timer_do():
+func after_timer_do() -> void:
+	if State.game == TRANSITIONING:
+		return
+	
 	if State.game == DIALOGUE and State.dialogue == PAUSING:
-		print("Rendering options after pause.")
 		render_options()
 		return
 		
@@ -1261,7 +1263,6 @@ func after_timer_do():
 		if dialogue_pause:
 			dialogue_pause = false
 			set_dialogue_state(PAUSING)
-			print("Setting PAUSING as dialogue state.")
 			dialogueTimer.wait_time = PAUSE_TIME
 			dialogueTimer.start()
 			return
@@ -1278,7 +1279,7 @@ func after_timer_do():
 	render_options()
 
 
-func _end_dialogue():
+func _end_dialogue() -> void:
 	dialogue_end = false
 	dangling_dialogue = false
 	# No practical point in turning this OFF, but it makes us look good:
@@ -1292,33 +1293,25 @@ func _end_dialogue():
 func reset_dialogue_bubbles() -> void:
 	var speakerBubbles : Array = get_tree().get_nodes_in_group("allBubbles")
 	
-	$UI/Title/Label.text = ""
+	titleLabel.text = ""
 	
 	for sb in speakerBubbles:
 		sb.global_position = Vector2.ZERO # Getting it out of the screen
 		sb.characterLines.text = ""
 
 
-func check_and_get_main_attributes(component: Component) -> Dictionary:
+func check_and_get_main_attributes(component: Object) -> Dictionary:
 	var main_attributes : Dictionary = {"error": false}
-	
-	var type_attribute: Dictionary = component.get_attribute_by_name("type")
-	if type_attribute.empty():
-		push_writer_error("No type attribute for component: " + component.name)
-		# Moving on to next element.
+	if component.GetAttribute("type") == null:
+		push_writer_error("No type attribute for component: " + component.Name)
 		main_attributes.error = true
-		
-	var objectName_attribute : Dictionary = component.get_attribute_by_name("objectName")
-	if objectName_attribute.empty():
-		push_writer_error("No objectName for component: " + component.name)
+	if component.GetAttribute("objectName") == null:
+		push_writer_error("No objectName for component: " + component.Name)
 		main_attributes.error = true
-		
 	if main_attributes.error:
-		return main_attributes # Without type and/or objectName
-	
-	main_attributes.type = type_attribute.value.data
-	main_attributes.objectName = objectName_attribute.value.data
-	
+		return main_attributes
+	main_attributes.type = str(component.GetAttribute("type").data)
+	main_attributes.objectName = str(component.GetAttribute("objectName").data)
 	return main_attributes
 
 
@@ -1326,8 +1319,8 @@ func check_contains_1(my_array : Array)-> bool:
 	if my_array.size() > 1:
 		var error_ids : Array = []
 		for element in my_array:
-			error_ids.append(element.id)
-		push_writer_error("More than 1 element found for specific action or cutScene: " 
+			error_ids.append(element.Id)
+		push_writer_error("More than 1 element found for specific action: " 
 			+ str(error_ids))
 		return false
 
@@ -1337,110 +1330,66 @@ func check_contains_1(my_array : Array)-> bool:
 	return true
 
 
-func get_id_from_cut_scene(cut_scene_name: String) -> String:
-	var compatible_elements : Array = []
-	var element_counter : int = 0 # Just stats.
+# Reads the components of a possible starting element of a player action.
+# Starting elements have exactly 2 components: VERB + OBJECT or OBJECT + OBJECT.
+# Returns the objectNames of its "actions" (actionVerb components) and "objects"
+# (item, character and exit components), or an empty Dictionary if it isn't one.
+func get_action_components(element : Object) -> Dictionary:
+	if element.Components.size() != 2:
+		return {}
 	
-	# Use next commented line to optimise the iteration only to the board of player actions:
-#	for element_id in player_actions_aw_board.elements:
-	for element_id in story.elements:
-		element_counter += 1
-		var element : Element = story.elements[element_id]
-		
-		# Elements with events must have only 1 component--the cutScene.
-		if element.components.size() != 1:
-			continue
-			
-		var component : Component = element.components[0]
+	var actions : Array = [] # Stores objectNames of actions: examine, handle, etc.
+	var objects : Array = [] # Stores objectNames of items, characters, exits.
+	for component in element.Components:
 		var main_attributes : Dictionary = check_and_get_main_attributes(component)
-		
 		if main_attributes.error:
-			# Errors thrown already in check_and_get_attributes
-			continue
-
-		if main_attributes.type != "cutScene":
-			continue
+			# Errors thrown already in check_and_get_main_attributes.
+			return {}
 		
-		if main_attributes.objectName != cut_scene_name:
-			continue
-
-		compatible_elements.append(element)
-	print("Iterated through " + str(element_counter) + " elements.")
+		match main_attributes.type:
+			"actionVerb":
+				actions.append(main_attributes.objectName)
+			"item", "character", "exit":
+				objects.append(main_attributes.objectName)
 	
-	if check_contains_1(compatible_elements):
-		# In our case, there is no "generic" substitution.
-		return compatible_elements[0].id
-
-	push_writer_error("Failed to get Target ID for cutScene " + cut_scene_name)
-	return ""
+	return {"actions": actions, "objects": objects}
 
 
 func get_id_from_verb_object_reply(verb: String, obj_reply : String)-> String:
 	var compatible_elements : Array = [] # Must eventually have exactly 1 member.
 	var generic_replies : Array = [] # Must also have 1 member.
-	var element_counter : int = 0 # Just stats.
 	
-#	for element_id in player_actions_aw_board.elements: # For optimisation.
-	for element_id in story.elements:
-		element_counter += 1
-		var element : Element = story.elements[element_id]
-		
-		# Elements with events must have only 1 component--the cutScene.
-		if element.components.size() != 2:
+	for element in get_player_action_elements():
+		var components : Dictionary = get_action_components(element)
+		if components.is_empty() or components.actions.is_empty():
 			continue
 		
-		var actions : Array = [] # Stores objectNames of actions: examine, handle, etc.
-		var objects : Array = [] # Stores objectNames of items, characters, exits.
-			
-		for component in element.components:
-
-			var main_attributes : Dictionary = check_and_get_main_attributes(component)
-			
-			if main_attributes.error:
-				# Errors thrown already in check_and_get_attributes
-				# Moving on to next element. (Not next component.)
-				break
-
-			match main_attributes.type:
-				"actionVerb":
-					actions.append(main_attributes.objectName)
-					
-				"item", "character", "exit":
-					objects.append(main_attributes.objectName)
-		
-		if actions.size() < 1:
-			continue
-		
-		if actions.size() > 1:
+		if components.actions.size() > 1:
 			push_writer_error("Cannot have more than 1 actionVerb components in element " 
-				+ element.id)
+				+ element.Id)
 			continue
 		
-		if actions[0] != verb:
+		if components.actions[0] != verb:
 			# Not the action we are looking for. Continue to next element iteration.
 			continue
 		
-		if objects.size() != 1:
-			push_writer_error("No object found for action " + verb)
-
-		if objects[0] != obj_reply:
-			# Not the noun we are looking for.
-			# Check first if it's generic reply for the verb:
-			if objects[0] == "generic":
-				# We store it:
-				generic_replies.append(element)
+		if components.objects.size() != 1:
+			push_writer_error("No object found for action " + verb + " in element " + element.Id)
 			continue
-
-		compatible_elements.append(element)
-	print("Iterated through " + str(element_counter) + " elements.")
+		
+		if components.objects[0] == obj_reply:
+			compatible_elements.append(element)
+		elif components.objects[0] == "generic":
+			# Not the noun we are looking for, but a generic reply for the verb:
+			generic_replies.append(element)
 	
 	# If we have a specific reply, we return the target element ID:
 	if check_contains_1(compatible_elements):
-		return compatible_elements[0].id
+		return compatible_elements[0].Id
 
 	# If we have a generic reply for the verb, we return the target ID:
 	if check_contains_1(generic_replies):
-		return generic_replies[0].id
+		return generic_replies[0].Id
 	
 	if verb != "walk":
 		push_writer_error("Failed to get Target ID for verb " + verb + " and noun " + obj_reply)
@@ -1449,37 +1398,13 @@ func get_id_from_verb_object_reply(verb: String, obj_reply : String)-> String:
 
 func get_id_from_objects_replies(obj_reply_1 : String, obj_reply_2 : String) -> String:
 	var compatible_elements : Array = [] # Must eventually have exactly 1 member.
-	var generic_replies : Array = [] # Must also have 1 member.
-	var element_counter : int = 0 # Just stats.
-	
-#	for element_id in player_actions_aw_board.elements: # For optimisation.
-	for element_id in story.elements:
-		element_counter += 1
-		var element : Element = story.elements[element_id]
-		
-		# Elements with events must have only 1 component--the cutScene.
-		if element.components.size() != 2:
-			continue
-		
-		var objects : Array = [] # Stores objectNames of items, characters, exits.
-			
-		for component in element.components:
+	var generic_replies : Array = [] # Ordered from the most specific to the most general case.
 
-			var main_attributes : Dictionary = check_and_get_main_attributes(component)
-			
-			if main_attributes.error:
-				# Errors thrown already in check_and_get_attributes
-				# Moving on to next element. (Not next component.)
-				break
-
-			match main_attributes.type:
-				"item", "character", "exit":
-					objects.append(main_attributes.objectName)
-		
-		if objects.size() != 2:
+	for element in get_player_action_elements():
+		var components : Dictionary = get_action_components(element)
+		if components.is_empty() or components.objects.size() != 2:
 			continue
-			
-		###### EXHAUSTIVE CHECKING ENSUES... ######
+		var objects : Array = components.objects
 		
 		# Cases of "generic" use:
 		
@@ -1488,8 +1413,9 @@ func get_id_from_objects_replies(obj_reply_1 : String, obj_reply_2 : String) -> 
 			# Inventory functions (should) block that.
 			# Unless encountered reply for USE GENERIC ON GENERIC.
 			if objects[0] == "generic":
-				generic_replies.push_front(element) # Pushing the most general case first.
+				generic_replies.push_back(element) # The most general case goes last.
 			continue
+		# GENERIC + one of our objects is more specific, so it goes first:
 		if objects[0] == "generic":
 			if objects[1] == obj_reply_1 or objects[1] == obj_reply_2:
 				generic_replies.push_front(element)
@@ -1499,38 +1425,24 @@ func get_id_from_objects_replies(obj_reply_1 : String, obj_reply_2 : String) -> 
 				generic_replies.push_front(element)
 			continue
 
-		# Cases of specific objects use:
-		
-		if objects[0] != obj_reply_1 and objects[0] != obj_reply_2:
-			continue
-
-		if objects[1] != obj_reply_1 and objects[1] != obj_reply_2:
-			continue
-
-		if objects[0] == obj_reply_1:
-			if objects[1] != obj_reply_2:
-				continue
+		# Cases of specific objects use, in either order:
+		if (objects[0] == obj_reply_1 and objects[1] == obj_reply_2) \
+				or (objects[0] == obj_reply_2 and objects[1] == obj_reply_1):
 			compatible_elements.append(element)
-		
-		if objects[1] == obj_reply_1:
-			if objects[0] != obj_reply_2:
-				continue
-			compatible_elements.append(element)
-	print("Iterated through " + str(element_counter) + " elements.")
 	
 	# If we have a specific reply, we return the target element ID:
 	if check_contains_1(compatible_elements):
-		return compatible_elements[0].id
+		return compatible_elements[0].Id
 
 	# Else we return the target ID of the first (most specific) of the generic cases:
 	if generic_replies.size() > 0:
-		return generic_replies[0].id
+		return generic_replies[0].Id
 	
 	push_writer_error("Failed to get Target ID for nouns " + obj_reply_1 + " and " + obj_reply_2)
 	return ""
 
 
-func _on_inventory_container_mouse_in_slot(item) -> void:
+func _on_inventory_container_mouse_in_slot(item : Item) -> void:
 	
 	# We don't want anything to happen while TRANSITIONING or DIALOGUE:
 	if State.game == TRANSITIONING or State.game == DIALOGUE:
@@ -1587,7 +1499,7 @@ func _on_inventory_container_item_selected(item : Item) -> void:
 		IDLE, MENU_OPEN:
 			if inventory_item_selected is Item:
 				push_error("Upon clicking inventory item: UI not in HOLDING_ITEM state, "
-					+ " but inventory_item_selected is: " + str(inventory_item_selected.object_name))
+					+ " but inventory_item_selected not NULL.")
 				return
 			
 			set_ui_state(HOLDING_ITEM, item)
@@ -1619,7 +1531,7 @@ func _on_inventory_container_item_selected(item : Item) -> void:
 			objectLabel.text = item.object_name
 
 
-func _on_inventory_container_item_examined(item)-> void:
+func _on_inventory_container_item_examined(item : Item) -> void:
 	current_object_clicked = null
 	# This is called when the inventory container's signal "item_examined" is received
 	# In other words, when you right click an inventory item.
@@ -1666,31 +1578,30 @@ func _on_inventory_container_item_examined(item)-> void:
 			objectLabel.text = item.object_name
 
 
-func set_cursor_hovering_over(aNode):
+func set_cursor_hovering_over(aNode : Area2D) -> void:
 	set_cursor(aNode)
-	current_object_hovered = aNode # This isn't currently used somewhere.
 
 
 
 func _on_OptionArrowButtonUp_pressed() -> void:
-	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = false
+	arrowButtonDn.disabled = false
 	for i in range(option_buttons.size(), 0, -1):
 		if not option_buttons[i - 1].visible:
 			option_buttons[i - 1].visible = true
 			number_of_visible_options += 1
 			if number_of_visible_options == option_buttons.size():
-				$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp.disabled = true
+				arrowButtonUp.disabled = true
 			break
 
 
 func _on_OptionArrowButtonDn_pressed() -> void:
-	$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonUp.disabled = false
+	arrowButtonUp.disabled = false
 	for ob in option_buttons:
 		if ob.visible:
 			ob.visible = false
 			number_of_visible_options -= 1
 			if number_of_visible_options <= MAX_NUMBER_VISIBLE_OPTIONS:
-				$UI/MarginContainer/OptionsUI/OptionsArrows/ArrowButtonDn.disabled = true
+				arrowButtonDn.disabled = true
 			break
 
 
@@ -1730,9 +1641,8 @@ func _on_Save_pressed() -> void:
 func _on_SettingsMenu_restart() -> void:
 	set_game_state(TRANSITIONING)
 	music_fade(OUT)
-	room_fade(OUT)
-	yield(tween_room, "tween_completed")
-	var _reload = get_tree().reload_current_scene()
+	await room_fade(OUT).finished
+	get_tree().reload_current_scene()
 
 
 
@@ -1788,3 +1698,4 @@ func _on_MouseCursorArea2D_area_exited(_area: Area2D) -> void:
 		IDLE:
 			erase_command_line()
 			set_cursor_hovering_over(null)
+
