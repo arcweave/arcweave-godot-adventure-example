@@ -35,10 +35,6 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Regrets"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/arcweave/plugin.cfg")
-
 [input]
 
 ui_accept={

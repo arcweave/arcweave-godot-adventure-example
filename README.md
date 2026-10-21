@@ -21,6 +21,8 @@ This document gives a brief overview of the game's structure as a Godot project.
 
 Open the project in Godot and build it once (the hammer icon at the top right, or `Alt + B`) before running it. The game's own scripts are in GDScript; only the plugin needs .NET.
 
+The Arcweave plugin ships disabled, because Godot can't load a C# plugin before the project is built: it would show an "Unable to load addon script" warning and disable it anyway. The game runs without it. You only need the plugin to update the story data: after building, enable it in **Project > Project Settings > Plugins**.
+
 Godot 4 cannot export C# projects to the web, so this version of the game runs on desktop platforms. The original Godot 3 version is still playable in your browser, [here](https://arcweave.itch.io/regrets), and its code is under the [`godot-3`](https://github.com/arcweave/arcweave-godot-adventure-example/tree/godot-3) tag of this repo.
 
 ### Updating the Story Data
