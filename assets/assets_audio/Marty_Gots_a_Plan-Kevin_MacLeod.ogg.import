@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Marty_Gots_a_Plan-Kevin_MacLeod.ogg-3c5480db21ff43964da356542a8e04b0.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wcav0g74acdn"
+path="res://.godot/imported/Marty_Gots_a_Plan-Kevin_MacLeod.ogg-3c5480db21ff43964da356542a8e04b0.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/assets_audio/Marty_Gots_a_Plan-Kevin_MacLeod.ogg"
-dest_files=[ "res://.import/Marty_Gots_a_Plan-Kevin_MacLeod.ogg-3c5480db21ff43964da356542a8e04b0.oggstr" ]
+dest_files=["res://.godot/imported/Marty_Gots_a_Plan-Kevin_MacLeod.ogg-3c5480db21ff43964da356542a8e04b0.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

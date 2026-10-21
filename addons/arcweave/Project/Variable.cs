@@ -1,0 +1,77 @@
+﻿using System;
+using Arcweave.Interpreter.INodes;
+using Godot;
+
+namespace Arcweave.Project
+{
+    public partial class Variable
+    {
+        [Signal] public delegate void VariableUpdatedEventHandler(Variant oldValue, Variant newValue);
+        [Export] public string Id { get; private set; }
+        public string Name { get; set; }
+        public IHasVariables Parent { get; set; }
+        public bool Changed;
+        private Variant _value;
+
+        public Variant Value
+        {
+            get => _value;
+            internal set
+            {
+                _value = value;
+                Changed = true;
+            }
+        }
+        private Variant _defaultValue { get; set; }
+        public Variant DefaultValue => _defaultValue;
+
+        public object ObjectValue {
+            get
+            {
+                if (Value.VariantType == Variant.Type.String) return Value.AsString();
+                if (Value.VariantType == Variant.Type.Bool) return Value.AsBool();
+                if (Value.VariantType == Variant.Type.Int) return Value.AsInt32();
+                if (Value.VariantType == Variant.Type.Float) return Value.AsDouble();
+                return null;
+            }
+        }
+
+        private string _typeName { get; set; }
+        public System.Type Type {
+            get
+            {
+                if (Value.VariantType == Variant.Type.String) return typeof(string);
+                if (Value.VariantType == Variant.Type.Int) return typeof(int);
+                if (Value.VariantType == Variant.Type.Bool) return typeof(bool);
+                if (Value.VariantType == Variant.Type.Float) return typeof(double);
+                return null;
+            }
+        }
+
+        public Variable(string name, Variant value) : this(name, name, value) { }
+
+        public Variable(string id, string name, Variant value, IHasVariables parent = null)
+        {
+            if (value.VariantType == Variant.Type.Nil)
+            {
+                throw new ArgumentNullException(nameof(value), "Variable value cannot be null.");
+            }
+
+            Id = id;
+            Name = name;
+            Value = value;
+            _defaultValue = value;
+            _typeName = value.GetType().FullName;
+            Parent = parent;
+            Changed = false;
+        }
+
+        /// <summary>
+        /// Resets the variable to the default value.
+        /// </summary>
+        public void ResetToDefaultValue()
+        {
+            Value = _defaultValue;
+        }
+    }
+}

@@ -1,25 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene format=3]
 
-[ext_resource path="res://resources/PixelFont5px_wGlow.tres" type="DynamicFont" id=1]
-[ext_resource path="res://scripts/bubble.gd" type="Script" id=6]
+[ext_resource type="FontFile" path="res://assets/assets_fonts_files/BetterPixels.ttf" id="1"]
+[ext_resource type="Script" path="res://scripts/bubble.gd" id="6"]
 
 [node name="Bubble" type="Node2D" groups=["allBubbles"]]
 z_index = 1
-script = ExtResource( 6 )
+script = ExtResource("6")
 
 [node name="CharacterLines" type="Label" parent="."]
-margin_left = -110.0
-margin_top = -70.0
-margin_right = 110.0
-margin_bottom = -54.0
+offset_left = -110.0
+offset_top = -70.0
+offset_right = 110.0
+offset_bottom = -54.0
 grow_vertical = 0
-rect_min_size = Vector2( 220, 16 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_constants/line_spacing = -2
-custom_fonts/font = ExtResource( 1 )
-align = 1
-valign = 2
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": true
-}
+custom_minimum_size = Vector2(220, 16)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = -2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1")
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/drum_fill.wav-d26d70079d81b56eeee3d9283d1c6580.sample"
+type="AudioStreamWAV"
+uid="uid://4hi1mvks0mix"
+path="res://.godot/imported/drum_fill.wav-d26d70079d81b56eeee3d9283d1c6580.sample"
 
 [deps]
 
 source_file="res://assets/assets_audio/drum_fill.wav"
-dest_files=[ "res://.import/drum_fill.wav-d26d70079d81b56eeee3d9283d1c6580.sample" ]
+dest_files=["res://.godot/imported/drum_fill.wav-d26d70079d81b56eeee3d9283d1c6580.sample"]
 
 [params]
 

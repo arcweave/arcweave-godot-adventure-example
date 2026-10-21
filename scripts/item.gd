@@ -6,8 +6,8 @@ class_name Item
 # which are the objects / items (and characters) in a room.
 
 # The object's name, as shown in the command line:
-export(String) var object_name = ""
+@export var object_name: String = ""
 # The objectName, as in the Arcweave component:
-export(String) var reply_id = ""
+@export var reply_id: String = ""
 # The texture of the inventory item:
-export(Texture) var texture
+@export var texture: Texture2D

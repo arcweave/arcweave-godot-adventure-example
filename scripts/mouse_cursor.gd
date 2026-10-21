@@ -1,6 +1,6 @@
 extends Control
 
-onready var cursorSprite : Sprite = $Cursor
+@onready var cursorSprite : Sprite2D = $Cursor
 
 var mouse_over_game : bool = true
 
@@ -12,8 +12,12 @@ func _notification(what: int) -> void:
 
 
 func _process(_delta: float) -> void:
+	# The game draws its own cursor sprite, so it hides the system cursor
+	# while the mouse is over the game window:
+	var mouse_mode := Input.MOUSE_MODE_HIDDEN if mouse_over_game else Input.MOUSE_MODE_VISIBLE
+	if Input.mouse_mode != mouse_mode:
+		Input.mouse_mode = mouse_mode
 	if mouse_over_game:
-		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-		cursorSprite.position = get_global_mouse_position()
-	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		# Global, so the cursor follows the mouse wherever this node is placed.
+		# (In the settings popup, "global" means within the popup's own window.)
+		cursorSprite.global_position = get_global_mouse_position()

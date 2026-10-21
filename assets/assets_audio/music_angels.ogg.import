@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/music_angels.ogg-67d6bc2a190c8dff469ef5fd21345b56.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://3rsl7vwth5hd"
+path="res://.godot/imported/music_angels.ogg-67d6bc2a190c8dff469ef5fd21345b56.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/assets_audio/music_angels.ogg"
-dest_files=[ "res://.import/music_angels.ogg-67d6bc2a190c8dff469ef5fd21345b56.oggstr" ]
+dest_files=["res://.godot/imported/music_angels.ogg-67d6bc2a190c8dff469ef5fd21345b56.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
