@@ -14,6 +14,10 @@ Moreover, we have created a couple of [YouTube video tutorials](https://www.yout
 
 This document gives a brief overview of the game's structure as a Godot project.
 
+### Download
+
+Each [release](https://github.com/arcweave/arcweave-godot-adventure-example/releases) includes the project as [`Regrets.zip`](https://github.com/arcweave/arcweave-godot-adventure-example/releases/latest/download/Regrets.zip), with the [CHANGELOG](CHANGELOG.md). You can also clone this repo.
+
 ### Requirements
 
 * The **.NET** version of [Godot 4.7](https://godotengine.org/download), since the Arcweave plugin is written in C#.
