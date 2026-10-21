@@ -16,7 +16,7 @@ offset_top = 6.0
 offset_right = 24.0
 offset_bottom = 24.0
 custom_minimum_size = Vector2(18, 18)
-stretch_mode = 4
+stretch_mode = 3
 
 [connection signal="gui_input" from="." to="." method="_on_InventorySlot_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_InventorySlot_mouse_entered"]

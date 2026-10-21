@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" path="res://scenes_objects/ClickableExit.tscn" id="9"]
 
 [sub_resource type="NavigationPolygon" id="1"]
-vertices = PackedVector2Array(24.2049, 89.4927, 10, 90, 15, 79, 36, 79, 41, 96, 24, 96, 41, 90, 295.131, 81, 295, 75, 303, 75, 311, 91, 194, 81, 37, 74, 59, 74, 60, 76, 173, 80, 175, 77, 191, 77, 162, 80, 129, 76, 126, 72, 100, 76, 105, 72)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 0, 3, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(7, 10, 6, 11), PackedInt32Array(6, 3, 12, 13, 14), PackedInt32Array(15, 16, 17, 11), PackedInt32Array(15, 11, 6, 18), PackedInt32Array(19, 18, 6), PackedInt32Array(20, 19, 6, 21), PackedInt32Array(21, 22, 20), PackedInt32Array(21, 6, 14)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(303, 75, 311, 91, 41, 90, 41, 96, 24, 96, 24.2049, 89.4927, 10, 90, 15, 79, 36, 79, 37, 74, 59, 74, 60, 76, 100, 76, 105, 72, 126, 72, 129, 76, 162, 80, 173, 80, 175, 77, 191, 77, 194, 81, 295.131, 81, 295, 75)])
+vertices = PackedVector2Array(24.2049, 89.4927, 10, 90, 15, 79, 36, 79, 41, 96, 24, 96, 41, 90, 295.131, 81, 295, 75, 303, 75, 311, 91, 194, 81, 37, 74, 59, 74, 60, 76, 173, 80, 175, 77, 191, 77, 162, 80, 129, 76, 100, 76)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 0, 3, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(7, 10, 6, 11), PackedInt32Array(6, 3, 12, 13, 14), PackedInt32Array(15, 16, 17, 11), PackedInt32Array(15, 11, 6, 18), PackedInt32Array(19, 18, 6), PackedInt32Array(19, 6, 20), PackedInt32Array(20, 6, 14)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(303, 75, 311, 91, 41, 90, 41, 96, 24, 96, 24.2049, 89.4927, 10, 90, 15, 79, 36, 79, 37, 74, 59, 74, 60, 76, 100, 76, 129, 76, 162, 80, 173, 80, 175, 77, 191, 77, 194, 81, 295.131, 81, 295, 75)])
 
 [sub_resource type="RectangleShape2D" id="5"]
 size = Vector2(22, 42)
@@ -57,7 +57,7 @@ position = Vector2(0, -21)
 shape = SubResource("5")
 
 [node name="ApproachPosition" parent="Objects/FinalExit" index="1"]
-position = Vector2(0, 3)
+position = Vector2(0, 6)
 
 [node name="Scripts" parent="Objects" index="1" instance=ExtResource("3")]
 visible = false

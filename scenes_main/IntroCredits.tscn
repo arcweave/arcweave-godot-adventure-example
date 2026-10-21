@@ -83,6 +83,7 @@ offset_right = 62.0
 offset_bottom = 55.0
 custom_minimum_size = Vector2(62, 50)
 theme_override_constants/line_spacing = -3
+theme_override_constants/paragraph_spacing = -10
 theme_override_fonts/font = ExtResource("4")
 text = "Writer-Dev:
 Sprites Art:
@@ -97,6 +98,7 @@ offset_right = 277.0
 offset_bottom = 55.0
 custom_minimum_size = Vector2(106, 50)
 theme_override_constants/line_spacing = -3
+theme_override_constants/paragraph_spacing = -10
 theme_override_fonts/font = ExtResource("4")
 text = "GIANNIS GEORGIOU
 STAMATIS VASILEIOU
@@ -114,6 +116,7 @@ offset_top = -74.0
 offset_right = 144.0
 custom_minimum_size = Vector2(80, 50)
 theme_override_constants/line_spacing = -3
+theme_override_constants/paragraph_spacing = -10
 theme_override_fonts/font = ExtResource("4")
 text = "\"Kool Kats\" and \"Marty Gots a Plan\" by Kevin MacLeod and 
 \"Harmony of Peace - Angel Voices\" by Gertraut Hecher
