@@ -31,22 +31,23 @@ offset_bottom = -152.0
 custom_minimum_size = Vector2(320, 152)
 script = ExtResource("7")
 
-[node name="Popup" type="Popup" parent="."]
-position = Vector2i(40, 27)
-size = Vector2i(240, 120)
+[node name="Popup" type="Control" parent="."]
 visible = false
-exclusive = true
-popup_window = false
-
-[node name="Panel" type="Panel" parent="Popup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="Popup"]
+offset_left = 40.0
+offset_top = 27.0
+offset_right = 280.0
+offset_bottom = 147.0
 theme_override_styles/panel = SubResource("7")
 
 [node name="MarginContainer" type="MarginContainer" parent="Popup"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 4.0
+offset_left = 40.0
+offset_top = 27.0
+offset_right = 280.0
+offset_bottom = 147.0
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_left = 4
@@ -200,6 +201,7 @@ offset_bottom = 15.0
 text = "Quit"
 
 [node name="MenuCursor" parent="Popup" instance=ExtResource("6")]
+mouse_filter = 2
 
 [node name="CommandTimer" type="Timer" parent="."]
 wait_time = 0.15

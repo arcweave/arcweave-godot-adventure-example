@@ -30,10 +30,15 @@ func _on_InventorySlot_gui_input(event: InputEvent) -> void:
 	if item == null:
 		return
 
+	# The slot accepts the clicks it handles. Otherwise, Godot 4 passes them on
+	# (containers let mouse events through), and Main would get them as clicks
+	# on empty space, which drop the item just selected.
 	if event.is_action_pressed("click"):
+		accept_event()
 		item_selected.emit(item)
 
 	if event.is_action_pressed("right_click"):
+		accept_event()
 		item_examined.emit(item)
 
 

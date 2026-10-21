@@ -1,6 +1,9 @@
 extends Control
 
 signal restart
+# Main hides its own cursor while the menu is open, and saves the settings when it closes:
+signal opened
+signal closed
 
 enum {REPLAY, QUIT}
 enum {EXPLORING, WALKING_TO_ACTION, TRANSITIONING, DIALOGUE} # GAME states
@@ -11,22 +14,13 @@ var State : StateHandler = preload("res://resources/state_handler.tres")
 
 var command : int = REPLAY
 
-@onready var popup_menu : Popup = $Popup
+# A full-screen Control, not a Popup window: a window would get its own viewport,
+# which draws blurry (it doesn't use the project's Nearest texture filter) and
+# keeps the menu cursor inside it. It covers the whole screen, so clicks outside
+# the menu panel don't reach the game's UI (which keeps processing while paused).
+@onready var popup_menu : Control = $Popup
 @onready var load_button : Button = $Popup/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Load
 @onready var command_timer : Timer = $CommandTimer
-
-
-func _ready() -> void:
-	# The popup is its own window, so while it is open it receives the input:
-	popup_menu.window_input.connect(_on_popup_window_input)
-	# The popup can also close itself (e.g. on ui_cancel), so we always unpause here:
-	popup_menu.popup_hide.connect(func(): get_tree().paused = false)
-
-
-func _on_popup_window_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_menu"):
-		hide_popup()
-		popup_menu.set_input_as_handled()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -35,13 +29,18 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 
 	if event.is_action_pressed("ui_menu"):
+		get_viewport().set_input_as_handled()
 		if popup_menu.visible:
 			hide_popup()
-			return
+		else:
+			show_popup()
 
-		update_load_button()
-		popup_menu.popup()
-		get_tree().paused = true
+
+func show_popup() -> void:
+	update_load_button()
+	popup_menu.visible = true
+	get_tree().paused = true
+	opened.emit()
 
 
 func update_load_button() -> void:
@@ -51,6 +50,7 @@ func update_load_button() -> void:
 func hide_popup() -> void:
 	popup_menu.visible = false
 	get_tree().paused = false
+	closed.emit()
 
 
 func go(new_command : int = REPLAY) -> void:

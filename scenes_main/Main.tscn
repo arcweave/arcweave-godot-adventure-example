@@ -155,12 +155,6 @@ offset_right = 0.0
 offset_bottom = 0.0
 mouse_filter = 2
 
-[node name="Popup" parent="UI/SettingsMenu" index="0"]
-visible = false
-
-[node name="MarginContainer" parent="UI/SettingsMenu/Popup" index="1"]
-offset_bottom = 0.0
-
 [node name="VBoxContainer" parent="UI/SettingsMenu/Popup/MarginContainer" index="0"]
 offset_bottom = 116.0
 
@@ -214,8 +208,8 @@ ArcweaveAsset = ExtResource("15")
 [connection signal="mouse_exited" from="UI/MouseMenu/ButtonHand" to="." method="_on_ButtonHand_mouse_exited"]
 [connection signal="pressed" from="UI/MouseMenu/ButtonHand" to="." method="_on_ButtonHand_pressed"]
 [connection signal="restart" from="UI/SettingsMenu" to="." method="_on_SettingsMenu_restart"]
-[connection signal="about_to_popup" from="UI/SettingsMenu/Popup" to="." method="_on_Popup_about_to_show"]
-[connection signal="popup_hide" from="UI/SettingsMenu/Popup" to="." method="_on_Popup_popup_hide"]
+[connection signal="opened" from="UI/SettingsMenu" to="." method="_on_SettingsMenu_opened"]
+[connection signal="closed" from="UI/SettingsMenu" to="." method="_on_SettingsMenu_closed"]
 [connection signal="value_changed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/MusicRow/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
 [connection signal="value_changed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/SFXRow/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
 [connection signal="value_changed" from="UI/SettingsMenu/Popup/MarginContainer/VBoxContainer/DialogueSpeedRow/DialogueSpeedSlider" to="." method="_on_DialogueSpeedSlider_value_changed"]

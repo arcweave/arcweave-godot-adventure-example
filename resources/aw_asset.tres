@@ -7283,11 +7283,11 @@ project_settings = {
 }
 },
 "components": ["2cc43715-13b0-4cad-92d7-5b4f61fe66a7"],
-"content": "<p>I couldn't play adventure games οn it.</p>",
+"content": "<p>I couldn't play adventure games on it.</p>",
 "height": 321.0,
 "outputs": ["ad61a563-46a5-4724-b7be-1aae22e62046"],
 "theme": "default",
-"title": "<p>I couldn't play adventure games οn it.</p>",
+"title": "<p>I couldn't play adventure games on it.</p>",
 "width": 301.0,
 "x": 4380.0,
 "y": 3240.0

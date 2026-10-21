@@ -32,6 +32,10 @@ func _input(event: InputEvent) -> void:
 	# If in dialogue state, we don't want the ClickableObject to pick up events:
 	if state_handler.game == state_handler.DIALOGUE:
 		return
+	# Neither while the verb menu is open: the click goes to the menu's buttons
+	# (even if it's over an object), or else it just closes the menu.
+	if state_handler.ui == state_handler.MENU_OPEN:
+		return
 
 	if event.is_action_pressed("click") and mouse_over:
 		get_viewport().set_input_as_handled()

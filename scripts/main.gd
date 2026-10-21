@@ -81,6 +81,7 @@ var option_buttons : Array[Button] = []
 @onready var fader : ColorRect = $UI/Fader
 @onready var dialogueTimer: Timer = $DialogueTimer
 @onready var cursorSprite : Sprite2D = $UI/MouseCursor/Cursor
+@onready var cursorArea : Area2D = $UI/MouseCursor/Cursor/MouseCursorArea2D
 @onready var cursorCollision : CollisionShape2D = $UI/MouseCursor/Cursor/MouseCursorArea2D/MouseCursorCollision
 @onready var musicPlayer : AudioStreamPlayer = $UI/MusicPlayer
 @onready var sfxPlayer : AudioStreamPlayer = $UI/SFXPlayer
@@ -208,7 +209,7 @@ func _unhandled_input(event : InputEvent) -> void:
 				
 				# If UI state is not IDLE, we switch to IDLE and return:
 				if State.ui == MENU_OPEN or State.ui == HOLDING_ITEM:
-					set_ui_state(IDLE)
+					return_ui_to_idle()
 					return
 					
 				# Else (if UI is already IDLE), we walk to mouse position:
@@ -222,7 +223,7 @@ func _unhandled_input(event : InputEvent) -> void:
 				
 				# If UI state is not IDLE, we switch to IDLE and return:
 				if State.ui == MENU_OPEN or State.ui == HOLDING_ITEM:
-					set_ui_state(IDLE)
+					return_ui_to_idle()
 					return
 					
 				# Else (if UI is already IDLE), we switch to EXPLORING
@@ -509,6 +510,16 @@ func set_ui_state(new_state : int, inventory_item : Item = null) -> void:
 	set_cursor_and_selected_item(inventory_item)
 	if State.ui != new_state:
 		State.ui = new_state
+
+
+# Closes the verb menu or drops the held item. The room reacts to the mouse again,
+# so if the cursor is already over an object, we show it as hovered:
+func return_ui_to_idle() -> void:
+	set_ui_state(IDLE)
+	for area in cursorArea.get_overlapping_areas():
+		if area is ClickableObject:
+			_on_MouseCursorArea2D_area_entered(area)
+			return
 
 
 func set_dialogue_state(new_state : int) -> void:
@@ -1196,6 +1207,13 @@ func _on_ClickableObject_clicked(node_clicked : ClickableObject) -> void:
 	if State.game == TRANSITIONING or State.game == DIALOGUE:
 		return
 	
+	# While the verb menu is open, the room doesn't react to the mouse:
+	# clicking anywhere outside the menu only closes it.
+	# (ClickableObjects ignore clicks then, so this is just in case.)
+	if State.ui == MENU_OPEN:
+		return_ui_to_idle()
+		return
+	
 	# If WALKING_TO_ACTION, we forget the previous intent:
 	if State.game == WALKING_TO_ACTION:
 		set_game_state(EXPLORING)
@@ -1208,13 +1226,6 @@ func _on_ClickableObject_clicked(node_clicked : ClickableObject) -> void:
 			if current_object_clicked is ClickableExit:
 				check_exit_for_logic(current_object_clicked)
 				return
-		
-		MENU_OPEN:
-			set_ui_state(IDLE)
-			set_cursor_and_selected_item(null)
-			
-			if current_object_clicked is ClickableExit:
-				check_exit_for_logic(current_object_clicked)
 		
 		HOLDING_ITEM:
 			if inventory_item_selected == null:
@@ -1467,10 +1478,7 @@ func _on_inventory_container_mouse_in_slot(item : Item) -> void:
 			command_line.object_2 = item.object_name
 			update_command_line()
 
-		IDLE, MENU_OPEN:
-			
-			if item == null:
-				return
+		IDLE:
 			command_line.object_1 = item.object_name
 			update_command_line()
 
@@ -1487,7 +1495,7 @@ func _on_inventory_container_mouse_out_of_slot() -> void:
 			command_line.object_2 = ""
 			update_command_line()
 		
-		MENU_OPEN, IDLE:
+		IDLE:
 			erase_command_line()
 
 
@@ -1496,7 +1504,11 @@ func _on_inventory_container_item_selected(item : Item) -> void:
 	# This is called when the inventory container's signal "item_selected" is received:
 	match State.ui:
 		
-		IDLE, MENU_OPEN:
+		MENU_OPEN:
+			# While the verb menu is open, clicking anywhere outside it only closes it:
+			return_ui_to_idle()
+		
+		IDLE:
 			if inventory_item_selected is Item:
 				push_error("Upon clicking inventory item: UI not in HOLDING_ITEM state, "
 					+ " but inventory_item_selected not NULL.")
@@ -1537,7 +1549,11 @@ func _on_inventory_container_item_examined(item : Item) -> void:
 	# In other words, when you right click an inventory item.
 	match State.ui:
 		
-		IDLE, MENU_OPEN:
+		MENU_OPEN:
+			# While the verb menu is open, clicking anywhere outside it only closes it:
+			return_ui_to_idle()
+		
+		IDLE:
 			if inventory_item_selected is Item:
 				push_error("Upon clicking inventory item: UI not in HOLDING_ITEM state, "
 					+ " but inventory_item_selected not NULL.")
@@ -1621,7 +1637,7 @@ func _on_WalkSpeedSlider_value_changed(value: float) -> void:
 	set_walk_speed(value)
 
 
-func _on_Popup_about_to_show() -> void:
+func _on_SettingsMenu_opened() -> void:
 	show_cursor(false)
 
 
@@ -1629,7 +1645,7 @@ func _on_SFXPlayer_finished() -> void:
 	play_next_from_playlist()
 
 
-func _on_Popup_popup_hide() -> void:
+func _on_SettingsMenu_closed() -> void:
 	save_settings()
 	show_cursor(true) # Without resetting it.
 
@@ -1671,7 +1687,7 @@ func _on_MouseCursorArea2D_area_entered(area: Area2D) -> void:
 			update_command_line()
 
 		MENU_OPEN:
-			set_cursor_hovering_over(area)
+			pass # While the verb menu is open, the room doesn't react to the mouse.
 		
 		IDLE:
 			set_cursor_hovering_over(area)
@@ -1693,7 +1709,7 @@ func _on_MouseCursorArea2D_area_exited(_area: Area2D) -> void:
 			update_command_line()
 		
 		MENU_OPEN:
-			set_cursor_hovering_over(null)
+			pass # While the verb menu is open, the room doesn't react to the mouse.
 			
 		IDLE:
 			erase_command_line()
